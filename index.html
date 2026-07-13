@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HiroAI Apps - 実用的で美しいモバイルアプリ開発</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FAF6F0;
+            --primary-color: #8B5A2B;
+            --secondary-color: #5A4A42;
+            --text-color: #2C2520;
+            --card-bg: #FFFFFF;
+            --accent-color: #EAD8C3;
+            --font-outfit: 'Outfit', 'Noto Sans JP', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-outfit);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        header {
+            background-color: rgba(90, 74, 66, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: #FFFFFF;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #5A4A42 0%, #3E322B 100%);
+            color: #FFFFFF;
+            padding: 80px 5%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle, rgba(234, 216, 195, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .hero p {
+            font-size: 18px;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #EAD8C3;
+            animation: fadeInUp 0.8s ease 0.2s;
+            animation-fill-mode: both;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 60px auto 0;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--secondary-color);
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .app-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .app-card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(90, 74, 66, 0.05);
+            border: 1px solid rgba(90, 74, 66, 0.08);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(90, 74, 66, 0.1);
+        }
+
+        @media (min-width: 768px) {
+            .app-card {
+                flex-direction: row;
+            }
+        }
+
+        .app-image {
+            background: linear-gradient(135deg, var(--accent-color) 0%, #D8C3A5 100%);
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 250px;
+            position: relative;
+        }
+
+        .app-image .icon-placeholder {
+            font-size: 72px;
+            filter: drop-shadow(0 10px 15px rgba(90, 74, 66, 0.2));
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .app-details {
+            padding: 40px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .app-status {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--secondary-color);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            align-self: flex-start;
+            letter-spacing: 0.5px;
+        }
+
+        .app-details h3 {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .app-details p {
+            font-size: 15px;
+            color: #665A52;
+            margin-bottom: 25px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .feature-item {
+            background-color: #FAF8F5;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .feature-item h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+
+        .feature-item p {
+            font-size: 12px;
+            color: #7E7066;
+            margin-bottom: 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background-color 0.3s, transform 0.2s;
+            align-self: flex-start;
+            box-shadow: 0 4px 15px rgba(139, 90, 43, 0.2);
+        }
+
+        .btn:hover {
+            background-color: #744A22;
+            transform: translateY(-2px);
+        }
+
+        .footer-links {
+            text-align: center;
+            margin-top: 80px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(90, 74, 66, 0.1);
+        }
+
+        .footer-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 11px;
+            color: #9E9085;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">HiroAI<span>Apps</span></div>
+        <nav>
+            <a href="#apps">Apps</a>
+            <a href="privacy.html">プライバシーポリシー</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>HiroAI Apps</h1>
+        <p>日曜大工やDIYをもっと楽しく、もっとスマートに。日々の創作活動を支えるモバイルツールを開発しています。</p>
+    </section>
+
+    <div class="container" id="apps">
+        <h2 class="section-title">提供中のアプリ</h2>
+        
+        <div class="app-grid">
+            <div class="app-card">
+                <div class="app-image">
+                    <div class="icon-placeholder">🪵</div>
+                </div>
+                <div class="app-details">
+                    <span class="app-status">Google Play クローズドテスト実施中</span>
+                    <h3>DIY Wood Calculator</h3>
+                    <p>日曜大工（DIY）における木材の効率的な切り出し（木取り）をシミュレーション・計算するアプリです。材料の無駄を極限まで省き、設計をサポートします。</p>
+                    
+                    <div class="features">
+                        <div class="feature-item">
+                            <h4>🪵 効率的な木取り計算</h4>
+                            <p>必要な切り出しパーツを指定するだけで、定尺板から無駄なく切り出す配置パターンを瞬時に算出します。</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>📐 3Dシミュレーター</h4>
+                            <p>切り出した木材の配置イメージを、直感的な3D空間上でプレビューして確認できます。</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>💾 履歴・お気に入り保存</h4>
+                            <p>過去に行った計算パターンや、よく使うお気に入りの設定を保存して、すぐに呼び出せます。</p>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="btn" style="opacity: 0.7; pointer-events: none;">Google Play ストアで公開予定</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <a href="index.html">ホーム</a>
+            <a href="privacy.html">プライバシーポリシー</a>
+            <a href="mailto:support@example.com">お問い合わせ</a>
+        </div>
+
+        <div class="copyright">
+            &copy; 2026 HiroAI Apps. All Rights Reserved.
+        </div>
+    </div>
+
+</body>
+</html>
