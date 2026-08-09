@@ -260,6 +260,69 @@
             transform: translateY(-2px);
         }
 
+        /* ===== 記事一覧 ===== */
+        .article-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .article-list { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+        }
+
+        .article-card {
+            display: block;
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 28px;
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid rgba(90, 74, 66, 0.08);
+            box-shadow: 0 10px 30px rgba(90, 74, 66, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(90, 74, 66, 0.1);
+        }
+
+        .article-card-date {
+            font-size: 11px;
+            color: #9E9085;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+
+        .article-card h3 {
+            font-size: 19px;
+            font-weight: 800;
+            color: var(--secondary-color);
+            line-height: 1.45;
+            margin-bottom: 12px;
+        }
+
+        .article-card p {
+            font-size: 14px;
+            color: #665A52;
+            margin-bottom: 14px;
+        }
+
+        .article-card code {
+            background-color: #F0E8DE;
+            color: #6B4423;
+            padding: 1px 5px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .article-more {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
         .footer-links {
             text-align: center;
             margin-top: 80px;
@@ -324,6 +387,7 @@
         </div>
         <nav>
             <a href="#apps">Apps</a>
+            <a href="#articles">記事</a>
             <a href="terms.html">利用規約</a>
             <a href="privacy.html">プライバシーポリシー</a>
         </nav>
@@ -422,6 +486,23 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- 記事（作る前に調べた記録・実測メモ） -->
+        <h2 class="section-title" id="articles" style="margin-top: 80px;">記事</h2>
+
+        <p style="text-align: center; font-size: 14px; color: #7E7066; max-width: 640px; margin: -20px auto 40px;">
+            アプリを作る前に調べたこと、実機で確かめたことを残しています。<br>
+            「作らなくていい」と分かった話も、同じくらい役に立つはずなので。
+        </p>
+
+        <div class="article-list">
+            <a class="article-card" href="blog-android-app-volume.html">
+                <div class="article-card-date">2026-08-09 ・ Android / オーディオ</div>
+                <h3>Androidでアプリごとの音量を変えられない理由を、実測で確かめた</h3>
+                <p>「配信アプリの音だけ下げたい」から始めた調査。出力全体に増幅をかけると音楽アプリには効くのに配信アプリには効かない——その理由を <code>dumpsys</code> の実出力で追いました。Bluetooth機器ごとに音量を覚えてくれない件も。</p>
+                <span class="article-more">続きを読む →</span>
+            </a>
         </div>
 
         <div class="footer-links">

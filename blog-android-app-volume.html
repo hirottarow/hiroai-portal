@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Androidでアプリごとの音量を変えられない理由を、実測で確かめた | ひろ@AI遊び場</title>
+    <meta name="description" content="「配信アプリだけ音量を下げたい」から始めて、Androidの音量の仕組みをdumpsysで実測した記録。出力ミックスへの増幅が効くアプリと効かないアプリがある理由、Bluetooth機器ごとに音量を覚えてくれない理由まで、実際の出力つきで解説します。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FAF6F0;
+            --primary-color: #8B5A2B;
+            --secondary-color: #5A4A42;
+            --text-color: #2C2520;
+            --card-bg: #FFFFFF;
+            --accent-color: #EAD8C3;
+            --font-outfit: 'Outfit', 'Noto Sans JP', sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: var(--font-outfit);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        header {
+            background-color: rgba(90, 74, 66, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover { color: var(--accent-color); }
+
+        /* ===== 記事本文 ===== */
+        .article {
+            max-width: 760px;
+            margin: 50px auto 0;
+            padding: 0 20px;
+        }
+
+        .article-meta {
+            font-size: 12px;
+            color: #9E9085;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .article h1 {
+            font-size: 30px;
+            font-weight: 800;
+            color: var(--secondary-color);
+            line-height: 1.4;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .lead {
+            font-size: 16px;
+            color: #665A52;
+            background-color: var(--card-bg);
+            border-left: 4px solid var(--primary-color);
+            padding: 20px 24px;
+            border-radius: 0 10px 10px 0;
+            margin-bottom: 40px;
+        }
+
+        .article h2 {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--secondary-color);
+            margin: 48px 0 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .article h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 32px 0 12px;
+        }
+
+        .article p {
+            font-size: 15px;
+            margin-bottom: 18px;
+        }
+
+        .article ul, .article ol {
+            margin: 0 0 20px 22px;
+            font-size: 15px;
+        }
+
+        .article li { margin-bottom: 8px; }
+
+        .article strong { color: var(--secondary-color); font-weight: 700; }
+
+        .article a { color: var(--primary-color); }
+
+        pre {
+            background-color: #2C2520;
+            color: #EAD8C3;
+            padding: 18px 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-family: 'SFMono-Regular', Consolas, 'Courier New', monospace;
+        }
+
+        code {
+            background-color: #F0E8DE;
+            color: #6B4423;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-family: 'SFMono-Regular', Consolas, 'Courier New', monospace;
+        }
+
+        pre code { background: none; color: inherit; padding: 0; }
+
+        /* 本文の strong は濃い茶色だが、暗い背景のコードブロックでは沈む。
+           `.article strong` より詳細度を上げないと勝てないので .article を付ける。 */
+        .article pre strong { color: #F5C77E; font-weight: 700; }
+
+        .table-wrap { overflow-x: auto; margin-bottom: 22px; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px 14px;
+            text-align: left;
+            border-bottom: 1px solid rgba(90, 74, 66, 0.1);
+        }
+
+        th {
+            background-color: var(--accent-color);
+            color: var(--secondary-color);
+            font-weight: 700;
+            font-size: 13px;
+            white-space: nowrap;
+        }
+
+        .note {
+            background-color: #FFF9F0;
+            border: 1px solid var(--accent-color);
+            border-radius: 10px;
+            padding: 18px 20px;
+            font-size: 14px;
+            color: #665A52;
+            margin-bottom: 22px;
+        }
+
+        .note strong { color: var(--primary-color); }
+
+        .env {
+            font-size: 13px;
+            color: #7E7066;
+            background-color: #F5EFE7;
+            border-radius: 8px;
+            padding: 14px 18px;
+            margin-bottom: 30px;
+        }
+
+        .author-box {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 28px;
+            margin-top: 60px;
+            border: 1px solid rgba(90, 74, 66, 0.08);
+            box-shadow: 0 10px 30px rgba(90, 74, 66, 0.05);
+        }
+
+        .author-box h3 {
+            margin-top: 0;
+            font-size: 16px;
+            color: var(--secondary-color);
+        }
+
+        .author-box p { font-size: 14px; color: #665A52; }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 11px 22px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 15px rgba(139, 90, 43, 0.2);
+        }
+
+        .btn:hover { background-color: #744A22; transform: translateY(-2px); }
+
+        .footer-links {
+            max-width: 760px;
+            margin: 70px auto 0;
+            padding: 30px 20px 0;
+            text-align: center;
+            border-top: 1px solid rgba(90, 74, 66, 0.1);
+        }
+
+        .footer-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            margin: 0 15px;
+        }
+
+        .footer-links a:hover { color: var(--primary-color); }
+
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 11px;
+            color: #9E9085;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo" style="display: flex; align-items: center; gap: 8px;">
+            <img src="logo.jpg" alt="ひろ@AI遊び場 ロゴ" style="height: 38px; border-radius: 6px; display: block;">
+            <a href="index.html" style="font-size: 20px; font-weight: 800; color: #FFFFFF; letter-spacing: 0.5px; text-decoration: none;">ひろ@AI遊び場</a>
+        </div>
+        <nav>
+            <a href="index.html#apps">Apps</a>
+            <a href="index.html#articles">記事</a>
+            <a href="privacy.html">プライバシーポリシー</a>
+        </nav>
+    </header>
+
+    <article class="article">
+        <div class="article-meta">2026-08-09 ・ Android / オーディオ</div>
+        <h1>Androidでアプリごとの音量を変えられない理由を、実測で確かめた</h1>
+
+        <p class="lead">
+            「ライブ配信アプリの音だけ少し下げたい」。そう思って調べ始めたら、Androidの音の仕組みを一段深く覗くことになりました。
+            出力全体に増幅をかけると<strong>効くアプリと効かないアプリがある</strong>こと、そして
+            <strong>AndroidはBluetooth機器ごとに音量を覚えていない</strong>ことが分かりました。
+            推測ではなく、実機の <code>dumpsys</code> 出力で1つずつ確かめた記録です。
+        </p>
+
+        <div class="env">
+            <strong>検証環境</strong>　Xiaomi 14 Ultra（24030PN60G）／ Android 16（API 36）／ HyperOS 3.0<br>
+            出力先: Bluetooth A2DP 接続の骨伝導イヤホン（OpenRun by Shokz）
+        </div>
+
+        <div class="note">
+            <strong>この記事の調べ方について。</strong>
+            使ったのは <code>adb shell dumpsys</code> と <code>settings list</code> という
+            <strong>Android標準の診断コマンド</strong>だけです。自分の端末が今どういう状態かを表示するもので、
+            アプリの解析（逆コンパイル・バイナリ解析・通信の傍受）は<strong>一切行っていません</strong>。
+            登場するアプリはOSの状態を説明するための例で、特定のアプリや企業を批判する意図はありません。
+            出力に含まれるパッケージ名など、説明に不要な情報は伏せています。
+        </div>
+
+        <h2>1. そもそもAndroidの音量は「アプリ」に紐づいていない</h2>
+
+        <p>
+            Androidの音量はアプリ単位ではなく、<strong>音の役割（ストリーム）単位</strong>で管理されています。
+            メディア、着信音、アラーム、通知、通話。この5つ前後の枠しかありません。
+        </p>
+
+        <p>
+            これは設計思想の話です。「着信音とアラームは確実に鳴ってほしい、動画の音は自由に下げたい」という
+            <strong>役割ベースの要求</strong>から出発しているため、アプリという単位が最初から存在しません。
+            同じアプリがメディアも通知も鳴らす以上、アプリを単位にすると利用者の意図と噛み合わない、という判断です。
+        </p>
+
+        <p>
+            Windowsの音量ミキサーがアプリごとに調整できるのは、デスクトップでプロセスごとの
+            オーディオセッションをユーザーが管理する文化があるからで、出発点が違います。
+        </p>
+
+        <h2>2. それなら出力全体に効果をかけてしまえばいい、と考えた</h2>
+
+        <p>
+            Androidには <code>LoudnessEnhancer</code> という音量を持ち上げるエフェクトがあります。
+            通常は「自分のアプリが鳴らす音」に対して使うものですが、
+            <strong>オーディオセッションに 0 を指定すると出力ミックス全体が対象になる</strong>とドキュメントに書かれています。
+        </p>
+
+        <pre><code>// 0 = グローバル出力ミックス
+val fx = LoudnessEnhancer(0)
+fx.setTargetGain(-800)   // mB単位。-800 = -8dB
+fx.enabled = true</code></pre>
+
+        <p>
+            ここで一つ工夫をしました。<strong>判定は「下げる方向」で行う</strong>ことにしたのです。
+            音を大きくすると「大きくなった気がする」で済んでしまいますが、小さくなるのは聞けばすぐ分かります。
+            プラシーボを排除するには減衰のほうが確実です。
+        </p>
+
+        <p>
+            結果は<strong>はっきり下がりました</strong>。ただし——
+        </p>
+
+        <h2>3. 音楽アプリは下がったのに、配信アプリは下がらなかった</h2>
+
+        <p>
+            音楽アプリの音は明確に小さくなったのに、<strong>ライブ配信アプリの音はまったく変わりません</strong>でした。
+            同じ端末、同じイヤホン、同じ瞬間です。なぜ片方だけ効かないのか。
+        </p>
+
+        <p><code>adb shell dumpsys audio</code> で再生中のプレイヤーを見ると、決定的な違いがありました。</p>
+
+        <pre><code>piid:3335 type:<strong>AAudio</strong>  u/pid:10330/1052  state:started
+   usage=USAGE_MEDIA  <strong>sessionId:-1</strong>
+
+piid:3359 type:<strong>android.media.AudioTrack</strong>  u/pid:10591/17113
+   usage=USAGE_MEDIA  <strong>sessionId:3545</strong></code></pre>
+
+        <table style="margin-bottom:22px">
+            <tr><th>アプリ</th><th>再生方式</th><th>セッションID</th><th>結果</th></tr>
+            <tr><td>音楽アプリ</td><td>AudioTrack</td><td>3545</td><td><strong>効く</strong></td></tr>
+            <tr><td>配信アプリ</td><td>AAudio</td><td><strong>-1（なし）</strong></td><td>効かない</td></tr>
+        </table>
+
+        <p>
+            <strong>セッションIDが -1</strong>。これは「エフェクトを一切通さない」という宣言です。
+            AAudio は低遅延再生のためのAPIで、音声処理の段をできるだけ飛ばして最短経路でスピーカーへ送ります。
+            ライブ配信は遅延が命なので、この選択自体はまったく合理的です。
+        </p>
+
+        <p>裏付けは出力スレッドの側にもありました。<code>dumpsys media.audio_flinger</code> の抜粋です。</p>
+
+        <pre><code>Output thread ... name AudioOut_D    →  <strong>2 Effect Chains</strong>
+Output thread ... name AudioOut_15   →  0 Effect Chains
+Output thread ... name AudioOut_1D   →  0 Effect Chains
+Output thread ... name AudioOut_25   →  0 Effect Chains
+Output thread ... name AudioOut_45   →  0 Effect Chains
+Output thread ... name AudioOut_55   →  0 Effect Chains</code></pre>
+
+        <p>
+            出力スレッドは6本あり、<strong>エフェクトチェーンを持っているのは1本だけ</strong>です。
+            グローバルに載せたつもりの効果は、実際にはこの1本にしか乗っていません。
+            低遅延パスを通るアプリの音は、その横をすり抜けていきます。
+        </p>
+
+        <p style="font-size:13px; color:#7E7066;">
+            ※ 上のコードは「自分の端末で試したらどうなるか」を確かめたもので、
+            他人が使っているアプリの音を勝手に操作する目的で使うものではありません。
+            結論から言えば、そうした用途には<strong>そもそも使えません</strong>（この後で分かります）。
+        </p>
+
+        <div class="note">
+            <strong>ここまでの結論。</strong>「端末全体の音量を操作するアプリ」は作れますが、
+            <strong>効く相手と効かない相手があります</strong>。音楽・動画には効き、
+            低遅延再生を使うアプリ（配信・通話・ゲームに多い）には効きません。
+            そしてこれは相手のアプリの実装なので、こちらからは手が出せません。
+        </div>
+
+        <h2>4. 「アプリ個別の音量」に抜け道はないのか</h2>
+
+        <p>
+            もう一つの候補が <code>MediaSession</code> です。アプリが再生セッションを公開していれば、
+            外部から <code>setVolumeTo()</code> でそのセッションの音量を操作できます。
+            これを確かめました。
+        </p>
+
+        <pre><code>$ adb shell dumpsys media_session
+
+package=（音楽アプリ）
+   active=true   <strong>volumeType=LOCAL</strong>, controlType=ABSOLUTE
+
+package=com.android.server.telecom
+   active=false  volumeType=LOCAL
+
+（配信アプリは一覧に無い）</code></pre>
+
+        <p style="font-size:13px; color:#7E7066;">
+            ※ 出力に含まれるパッケージ名は伏せています（内容の説明に必要な部分だけを残しています）。
+        </p>
+
+        <p>ここも2重に塞がっていました。</p>
+
+        <ul>
+            <li><strong>配信アプリはそもそも MediaSession を公開していません。</strong>掴む対象が存在しない</li>
+            <li>音楽アプリは公開していますが <code>volumeType=LOCAL</code> です。これは「音量は端末のストリーム音量で管理する」という意味で、
+                <code>setVolumeTo()</code> を呼んでも<strong>メディア音量全体が動くだけ</strong>。
+                セッション固有の音量を持つのは <code>REMOTE</code>（Chromecastなどへキャスト中）のときだけです</li>
+        </ul>
+
+        <p>
+            残る手段は「他アプリの音をキャプチャして加工し、鳴らし直す」ですが、
+            これは相手が録音を許可している場合のみ成立し、しかも遅延と二重再生が付いてきます。実用にはなりません。
+        </p>
+
+        <h3>なぜメーカー製アプリはできるのか</h3>
+
+        <p>
+            SamsungのSound Assistantはアプリごとの音量を実現しています。あれが可能なのは、
+            <strong>メーカー純正で署名レベルの特権を持っている</strong>からです。
+            サードパーティのアプリには開放されていません。この差は埋められません。
+        </p>
+
+        <p>
+            つまり「アプリごとの音量」は、<strong>技術的にできないのではなく、サードパーティには許されていない</strong>、
+            が正確な答えでした。
+        </p>
+
+        <h2>5. では、Bluetooth機器ごとの音量は？</h2>
+
+        <p>
+            アプリ単位が無理なら、せめて「イヤホンを繋いだときだけ音量を変える」はどうか。
+            Androidは機器を判別して音量を覚えているように見えます。実際に覚えていました——<strong>ただし種類までです</strong>。
+        </p>
+
+        <pre><code>$ adb shell settings list system | grep volume_music
+
+volume_music_speaker=0
+volume_music_earpiece=110
+volume_music_usb_headset=90
+<strong>volume_music_bt_a2dp=90</strong>      ← Bluetoothの枠はこの1つだけ
+volume_music_ble_headset=50
+volume_music_bt_sco=40</code></pre>
+
+        <p>
+            スピーカー、有線、USB、Bluetoothでそれぞれ別の値を持っています。しかし
+            <strong>Bluetoothの枠は「bt_a2dp」1つだけ</strong>です。
+            検証した端末には6台のBluetooth機器がペアリングされていますが、全部でこの1枠を共有しています。
+        </p>
+
+        <p>
+            つまり、骨伝導イヤホン用に上げた音量が、次に別のイヤホンを繋いだときにもそのまま適用されます。
+            <strong>機器ごとには覚えてくれません。</strong>
+        </p>
+
+        <div class="note">
+            <strong>ついでに分かったこと。</strong>メディア音量の内部段階は <strong>0〜150</strong> でした
+            （画面のスライダーは15段階に丸められています）。検証時の値は90、つまり60%。
+            「音が小さい」と感じていても、実はまだ4割の余地が残っていることがあります。
+        </div>
+
+        <h2>6. 穴は見つけたが、先客がいた</h2>
+
+        <p>
+            「Androidが種類ごとまでしかやらないなら、機器ごとにやるアプリを作ればいい」——
+            そう考えて調べたところ、<strong>すでにありました</strong>。
+        </p>
+
+        <p>
+            <strong>Bluetooth Volume Manager（BVM）</strong>は、Bluetooth機器ごとにメディア・通話・着信・通知の音量を記憶し、
+            接続時に自動で復元します。無料、広告なし、オープンソース。評価3.9、レビュー約4,000件。
+            接続時の再生コマンド送信やアプリ自動起動まで持っています。
+        </p>
+
+        <p>
+            自分が思いついた穴は、たいてい誰かがすでに埋めています。
+            ここで「それでも作る」と進むのは、たいてい良い判断ではありません。
+            <strong>調べる前に作らなくてよかった</strong>、というのがこの日いちばんの収穫でした。
+        </p>
+
+        <h2>7. 結局どこまでできるのか（まとめ）</h2>
+
+        <div class="table-wrap">
+            <table>
+                <tr><th>やりたいこと</th><th>可否</th><th>理由</th></tr>
+                <tr><td>アプリごとに音量を変える</td><td>✕</td><td>サードパーティには権限が開放されていない</td></tr>
+                <tr><td>端末全体の音量を増減する</td><td>△</td><td>低遅延再生のアプリには効かない</td></tr>
+                <tr><td>機器ごとにシステム音量を変える</td><td>○</td><td>全アプリに効く。ただし端末MAXが上限</td></tr>
+                <tr><td>自分のアプリの音を増減する</td><td>◎</td><td>制約なし。上限も超えられる</td></tr>
+            </table>
+        </div>
+
+        <p>
+            最後の行が、この調査で唯一そのまま使えた結論でした。
+            <strong>自分が鳴らす音に対してなら、機器ごとのゲイン調整は完全に自由にできます。</strong>
+            出力先の名前は <code>AudioDeviceInfo.getProductName()</code> から取得でき、
+            Bluetoothの権限も要りません（実際に <code>"OpenRun by Shokz"</code> という実機器名が取れました）。
+        </p>
+
+        <p>
+            読み上げ機能を持つアプリなら、「スピーカーでは100%、骨伝導イヤホンでは200%」といった設定が素直に作れます。
+            他人のアプリの音は動かせませんが、自分のアプリの音なら思いどおりです。
+        </p>
+
+        <div class="author-box">
+            <h3>この記事について</h3>
+            <p>
+                実機で確かめた値だけを載せています。<code>dumpsys</code> の出力は検証時点のもので、
+                機種・Androidバージョン・メーカーの音響処理によって結果は変わります。
+                特に AAudio まわりの挙動は端末差が大きい部分です。
+            </p>
+            <p style="margin-bottom:22px">
+                個人でAndroidアプリを作っています。作る前に調べて「作らなくていい」と分かった話も、
+                こうして残していきます。
+            </p>
+            <a href="index.html#apps" class="btn">公開中のアプリを見る</a>
+        </div>
+    </article>
+
+    <div class="footer-links">
+        <a href="index.html">ホーム</a>
+        <a href="terms.html">利用規約</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+        <a href="mailto:hiro.ai.playground@gmail.com">お問い合わせ</a>
+    </div>
+
+    <div class="copyright">
+        &copy; 2026 Hiro @ AI Playground. All Rights Reserved.
+    </div>
+
+</body>
+</html>
