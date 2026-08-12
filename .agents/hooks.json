@@ -1,0 +1,25 @@
+{
+  "workspace-guard": {
+    "PreToolUse": [
+      {
+        "matcher": "run_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python C:/Antigravity/.agents/hooks/guard.py",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  },
+  "read-claude-md": {
+    "PreInvocation": [
+      {
+        "type": "command",
+        "command": "python C:/Antigravity/.agents/hooks/remind.py",
+        "timeout": 10
+      }
+    ]
+  }
+}
