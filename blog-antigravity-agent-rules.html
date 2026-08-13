@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIエージェントに運用ルールを読ませる話 ｜ Antigravity 2.0 と Antigravity CLI を実測した</title>
+    <meta name="description" content="同じフォルダで複数のAIコーディングエージェントを動かしていたら、片方が運用ルールを一度も読んでいませんでした。エラーは出ません。ルールファイルの置き場が製品ごとに違うこと、会話単位で読み込まれること、文章の指示では必ずしも読まれないこと、待機中のCPU消費まで、実測で確かめた記録です。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FAF6F0;
+            --primary-color: #8B5A2B;
+            --secondary-color: #5A4A42;
+            --text-color: #2C2520;
+            --card-bg: #FFFFFF;
+            --accent-color: #EAD8C3;
+            --font-outfit: 'Outfit', 'Noto Sans JP', sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: var(--font-outfit);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        header {
+            background-color: rgba(90, 74, 66, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover { color: var(--accent-color); }
+
+        /* ===== 記事本文 ===== */
+        .article {
+            max-width: 760px;
+            margin: 50px auto 0;
+            padding: 0 20px;
+        }
+
+        .article-meta {
+            font-size: 12px;
+            color: #9E9085;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .article h1 {
+            font-size: 30px;
+            font-weight: 800;
+            color: var(--secondary-color);
+            line-height: 1.4;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .lead {
+            font-size: 16px;
+            color: #665A52;
+            background-color: var(--card-bg);
+            border-left: 4px solid var(--primary-color);
+            padding: 20px 24px;
+            border-radius: 0 10px 10px 0;
+            margin-bottom: 40px;
+        }
+
+        .article h2 {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--secondary-color);
+            margin: 48px 0 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .article h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 32px 0 12px;
+        }
+
+        .article p {
+            font-size: 15px;
+            margin-bottom: 18px;
+        }
+
+        .article ul, .article ol {
+            margin: 0 0 20px 22px;
+            font-size: 15px;
+        }
+
+        .article li { margin-bottom: 8px; }
+
+        .article strong { color: var(--secondary-color); font-weight: 700; }
+
+        .article a { color: var(--primary-color); }
+
+        pre {
+            background-color: #2C2520;
+            color: #EAD8C3;
+            padding: 18px 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-family: 'SFMono-Regular', Consolas, 'Courier New', monospace;
+        }
+
+        code {
+            background-color: #F0E8DE;
+            color: #6B4423;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-family: 'SFMono-Regular', Consolas, 'Courier New', monospace;
+        }
+
+        pre code { background: none; color: inherit; padding: 0; }
+
+        /* 本文の strong は濃い茶色だが、暗い背景のコードブロックでは沈む。
+           `.article strong` より詳細度を上げないと勝てないので .article を付ける。 */
+        .article pre strong { color: #F5C77E; font-weight: 700; }
+
+        .table-wrap { overflow-x: auto; margin-bottom: 22px; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px 14px;
+            text-align: left;
+            border-bottom: 1px solid rgba(90, 74, 66, 0.1);
+        }
+
+        th {
+            background-color: var(--accent-color);
+            color: var(--secondary-color);
+            font-weight: 700;
+            font-size: 13px;
+            white-space: nowrap;
+        }
+
+        .note {
+            background-color: #FFF9F0;
+            border: 1px solid var(--accent-color);
+            border-radius: 10px;
+            padding: 18px 20px;
+            font-size: 14px;
+            color: #665A52;
+            margin-bottom: 22px;
+        }
+
+        .note strong { color: var(--primary-color); }
+
+        .env {
+            font-size: 13px;
+            color: #7E7066;
+            background-color: #F5EFE7;
+            border-radius: 8px;
+            padding: 14px 18px;
+            margin-bottom: 30px;
+        }
+
+        .author-box {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 28px;
+            margin-top: 60px;
+            border: 1px solid rgba(90, 74, 66, 0.08);
+            box-shadow: 0 10px 30px rgba(90, 74, 66, 0.05);
+        }
+
+        .author-box h3 {
+            margin-top: 0;
+            font-size: 16px;
+            color: var(--secondary-color);
+        }
+
+        .author-box p { font-size: 14px; color: #665A52; }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 11px 22px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 15px rgba(139, 90, 43, 0.2);
+        }
+
+        .btn:hover { background-color: #744A22; transform: translateY(-2px); }
+
+        .footer-links {
+            max-width: 760px;
+            margin: 70px auto 0;
+            padding: 30px 20px 0;
+            text-align: center;
+            border-top: 1px solid rgba(90, 74, 66, 0.1);
+        }
+
+        .footer-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            margin: 0 15px;
+        }
+
+        .footer-links a:hover { color: var(--primary-color); }
+
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 11px;
+            color: #9E9085;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo" style="display: flex; align-items: center; gap: 8px;">
+            <img src="logo.jpg" alt="ひろ@AI遊び場 ロゴ" style="height: 38px; border-radius: 6px; display: block;">
+            <a href="index.html" style="font-size: 20px; font-weight: 800; color: #FFFFFF; letter-spacing: 0.5px; text-decoration: none;">ひろ@AI遊び場</a>
+        </div>
+        <nav>
+            <a href="index.html#apps">Apps</a>
+            <a href="index.html#articles">記事</a>
+            <a href="privacy.html">プライバシーポリシー</a>
+        </nav>
+    </header>
+
+    <article class="article">
+        <div class="article-meta">2026-08-14 ・ AI / 開発環境</div>
+        <h1>AIエージェントに運用ルールを読ませる話</h1>
+
+        <p class="lead">
+            同じフォルダで複数のAIコーディングエージェントを動かしています。ある日、その1つが
+            <strong>運用ルールを一度も読んでいなかった</strong>ことに気づきました。
+            エラーは出ません。読んでいないだけで、それらしく動きます。
+            なぜそうなるのか、どうやって気づけるのかを、Google の Antigravity 2.0 と
+            Antigravity CLI で実際に確かめた記録です。
+        </p>
+
+        <div class="env">
+            <strong>検証環境</strong>　Antigravity 2.0 ／ Antigravity CLI 1.1.12 ／ Windows 11<br>
+            検証日: 2026年8月13〜14日
+        </div>
+
+        <div class="note">
+            <strong>この記事の調べ方について。</strong>
+            使ったのは <strong>製品に同梱されているドキュメント</strong>、
+            <strong>公開されているコマンド</strong>（<code>--help</code> や モデル一覧の表示）、
+            そして<strong>自分のPCのプロセス情報</strong>（標準のプロセス一覧）だけです。
+            逆コンパイル・バイナリ解析・通信の傍受は<strong>一切行っていません</strong>。
+            アカウント名・IPアドレス・ユーザー名を含むパスなど、説明に不要な情報は伏せています。
+            <strong>特定の製品や企業を批判する意図はありません。</strong>
+            すべて上記バージョン時点の観測で、今後の更新で変わる可能性があります。
+        </div>
+
+        <h2>1. ルールファイルの置き場は、製品ごとに違う</h2>
+
+        <p>
+            AIコーディングエージェントには「このフォルダではこう作業して」という指示を
+            ファイルで渡せます。ところが<strong>そのファイル名と置き場所が、製品ごとに違います</strong>。
+        </p>
+
+        <div class="table-wrap">
+            <table>
+                <tr><th>エージェント</th><th>読むファイル</th></tr>
+                <tr><td>Claude Code</td><td><code>CLAUDE.md</code></td></tr>
+                <tr><td>Antigravity CLI</td><td><code>GEMINI.md</code> / <code>AGENTS.md</code></td></tr>
+                <tr><td>Antigravity 2.0</td><td><code>.agents/rules/</code> の中の <code>.md</code></td></tr>
+            </table>
+        </div>
+
+        <p>
+            私のフォルダには <code>CLAUDE.md</code> しか置いていませんでした。
+            つまり <strong>Antigravity 側は、運用ルールを1行も受け取らないまま動いていた</strong>ことになります。
+            ビルドの手順も、触ってはいけないフォルダも、何も知らない状態です。
+        </p>
+
+        <p>
+            怖いのは<strong>エラーが一切出ない</strong>ことです。ルールが無ければ、
+            エージェントは一般的な知識で普通に答えます。答えが返ってくるので、気づけません。
+        </p>
+
+        <h2>2. 「ファイルがある」と「読まれている」は別</h2>
+
+        <p>
+            実は <code>.agents/rules.md</code> というファイルは置いてありました。中身も正しく、
+            「運用ルールの正本はこちら」と書いてあります。それでも読まれていませんでした。
+        </p>
+
+        <p>
+            読まれるのは <code>.agents/rules/</code> という<strong>ディレクトリの中の <code>.md</code></strong> で、
+            <code>.agents/rules.md</code> という<strong>ファイル</strong>ではなかったからです。
+            半歩ずれていただけで、内容がどれだけ正しくても届きません。
+        </p>
+
+        <div class="note">
+            <strong>どうやって確かめるか。</strong>
+            会話ログに残る<strong>ツール呼び出しの順序</strong>を見ます。ルールが届いていれば、
+            エージェントの<strong>最初の行動が「ルールファイルを開く」</strong>になります。
+            届いていなければ、いきなりフォルダ一覧を眺め始めたり、そもそも何も読まずに答えます。
+            回答の文面だけを見ても分かりません。もっともらしい答えは、ルール無しでも返ってきます。
+        </div>
+
+        <h2>3. ルールは「会話単位」で読み込まれる</h2>
+
+        <p>
+            ファイルを正しい場所に置いても、<strong>すでに始まっている会話には効きません</strong>。
+            読み込まれるのは会話の開始時だけです。
+        </p>
+
+        <p>
+            これを知らないと「置いたのに効かない」と判断してしまいます。
+            私も一度そう誤診しかけました。<strong>新しい会話を始めてから確かめる</strong>のが正解です。
+        </p>
+
+        <h2>4. 文章で指示しても、必ず読むとは限らない</h2>
+
+        <p>
+            ここが一番の発見でした。ルールファイルに「まず正本を読むこと」と書いておいても、
+            <strong>読む時と読まない時があります</strong>。
+        </p>
+
+        <p>
+            プロジェクト名を含むビルドの質問では、素直に読みに行きました。
+            ところが「実機の画面を操作したい」という質問では<strong>一度も読まずに即答</strong>し、
+            一般的な手順を答えました。私の環境では手順が違うので、そのまま実行すれば事故になります。
+        </p>
+
+        <p>
+            おそらく「プロジェクト固有の知識が要る」と判断した時だけ読みに行っています。
+            一般的な知識で答えられそうな質問ほど、読まずに済ませてしまう。
+            <strong>危ないのは、まさにそういう質問の方</strong>です。
+        </p>
+
+        <p>
+            対処として、入口のファイルから裁量を取り除きました。
+            「どんな質問でも読むこと。<strong>一般的な知識で答えられると思った時ほど読むこと</strong>。
+            この環境は標準の手順と違う」と書き足したところ、実機操作の質問でも読むようになりました。
+        </p>
+
+        <p>
+            ただし、これは<strong>保証ではありません</strong>。効いたのは文面に挙げた範囲だけで、
+            挙げていない領域では同じことが起きます。文章による誘導である限り、確実にはなりません。
+        </p>
+
+        <h2>5. 確実に止めたいなら、フックを使う</h2>
+
+        <p>
+            Antigravity には <code>hooks.json</code> という仕組みがあり、
+            <strong>エージェントがコマンドを実行する直前に割り込めます</strong>。
+            外部のスクリプトを呼び、その返事が <code>deny</code> なら実行そのものが止まります。
+            モデルの判断が入りません。
+        </p>
+
+        <p>
+            危険なコマンド（取り消せない削除、意図しない一括操作など）をここで止めるようにしたところ、
+            実際にブロックされることを確認できました。エージェント側にも
+            「フックによって実行がブロックされた」と表示されます。
+        </p>
+
+        <p>ここでも2つ、静かにハマる落とし穴がありました。</p>
+
+        <p>
+            <strong>説明用のキーを足すとファイルごと無効になります。</strong>
+            <code>hooks.json</code> は<strong>トップレベルのキーをすべてフック名として解釈する</strong>ため、
+            コメント代わりに <code>"_comment"</code> のような項目を1つ書いただけで、
+            全体が読み込まれなくなります。<strong>エラーは出ません。</strong>フックが1つも動かないだけです。
+        </p>
+
+        <p>
+            <strong>フックの出力は ASCII に寄せた方が安全です。</strong>
+            フックはシェル経由で呼ばれるので、受け取り側の文字コードが想定と違うと
+            JSON が壊れて読めなくなります。日本語の理由文をそのまま返して失敗したので、
+            エスケープした形（<code>\uXXXX</code>）で返すようにしました。
+            ここが壊れると<strong>ガードが黙って無効になる</strong>ので、
+            「動いているつもり」が一番危ない場所です。
+        </p>
+
+        <h2>6. 利用枠は2つのグループに分かれている</h2>
+
+        <p>
+            Antigravity CLI は複数のモデルを切り替えて使えますが、
+            <strong>利用枠（クォータ）はモデルごとではなく、2つのグループで共有</strong>されています。
+        </p>
+
+        <div class="table-wrap">
+            <table>
+                <tr><th>グループ</th><th>含まれるモデル</th></tr>
+                <tr><td>Gemini 系</td><td>Gemini Flash / Gemini Pro</td></tr>
+                <tr><td>Claude・GPT 系</td><td>Claude Opus / Claude Sonnet / GPT-OSS</td></tr>
+            </table>
+        </div>
+
+        <p>
+            それぞれに<strong>週単位と5時間単位の2種類</strong>の枠があり、残量は
+            <code>/usage</code> で確認できます（<code>/credits</code> は従量課金のクレジットで別物です）。
+        </p>
+
+        <p>
+            グループが分かれているということは、<strong>片方を使い切っても、もう片方で作業を続けられる</strong>
+            ということです。私はエージェントを2つ立ち上げ、片方を Gemini 系、
+            もう片方を Claude 系に固定して使い分けるようにしました。
+        </p>
+
+        <h2>7. コマンドライン版は、待機中もCPUを使い続ける</h2>
+
+        <p>
+            これは実測していて驚いた点です。Antigravity CLI は
+            <strong>一度でも応答を生成すると、その後ずっと待機中でもCPUを使い続けます</strong>。
+        </p>
+
+        <div class="table-wrap">
+            <table>
+                <tr><th>状態</th><th>CPU使用率（4コア中）</th><th>1コア換算</th></tr>
+                <tr><td>起動直後・まだ何も生成していない</td><td>約 0.6%</td><td>約 2%</td></tr>
+                <tr><td>1回でも生成した後（待機中）</td><td>約 6〜7%</td><td>約 25%</td></tr>
+            </table>
+        </div>
+
+        <p>
+            5分おきに30分、さらに時間を置いて計46分観測しましたが、<strong>下がりませんでした</strong>。
+            会話をクリアしても戻らず、<strong>プロセスを終了して起動し直すと 0.6% に戻ります</strong>。
+            2つ動かしていたので、合計で1コアの半分ほどを待機中に消費していた計算になります。
+        </p>
+
+        <p>
+            測り方は単純で、プロセスのCPU使用時間を一定間隔で2回読み、その差を経過時間で割っただけです。
+            なお同じ環境で、GUI版（Antigravity 2.0）は待機中ほぼ 0% でした。メモリは使いますが、
+            CPUは使っていません。
+        </p>
+
+        <p>
+            対策は「<strong>使わない時は終了する</strong>」に尽きます。起動は10秒ほどなので、
+            必要になってから立ち上げ直す方が安く済みます。
+        </p>
+
+        <h2>8. おまけ：自分の誤診の話</h2>
+
+        <p>
+            このCPUの原因を探していて、設定項目を1つ変えたら
+            <strong>6.4% が 0.8% に下がりました</strong>。8分の1です。原因が分かったと思いました。
+        </p>
+
+        <p>
+            違いました。<strong>設定を変えた方だけ、再起動していた</strong>のです。
+            もう一方を再起動して測り直すと数字が入れ替わり、設定は無関係だと分かりました。
+            「1回生成すると上がる」という本当の原因にたどり着いたのは、その後です。
+        </p>
+
+        <p>
+            <strong>変えたものと変わった結果の間に、変えていないつもりの差が挟まっていないか。</strong>
+            AIに手伝ってもらう検証でも、ここは人間側が疑うしかない部分だと思いました。
+        </p>
+
+        <h2>まとめ</h2>
+
+        <div class="table-wrap">
+            <table>
+                <tr><th>気をつける点</th><th>どうする</th></tr>
+                <tr><td>ルールの置き場が製品ごとに違う</td><td>同梱ドキュメントで探索先を確かめる</td></tr>
+                <tr><td>置いても読まれないことがある</td><td>ログのツール呼び出し順で確かめる</td></tr>
+                <tr><td>ルールは会話開始時に読まれる</td><td>新しい会話で検証する</td></tr>
+                <tr><td>文章の指示は必ずしも従われない</td><td>止めたい操作はフックで止める</td></tr>
+                <tr><td>コマンドライン版は待機中もCPUを使う</td><td>使わない時は終了する</td></tr>
+            </table>
+        </div>
+
+        <p>
+            どれも<strong>エラーが出ないまま無効になっている</strong>類の話でした。
+            動いているように見えるので、探しに行かないと見つかりません。
+            複数のAIエージェントを同じフォルダで動かしている方の参考になれば幸いです。
+        </p>
+
+        <div class="author-box">
+            <h3>この記事について</h3>
+            <p>
+                すべて自分の環境で実測した値です。<strong>Antigravity 2.0 / Antigravity CLI 1.1.12</strong>、
+                Windows 11、2026年8月時点の観測で、<strong>バージョンが上がれば変わります</strong>。
+                CPU使用率は4コアの環境での測定なので、コア数が違えば見え方も変わります。
+            </p>
+            <p>
+                調べたのは製品に同梱されているドキュメントと、公開されているコマンド、
+                自分のPCのプロセス情報だけです。<strong>不具合の指摘ではなく、
+                使う側が知っておくと事故を防げる挙動として</strong>書きました。
+            </p>
+            <p style="margin-bottom:22px">
+                個人でAndroidアプリを作っています。作る前に調べて「作らなくていい」と分かった話も、
+                こうして残していきます。
+            </p>
+            <a href="index.html#apps" class="btn">公開中のアプリを見る</a>
+        </div>
+    </article>
+
+    <div class="footer-links">
+        <a href="index.html">ホーム</a>
+        <a href="terms.html">利用規約</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+        <a href="mailto:hiro.ai.playground@gmail.com">お問い合わせ</a>
+    </div>
+
+    <div class="copyright">
+        &copy; 2026 Hiro @ AI Playground. All Rights Reserved.
+    </div>
+
+</body>
+</html>
