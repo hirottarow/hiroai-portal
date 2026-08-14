@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本地図 制覇チャレンジ(表示専用) ｜ ひろ@AI遊び場</title>
+    <meta name="description" content="配信画面に映すための表示専用ビュー。操作画面(tool-japan-map.html)を同じブラウザの別タブで開くと自動的に反映されます。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FAF6F0;
+            --primary-color: #8B5A2B;
+            --secondary-color: #5A4A42;
+            --text-color: #2C2520;
+            --card-bg: #FFFFFF;
+            --accent-color: #EAD8C3;
+            --font-outfit: 'Outfit', 'Noto Sans JP', sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html, body {
+            height: 100%;
+            font-family: var(--font-outfit);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            overflow: hidden;
+        }
+
+        .stage {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            gap: 16px;
+        }
+
+        .title { font-size: clamp(18px, 3vw, 30px); font-weight: 800; color: var(--secondary-color); text-align: center; }
+        .title .collected { color: var(--primary-color); }
+
+        .progress-line { font-size: clamp(14px, 2vw, 18px); color: #7E7066; text-align: center; }
+        .progress-line b { color: var(--secondary-color); font-size: 1.2em; }
+
+        .map-holder { flex: 1; width: 100%; max-width: 900px; display: flex; align-items: center; justify-content: center; min-height: 0; }
+        .hex-map { width: 100%; height: 100%; max-height: 100%; }
+        .pref-hex text { font-family: var(--font-outfit); fill: var(--text-color); }
+
+        .legend { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; font-size: clamp(11px, 1.4vw, 14px); color: #7E7066; }
+        .legend span { display: inline-flex; align-items: center; gap: 6px; }
+        .legend i { width: 14px; height: 14px; border-radius: 3px; display: inline-block; border: 1px solid rgba(90,74,66,0.2); }
+
+        .congrats-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(90,74,66,0.94), rgba(44,37,32,0.94));
+            z-index: 300;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+        .congrats-overlay.show { display: flex; }
+        .congrats-overlay h2 { font-size: clamp(30px, 6vw, 60px); font-weight: 800; margin-bottom: 16px; }
+        .congrats-overlay p { font-size: clamp(14px, 2.4vw, 22px); color: var(--accent-color); }
+    </style>
+</head>
+<body>
+
+    <div class="stage">
+        <div class="title" id="titleLine">日本地図 制覇チャレンジ</div>
+        <div class="progress-line"><b id="progressBig">0 / 47</b> 都道府県が達成 ・ 総登録 <b id="totalCount">0</b>人</div>
+        <div class="map-holder">
+            <svg id="mapSvg" class="hex-map" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+        <div class="legend">
+            <span><i style="background:#F3ECE3;"></i>未登録</span>
+            <span><i id="legendMid" style="background:#F0B429;"></i>中間</span>
+            <span><i id="legendAchieve" style="background:#4C9A6B;"></i>達成</span>
+        </div>
+    </div>
+
+    <div class="congrats-overlay" id="congratsOverlay">
+        <div>
+            <h2>🎉 Congratulations! 🎉</h2>
+            <p id="congratsText">全都道府県、達成しました！</p>
+        </div>
+    </div>
+
+    <script>
+        const PREFECTURES = [
+            {name:'北海道', col:7, row:0}, {name:'青森県', col:7, row:1}, {name:'岩手県', col:7, row:2},
+            {name:'宮城県', col:7, row:3}, {name:'秋田県', col:6, row:2}, {name:'山形県', col:6, row:3},
+            {name:'福島県', col:7, row:4}, {name:'茨城県', col:8, row:5}, {name:'栃木県', col:7, row:5},
+            {name:'群馬県', col:6, row:5}, {name:'埼玉県', col:7, row:6}, {name:'千葉県', col:8, row:6},
+            {name:'東京都', col:7, row:7}, {name:'神奈川県', col:7, row:8}, {name:'新潟県', col:6, row:4},
+            {name:'富山県', col:5, row:5}, {name:'石川県', col:4, row:5}, {name:'福井県', col:4, row:6},
+            {name:'山梨県', col:6, row:7}, {name:'長野県', col:6, row:6}, {name:'岐阜県', col:5, row:6},
+            {name:'静岡県', col:6, row:8}, {name:'愛知県', col:5, row:7}, {name:'三重県', col:5, row:8},
+            {name:'滋賀県', col:4, row:7}, {name:'京都府', col:3, row:7}, {name:'大阪府', col:3, row:8},
+            {name:'兵庫県', col:2, row:7}, {name:'奈良県', col:4, row:8}, {name:'和歌山県', col:4, row:9},
+            {name:'鳥取県', col:2, row:6}, {name:'島根県', col:1, row:6}, {name:'岡山県', col:2, row:8},
+            {name:'広島県', col:1, row:7}, {name:'山口県', col:0, row:7}, {name:'徳島県', col:4, row:10},
+            {name:'香川県', col:3, row:9}, {name:'愛媛県', col:2, row:9}, {name:'高知県', col:3, row:10},
+            {name:'福岡県', col:1, row:8}, {name:'佐賀県', col:0, row:8}, {name:'長崎県', col:0, row:9},
+            {name:'熊本県', col:1, row:9}, {name:'大分県', col:2, row:10}, {name:'宮崎県', col:1, row:10},
+            {name:'鹿児島県', col:1, row:11}, {name:'沖縄県', col:0, row:13}
+        ];
+        PREFECTURES.forEach(p => { p.short = p.name.replace(/[県府都]$/, ''); });
+
+        const R = 1, SQRT3 = Math.sqrt(3);
+        function hexCenter(col, row) {
+            return { x: col * 1.5 * R, y: row * SQRT3 * R + (col % 2 === 1 ? SQRT3 * R / 2 : 0) };
+        }
+        function hexPoints(cx, cy) {
+            const pts = [];
+            for (let i = 0; i < 6; i++) {
+                const a = Math.PI / 180 * 60 * i;
+                pts.push([cx + R * Math.cos(a), cy + R * Math.sin(a)]);
+            }
+            return pts;
+        }
+        const LAYOUT = PREFECTURES.map(p => {
+            const c = hexCenter(p.col, p.row);
+            return { ...p, center: c, pts: hexPoints(c.x, c.y) };
+        });
+
+        const ENTRIES_KEY = 'japanMapEntries';
+        const SETTINGS_KEY = 'japanMapSettings';
+        const DEFAULT_SETTINGS = { title: '', achieveCount: 3, achieveColor: '#4C9A6B', midCount: 1, midColor: '#F0B429' };
+
+        function loadEntries() {
+            try { return JSON.parse(localStorage.getItem(ENTRIES_KEY)) || []; } catch (e) { return []; }
+        }
+        function loadSettings() {
+            try { return { ...DEFAULT_SETTINGS, ...(JSON.parse(localStorage.getItem(SETTINGS_KEY)) || {}) }; } catch (e) { return { ...DEFAULT_SETTINGS }; }
+        }
+
+        const SVGNS = 'http://www.w3.org/2000/svg';
+        const mapSvg = document.getElementById('mapSvg');
+        let wasComplete = false;
+
+        function countsByPref(entries) {
+            const c = {};
+            entries.forEach(e => { c[e.pref] = (c[e.pref] || 0) + 1; });
+            return c;
+        }
+        function colorFor(count, settings) {
+            if (count >= settings.achieveCount) return settings.achieveColor;
+            if (count > 0 && count >= settings.midCount) return settings.midColor;
+            return '#F3ECE3';
+        }
+
+        function render() {
+            const entries = loadEntries();
+            const settings = loadSettings();
+            const counts = countsByPref(entries);
+
+            mapSvg.innerHTML = '';
+            let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+            LAYOUT.forEach(p => p.pts.forEach(([x, y]) => {
+                minX = Math.min(minX, x); maxX = Math.max(maxX, x);
+                minY = Math.min(minY, y); maxY = Math.max(maxY, y);
+            }));
+            const pad = 0.4;
+            mapSvg.setAttribute('viewBox', `${minX - pad} ${minY - pad} ${maxX - minX + pad * 2} ${maxY - minY + pad * 2}`);
+
+            LAYOUT.forEach(p => {
+                const count = counts[p.name] || 0;
+                const g = document.createElementNS(SVGNS, 'g');
+                g.setAttribute('class', 'pref-hex');
+                const poly = document.createElementNS(SVGNS, 'polygon');
+                poly.setAttribute('points', p.pts.map(pt => pt.join(',')).join(' '));
+                poly.setAttribute('fill', colorFor(count, settings));
+                poly.setAttribute('stroke', '#5A4A42');
+                poly.setAttribute('stroke-width', '0.04');
+                g.appendChild(poly);
+
+                const text = document.createElementNS(SVGNS, 'text');
+                text.setAttribute('x', p.center.x);
+                text.setAttribute('y', p.center.y - 0.02);
+                text.setAttribute('text-anchor', 'middle');
+                text.setAttribute('font-size', '0.32');
+                text.setAttribute('font-weight', '700');
+                text.textContent = p.short;
+                g.appendChild(text);
+
+                if (count > 0) {
+                    const sub = document.createElementNS(SVGNS, 'text');
+                    sub.setAttribute('x', p.center.x);
+                    sub.setAttribute('y', p.center.y + 0.34);
+                    sub.setAttribute('text-anchor', 'middle');
+                    sub.setAttribute('font-size', '0.24');
+                    sub.textContent = count + '人';
+                    g.appendChild(sub);
+                }
+                mapSvg.appendChild(g);
+            });
+
+            document.getElementById('legendMid').style.background = settings.midColor;
+            document.getElementById('legendAchieve').style.background = settings.achieveColor;
+
+            const achievedCount = PREFECTURES.filter(p => (counts[p.name] || 0) >= settings.achieveCount).length;
+            document.getElementById('progressBig').textContent = `${achievedCount} / 47`;
+            document.getElementById('totalCount').textContent = entries.length;
+            document.getElementById('titleLine').innerHTML = settings.title
+                ? `<span class="collected">${settings.title}</span> 制覇チャレンジ`
+                : '日本地図 制覇チャレンジ';
+
+            const isComplete = achievedCount === 47;
+            if (isComplete && !wasComplete) {
+                document.getElementById('congratsText').textContent = settings.title ? `「${settings.title}」全都道府県、達成しました！` : '全都道府県、達成しました！';
+                const el = document.getElementById('congratsOverlay');
+                el.classList.add('show');
+                setTimeout(() => el.classList.remove('show'), 10000);
+            }
+            wasComplete = isComplete;
+        }
+
+        window.addEventListener('storage', ev => {
+            if (ev.key === ENTRIES_KEY || ev.key === SETTINGS_KEY) render();
+        });
+        // storageイベントが届かない環境向けの保険ポーリング
+        setInterval(render, 3000);
+
+        render();
+    </script>
+
+</body>
+</html>

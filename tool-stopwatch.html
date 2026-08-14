@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ストップウォッチ・ラップタイマー(無料・登録不要) ｜ ひろ@AI遊び場</title>
+    <meta name="description" content="ブラウザで動く無料のストップウォッチ／ラップタイマー。インストール不要、データは端末内のみで完結します。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FAF6F0;
+            --primary-color: #8B5A2B;
+            --secondary-color: #5A4A42;
+            --text-color: #2C2520;
+            --card-bg: #FFFFFF;
+            --accent-color: #EAD8C3;
+            --font-outfit: 'Outfit', 'Noto Sans JP', sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: var(--font-outfit);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        header {
+            background-color: rgba(90, 74, 66, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            margin-left: 20px;
+        }
+
+        nav a:hover { color: var(--accent-color); }
+
+        .tool-wrap {
+            max-width: 640px;
+            margin: 50px auto 0;
+            padding: 0 20px;
+        }
+
+        .tool-meta {
+            font-size: 12px;
+            color: #9E9085;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+        }
+
+        .panel {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 40px 30px;
+            border: 1px solid rgba(90, 74, 66, 0.08);
+            box-shadow: 0 10px 30px rgba(90, 74, 66, 0.05);
+            text-align: center;
+        }
+
+        .display {
+            font-size: 52px;
+            font-weight: 800;
+            font-variant-numeric: tabular-nums;
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .display .ms { font-size: 26px; color: var(--primary-color); }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        button {
+            font-family: var(--font-outfit);
+            font-size: 15px;
+            font-weight: 700;
+            border: none;
+            border-radius: 10px;
+            padding: 14px 26px;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.15s;
+        }
+
+        button:active { transform: translateY(1px); }
+
+        .btn-primary { background-color: var(--primary-color); color: #fff; }
+        .btn-primary:hover { background-color: #744A22; }
+
+        .btn-secondary { background-color: var(--accent-color); color: var(--secondary-color); }
+        .btn-secondary:hover { background-color: #DFC7A5; }
+
+        .btn-danger { background-color: #F0E8DE; color: #9C4B3F; }
+        .btn-danger:hover { background-color: #E5D5C4; }
+
+        button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+        .laps {
+            margin-top: 30px;
+            text-align: left;
+            max-height: 320px;
+            overflow-y: auto;
+        }
+
+        .lap-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 14px;
+            font-size: 14px;
+            border-bottom: 1px solid rgba(90, 74, 66, 0.08);
+        }
+
+        .lap-row:nth-child(odd) { background-color: #FAF8F5; }
+
+        .lap-row .lap-no { color: #9E9085; font-weight: 700; }
+        .lap-row .lap-diff { color: #9E9085; }
+        .lap-row .lap-total { font-variant-numeric: tabular-nums; color: var(--secondary-color); font-weight: 700; }
+
+        .empty-hint { text-align: center; color: #9E9085; font-size: 13px; padding: 20px 0; }
+
+        .article-note {
+            margin-top: 24px;
+            font-size: 13px;
+            color: #7E7066;
+            background-color: #F5EFE7;
+            border-radius: 10px;
+            padding: 16px 18px;
+        }
+
+        .footer-links {
+            max-width: 640px;
+            margin: 60px auto 0;
+            padding: 30px 20px 0;
+            text-align: center;
+            border-top: 1px solid rgba(90, 74, 66, 0.1);
+        }
+
+        .footer-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            margin: 0 15px;
+        }
+
+        .footer-links a:hover { color: var(--primary-color); }
+
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 11px;
+            color: #9E9085;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo" style="display: flex; align-items: center; gap: 8px;">
+            <img src="logo.jpg" alt="ひろ@AI遊び場 ロゴ" style="height: 38px; border-radius: 6px; display: block;">
+            <a href="index.html" style="font-size: 20px; font-weight: 800; color: #FFFFFF; letter-spacing: 0.5px; text-decoration: none;">ひろ@AI遊び場</a>
+        </div>
+        <nav>
+            <a href="index.html#apps">Apps</a>
+            <a href="tools.html">ツール</a>
+            <a href="index.html#articles">記事</a>
+            <a href="privacy.html">プライバシーポリシー</a>
+        </nav>
+    </header>
+
+    <div class="tool-wrap">
+        <div class="tool-meta"><a href="tools.html" style="color:#9E9085;">ツール一覧</a> ・ 無料・登録不要</div>
+        <h1>ストップウォッチ / ラップタイマー</h1>
+
+        <div class="panel">
+            <div class="display" id="display">00:00<span class="ms">.00</span></div>
+            <div class="controls">
+                <button class="btn-primary" id="startBtn">スタート</button>
+                <button class="btn-secondary" id="lapBtn" disabled>ラップ</button>
+                <button class="btn-danger" id="resetBtn" disabled>リセット</button>
+            </div>
+            <div class="laps" id="laps">
+                <div class="empty-hint" id="emptyHint">ラップを記録するとここに一覧が出ます</div>
+            </div>
+        </div>
+
+        <div class="article-note">計測データはこのページを開いている間だけ保持され、閉じると消えます。サーバーへの送信は行いません。</div>
+
+        <div class="footer-links">
+            <a href="tools.html">ツール一覧</a>
+            <a href="index.html">ホーム</a>
+            <a href="privacy.html">プライバシーポリシー</a>
+        </div>
+
+        <div class="copyright">&copy; 2026 Hiro @ AI Playground. All Rights Reserved.</div>
+    </div>
+
+    <script>
+        const display = document.getElementById('display');
+        const startBtn = document.getElementById('startBtn');
+        const lapBtn = document.getElementById('lapBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const lapsEl = document.getElementById('laps');
+        const emptyHint = document.getElementById('emptyHint');
+
+        let running = false;
+        let startTime = 0;
+        let elapsedBeforePause = 0;
+        let rafId = null;
+        let laps = [];
+        let lastLapTotal = 0;
+
+        function format(ms) {
+            const totalMs = Math.max(0, Math.floor(ms));
+            const minutes = Math.floor(totalMs / 60000);
+            const seconds = Math.floor((totalMs % 60000) / 1000);
+            const centis = Math.floor((totalMs % 1000) / 10);
+            const pad = (n, len) => String(n).padStart(len, '0');
+            return { main: `${pad(minutes, 2)}:${pad(seconds, 2)}`, ms: pad(centis, 2) };
+        }
+
+        function currentElapsed() {
+            return running ? elapsedBeforePause + (performance.now() - startTime) : elapsedBeforePause;
+        }
+
+        function tick() {
+            const { main, ms } = format(currentElapsed());
+            display.innerHTML = `${main}<span class="ms">.${ms}</span>`;
+            if (running) rafId = requestAnimationFrame(tick);
+        }
+
+        function renderLaps() {
+            if (laps.length === 0) {
+                lapsEl.innerHTML = '<div class="empty-hint" id="emptyHint">ラップを記録するとここに一覧が出ます</div>';
+                return;
+            }
+            lapsEl.innerHTML = laps.map((lap, i) => {
+                const total = format(lap.total);
+                const diff = format(lap.diff);
+                return `<div class="lap-row">
+                    <span class="lap-no">Lap ${i + 1}</span>
+                    <span class="lap-diff">+${diff.main}.${diff.ms}</span>
+                    <span class="lap-total">${total.main}.${total.ms}</span>
+                </div>`;
+            }).reverse().join('');
+        }
+
+        startBtn.addEventListener('click', () => {
+            if (!running) {
+                running = true;
+                startTime = performance.now();
+                startBtn.textContent = 'ストップ';
+                startBtn.classList.remove('btn-primary');
+                startBtn.classList.add('btn-danger');
+                lapBtn.disabled = false;
+                resetBtn.disabled = false;
+                tick();
+            } else {
+                running = false;
+                elapsedBeforePause = currentElapsed();
+                cancelAnimationFrame(rafId);
+                startBtn.textContent = 'スタート';
+                startBtn.classList.remove('btn-danger');
+                startBtn.classList.add('btn-primary');
+                lapBtn.disabled = true;
+            }
+        });
+
+        lapBtn.addEventListener('click', () => {
+            const total = currentElapsed();
+            laps.push({ total, diff: total - lastLapTotal });
+            lastLapTotal = total;
+            renderLaps();
+        });
+
+        resetBtn.addEventListener('click', () => {
+            running = false;
+            cancelAnimationFrame(rafId);
+            elapsedBeforePause = 0;
+            lastLapTotal = 0;
+            laps = [];
+            display.innerHTML = '00:00<span class="ms">.00</span>';
+            startBtn.textContent = 'スタート';
+            startBtn.classList.remove('btn-danger');
+            startBtn.classList.add('btn-primary');
+            lapBtn.disabled = true;
+            resetBtn.disabled = true;
+            renderLaps();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字数カウンター(無料・登録不要) ｜ ひろ@AI遊び場</title>
+    <meta name="description" content="文字数・スペースを除いた文字数・行数・原稿用紙換算をリアルタイムで表示する無料の文字数カウンター。テキストは送信されません。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FAF6F0;
+            --primary-color: #8B5A2B;
+            --secondary-color: #5A4A42;
+            --text-color: #2C2520;
+            --card-bg: #FFFFFF;
+            --accent-color: #EAD8C3;
+            --font-outfit: 'Outfit', 'Noto Sans JP', sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: var(--font-outfit);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        header {
+            background-color: rgba(90, 74, 66, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            margin-left: 20px;
+        }
+
+        nav a:hover { color: var(--accent-color); }
+
+        .tool-wrap {
+            max-width: 720px;
+            margin: 50px auto 0;
+            padding: 0 20px;
+        }
+
+        .tool-meta {
+            font-size: 12px;
+            color: #9E9085;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+        }
+
+        .panel {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid rgba(90, 74, 66, 0.08);
+            box-shadow: 0 10px 30px rgba(90, 74, 66, 0.05);
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 280px;
+            font-family: var(--font-outfit);
+            font-size: 15px;
+            line-height: 1.7;
+            padding: 16px;
+            border: 1px solid rgba(90, 74, 66, 0.2);
+            border-radius: 10px;
+            resize: vertical;
+            color: var(--text-color);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin-top: 20px;
+        }
+
+        @media (min-width: 520px) {
+            .stats { grid-template-columns: repeat(4, 1fr); }
+        }
+
+        .stat-item {
+            background-color: #FAF8F5;
+            border-radius: 10px;
+            padding: 14px;
+            border-left: 4px solid var(--primary-color);
+            text-align: center;
+        }
+
+        .stat-item .num {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--secondary-color);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .stat-item .label {
+            font-size: 11px;
+            color: #7E7066;
+            margin-top: 4px;
+        }
+
+        .clear-btn {
+            margin-top: 16px;
+            font-family: var(--font-outfit);
+            font-size: 13px;
+            font-weight: 700;
+            background-color: var(--accent-color);
+            color: var(--secondary-color);
+            border: none;
+            border-radius: 8px;
+            padding: 10px 18px;
+            cursor: pointer;
+        }
+
+        .clear-btn:hover { background-color: #DFC7A5; }
+
+        .article-note {
+            margin-top: 24px;
+            font-size: 13px;
+            color: #7E7066;
+            background-color: #F5EFE7;
+            border-radius: 10px;
+            padding: 16px 18px;
+        }
+
+        .footer-links {
+            max-width: 720px;
+            margin: 60px auto 0;
+            padding: 30px 20px 0;
+            text-align: center;
+            border-top: 1px solid rgba(90, 74, 66, 0.1);
+        }
+
+        .footer-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            margin: 0 15px;
+        }
+
+        .footer-links a:hover { color: var(--primary-color); }
+
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 11px;
+            color: #9E9085;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo" style="display: flex; align-items: center; gap: 8px;">
+            <img src="logo.jpg" alt="ひろ@AI遊び場 ロゴ" style="height: 38px; border-radius: 6px; display: block;">
+            <a href="index.html" style="font-size: 20px; font-weight: 800; color: #FFFFFF; letter-spacing: 0.5px; text-decoration: none;">ひろ@AI遊び場</a>
+        </div>
+        <nav>
+            <a href="index.html#apps">Apps</a>
+            <a href="tools.html">ツール</a>
+            <a href="index.html#articles">記事</a>
+            <a href="privacy.html">プライバシーポリシー</a>
+        </nav>
+    </header>
+
+    <div class="tool-wrap">
+        <div class="tool-meta"><a href="tools.html" style="color:#9E9085;">ツール一覧</a> ・ 無料・登録不要</div>
+        <h1>文字数カウンター</h1>
+
+        <div class="panel">
+            <textarea id="text" placeholder="ここに文章を入力してください"></textarea>
+
+            <div class="stats">
+                <div class="stat-item"><div class="num" id="charCount">0</div><div class="label">文字数</div></div>
+                <div class="stat-item"><div class="num" id="charNoSpace">0</div><div class="label">スペース・改行除く</div></div>
+                <div class="stat-item"><div class="num" id="lineCount">0</div><div class="label">行数</div></div>
+                <div class="stat-item"><div class="num" id="genkoCount">0</div><div class="label">原稿用紙(400字詰め)</div></div>
+            </div>
+
+            <button class="clear-btn" id="clearBtn">クリア</button>
+        </div>
+
+        <div class="article-note">入力したテキストはブラウザ内でのみ処理され、サーバーへは送信されません。</div>
+
+        <div class="footer-links">
+            <a href="tools.html">ツール一覧</a>
+            <a href="index.html">ホーム</a>
+            <a href="privacy.html">プライバシーポリシー</a>
+        </div>
+
+        <div class="copyright">&copy; 2026 Hiro @ AI Playground. All Rights Reserved.</div>
+    </div>
+
+    <script>
+        const textEl = document.getElementById('text');
+        const charCount = document.getElementById('charCount');
+        const charNoSpace = document.getElementById('charNoSpace');
+        const lineCount = document.getElementById('lineCount');
+        const genkoCount = document.getElementById('genkoCount');
+        const clearBtn = document.getElementById('clearBtn');
+
+        function update() {
+            const text = textEl.value;
+            const total = [...text].length;
+            const noSpace = [...text.replace(/[\s　]/g, '')].length;
+            const lines = text === '' ? 0 : text.split('\n').length;
+            const genko = total === 0 ? 0 : Math.ceil(total / 400);
+
+            charCount.textContent = total.toLocaleString('ja-JP');
+            charNoSpace.textContent = noSpace.toLocaleString('ja-JP');
+            lineCount.textContent = lines.toLocaleString('ja-JP');
+            genkoCount.textContent = genko.toLocaleString('ja-JP');
+        }
+
+        clearBtn.addEventListener('click', () => {
+            textEl.value = '';
+            update();
+            textEl.focus();
+        });
+
+        textEl.addEventListener('input', update);
+        update();
+    </script>
+
+</body>
+</html>

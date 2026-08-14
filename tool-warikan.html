@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>割り勘計算機(無料・登録不要) ｜ ひろ@AI遊び場</title>
+    <meta name="description" content="合計金額と人数から一人あたりの金額を即計算する無料の割り勘計算機。端数処理(切り上げ/切り捨て/四捨五入)や幹事負担にも対応。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FAF6F0;
+            --primary-color: #8B5A2B;
+            --secondary-color: #5A4A42;
+            --text-color: #2C2520;
+            --card-bg: #FFFFFF;
+            --accent-color: #EAD8C3;
+            --font-outfit: 'Outfit', 'Noto Sans JP', sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: var(--font-outfit);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        header {
+            background-color: rgba(90, 74, 66, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            margin-left: 20px;
+        }
+
+        nav a:hover { color: var(--accent-color); }
+
+        .tool-wrap {
+            max-width: 640px;
+            margin: 50px auto 0;
+            padding: 0 20px;
+        }
+
+        .tool-meta {
+            font-size: 12px;
+            color: #9E9085;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+        }
+
+        .panel {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 36px 30px;
+            border: 1px solid rgba(90, 74, 66, 0.08);
+            box-shadow: 0 10px 30px rgba(90, 74, 66, 0.05);
+        }
+
+        .field { margin-bottom: 20px; }
+
+        .field label {
+            display: block;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 8px;
+        }
+
+        .field input, .field select {
+            width: 100%;
+            font-family: var(--font-outfit);
+            font-size: 17px;
+            padding: 12px 14px;
+            border: 1px solid rgba(90, 74, 66, 0.2);
+            border-radius: 10px;
+            background-color: #FFFFFF;
+            color: var(--text-color);
+        }
+
+        .field-row { display: flex; gap: 16px; }
+        .field-row .field { flex: 1; }
+
+        .checkbox-field {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: var(--secondary-color);
+            margin-bottom: 24px;
+        }
+
+        .checkbox-field input { width: 18px; height: 18px; }
+
+        .result {
+            background-color: #F5EFE7;
+            border-radius: 12px;
+            padding: 22px 24px;
+        }
+
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 8px 0;
+        }
+
+        .result-row .label { font-size: 13px; color: #7E7066; }
+        .result-row .value { font-size: 20px; font-weight: 800; color: var(--secondary-color); font-variant-numeric: tabular-nums; }
+        .result-row.main .value { font-size: 30px; color: var(--primary-color); }
+
+        .result-note { font-size: 12px; color: #9E9085; margin-top: 6px; }
+
+        .article-note {
+            margin-top: 24px;
+            font-size: 13px;
+            color: #7E7066;
+            background-color: #F5EFE7;
+            border-radius: 10px;
+            padding: 16px 18px;
+        }
+
+        .footer-links {
+            max-width: 640px;
+            margin: 60px auto 0;
+            padding: 30px 20px 0;
+            text-align: center;
+            border-top: 1px solid rgba(90, 74, 66, 0.1);
+        }
+
+        .footer-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            margin: 0 15px;
+        }
+
+        .footer-links a:hover { color: var(--primary-color); }
+
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 11px;
+            color: #9E9085;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo" style="display: flex; align-items: center; gap: 8px;">
+            <img src="logo.jpg" alt="ひろ@AI遊び場 ロゴ" style="height: 38px; border-radius: 6px; display: block;">
+            <a href="index.html" style="font-size: 20px; font-weight: 800; color: #FFFFFF; letter-spacing: 0.5px; text-decoration: none;">ひろ@AI遊び場</a>
+        </div>
+        <nav>
+            <a href="index.html#apps">Apps</a>
+            <a href="tools.html">ツール</a>
+            <a href="index.html#articles">記事</a>
+            <a href="privacy.html">プライバシーポリシー</a>
+        </nav>
+    </header>
+
+    <div class="tool-wrap">
+        <div class="tool-meta"><a href="tools.html" style="color:#9E9085;">ツール一覧</a> ・ 無料・登録不要</div>
+        <h1>割り勘計算機</h1>
+
+        <div class="panel">
+            <div class="field">
+                <label for="total">合計金額(円)</label>
+                <input type="number" id="total" value="10000" min="0">
+            </div>
+
+            <div class="field-row">
+                <div class="field">
+                    <label for="people">人数</label>
+                    <input type="number" id="people" value="4" min="1">
+                </div>
+                <div class="field">
+                    <label for="unit">端数の単位</label>
+                    <select id="unit">
+                        <option value="1">1円</option>
+                        <option value="10" selected>10円</option>
+                        <option value="100">100円</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="rounding">端数処理</label>
+                <select id="rounding">
+                    <option value="ceil">切り上げ(全員同額・徴収額に余裕を持たせる)</option>
+                    <option value="floor">切り捨て(全員同額・不足分が出ることがある)</option>
+                    <option value="round">四捨五入(全員同額)</option>
+                </select>
+            </div>
+
+            <label class="checkbox-field">
+                <input type="checkbox" id="organizerPays">
+                幹事(1人)が端数を多めに負担する
+            </label>
+
+            <div class="result" id="result"></div>
+        </div>
+
+        <div class="article-note">この計算機は端数の丸め誤差を「差額」として表示します。幹事負担モードでは、幹事以外は端数の単位で切り捨てた同額を払い、残りを幹事1人がまとめて負担します。</div>
+
+        <div class="footer-links">
+            <a href="tools.html">ツール一覧</a>
+            <a href="index.html">ホーム</a>
+            <a href="privacy.html">プライバシーポリシー</a>
+        </div>
+
+        <div class="copyright">&copy; 2026 Hiro @ AI Playground. All Rights Reserved.</div>
+    </div>
+
+    <script>
+        const totalEl = document.getElementById('total');
+        const peopleEl = document.getElementById('people');
+        const unitEl = document.getElementById('unit');
+        const roundingEl = document.getElementById('rounding');
+        const organizerEl = document.getElementById('organizerPays');
+        const resultEl = document.getElementById('result');
+
+        function yen(n) {
+            return n.toLocaleString('ja-JP') + '円';
+        }
+
+        function roundToUnit(value, unit, mode) {
+            const steps = value / unit;
+            let rounded;
+            if (mode === 'ceil') rounded = Math.ceil(steps);
+            else if (mode === 'floor') rounded = Math.floor(steps);
+            else rounded = Math.round(steps);
+            return rounded * unit;
+        }
+
+        function calculate() {
+            const total = Math.max(0, parseFloat(totalEl.value) || 0);
+            const people = Math.max(1, parseInt(peopleEl.value, 10) || 1);
+            const unit = parseInt(unitEl.value, 10);
+            const mode = roundingEl.value;
+            const organizerPays = organizerEl.checked;
+
+            if (organizerPays) {
+                const others = people - 1;
+                const perOther = others > 0 ? roundToUnit(total / people, unit, 'floor') : 0;
+                const organizerAmount = total - perOther * others;
+                resultEl.innerHTML = `
+                    <div class="result-row main"><span class="label">幹事以外 一人あたり</span><span class="value">${yen(perOther)}</span></div>
+                    <div class="result-row"><span class="label">幹事の負担額</span><span class="value">${yen(organizerAmount)}</span></div>
+                    <div class="result-note">幹事以外 ${others}人 × ${yen(perOther)} + 幹事 ${yen(organizerAmount)} = ${yen(perOther * others + organizerAmount)}</div>
+                `;
+                return;
+            }
+
+            const perPerson = roundToUnit(total / people, unit, mode);
+            const collected = perPerson * people;
+            const diff = collected - total;
+
+            let diffLine = '';
+            if (diff > 0) diffLine = `徴収額が ${yen(diff)} 多くなります(お釣り分)`;
+            else if (diff < 0) diffLine = `徴収額が ${yen(-diff)} 不足します`;
+            else diffLine = '端数なくぴったり割れています';
+
+            resultEl.innerHTML = `
+                <div class="result-row main"><span class="label">一人あたり</span><span class="value">${yen(perPerson)}</span></div>
+                <div class="result-row"><span class="label">合計徴収額</span><span class="value">${yen(collected)}</span></div>
+                <div class="result-note">${diffLine}</div>
+            `;
+        }
+
+        [totalEl, peopleEl, unitEl, roundingEl, organizerEl].forEach(el => {
+            el.addEventListener('input', calculate);
+            el.addEventListener('change', calculate);
+        });
+
+        calculate();
+    </script>
+
+</body>
+</html>

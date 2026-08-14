@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本地図 制覇チャレンジ(操作画面) ｜ ひろ@AI遊び場</title>
+    <meta name="description" content="配信企画向け、47都道府県にリスナー名を登録していく日本地図ツールの操作画面。タップで登録、検索で都道府県変更、達成人数や色は設定から変えられます。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FAF6F0;
+            --primary-color: #8B5A2B;
+            --secondary-color: #5A4A42;
+            --text-color: #2C2520;
+            --card-bg: #FFFFFF;
+            --accent-color: #EAD8C3;
+            --font-outfit: 'Outfit', 'Noto Sans JP', sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: var(--font-outfit);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        header {
+            background-color: rgba(90, 74, 66, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        nav a { color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 14px; margin-left: 20px; }
+        nav a:hover { color: var(--accent-color); }
+
+        .tool-wrap { max-width: 1120px; margin: 40px auto 0; padding: 0 20px; }
+
+        .tool-meta { font-size: 12px; color: #9E9085; margin-bottom: 12px; letter-spacing: 0.5px; }
+
+        h1 { font-size: 24px; font-weight: 800; color: var(--secondary-color); margin-bottom: 6px; }
+
+        .collect-title { font-size: 14px; color: #7E7066; margin-bottom: 20px; }
+        .collect-title b { color: var(--primary-color); }
+
+        .topbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--card-bg);
+            border-radius: 14px;
+            padding: 16px 20px;
+            border: 1px solid rgba(90, 74, 66, 0.08);
+            box-shadow: 0 10px 30px rgba(90, 74, 66, 0.05);
+            margin-bottom: 20px;
+        }
+
+        .progress { display: flex; align-items: baseline; gap: 10px; }
+        .progress .big { font-size: 26px; font-weight: 800; color: var(--secondary-color); }
+        .progress .sub { font-size: 12px; color: #9E9085; }
+
+        .topbar-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+        button {
+            font-family: var(--font-outfit);
+            font-size: 13px;
+            font-weight: 700;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 16px;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.15s;
+        }
+        button:active { transform: translateY(1px); }
+
+        .btn-primary { background-color: var(--primary-color); color: #fff; }
+        .btn-primary:hover { background-color: #744A22; }
+        .btn-secondary { background-color: var(--accent-color); color: var(--secondary-color); }
+        .btn-secondary:hover { background-color: #DFC7A5; }
+        .btn-ghost { background-color: #F0E8DE; color: var(--secondary-color); }
+        .btn-ghost:hover { background-color: #E5D5C4; }
+        .btn-danger { background-color: #F0E8DE; color: #9C4B3F; }
+        .btn-danger:hover { background-color: #E5D5C4; }
+        .btn-small { padding: 6px 10px; font-size: 12px; border-radius: 6px; }
+
+        .search-box { background-color: var(--card-bg); border-radius: 14px; padding: 16px 20px; border: 1px solid rgba(90, 74, 66, 0.08); box-shadow: 0 10px 30px rgba(90, 74, 66, 0.05); margin-bottom: 20px; }
+        .search-box input[type="text"] {
+            width: 100%;
+            font-family: var(--font-outfit);
+            font-size: 14px;
+            padding: 10px 14px;
+            border: 1px solid rgba(90, 74, 66, 0.2);
+            border-radius: 8px;
+        }
+        .search-results { margin-top: 12px; }
+
+        .entry-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 10px;
+            font-size: 13px;
+            border-bottom: 1px solid rgba(90, 74, 66, 0.08);
+        }
+        .entry-row:last-child { border-bottom: none; }
+        .entry-row .name { font-weight: 700; color: var(--secondary-color); }
+        .entry-row .pref { color: #9E9085; font-size: 12px; }
+        .entry-row .btns { display: flex; gap: 6px; }
+
+        .map-layout { display: flex; gap: 24px; flex-wrap: wrap-reverse; align-items: flex-start; }
+
+        .map-container {
+            flex: 1 1 480px;
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 20px;
+            border: 1px solid rgba(90, 74, 66, 0.08);
+            box-shadow: 0 10px 30px rgba(90, 74, 66, 0.05);
+        }
+
+        .hex-map { width: 100%; height: auto; display: block; max-height: 78vh; }
+        .pref-hex.interactive { cursor: pointer; }
+        .pref-hex.interactive:hover polygon { opacity: 0.8; }
+        .pref-hex text { font-family: var(--font-outfit); fill: var(--text-color); pointer-events: none; }
+
+        .legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 14px; font-size: 12px; color: #7E7066; }
+        .legend span { display: inline-flex; align-items: center; gap: 6px; }
+        .legend i { width: 14px; height: 14px; border-radius: 3px; display: inline-block; border: 1px solid rgba(90,74,66,0.2); }
+
+        .panel {
+            flex: 1 1 320px;
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid rgba(90, 74, 66, 0.08);
+            box-shadow: 0 10px 30px rgba(90, 74, 66, 0.05);
+            min-height: 200px;
+        }
+
+        .panel h2 { font-size: 18px; font-weight: 800; color: var(--secondary-color); margin-bottom: 4px; }
+        .panel .panel-sub { font-size: 12px; color: #9E9085; margin-bottom: 16px; }
+        .panel .hint { font-size: 13px; color: #9E9085; text-align: center; padding: 40px 10px; }
+
+        .add-form { display: flex; gap: 8px; margin-top: 16px; }
+        .add-form input { flex: 1; font-family: var(--font-outfit); font-size: 14px; padding: 10px 12px; border: 1px solid rgba(90, 74, 66, 0.2); border-radius: 8px; }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background-color: rgba(44, 37, 32, 0.6);
+            z-index: 200;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .overlay.show { display: flex; }
+
+        .modal {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 28px;
+            max-width: 420px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+        .modal h3 { font-size: 18px; font-weight: 800; color: var(--secondary-color); margin-bottom: 16px; }
+
+        .settings-field { margin-bottom: 16px; }
+        .settings-field label { display: block; font-size: 13px; font-weight: 700; color: var(--secondary-color); margin-bottom: 6px; }
+        .settings-field input[type="text"], .settings-field input[type="number"] {
+            width: 100%; font-family: var(--font-outfit); font-size: 14px; padding: 10px 12px;
+            border: 1px solid rgba(90, 74, 66, 0.2); border-radius: 8px;
+        }
+        .settings-field input[type="color"] { width: 60px; height: 38px; border: 1px solid rgba(90, 74, 66, 0.2); border-radius: 8px; padding: 2px; }
+        .settings-row { display: flex; gap: 12px; align-items: flex-end; }
+        .settings-row .settings-field { flex: 1; }
+
+        .modal-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 20px; flex-wrap: wrap; }
+
+        .congrats-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(90,74,66,0.92), rgba(44,37,32,0.92));
+            z-index: 300;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            cursor: pointer;
+        }
+        .congrats-overlay.show { display: flex; }
+        .congrats-overlay h2 { font-size: 44px; font-weight: 800; margin-bottom: 16px; }
+        .congrats-overlay p { font-size: 18px; color: var(--accent-color); }
+
+        .article-note { margin-top: 24px; font-size: 13px; color: #7E7066; background-color: #F5EFE7; border-radius: 10px; padding: 16px 18px; }
+
+        .footer-links { max-width: 1120px; margin: 60px auto 0; padding: 30px 20px 0; text-align: center; border-top: 1px solid rgba(90, 74, 66, 0.1); }
+        .footer-links a { color: var(--secondary-color); text-decoration: none; font-weight: 600; font-size: 13px; margin: 0 15px; }
+        .footer-links a:hover { color: var(--primary-color); }
+        .copyright { text-align: center; margin-top: 20px; font-size: 11px; color: #9E9085; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo" style="display: flex; align-items: center; gap: 8px;">
+            <img src="logo.jpg" alt="ひろ@AI遊び場 ロゴ" style="height: 38px; border-radius: 6px; display: block;">
+            <a href="index.html" style="font-size: 20px; font-weight: 800; color: #FFFFFF; letter-spacing: 0.5px; text-decoration: none;">ひろ@AI遊び場</a>
+        </div>
+        <nav>
+            <a href="index.html#apps">Apps</a>
+            <a href="tools.html">ツール</a>
+            <a href="index.html#articles">記事</a>
+            <a href="privacy.html">プライバシーポリシー</a>
+        </nav>
+    </header>
+
+    <div class="tool-wrap">
+        <div class="tool-meta"><a href="tools.html" style="color:#9E9085;">ツール一覧</a> ・ 無料・登録不要・配信企画向け</div>
+        <h1>日本地図 制覇チャレンジ(操作画面)</h1>
+        <div class="collect-title" id="collectTitle" style="display:none;">集めているもの: <b id="collectTitleText"></b></div>
+
+        <div class="topbar">
+            <div class="progress">
+                <span class="big" id="progressBig">0 / 47</span>
+                <span class="sub">都道府県が達成</span>
+                <span class="sub" id="totalCount">・ 総登録 0人</span>
+            </div>
+            <div class="topbar-actions">
+                <button class="btn-secondary" id="openDisplayBtn">表示専用ビューを開く</button>
+                <button class="btn-ghost" id="exportBtn">書き出し</button>
+                <button class="btn-ghost" id="settingsBtn">⚙ 設定</button>
+                <button class="btn-danger" id="resetBtn">全リセット</button>
+            </div>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="ユーザー名で検索(都道府県の変更・削除に使えます)">
+            <div class="search-results" id="searchResults"></div>
+        </div>
+
+        <div class="map-layout">
+            <div class="map-container">
+                <svg id="mapSvg" class="hex-map" xmlns="http://www.w3.org/2000/svg"></svg>
+                <div class="legend">
+                    <span><i style="background:#F3ECE3;"></i>未登録</span>
+                    <span><i id="legendMid" style="background:#F0B429;"></i>中間</span>
+                    <span><i id="legendAchieve" style="background:#4C9A6B;"></i>達成</span>
+                </div>
+            </div>
+            <div class="panel" id="panel">
+                <div class="hint">地図の都道府県をタップすると、ここに登録フォームが出ます</div>
+            </div>
+        </div>
+
+        <div class="article-note">登録データはこのブラウザ内(localStorage)に保存され、閉じても保持されます。表示専用ビューは同じブラウザで別タブとして開くと自動的に同期します。</div>
+
+        <div class="footer-links">
+            <a href="tools.html">ツール一覧</a>
+            <a href="index.html">ホーム</a>
+            <a href="privacy.html">プライバシーポリシー</a>
+        </div>
+        <div class="copyright">&copy; 2026 Hiro @ AI Playground. All Rights Reserved.</div>
+    </div>
+
+    <!-- 設定モーダル -->
+    <div class="overlay" id="settingsOverlay">
+        <div class="modal">
+            <h3>設定</h3>
+            <div class="settings-field">
+                <label for="settingTitle">タイトル(何を集めているか)</label>
+                <input type="text" id="settingTitle" placeholder="例: リスナーの出身地">
+            </div>
+            <div class="settings-row">
+                <div class="settings-field">
+                    <label for="settingAchieveCount">達成人数</label>
+                    <input type="number" id="settingAchieveCount" min="1">
+                </div>
+                <div class="settings-field">
+                    <label for="settingAchieveColor">達成色</label>
+                    <input type="color" id="settingAchieveColor">
+                </div>
+            </div>
+            <div class="settings-row">
+                <div class="settings-field">
+                    <label for="settingMidCount">中間人数</label>
+                    <input type="number" id="settingMidCount" min="0">
+                </div>
+                <div class="settings-field">
+                    <label for="settingMidColor">中間色</label>
+                    <input type="color" id="settingMidColor">
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-ghost" id="settingsCancelBtn">キャンセル</button>
+                <button class="btn-primary" id="settingsSaveBtn">保存</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 重複確認モーダル -->
+    <div class="overlay" id="dupOverlay">
+        <div class="modal">
+            <h3 id="dupTitle"></h3>
+            <p id="dupBody" style="font-size:14px; color:#665A52; margin-bottom:10px;"></p>
+            <div id="dupRenameArea" style="display:none; margin-top:10px;">
+                <input type="text" id="dupRenameInput" style="width:100%; font-family: var(--font-outfit); font-size:14px; padding:10px 12px; border:1px solid rgba(90,74,66,0.2); border-radius:8px;">
+            </div>
+            <div class="modal-actions">
+                <button class="btn-ghost" id="dupCancelBtn">キャンセル</button>
+                <button class="btn-secondary" id="dupRenameBtn">別人として登録する</button>
+                <button class="btn-primary" id="dupMoveBtn">移動する</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 都道府県移動モーダル -->
+    <div class="overlay" id="moveOverlay">
+        <div class="modal">
+            <h3 id="moveTitle"></h3>
+            <div class="settings-field">
+                <label for="movePrefSelect">移動先の都道府県</label>
+                <select id="movePrefSelect" style="width:100%; font-family: var(--font-outfit); font-size:14px; padding:10px 12px; border:1px solid rgba(90,74,66,0.2); border-radius:8px;"></select>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-ghost" id="moveCancelBtn">キャンセル</button>
+                <button class="btn-primary" id="moveConfirmBtn">移動する</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- リセット確認モーダル -->
+    <div class="overlay" id="resetOverlay">
+        <div class="modal">
+            <h3>全データをリセットしますか？</h3>
+            <p style="font-size:14px; color:#665A52;">登録済みの全ユーザー名が削除されます。この操作は取り消せません。</p>
+            <div class="modal-actions">
+                <button class="btn-ghost" id="resetCancelBtn">キャンセル</button>
+                <button class="btn-danger" id="resetConfirmBtn">リセットする</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="congrats-overlay" id="congratsOverlay">
+        <div>
+            <h2>🎉 Congratulations! 🎉</h2>
+            <p id="congratsText">全都道府県、達成しました！</p>
+        </div>
+    </div>
+
+    <script>
+        const PREFECTURES = [
+            {name:'北海道', col:7, row:0}, {name:'青森県', col:7, row:1}, {name:'岩手県', col:7, row:2},
+            {name:'宮城県', col:7, row:3}, {name:'秋田県', col:6, row:2}, {name:'山形県', col:6, row:3},
+            {name:'福島県', col:7, row:4}, {name:'茨城県', col:8, row:5}, {name:'栃木県', col:7, row:5},
+            {name:'群馬県', col:6, row:5}, {name:'埼玉県', col:7, row:6}, {name:'千葉県', col:8, row:6},
+            {name:'東京都', col:7, row:7}, {name:'神奈川県', col:7, row:8}, {name:'新潟県', col:6, row:4},
+            {name:'富山県', col:5, row:5}, {name:'石川県', col:4, row:5}, {name:'福井県', col:4, row:6},
+            {name:'山梨県', col:6, row:7}, {name:'長野県', col:6, row:6}, {name:'岐阜県', col:5, row:6},
+            {name:'静岡県', col:6, row:8}, {name:'愛知県', col:5, row:7}, {name:'三重県', col:5, row:8},
+            {name:'滋賀県', col:4, row:7}, {name:'京都府', col:3, row:7}, {name:'大阪府', col:3, row:8},
+            {name:'兵庫県', col:2, row:7}, {name:'奈良県', col:4, row:8}, {name:'和歌山県', col:4, row:9},
+            {name:'鳥取県', col:2, row:6}, {name:'島根県', col:1, row:6}, {name:'岡山県', col:2, row:8},
+            {name:'広島県', col:1, row:7}, {name:'山口県', col:0, row:7}, {name:'徳島県', col:4, row:10},
+            {name:'香川県', col:3, row:9}, {name:'愛媛県', col:2, row:9}, {name:'高知県', col:3, row:10},
+            {name:'福岡県', col:1, row:8}, {name:'佐賀県', col:0, row:8}, {name:'長崎県', col:0, row:9},
+            {name:'熊本県', col:1, row:9}, {name:'大分県', col:2, row:10}, {name:'宮崎県', col:1, row:10},
+            {name:'鹿児島県', col:1, row:11}, {name:'沖縄県', col:0, row:13}
+        ];
+        PREFECTURES.forEach(p => { p.short = p.name.replace(/[県府都]$/, ''); });
+
+        const R = 1, SQRT3 = Math.sqrt(3);
+        function hexCenter(col, row) {
+            return { x: col * 1.5 * R, y: row * SQRT3 * R + (col % 2 === 1 ? SQRT3 * R / 2 : 0) };
+        }
+        function hexPoints(cx, cy) {
+            const pts = [];
+            for (let i = 0; i < 6; i++) {
+                const a = Math.PI / 180 * 60 * i;
+                pts.push([cx + R * Math.cos(a), cy + R * Math.sin(a)]);
+            }
+            return pts;
+        }
+        const LAYOUT = PREFECTURES.map(p => {
+            const c = hexCenter(p.col, p.row);
+            return { ...p, center: c, pts: hexPoints(c.x, c.y) };
+        });
+
+        const ENTRIES_KEY = 'japanMapEntries';
+        const SETTINGS_KEY = 'japanMapSettings';
+        const DEFAULT_SETTINGS = { title: '', achieveCount: 3, achieveColor: '#4C9A6B', midCount: 1, midColor: '#F0B429' };
+
+        function loadEntries() {
+            try { return JSON.parse(localStorage.getItem(ENTRIES_KEY)) || []; } catch (e) { return []; }
+        }
+        function saveEntries(entries) { localStorage.setItem(ENTRIES_KEY, JSON.stringify(entries)); }
+        function loadSettings() {
+            try { return { ...DEFAULT_SETTINGS, ...(JSON.parse(localStorage.getItem(SETTINGS_KEY)) || {}) }; } catch (e) { return { ...DEFAULT_SETTINGS }; }
+        }
+        function saveSettings(settings) { localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings)); }
+        function uid() { return 'e' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8); }
+
+        const SVGNS = 'http://www.w3.org/2000/svg';
+        const mapSvg = document.getElementById('mapSvg');
+        const panel = document.getElementById('panel');
+        let selectedPref = null;
+        let wasComplete = false;
+
+        function countsByPref(entries) {
+            const c = {};
+            entries.forEach(e => { c[e.pref] = (c[e.pref] || 0) + 1; });
+            return c;
+        }
+
+        function colorFor(count, settings) {
+            if (count >= settings.achieveCount) return settings.achieveColor;
+            if (count > 0 && count >= settings.midCount) return settings.midColor;
+            return '#F3ECE3';
+        }
+
+        function renderMap() {
+            const entries = loadEntries();
+            const settings = loadSettings();
+            const counts = countsByPref(entries);
+
+            mapSvg.innerHTML = '';
+            let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+            LAYOUT.forEach(p => p.pts.forEach(([x, y]) => {
+                minX = Math.min(minX, x); maxX = Math.max(maxX, x);
+                minY = Math.min(minY, y); maxY = Math.max(maxY, y);
+            }));
+            const pad = 0.4;
+            mapSvg.setAttribute('viewBox', `${minX - pad} ${minY - pad} ${maxX - minX + pad * 2} ${maxY - minY + pad * 2}`);
+
+            LAYOUT.forEach(p => {
+                const count = counts[p.name] || 0;
+                const g = document.createElementNS(SVGNS, 'g');
+                g.setAttribute('class', 'pref-hex interactive');
+                const poly = document.createElementNS(SVGNS, 'polygon');
+                poly.setAttribute('points', p.pts.map(pt => pt.join(',')).join(' '));
+                poly.setAttribute('fill', colorFor(count, settings));
+                poly.setAttribute('stroke', '#5A4A42');
+                poly.setAttribute('stroke-width', '0.04');
+                g.appendChild(poly);
+
+                const text = document.createElementNS(SVGNS, 'text');
+                text.setAttribute('x', p.center.x);
+                text.setAttribute('y', p.center.y - 0.02);
+                text.setAttribute('text-anchor', 'middle');
+                text.setAttribute('font-size', '0.32');
+                text.setAttribute('font-weight', '700');
+                text.textContent = p.short;
+                g.appendChild(text);
+
+                if (count > 0) {
+                    const sub = document.createElementNS(SVGNS, 'text');
+                    sub.setAttribute('x', p.center.x);
+                    sub.setAttribute('y', p.center.y + 0.34);
+                    sub.setAttribute('text-anchor', 'middle');
+                    sub.setAttribute('font-size', '0.24');
+                    sub.textContent = count + '人';
+                    g.appendChild(sub);
+                }
+
+                const title = document.createElementNS(SVGNS, 'title');
+                title.textContent = `${p.name}(${count}人)`;
+                g.appendChild(title);
+
+                g.addEventListener('click', () => { selectedPref = p.name; renderPanel(); });
+                mapSvg.appendChild(g);
+            });
+
+            document.getElementById('legendMid').style.background = settings.midColor;
+            document.getElementById('legendAchieve').style.background = settings.achieveColor;
+
+            const achievedCount = PREFECTURES.filter(p => (counts[p.name] || 0) >= settings.achieveCount).length;
+            document.getElementById('progressBig').textContent = `${achievedCount} / 47`;
+            document.getElementById('totalCount').textContent = `・ 総登録 ${entries.length}人`;
+
+            if (settings.title) {
+                document.getElementById('collectTitle').style.display = '';
+                document.getElementById('collectTitleText').textContent = settings.title;
+            } else {
+                document.getElementById('collectTitle').style.display = 'none';
+            }
+
+            const isComplete = achievedCount === 47;
+            if (isComplete && !wasComplete) showCongrats(settings);
+            wasComplete = isComplete;
+        }
+
+        function showCongrats(settings) {
+            const el = document.getElementById('congratsOverlay');
+            document.getElementById('congratsText').textContent = settings.title ? `「${settings.title}」全都道府県、達成しました！` : '全都道府県、達成しました！';
+            el.classList.add('show');
+        }
+        document.getElementById('congratsOverlay').addEventListener('click', () => {
+            document.getElementById('congratsOverlay').classList.remove('show');
+        });
+
+        function entryRowHTML(e, showPref) {
+            return `<div class="entry-row" data-id="${e.id}">
+                <div><span class="name">${escapeHtml(e.name)}</span>${showPref ? ` <span class="pref">${e.pref}</span>` : ''}</div>
+                <div class="btns">
+                    <button class="btn-ghost btn-small move-btn" data-id="${e.id}">移動</button>
+                    <button class="btn-danger btn-small del-btn" data-id="${e.id}">削除</button>
+                </div>
+            </div>`;
+        }
+
+        function escapeHtml(s) {
+            return s.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+        }
+
+        function renderPanel() {
+            if (!selectedPref) {
+                panel.innerHTML = '<div class="hint">地図の都道府県をタップすると、ここに登録フォームが出ます</div>';
+                return;
+            }
+            const entries = loadEntries().filter(e => e.pref === selectedPref);
+            panel.innerHTML = `
+                <h2>${selectedPref}</h2>
+                <div class="panel-sub">${entries.length}人 登録中</div>
+                <div id="panelEntries">${entries.length ? entries.map(e => entryRowHTML(e, false)).join('') : '<div class="hint" style="padding:16px 0;">まだ登録がありません</div>'}</div>
+                <div class="add-form">
+                    <input type="text" id="panelAddInput" placeholder="ユーザー名を入力">
+                    <button class="btn-primary" id="panelAddBtn">追加</button>
+                </div>
+            `;
+            document.getElementById('panelAddBtn').addEventListener('click', panelAdd);
+            document.getElementById('panelAddInput').addEventListener('keydown', ev => { if (ev.key === 'Enter') panelAdd(); });
+            bindEntryRowButtons(panel);
+        }
+
+        function panelAdd() {
+            const input = document.getElementById('panelAddInput');
+            const name = input.value.trim();
+            if (!name) return;
+            addEntry(name, selectedPref);
+            input.value = '';
+        }
+
+        function bindEntryRowButtons(container) {
+            container.querySelectorAll('.move-btn').forEach(btn => {
+                btn.addEventListener('click', () => openMoveModal(btn.dataset.id));
+            });
+            container.querySelectorAll('.del-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const entries = loadEntries();
+                    const target = entries.find(e => e.id === btn.dataset.id);
+                    if (!target) return;
+                    if (!confirm(`"${target.name}"(${target.pref})を削除しますか？`)) return;
+                    saveEntries(entries.filter(e => e.id !== btn.dataset.id));
+                    renderMap(); renderPanel(); renderSearch();
+                });
+            });
+        }
+
+        function addEntry(name, pref) {
+            const entries = loadEntries();
+            const sameHere = entries.find(e => e.name === name && e.pref === pref);
+            if (sameHere) { alert(`"${name}" は既に${pref}に登録されています。`); return; }
+            const existing = entries.find(e => e.name === name && e.pref !== pref);
+            if (existing) { openDupModal(existing, name, pref); return; }
+            entries.push({ id: uid(), name, pref });
+            saveEntries(entries);
+            renderMap(); renderPanel(); renderSearch();
+        }
+
+        // 重複確認モーダル
+        const dupOverlay = document.getElementById('dupOverlay');
+        let dupContext = null;
+        function openDupModal(existing, name, newPref) {
+            dupContext = { existing, name, newPref };
+            document.getElementById('dupTitle').textContent = '同じ名前が既に登録されています';
+            document.getElementById('dupBody').textContent = `「${name}」さんは既に${existing.pref}に登録されています。${newPref}へ移動しますか？別人として登録しますか？`;
+            document.getElementById('dupRenameArea').style.display = 'none';
+            dupOverlay.classList.add('show');
+        }
+        document.getElementById('dupCancelBtn').addEventListener('click', () => dupOverlay.classList.remove('show'));
+        document.getElementById('dupMoveBtn').addEventListener('click', () => {
+            if (!dupContext) return;
+            const entries = loadEntries();
+            const e = entries.find(x => x.id === dupContext.existing.id);
+            if (e) { e.pref = dupContext.newPref; saveEntries(entries); }
+            dupOverlay.classList.remove('show');
+            renderMap(); renderPanel(); renderSearch();
+        });
+        document.getElementById('dupRenameBtn').addEventListener('click', () => {
+            const area = document.getElementById('dupRenameArea');
+            if (area.style.display === 'none') {
+                area.style.display = 'block';
+                document.getElementById('dupRenameInput').value = dupContext.name + '(2)';
+                document.getElementById('dupRenameInput').focus();
+                return;
+            }
+            const newName = document.getElementById('dupRenameInput').value.trim();
+            if (!newName) return;
+            dupOverlay.classList.remove('show');
+            addEntry(newName, dupContext.newPref);
+        });
+
+        // 移動モーダル
+        const moveOverlay = document.getElementById('moveOverlay');
+        let moveEntryId = null;
+        function openMoveModal(entryId) {
+            const entries = loadEntries();
+            const e = entries.find(x => x.id === entryId);
+            if (!e) return;
+            moveEntryId = entryId;
+            document.getElementById('moveTitle').textContent = `"${e.name}" を移動`;
+            const select = document.getElementById('movePrefSelect');
+            select.innerHTML = PREFECTURES.map(p => `<option value="${p.name}" ${p.name === e.pref ? 'selected' : ''}>${p.name}</option>`).join('');
+            moveOverlay.classList.add('show');
+        }
+        document.getElementById('moveCancelBtn').addEventListener('click', () => moveOverlay.classList.remove('show'));
+        document.getElementById('moveConfirmBtn').addEventListener('click', () => {
+            if (!moveEntryId) return;
+            const newPref = document.getElementById('movePrefSelect').value;
+            const entries = loadEntries();
+            const e = entries.find(x => x.id === moveEntryId);
+            if (e) {
+                const dup = entries.find(x => x.name === e.name && x.pref === newPref && x.id !== e.id);
+                if (dup) { alert(`"${e.name}" は既に${newPref}に登録されています。`); return; }
+                e.pref = newPref;
+                saveEntries(entries);
+            }
+            moveOverlay.classList.remove('show');
+            renderMap(); renderPanel(); renderSearch();
+        });
+
+        // 検索
+        function renderSearch() {
+            const q = document.getElementById('searchInput').value.trim();
+            const resultsEl = document.getElementById('searchResults');
+            if (!q) { resultsEl.innerHTML = ''; return; }
+            const matches = loadEntries().filter(e => e.name.includes(q));
+            resultsEl.innerHTML = matches.length
+                ? matches.map(e => entryRowHTML(e, true)).join('')
+                : '<div class="hint" style="padding:10px 0;">見つかりませんでした</div>';
+            bindEntryRowButtons(resultsEl);
+        }
+        document.getElementById('searchInput').addEventListener('input', renderSearch);
+
+        // 設定モーダル
+        const settingsOverlay = document.getElementById('settingsOverlay');
+        document.getElementById('settingsBtn').addEventListener('click', () => {
+            const s = loadSettings();
+            document.getElementById('settingTitle').value = s.title;
+            document.getElementById('settingAchieveCount').value = s.achieveCount;
+            document.getElementById('settingAchieveColor').value = s.achieveColor;
+            document.getElementById('settingMidCount').value = s.midCount;
+            document.getElementById('settingMidColor').value = s.midColor;
+            settingsOverlay.classList.add('show');
+        });
+        document.getElementById('settingsCancelBtn').addEventListener('click', () => settingsOverlay.classList.remove('show'));
+        document.getElementById('settingsSaveBtn').addEventListener('click', () => {
+            const achieveCount = Math.max(1, parseInt(document.getElementById('settingAchieveCount').value, 10) || 1);
+            const midCount = Math.max(0, Math.min(achieveCount - 1, parseInt(document.getElementById('settingMidCount').value, 10) || 0));
+            saveSettings({
+                title: document.getElementById('settingTitle').value.trim(),
+                achieveCount,
+                achieveColor: document.getElementById('settingAchieveColor').value,
+                midCount,
+                midColor: document.getElementById('settingMidColor').value
+            });
+            settingsOverlay.classList.remove('show');
+            renderMap();
+        });
+
+        // リセット
+        const resetOverlay = document.getElementById('resetOverlay');
+        document.getElementById('resetBtn').addEventListener('click', () => resetOverlay.classList.add('show'));
+        document.getElementById('resetCancelBtn').addEventListener('click', () => resetOverlay.classList.remove('show'));
+        document.getElementById('resetConfirmBtn').addEventListener('click', () => {
+            saveEntries([]);
+            selectedPref = null;
+            resetOverlay.classList.remove('show');
+            renderMap(); renderPanel(); renderSearch();
+        });
+
+        // 書き出し
+        document.getElementById('exportBtn').addEventListener('click', () => {
+            const entries = loadEntries();
+            const settings = loadSettings();
+            const counts = countsByPref(entries);
+            const lines = [settings.title || '都道府県登録リスト', new Date().toLocaleString('ja-JP'), ''];
+            PREFECTURES.forEach(p => {
+                const names = entries.filter(e => e.pref === p.name).map(e => e.name);
+                lines.push(`${p.name}(${names.length}人): ${names.join('、')}`);
+            });
+            const blob = new Blob([lines.join('\n')], { type: 'text/plain' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = '日本地図_登録リスト.txt';
+            a.click();
+            URL.revokeObjectURL(a.href);
+        });
+
+        document.getElementById('openDisplayBtn').addEventListener('click', () => {
+            window.open('tool-japan-map-display.html', '_blank');
+        });
+
+        window.addEventListener('storage', ev => {
+            if (ev.key === ENTRIES_KEY || ev.key === SETTINGS_KEY) { renderMap(); renderPanel(); renderSearch(); }
+        });
+
+        renderMap();
+        renderPanel();
+    </script>
+
+</body>
+</html>

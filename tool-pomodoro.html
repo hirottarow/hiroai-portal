@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポモドーロタイマー(無料・登録不要) ｜ ひろ@AI遊び場</title>
+    <meta name="description" content="25分作業＋5分休憩を自動で繰り返す無料のポモドーロタイマー。インストール不要、ブラウザだけで動きます。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FAF6F0;
+            --primary-color: #8B5A2B;
+            --secondary-color: #5A4A42;
+            --text-color: #2C2520;
+            --card-bg: #FFFFFF;
+            --accent-color: #EAD8C3;
+            --font-outfit: 'Outfit', 'Noto Sans JP', sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: var(--font-outfit);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-bottom: 60px;
+            transition: background-color 0.4s;
+        }
+
+        body.break-mode { background-color: #EAF3EC; }
+
+        header {
+            background-color: rgba(90, 74, 66, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            margin-left: 20px;
+        }
+
+        nav a:hover { color: var(--accent-color); }
+
+        .tool-wrap {
+            max-width: 640px;
+            margin: 50px auto 0;
+            padding: 0 20px;
+        }
+
+        .tool-meta {
+            font-size: 12px;
+            color: #9E9085;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+        }
+
+        .panel {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 40px 30px;
+            border: 1px solid rgba(90, 74, 66, 0.08);
+            box-shadow: 0 10px 30px rgba(90, 74, 66, 0.05);
+            text-align: center;
+        }
+
+        .mode-badge {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--secondary-color);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 5px 14px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        body.break-mode .mode-badge { background-color: #C8E3CE; color: #2F5D3A; }
+
+        .display {
+            font-size: 64px;
+            font-weight: 800;
+            font-variant-numeric: tabular-nums;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .cycle-count { font-size: 13px; color: #9E9085; margin-bottom: 26px; }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 26px;
+        }
+
+        button {
+            font-family: var(--font-outfit);
+            font-size: 15px;
+            font-weight: 700;
+            border: none;
+            border-radius: 10px;
+            padding: 14px 26px;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.15s;
+        }
+
+        button:active { transform: translateY(1px); }
+
+        .btn-primary { background-color: var(--primary-color); color: #fff; }
+        .btn-primary:hover { background-color: #744A22; }
+
+        .btn-secondary { background-color: var(--accent-color); color: var(--secondary-color); }
+        .btn-secondary:hover { background-color: #DFC7A5; }
+
+        .settings {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            border-top: 1px solid rgba(90, 74, 66, 0.08);
+            padding-top: 22px;
+        }
+
+        .settings label {
+            font-size: 12px;
+            color: #7E7066;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .settings input {
+            width: 70px;
+            font-family: var(--font-outfit);
+            font-size: 15px;
+            text-align: center;
+            padding: 8px;
+            border: 1px solid rgba(90, 74, 66, 0.2);
+            border-radius: 8px;
+        }
+
+        .article-note {
+            margin-top: 24px;
+            font-size: 13px;
+            color: #7E7066;
+            background-color: #F5EFE7;
+            border-radius: 10px;
+            padding: 16px 18px;
+        }
+
+        .footer-links {
+            max-width: 640px;
+            margin: 60px auto 0;
+            padding: 30px 20px 0;
+            text-align: center;
+            border-top: 1px solid rgba(90, 74, 66, 0.1);
+        }
+
+        .footer-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            margin: 0 15px;
+        }
+
+        .footer-links a:hover { color: var(--primary-color); }
+
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 11px;
+            color: #9E9085;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo" style="display: flex; align-items: center; gap: 8px;">
+            <img src="logo.jpg" alt="ひろ@AI遊び場 ロゴ" style="height: 38px; border-radius: 6px; display: block;">
+            <a href="index.html" style="font-size: 20px; font-weight: 800; color: #FFFFFF; letter-spacing: 0.5px; text-decoration: none;">ひろ@AI遊び場</a>
+        </div>
+        <nav>
+            <a href="index.html#apps">Apps</a>
+            <a href="tools.html">ツール</a>
+            <a href="index.html#articles">記事</a>
+            <a href="privacy.html">プライバシーポリシー</a>
+        </nav>
+    </header>
+
+    <div class="tool-wrap">
+        <div class="tool-meta"><a href="tools.html" style="color:#9E9085;">ツール一覧</a> ・ 無料・登録不要</div>
+        <h1>ポモドーロタイマー</h1>
+
+        <div class="panel">
+            <span class="mode-badge" id="modeBadge">作業中</span>
+            <div class="display" id="display">25:00</div>
+            <div class="cycle-count" id="cycleCount">完了サイクル: 0</div>
+            <div class="controls">
+                <button class="btn-primary" id="startBtn">スタート</button>
+                <button class="btn-secondary" id="resetBtn">リセット</button>
+            </div>
+            <div class="settings">
+                <label>作業(分)
+                    <input type="number" id="workMinutes" value="25" min="1" max="120">
+                </label>
+                <label>休憩(分)
+                    <input type="number" id="breakMinutes" value="5" min="1" max="60">
+                </label>
+            </div>
+        </div>
+
+        <div class="article-note">作業時間が終わると自動で休憩に切り替わり、音で通知します。タブを閉じるとカウントは止まります。</div>
+
+        <div class="footer-links">
+            <a href="tools.html">ツール一覧</a>
+            <a href="index.html">ホーム</a>
+            <a href="privacy.html">プライバシーポリシー</a>
+        </div>
+
+        <div class="copyright">&copy; 2026 Hiro @ AI Playground. All Rights Reserved.</div>
+    </div>
+
+    <script>
+        const display = document.getElementById('display');
+        const modeBadge = document.getElementById('modeBadge');
+        const cycleCount = document.getElementById('cycleCount');
+        const startBtn = document.getElementById('startBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const workInput = document.getElementById('workMinutes');
+        const breakInput = document.getElementById('breakMinutes');
+
+        let running = false;
+        let isBreak = false;
+        let remainingSec = 25 * 60;
+        let intervalId = null;
+        let completedCycles = 0;
+
+        function format(sec) {
+            const m = Math.floor(sec / 60);
+            const s = sec % 60;
+            return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+        }
+
+        function render() {
+            display.textContent = format(remainingSec);
+            modeBadge.textContent = isBreak ? '休憩中' : '作業中';
+            document.body.classList.toggle('break-mode', isBreak);
+            cycleCount.textContent = `完了サイクル: ${completedCycles}`;
+        }
+
+        function playBeep() {
+            const ctx = new (window.AudioContext || window.webkitAudioContext)();
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.connect(gain);
+            gain.connect(ctx.destination);
+            osc.frequency.value = isBreak ? 660 : 440;
+            gain.gain.setValueAtTime(0.15, ctx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.6);
+            osc.start();
+            osc.stop(ctx.currentTime + 0.6);
+        }
+
+        function switchMode() {
+            if (!isBreak) completedCycles++;
+            isBreak = !isBreak;
+            const minutes = isBreak ? parseInt(breakInput.value, 10) : parseInt(workInput.value, 10);
+            remainingSec = Math.max(1, minutes || 1) * 60;
+            playBeep();
+            render();
+        }
+
+        function tick() {
+            remainingSec--;
+            if (remainingSec <= 0) {
+                switchMode();
+                return;
+            }
+            render();
+        }
+
+        startBtn.addEventListener('click', () => {
+            if (!running) {
+                running = true;
+                workInput.disabled = true;
+                breakInput.disabled = true;
+                startBtn.textContent = '一時停止';
+                intervalId = setInterval(tick, 1000);
+            } else {
+                running = false;
+                startBtn.textContent = 'スタート';
+                clearInterval(intervalId);
+            }
+        });
+
+        resetBtn.addEventListener('click', () => {
+            running = false;
+            isBreak = false;
+            completedCycles = 0;
+            clearInterval(intervalId);
+            workInput.disabled = false;
+            breakInput.disabled = false;
+            startBtn.textContent = 'スタート';
+            remainingSec = Math.max(1, parseInt(workInput.value, 10) || 25) * 60;
+            render();
+        });
+
+        workInput.addEventListener('change', () => {
+            if (!running && !isBreak) {
+                remainingSec = Math.max(1, parseInt(workInput.value, 10) || 25) * 60;
+                render();
+            }
+        });
+
+        render();
+    </script>
+
+</body>
+</html>
