@@ -179,6 +179,13 @@
             filter: drop-shadow(0 10px 15px rgba(90, 74, 66, 0.2));
             animation: float 4s ease-in-out infinite;
         }
+        .app-image .app-icon-img {
+            width: 132px;
+            height: 132px;
+            border-radius: 30px;
+            box-shadow: 0 12px 28px rgba(90, 74, 66, 0.28);
+            animation: float 4s ease-in-out infinite;
+        }
 
         .app-details {
             padding: 40px;
@@ -409,7 +416,7 @@
             <!-- DIY Wood Calculator -->
             <div class="app-card">
                 <div class="app-image">
-                    <div class="icon-placeholder">🪵</div>
+                    <img src="icon_diy_wood.png" alt="DIY Wood Calculator のアイコン" class="app-icon-img">
                 </div>
                 <div class="app-details">
                     <span class="app-status">Google Play クローズドテスト実施中</span>
@@ -450,7 +457,7 @@
             <!-- LaunchLog -->
             <div class="app-card">
                 <div class="app-image" style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);">
-                    <div class="icon-placeholder">🚀</div>
+                    <img src="icon_launchlog.png" alt="LaunchLog のアイコン" class="app-icon-img">
                 </div>
                 <div class="app-details">
                     <span class="app-status">Google Play クローズドテスト実施中</span>
@@ -487,6 +494,46 @@
                     </div>
                 </div>
             </div>
+
+                <!-- 音ナビ -->
+                <div class="app-card">
+                    <div class="app-image" style="background: linear-gradient(135deg, #16324a 0%, #0b1622 100%);">
+                        <img src="icon_otonavi.png" alt="音ナビ のアイコン" class="app-icon-img">
+                    </div>
+                    <div class="app-details">
+                        <span class="app-status">Google Play 公開準備中</span>
+                        <h3>音ナビ <span style="font-size: 15px; font-weight: 600; color: #7E7066;">/ Sound Guide</span></h3>
+                        <p>配信・動画編集・録音の前に、音量のバランスを目で確かめるためのメーターアプリです。「このスマホが再生している音」と「マイクに入る音」を分けて測れます。案内に沿って音源を1つずつ鳴らしていくだけで、適正な音量に整えられます。日本語／英語の表示に対応しています。</p>
+                        <div class="features">
+                            <div class="feature-item">
+                                <h4>🔊 端末の音量つまみに左右されない</h4>
+                                <p>「出る音」モードは、端末の音量調整より前の信号を直接測ります。ミュート中でもイヤホン接続中でもメーターの数値は変わりません。アプリが出している元の音量そのものを見ているので、<strong>編集アプリや配信アプリが変わっても同じ物差しで比較できます</strong>。マイクで拾う方式では、部屋の反響やスピーカーの特性が混ざるため、この比較はできません。</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>🎤 マイクに入る音も測れる</h4>
+                                <p>「入る音」モードでは、自分の声や楽器がマイクにどのくらいの大きさで入っているかを確認できます。端末が対応していれば無加工の音声を使い、自動ゲイン調整で数値が歪まないようにしています。</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>📊 6種類のメーター表示</h4>
+                                <p>ゾーンバー・スクロール履歴・スペクトラム（周波数）・低中高・波形・LED-VU から選べます。各表示にバッテリー消費の目安を付けているので、長時間の監視でも安心して選べます。</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>✨ 小窓で他のアプリを見ながら監視</h4>
+                                <p>メーターを最前面の小窓として表示できます。小窓の外側のタッチは下のアプリにそのまま届くので、配信アプリや編集アプリの操作を妨げません。ドラッグで好きな位置に置けます。</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>🎯 目標値マーカーとプリセット保存</h4>
+                                <p>音源ごとの目標音量をメーター上にマーカーで表示。「今の音量を目標にする」で、その環境の実測値をワンタップで基準にできます。用途ごとの設定は名前を付けて保存でき、次回から呼び出すだけです。</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 10px;">
+                            <a href="#" class="btn" style="opacity: 0.7; pointer-events: none;">Google Play ストアで公開予定</a>
+                            <a href="privacy_otonavi.html" class="btn" style="background-color: #16a34a; box-shadow: 0 4px 15px rgba(22, 163, 74, 0.25);">🔒 プライバシーポリシー</a>
+                            <a href="terms.html" class="btn" style="background-color: #16a34a; box-shadow: 0 4px 15px rgba(22, 163, 74, 0.25);">📄 利用規約</a>
+                        </div>
+                    </div>
+                </div>
         </div>
 
         <!-- 便利ツール -->

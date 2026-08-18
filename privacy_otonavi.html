@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プライバシーポリシー - 音ナビ | ひろ@AI遊び場</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FAF6F0;
+            --primary-color: #3B82F6;
+            --secondary-color: #1E293B;
+            --text-color: #2C2520;
+            --card-bg: #FFFFFF;
+            --accent-color: #DBEAFE;
+            --font-outfit: 'Outfit', 'Noto Sans JP', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-outfit);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            padding-bottom: 60px;
+        }
+
+        header {
+            background-color: rgba(30, 41, 59, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: #FFFFFF;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto 0;
+            padding: 0 20px;
+        }
+
+        .policy-card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(30, 41, 59, 0.05);
+            border: 1px solid rgba(59, 130, 246, 0.15);
+        }
+
+        .app-badge {
+            display: inline-block;
+            background-color: #DBEAFE;
+            color: #1E40AF;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 15px;
+            color: #334155;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        li {
+            font-size: 15px;
+            color: #334155;
+            margin-bottom: 10px;
+        }
+
+        .footer-links {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(30, 41, 59, 0.1);
+        }
+
+        .footer-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 11px;
+            color: #94A3B8;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="ひろ@AI遊び場 ロゴ" style="height: 38px; border-radius: 6px; display: block;">
+            <span style="font-size: 20px; font-weight: 800; color: #FFFFFF; letter-spacing: 0.5px;">ひろ@AI遊び場</span>
+        </div>
+        <nav>
+            <a href="index.html">Apps</a>
+            <a href="tools.html">ツール</a>
+            <a href="terms.html">利用規約</a>
+            <a href="privacy.html">プライバシーポリシー一覧</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="policy-card">
+            <span class="app-badge">🔊 音ナビ / Sound Guide 専用</span>
+            <h1>プライバシーポリシー</h1>
+            
+            <p>ひろ@AI遊び場（Hiro @ AI Playground）（以下、「当開発者」といいます）は、提供するスマートフォン用アプリケーション「<strong>音ナビ（Sound Guide）</strong>」（以下、「本アプリ」といいます）におけるユーザー情報の取り扱いについて、以下の通りプライバシーポリシーを定めます。</p>
+
+            <h2>1. 音声データの取り扱いについて</h2>
+            <p>本アプリは、音量（音の大きさ）をメーターに表示することを目的として、次の2種類の音声を取り込みます。</p>
+            <ul>
+                <li><strong>出る音</strong>：端末が再生している音（他アプリの音楽・効果音など）</li>
+                <li><strong>入る音</strong>：端末のマイクに入る音（声・楽器など）</li>
+            </ul>
+            <p>取り込んだ音声は、<strong>端末内のメモリ上で音量の数値（dBFS）に変換するためだけに使用され、処理が終わり次第すぐに破棄されます</strong>。本アプリは音声をファイルとして保存する機能を持たず、録音データが端末内に残ることはありません。また、音声データおよびそこから算出した数値が、当開発者または第三者のサーバーへ送信・収集されることは一切ありません。</p>
+            <p>目標音量・表示スタイル・プリセットなどの設定は、ユーザーの端末内にのみ保存されます。</p>
+
+            <h2>2. 端末権限について</h2>
+            <p>本アプリは、機能の実現のために以下の権限を使用します。いずれも本アプリの画面上に音量を表示する目的にのみ使用し、取得した情報を外部へ送信・蓄積することはありません。</p>
+            <ul>
+                <li><strong>マイク（録音）</strong>：「入る音」モードでマイクに入る音量を測定するために使用します。あわせて、「出る音」モードで端末の再生音を取り込む際にも、Androidの仕様上この権限が必要となります。</li>
+                <li><strong>画面キャプチャ（メディア投影）</strong>：「出る音」モードで端末の再生音を取り込むために使用します。Androidではこの仕組みが画面の記録と共通のため、開始時に「画面の共有」に関する確認画面が表示されますが、<strong>本アプリが取得するのは音声のみで、画面の映像を取得・記録・送信することは一切ありません</strong>。</li>
+                <li><strong>他のアプリの上に表示</strong>：メーターを小窓として最前面に表示する機能で使用します（任意）。</li>
+                <li><strong>通知</strong>：測定中であることを知らせる通知の表示に使用します。</li>
+            </ul>
+
+            <h2>3. 広告の配信について</h2>
+            <p>本アプリでは、無料提供および機能維持のため第三者配信の広告サービス「Google AdMob」を利用しています。広告配信事業者は、ユーザーの興味に応じた広告を表示するために、クッキー（Cookie）や広告識別子（IDFA/AAIDなど）を使用してデバイスに関する匿名情報を収集する場合があります。これらに個人を特定できる情報は含まれません。</p>
+            <p>Google AdMobが収集する情報の詳細およびオプトアウト（情報の送信拒否）方法については、以下のGoogleのポリシーをご確認ください。</p>
+            <ul>
+                <li><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); font-weight: 600;">Google 広告規約 とプライバシーポリシー</a></li>
+            </ul>
+
+            <h2>4. 免責事項</h2>
+            <p>本アプリが表示する音量の数値は、音響上の相対的な目安です。端末や環境によって値は変わるため、測定機器としての正確性を保証するものではありません。本アプリの使用によって生じた不具合、データの紛失、収録・配信・編集における結果その他の損害について、当開発者は一切の責任を負いかねます。あらかじめご了承の上ご利用ください。</p>
+
+            <h2>5. プライバシーポリシーの変更</h2>
+            <p>当開発者は、法令の変更やアプリのアップデートに伴い、本ポリシーを改定することがあります。改定されたプライバシーポリシーは、本ページに掲載された時点から効力を生じるものとします。</p>
+
+            <h2>6. お問い合わせ先</h2>
+            <p>本ポリシーに関するご質問やお問い合わせは、以下までご連絡ください。</p>
+            <p>連絡先：<strong>hiro.ai.playground@gmail.com</strong></p>
+            <p style="font-size: 12px; color: #94A3B8; margin-top: 30px;">制定日：2026年8月18日</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="index.html">ホーム</a>
+            <a href="terms.html">利用規約</a>
+            <a href="privacy.html">プライバシーポリシー一覧</a>
+            <a href="mailto:hiro.ai.playground@gmail.com">お問い合わせ</a>
+        </div>
+
+        <div class="copyright">
+            &copy; 2026 Hiro @ AI Playground. All Rights Reserved.
+        </div>
+    </div>
+
+</body>
+</html>
