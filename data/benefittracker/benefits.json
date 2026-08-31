@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "dataVersion": "2026-08-31.5",
+ "dataVersion": "2026-08-31.6",
  "updatedAt": "2026-08-31",
  "templates": [
   {
@@ -15,7 +15,8 @@
    "unitPrice": 1,
    "balanceUnit": "円分",
    "quantityUnit": "回",
-   "exchange": "東証"
+   "exchange": "東証",
+   "usageNotes": "1ポイント単位で利用可・端数調整OK"
   },
   {
    "company": "すかいらーくHD",
@@ -29,7 +30,8 @@
    "unitPrice": 500,
    "balanceUnit": "円",
    "quantityUnit": "枚",
-   "exchange": "東証"
+   "exchange": "東証",
+   "usageNotes": "優待カード残高式・1円単位で利用可"
   },
   {
    "company": "マクドナルドHD",
@@ -43,7 +45,8 @@
    "unitPrice": 1,
    "balanceUnit": "冊",
    "quantityUnit": "冊",
-   "exchange": "東証"
+   "exchange": "東証",
+   "usageNotes": "金額券ではなく商品引換券（バーガー・サイド・ドリンク引換）"
   },
   {
    "company": "ゼンショーHD",
@@ -57,7 +60,8 @@
    "unitPrice": 500,
    "balanceUnit": "円",
    "quantityUnit": "枚",
-   "exchange": "東証"
+   "exchange": "東証",
+   "usageNotes": "500円券・お釣り不可"
   },
   {
    "company": "トリドールHD",
@@ -85,7 +89,8 @@
    "unitPrice": 500,
    "balanceUnit": "円",
    "quantityUnit": "枚",
-   "exchange": "東証"
+   "exchange": "東証",
+   "usageNotes": "500円券・お釣り不可"
   },
   {
    "company": "松屋フーズHD",
@@ -99,7 +104,8 @@
    "unitPrice": 1,
    "balanceUnit": "枚",
    "quantityUnit": "枚",
-   "exchange": "東証"
+   "exchange": "東証",
+   "usageNotes": "食事引換券（メニュー引換式・金額券ではない）"
   },
   {
    "company": "コロワイド",
@@ -113,7 +119,8 @@
    "unitPrice": 0,
    "balanceUnit": "円分",
    "quantityUnit": "回",
-   "exchange": "東証"
+   "exchange": "東証",
+   "usageNotes": "1ポイント=1円で1円単位利用可"
   },
   {
    "company": "アトム",
@@ -127,7 +134,8 @@
    "unitPrice": 0,
    "balanceUnit": "ポイント",
    "quantityUnit": "回",
-   "exchange": "東証"
+   "exchange": "東証",
+   "usageNotes": "1ポイント=1円で1円単位利用可"
   },
   {
    "company": "王将フードサービス",
@@ -155,7 +163,8 @@
    "unitPrice": 0,
    "balanceUnit": "円分",
    "quantityUnit": "回",
-   "exchange": "東証"
+   "exchange": "東証",
+   "usageNotes": "KOMECAにチャージされ1円単位で利用可"
   },
   {
    "company": "くら寿司",
@@ -183,7 +192,8 @@
    "unitPrice": 550,
    "balanceUnit": "円",
    "quantityUnit": "枚",
-   "exchange": "東証"
+   "exchange": "東証",
+   "usageNotes": "1円単位で利用可"
   },
   {
    "company": "クリエイト・レストランツ",
@@ -225,7 +235,8 @@
    "unitPrice": 1,
    "balanceUnit": "％割引",
    "quantityUnit": "枚",
-   "exchange": "東証"
+   "exchange": "東証",
+   "usageNotes": "20%割引カード（会計から割引・金券ではない）"
   },
   {
    "company": "ドトール・日レスHD",
@@ -239,7 +250,8 @@
    "unitPrice": 0,
    "balanceUnit": "円分",
    "quantityUnit": "回",
-   "exchange": "東証"
+   "exchange": "東証",
+   "usageNotes": "専用カード入金型・1円単位で利用可"
   },
   {
    "company": "力の源ホールディングス",
@@ -253,7 +265,8 @@
    "unitPrice": 0,
    "balanceUnit": "円相当",
    "quantityUnit": "枚",
-   "exchange": "東証"
+   "exchange": "東証",
+   "usageNotes": "アプリの電子カード・1円単位で利用可"
   },
   {
    "company": "リンガーハット",
@@ -267,7 +280,8 @@
    "unitPrice": 0,
    "balanceUnit": "ポイント",
    "quantityUnit": "枚",
-   "exchange": "東証"
+   "exchange": "東証",
+   "usageNotes": "電子ポイント制（スマホ専用）"
   },
   {
    "company": "木曽路",
@@ -295,7 +309,8 @@
    "unitPrice": 500,
    "balanceUnit": "円",
    "quantityUnit": "枚",
-   "exchange": "東証"
+   "exchange": "東証",
+   "usageNotes": "500円券・お釣り不可・1会計で複数枚利用可"
   },
   {
    "company": "ジョイフル",
@@ -309,7 +324,8 @@
    "unitPrice": 1,
    "balanceUnit": "枚",
    "quantityUnit": "枚",
-   "exchange": "福証"
+   "exchange": "福証",
+   "usageNotes": "15%割引券（金券ではない）"
   },
   {
    "company": "ワタミ",
@@ -323,7 +339,8 @@
    "unitPrice": 500,
    "balanceUnit": "円分",
    "quantityUnit": "枚",
-   "exchange": "東証"
+   "exchange": "東証",
+   "usageNotes": "500円券・お釣り不可・税込2,000円ごとに1枚利用可"
   },
   {
    "company": "大戸屋HD",
@@ -337,7 +354,8 @@
    "unitPrice": 500,
    "balanceUnit": "円相当",
    "quantityUnit": "枚",
-   "exchange": "東証"
+   "exchange": "東証",
+   "usageNotes": "ポイントは1円単位で利用可（コロワイド系列共通）"
   },
   {
    "company": "モスフードサービス",
@@ -365,7 +383,8 @@
    "unitPrice": 500,
    "balanceUnit": "円分",
    "quantityUnit": "枚",
-   "exchange": "東証"
+   "exchange": "東証",
+   "usageNotes": "500円券・お釣り不可"
   },
   {
    "company": "幸楽苑HD",
@@ -435,7 +454,8 @@
    "unitPrice": 1,
    "balanceUnit": "枚",
    "quantityUnit": "枚",
-   "exchange": "東証"
+   "exchange": "東証",
+   "usageNotes": "アプリの電子ポイント制"
   },
   {
    "company": "テンアライド",
@@ -701,7 +721,8 @@
    "unitPrice": 1,
    "balanceUnit": "％割引",
    "quantityUnit": "枚",
-   "exchange": "東証"
+   "exchange": "東証",
+   "usageNotes": "MUJIアプリの電子クーポン（7%割引）"
   },
   {
    "company": "三越伊勢丹HD",
@@ -799,7 +820,8 @@
    "unitPrice": 0,
    "balanceUnit": "ポイント",
    "quantityUnit": "回",
-   "exchange": "東証"
+   "exchange": "東証",
+   "usageNotes": "majicaポイント・1円単位で利用可"
   },
   {
    "company": "イズミ",
@@ -855,7 +877,8 @@
    "unitPrice": 1000,
    "balanceUnit": "円",
    "quantityUnit": "枚",
-   "exchange": "東証"
+   "exchange": "東証",
+   "usageNotes": "公式アプリでの利用のみ・1ポイント=1円"
   },
   {
    "company": "JR東日本",
@@ -1135,7 +1158,8 @@
    "unitPrice": 1,
    "balanceUnit": "枚",
    "quantityUnit": "枚",
-   "exchange": "東証"
+   "exchange": "東証",
+   "usageNotes": "電子チケット化（Sanrio+）・紙券は廃止"
   },
   {
    "company": "ラウンドワン",
@@ -1499,7 +1523,8 @@
    "unitPrice": 2000,
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
-   "exchange": "東証"
+   "exchange": "東証",
+   "usageNotes": "Pontaはau PAYマーケット交換で1.5倍に増量可"
   },
   {
    "company": "日本電信電話(NTT)",
@@ -1513,7 +1538,8 @@
    "unitPrice": 0,
    "balanceUnit": "ポイント",
    "quantityUnit": "P",
-   "exchange": "東証"
+   "exchange": "東証",
+   "usageNotes": "進呈には毎年エントリー手続きが必須"
   },
   {
    "company": "リコーリース",
@@ -1653,7 +1679,8 @@
    "unitPrice": 2000,
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
-   "exchange": "東証"
+   "exchange": "東証",
+   "usageNotes": "カタログから商品を選択する方式"
   },
   {
    "company": "ほくほくフィナンシャル",
