@@ -1,7 +1,17 @@
 {
  "schemaVersion": 1,
- "dataVersion": "2026-08-31.6",
+ "dataVersion": "2026-08-31.7",
  "updatedAt": "2026-08-31",
+ "categories": [
+  "外食",
+  "小売",
+  "交通",
+  "レジャー",
+  "カタログ",
+  "自社商品",
+  "サービス",
+  "その他"
+ ],
  "templates": [
   {
    "company": "カッパ・クリエイト",
