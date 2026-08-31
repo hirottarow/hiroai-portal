@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>株主優待 データベース ｜ ひろ@AI遊び場</title>
+    <meta name="description" content="人気の株主優待161銘柄をカテゴリ・キーワードで検索できるデータベース。使えるお店、お得な使い方、裏技情報も掲載。優待管理アプリ BenefitTracker と同じデータを毎回最新でお届けします。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FAF6F0;
+            --primary-color: #8B5A2B;
+            --secondary-color: #5A4A42;
+            --text-color: #2C2520;
+            --card-bg: #FFFFFF;
+            --accent-color: #EAD8C3;
+            --font-outfit: 'Outfit', 'Noto Sans JP', sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: var(--font-outfit);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        header {
+            background-color: rgba(90, 74, 66, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo { color: #FFFFFF; font-weight: 800; font-size: 18px; text-decoration: none; }
+
+        nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: var(--accent-color); }
+
+        .hero {
+            background: linear-gradient(135deg, #5A4A42 0%, #3E322B 100%);
+            color: #FFFFFF;
+            padding: 50px 5% 40px;
+            text-align: center;
+        }
+        .hero h1 { font-size: 28px; margin-bottom: 10px; }
+        .hero p { opacity: 0.85; font-size: 14px; max-width: 640px; margin: 0 auto; }
+
+        .container { max-width: 860px; margin: 0 auto; padding: 30px 5%; }
+
+        .controls { position: sticky; top: 62px; z-index: 50; background: var(--bg-color); padding: 10px 0 6px; }
+
+        .search-box {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 16px;
+            font-family: inherit;
+            border: 2px solid var(--accent-color);
+            border-radius: 12px;
+            background: var(--card-bg);
+            outline: none;
+        }
+        .search-box:focus { border-color: var(--primary-color); }
+
+        .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+        .chip {
+            border: 1px solid var(--accent-color);
+            background: var(--card-bg);
+            color: var(--secondary-color);
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .chip.active { background: var(--primary-color); border-color: var(--primary-color); color: #FFF; }
+
+        .meta-line { font-size: 12px; color: var(--secondary-color); margin: 12px 2px 4px; }
+
+        .benefit-card {
+            background: var(--card-bg);
+            border-radius: 14px;
+            padding: 18px 20px;
+            margin-top: 14px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+        }
+        .card-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+        .company { font-size: 17px; font-weight: 700; }
+        .ticker { font-size: 12px; color: var(--secondary-color); white-space: nowrap; }
+        .benefit-title { font-size: 14px; color: var(--primary-color); font-weight: 600; margin-top: 2px; }
+        .stars { color: #E5A33C; letter-spacing: 2px; font-size: 14px; }
+        .stars .off { color: #DDD2C4; }
+        .tag {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--secondary-color);
+            border-radius: 6px;
+            font-size: 11px;
+            padding: 2px 8px;
+            margin-right: 6px;
+        }
+        .stores { font-size: 13px; color: var(--secondary-color); margin-top: 8px; }
+        details { margin-top: 10px; }
+        summary {
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--primary-color);
+            user-select: none;
+        }
+        .description { white-space: pre-line; font-size: 13.5px; margin-top: 8px; color: var(--text-color); }
+
+        .status { text-align: center; padding: 40px 0; color: var(--secondary-color); }
+
+        .app-banner {
+            margin-top: 30px;
+            background: linear-gradient(135deg, #8B5A2B 0%, #6B4520 100%);
+            color: #FFF;
+            border-radius: 14px;
+            padding: 20px;
+            font-size: 14px;
+        }
+        .app-banner strong { display: block; font-size: 16px; margin-bottom: 6px; }
+
+        .footer-links { margin-top: 50px; text-align: center; font-size: 13px; }
+        .footer-links a { color: var(--secondary-color); margin: 0 10px; }
+        .copyright { text-align: center; font-size: 12px; color: var(--secondary-color); margin-top: 16px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <a class="logo" href="index.html">ひろ@AI遊び場</a>
+        </div>
+        <nav>
+            <a href="index.html#apps">Apps</a>
+            <a href="tools.html">ツール</a>
+            <a href="index.html#articles">記事</a>
+            <a href="privacy.html">プライバシーポリシー</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>🎁 株主優待 データベース</h1>
+        <p>人気の株主優待銘柄を、カテゴリとキーワードで検索。使えるお店・お得な使い方・ちょっとした裏技まで。</p>
+    </section>
+
+    <div class="container">
+        <div class="controls">
+            <input type="search" id="search" class="search-box" placeholder="企業名・証券コード・お店の名前で検索">
+            <div class="chips" id="chips"></div>
+        </div>
+        <div class="meta-line" id="meta"></div>
+        <div id="list"><div class="status">読み込み中…</div></div>
+
+        <div class="app-banner">
+            <strong>📱 手持ちの優待をアプリで管理</strong>
+            このデータベースは、株主優待の残高・期限管理アプリ「BenefitTracker」の優待辞書と同じデータです。アプリでは銘柄をワンタップで登録し、期限が近づくと通知でお知らせします。
+        </div>
+
+        <div class="footer-links">
+            <a href="index.html">ホーム</a>
+            <a href="tools.html">ツール</a>
+            <a href="terms.html">利用規約</a>
+            <a href="privacy.html">プライバシーポリシー</a>
+        </div>
+        <div class="copyright">&copy; 2026 Hiro @ AI Playground. All Rights Reserved.</div>
+    </div>
+
+    <script>
+    (function () {
+        var DATA_URL = 'data/benefittracker/benefits.json';
+        var allTemplates = [];
+        var updatedAt = '';
+        var activeCategory = 'すべて';
+        var searchEl = document.getElementById('search');
+        var chipsEl = document.getElementById('chips');
+        var listEl = document.getElementById('list');
+        var metaEl = document.getElementById('meta');
+
+        function starText(rating) {
+            var on = Math.max(0, Math.min(5, rating | 0));
+            return { on: '★'.repeat(on), off: '★'.repeat(5 - on) };
+        }
+
+        function render() {
+            var q = (searchEl.value || '').trim().toLowerCase();
+            var items = allTemplates.filter(function (t) {
+                var matchCat = activeCategory === 'すべて' || (t.category || 'その他') === activeCategory;
+                if (!matchCat) return false;
+                if (!q) return true;
+                var hay = [t.company, t.ticker, t.title, t.usableStores, t.description]
+                    .join('\n').toLowerCase();
+                return hay.indexOf(q) !== -1;
+            });
+
+            items.sort(function (a, b) {
+                var r = (b.rating || 0) - (a.rating || 0);
+                if (r !== 0) return r;
+                return String(a.ticker).localeCompare(String(b.ticker));
+            });
+
+            metaEl.textContent = items.length + ' 件を表示（全 ' + allTemplates.length + ' 銘柄' +
+                (updatedAt ? ' ／ データ更新日: ' + updatedAt : '') + '）';
+
+            listEl.textContent = '';
+            if (items.length === 0) {
+                var empty = document.createElement('div');
+                empty.className = 'status';
+                empty.textContent = '該当する銘柄がありません';
+                listEl.appendChild(empty);
+                return;
+            }
+
+            var frag = document.createDocumentFragment();
+            items.forEach(function (t) {
+                var card = document.createElement('div');
+                card.className = 'benefit-card';
+
+                var head = document.createElement('div');
+                head.className = 'card-head';
+                var company = document.createElement('span');
+                company.className = 'company';
+                company.textContent = t.company;
+                var ticker = document.createElement('span');
+                ticker.className = 'ticker';
+                ticker.textContent = (t.ticker ? t.ticker + ' ' : '') + (t.exchange || '');
+                head.appendChild(company);
+                head.appendChild(ticker);
+                card.appendChild(head);
+
+                var title = document.createElement('div');
+                title.className = 'benefit-title';
+                title.textContent = t.title || '';
+                card.appendChild(title);
+
+                var stars = starText(t.rating || 0);
+                var starLine = document.createElement('div');
+                starLine.className = 'stars';
+                starLine.appendChild(document.createTextNode(stars.on));
+                var off = document.createElement('span');
+                off.className = 'off';
+                off.textContent = stars.off;
+                starLine.appendChild(off);
+                var tag = document.createElement('span');
+                tag.className = 'tag';
+                tag.style.marginLeft = '10px';
+                tag.textContent = t.category || 'その他';
+                starLine.appendChild(tag);
+                card.appendChild(starLine);
+
+                if (t.usableStores) {
+                    var stores = document.createElement('div');
+                    stores.className = 'stores';
+                    stores.textContent = '🏬 ' + t.usableStores;
+                    card.appendChild(stores);
+                }
+
+                if (t.description) {
+                    var det = document.createElement('details');
+                    var sum = document.createElement('summary');
+                    sum.textContent = '詳しく見る（お得情報・裏技）';
+                    var desc = document.createElement('div');
+                    desc.className = 'description';
+                    desc.textContent = t.description;
+                    det.appendChild(sum);
+                    det.appendChild(desc);
+                    card.appendChild(det);
+                }
+
+                frag.appendChild(card);
+            });
+            listEl.appendChild(frag);
+        }
+
+        function buildChips() {
+            var cats = ['すべて'];
+            allTemplates.forEach(function (t) {
+                var c = t.category || 'その他';
+                if (cats.indexOf(c) === -1) cats.push(c);
+            });
+            chipsEl.textContent = '';
+            cats.forEach(function (c) {
+                var b = document.createElement('button');
+                b.className = 'chip' + (c === activeCategory ? ' active' : '');
+                b.textContent = c;
+                b.addEventListener('click', function () {
+                    activeCategory = c;
+                    Array.prototype.forEach.call(chipsEl.children, function (el) {
+                        el.classList.toggle('active', el.textContent === c);
+                    });
+                    render();
+                });
+                chipsEl.appendChild(b);
+            });
+        }
+
+        fetch(DATA_URL, { cache: 'no-cache' })
+            .then(function (res) {
+                if (!res.ok) throw new Error('HTTP ' + res.status);
+                return res.json();
+            })
+            .then(function (data) {
+                allTemplates = data.templates || [];
+                updatedAt = data.updatedAt || '';
+                buildChips();
+                render();
+            })
+            .catch(function (err) {
+                listEl.textContent = '';
+                var el = document.createElement('div');
+                el.className = 'status';
+                el.textContent = 'データの読み込みに失敗しました（' + err.message + '）。時間をおいて再読み込みしてください。';
+                listEl.appendChild(el);
+            });
+
+        searchEl.addEventListener('input', render);
+    })();
+    </script>
+</body>
+</html>
