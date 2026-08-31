@@ -267,6 +267,13 @@
                 starLine.appendChild(tag);
                 card.appendChild(starLine);
 
+                if (t.usageNotes) {
+                    var notes = document.createElement('div');
+                    notes.className = 'stores';
+                    notes.textContent = '💳 ' + t.usageNotes;
+                    card.appendChild(notes);
+                }
+
                 if (t.usableStores) {
                     var stores = document.createElement('div');
                     stores.className = 'stores';
