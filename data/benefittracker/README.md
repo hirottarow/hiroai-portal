@@ -35,7 +35,7 @@
 | usableStores | string | 使える店舗 | "" |
 | description | string | 説明（\n 区切りの複数段落） | "" |
 | rating | int | おすすめ度 1〜5 | 3 |
-| unitPrice | int | 1単位の金額 | 0 |
+| unitPrice | int | 1単位の金額。**規約: 金券・枚数系=券面額 / 物品セット・カタログ系=balanceと同値（1セットで使い切り） / ポイント・チャージ系=0（個数と「1回使う」を表示しない）**。1のまま残すとアプリで「1個=1円」になる（2026-08-31 の不具合） | 0 |
 | balanceUnit | string | 残高の単位（円分/円/冊 等） | 円 |
 | quantityUnit | string | 数量の単位（枚/冊/回 等） | 枚 |
 | exchange | string | 上場市場 | 東証 |
