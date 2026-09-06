@@ -130,6 +130,20 @@
 
         .status { text-align: center; padding: 40px 0; color: var(--secondary-color); }
 
+        .side-group { margin-top: 40px; }
+        .side-group h2 { font-size: 20px; margin: 0 0 8px; }
+        .side-lead { font-size: 14px; color: var(--secondary-color); line-height: 1.7; margin: 0 0 16px; }
+        .side-list { display: grid; gap: 10px; }
+        .side-item {
+            border: 1px solid rgba(0, 0, 0, .08);
+            border-radius: 10px;
+            padding: 12px 14px;
+            background: #FFF;
+        }
+        .side-item .company { font-weight: 700; }
+        .side-item .ticker { font-size: 12px; color: var(--secondary-color); margin-left: 8px; }
+        .side-item .side-note { font-size: 13px; color: var(--secondary-color); margin-top: 4px; line-height: 1.6; }
+
         .app-banner {
             margin-top: 30px;
             background: linear-gradient(135deg, #8B5A2B 0%, #6B4520 100%);
@@ -170,6 +184,12 @@
         </div>
         <div class="meta-line" id="meta"></div>
         <div id="list"><div class="status">読み込み中…</div></div>
+
+        <section class="side-group" id="site-only" hidden>
+            <h2 id="site-only-title"></h2>
+            <p class="side-lead">QUOカードは有効期限がなく、発行元の会社とは関係なくコンビニや書店で使えます。残高と期限を管理する必要がないので、アプリの優待辞書には入れずにここで紹介だけしています。</p>
+            <div class="side-list" id="site-only-list"></div>
+        </section>
 
         <div class="app-banner">
             <strong>📱 手持ちの優待をアプリで管理</strong>
@@ -320,6 +340,55 @@
             });
         }
 
+        // siteOnly … アプリの優待辞書には入れず、このページでの紹介だけにしている銘柄。
+        // 現在は QUOカードそのものが優待品のもの（期限がなく、発行元以外の店で使えるため
+        // 残高・期限の管理対象にならない）。
+        function renderSiteOnly(items) {
+            if (!items.length) return;
+            var section = document.getElementById('site-only');
+            var titleEl = document.getElementById('site-only-title');
+            var listEl2 = document.getElementById('site-only-list');
+            var group = items[0].siteGroup || 'そのほか';
+
+            titleEl.textContent = '🎫 ' + group + 'がもらえる銘柄（' + items.length + '）';
+            listEl2.textContent = '';
+
+            var frag = document.createDocumentFragment();
+            items.forEach(function (t) {
+                var item = document.createElement('div');
+                item.className = 'side-item';
+
+                var head = document.createElement('div');
+                var company = document.createElement('span');
+                company.className = 'company';
+                company.textContent = t.company;
+                var ticker = document.createElement('span');
+                ticker.className = 'ticker';
+                ticker.textContent = (t.ticker ? t.ticker + ' ' : '') + (t.exchange || '');
+                head.appendChild(company);
+                head.appendChild(ticker);
+                item.appendChild(head);
+
+                if (t.balance) {
+                    var note = document.createElement('div');
+                    note.className = 'side-note';
+                    note.textContent = '基本 ' + t.balance.toLocaleString() + ' 円分';
+                    item.appendChild(note);
+                }
+
+                if (t.usageNotes) {
+                    var cond = document.createElement('div');
+                    cond.className = 'side-note';
+                    cond.textContent = '💳 ' + t.usageNotes;
+                    item.appendChild(cond);
+                }
+
+                frag.appendChild(item);
+            });
+            listEl2.appendChild(frag);
+            section.hidden = false;
+        }
+
         fetch(DATA_URL, { cache: 'no-cache' })
             .then(function (res) {
                 if (!res.ok) throw new Error('HTTP ' + res.status);
@@ -330,6 +399,7 @@
                 updatedAt = data.updatedAt || '';
                 buildChips();
                 render();
+                renderSiteOnly(data.siteOnly || []);
             })
             .catch(function (err) {
                 listEl.textContent = '';
