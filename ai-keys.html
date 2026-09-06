@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI の API キーの取り方（MainteTree / AiKeyHub 共通） | ひろ@AI遊び場</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FAF6F0;
+            --primary-color: #3B82F6;
+            --secondary-color: #1E293B;
+            --text-color: #2C2520;
+            --card-bg: #FFFFFF;
+            --accent-color: #DBEAFE;
+            --font-outfit: 'Outfit', 'Noto Sans JP', sans-serif;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: var(--font-outfit);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            padding-bottom: 60px;
+        }
+        header {
+            background-color: rgba(30, 41, 59, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky; top: 0; z-index: 100;
+            padding: 15px 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        .logo { font-size: 24px; font-weight: 800; color: #FFFFFF; letter-spacing: 1px; display: flex; align-items: center; gap: 10px; }
+        nav a { color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 14px; margin-left: 20px; transition: color 0.3s; }
+        nav a:hover { color: var(--accent-color); }
+        .container { max-width: 800px; margin: 50px auto 0; padding: 0 20px; }
+        .policy-card {
+            background-color: var(--card-bg);
+            border-radius: 16px; padding: 40px;
+            box-shadow: 0 10px 30px rgba(30, 41, 59, 0.05);
+            border: 1px solid rgba(59, 130, 246, 0.15);
+        }
+        .app-badge {
+            display: inline-block; background-color: #DBEAFE; color: #1E40AF;
+            font-weight: 700; padding: 4px 12px; border-radius: 20px; font-size: 12px; margin-bottom: 15px;
+        }
+        h1 { font-size: 28px; font-weight: 800; color: var(--secondary-color); margin-bottom: 20px; border-bottom: 2px solid var(--accent-color); padding-bottom: 15px; }
+        h2 { font-size: 20px; font-weight: 700; color: var(--secondary-color); margin-top: 36px; margin-bottom: 15px; scroll-margin-top: 80px; }
+        h3 { font-size: 16px; font-weight: 700; color: var(--secondary-color); margin-top: 20px; margin-bottom: 8px; }
+        p { font-size: 15px; color: #334155; margin-bottom: 16px; }
+        ul, ol { margin-bottom: 16px; padding-left: 22px; }
+        li { font-size: 15px; color: #334155; margin-bottom: 8px; }
+        a.ext { color: var(--primary-color); font-weight: 600; }
+        .note { background: #F1F5F9; border-left: 4px solid var(--primary-color); padding: 12px 16px; border-radius: 6px; margin-bottom: 16px; font-size: 14px; color: #334155; }
+        .warn { background: #FFF7ED; border-left: 4px solid #F97316; padding: 12px 16px; border-radius: 6px; margin-bottom: 16px; font-size: 14px; color: #431407; }
+        .tag { display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 10px; border-radius: 12px; margin-right: 6px; vertical-align: middle; }
+        .tag-free { background: #DCFCE7; color: #166534; }
+        .tag-paid { background: #FEE2E2; color: #991B1B; }
+        .tag-part { background: #FEF9C3; color: #854D0E; }
+        details { border: 1px solid rgba(30, 41, 59, 0.12); border-radius: 12px; padding: 12px 18px; margin-bottom: 12px; background: #FFFFFF; scroll-margin-top: 80px; }
+        details[open] { box-shadow: 0 4px 14px rgba(30, 41, 59, 0.06); }
+        summary { cursor: pointer; font-weight: 700; color: var(--secondary-color); font-size: 16px; list-style: none; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+        summary::-webkit-details-marker { display: none; }
+        summary::before { content: "▶"; font-size: 11px; color: var(--primary-color); }
+        details[open] summary::before { content: "▼"; }
+        .verified { font-size: 12px; color: #94A3B8; margin-top: 4px; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+        th, td { border: 1px solid rgba(30, 41, 59, 0.12); padding: 8px 10px; text-align: left; vertical-align: top; }
+        th { background: #F8FAFC; color: var(--secondary-color); }
+        .footer-links { text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid rgba(30, 41, 59, 0.1); }
+        .footer-links a { color: var(--secondary-color); text-decoration: none; font-weight: 600; font-size: 13px; margin: 0 15px; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--primary-color); }
+        .copyright { text-align: center; margin-top: 20px; font-size: 11px; color: #94A3B8; }
+        @media (max-width: 600px) { .policy-card { padding: 24px 18px; } h1 { font-size: 22px; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="ひろ@AI遊び場 ロゴ" style="height: 38px; border-radius: 6px; display: block;">
+            <span style="font-size: 20px; font-weight: 800; color: #FFFFFF; letter-spacing: 0.5px;">ひろ@AI遊び場</span>
+        </div>
+        <nav>
+            <a href="index.html">Apps</a>
+            <a href="tools.html">ツール</a>
+            <a href="terms.html">利用規約</a>
+            <a href="privacy.html">プライバシーポリシー一覧</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="policy-card">
+            <span class="app-badge">🔑 MainteTree / AiKeyHub 共通ガイド</span>
+            <h1>「AI に聞く」を使うための API キーの取り方</h1>
+
+            <p>当開発者のアプリ（MainteTree など）の「AI に聞く」は、<strong>あなた自身が各 AI 会社から取得した API キー</strong>を使って動きます。このページでは、なぜキーが要るのか、いくらかかるのか、どこで取るのかを順に説明します。<strong>初めての方は「まずはこれ（Gemini）」だけ読めば十分です。</strong></p>
+
+            <h2 id="why">1. なぜキーが要るの？</h2>
+            <p>ChatGPT や Gemini のような AI は、会社のサーバーで動いています。アプリから AI に質問を送るには、「誰が使っているか」を示す合言葉（API キー）を付けて送る必要があります。当開発者がキーをまとめて用意すると、アプリが無料のまま当開発者に AI 利用料が請求され続けるため、<strong>使う人が自分のキーを持ち込む方式</strong>にしています。</p>
+            <p>キーが無くても、アプリの本来の機能（記録・点検・写真・CSV など）はすべて使えます。「相談文を共有」で文章だけを取り出し、ChatGPT アプリなどに貼り付ける使い方もできます。</p>
+
+            <h2 id="cost">2. いくらかかるの？</h2>
+            <p><strong>アプリ自体は無料</strong>です。AI の利用料は各社からあなたのアカウントに直接請求されます（当開発者は一切受け取りません）。会社によって「無料枠あり」と「前払い必須」に分かれます。</p>
+            <table>
+                <tr><th>会社</th><th>無料枠</th><th>ひとこと</th></tr>
+                <tr><td><a href="#google">Gemini（Google）</a></td><td><span class="tag tag-free">無料枠あり</span></td><td>Flash 系モデルが無料。<strong>まずはこれ</strong></td></tr>
+                <tr><td><a href="#groq">Groq</a></td><td><span class="tag tag-free">無料枠あり</span></td><td>1日1,000回・1分30回まで無料。応答が速い</td></tr>
+                <tr><td><a href="#cerebras">Cerebras</a></td><td><span class="tag tag-free">無料枠あり</span></td><td>登録時に $5 分のクレジット</td></tr>
+                <tr><td><a href="#openrouter">OpenRouter</a></td><td><span class="tag tag-part">無料モデルあり</span></td><td>「:free」モデルは無料（クレジット無しだと1日50回）</td></tr>
+                <tr><td><a href="#mistral">Mistral</a></td><td><span class="tag tag-free">無料枠あり</span></td><td>Studio の Free モードで開始できる</td></tr>
+                <tr><td><a href="#openai">ChatGPT（OpenAI）</a></td><td><span class="tag tag-paid">前払い</span></td><td>クレジットを購入して使う</td></tr>
+                <tr><td><a href="#anthropic">Claude（Anthropic）</a></td><td><span class="tag tag-paid">前払い</span></td><td>クレジットを購入して使う</td></tr>
+                <tr><td><a href="#xai">Grok（xAI）</a></td><td><span class="tag tag-paid">前払い</span></td><td>クレジットを入れてからキー発行</td></tr>
+            </table>
+            <div class="note">1回の相談は数円以下のことがほとんどですが、<strong>金額・無料枠の条件は各社が予告なく変えます</strong>。必ず各社の料金ページで最新を確認してください。前払いの会社は、使い過ぎを防ぐために「上限額」の設定をおすすめします。</div>
+
+            <h2 id="safety">3. キーは安全？</h2>
+            <ul>
+                <li>キーは<strong>あなたの端末の中だけ</strong>に暗号化して保存されます。バックアップにも含まれず、当開発者へ送られることはありません。</li>
+                <li>キーは<strong>パスワードと同じ</strong>です。人に見せない・スクリーンショットに写さない・SNS に貼らないでください。</li>
+                <li>漏れたと思ったら、各社のキー管理ページで<strong>そのキーを削除</strong>すれば無効になります。作り直せば済みます。</li>
+            </ul>
+
+            <h2 id="where">4. どこに入れるの？（MainteTree 直接 or AiKeyHub）</h2>
+            <p>入れ方は2つあります。<strong>当開発者の AI 付きアプリを2つ以上使うなら AiKeyHub</strong>、1つだけなら直接で十分です。</p>
+            <ul>
+                <li><strong>MainteTree に直接</strong>: MainteTree の「AI 設定」→ 使いたい会社の「＋ AI を追加」→ API キー欄に貼り付け。</li>
+                <li><strong>AiKeyHub にまとめて</strong>: AiKeyHub アプリにキーを1回入れると、対応するアプリ（MainteTree など）はそれを借りて使えます。MainteTree 側では「AI 設定」→「AiKeyHub の設定を使う」を ON にし、AiKeyHub 側で MainteTree を承認してください。</li>
+            </ul>
+
+            <h2 id="google">5. まずはこれ: Gemini（Google）のキーを取る <span class="tag tag-free">無料枠あり</span></h2>
+            <p>Google アカウントがあれば数分で取れて、Flash 系モデルは無料枠で使えます。カード登録は不要です。</p>
+            <ol>
+                <li>スマホのブラウザで <a class="ext" href="https://aistudio.google.com/apikey" target="_blank" rel="noopener noreferrer">Google AI Studio の API キーページ</a> を開き、Google アカウントでログインします。</li>
+                <li>「<strong>API キーを作成</strong>（Create API key）」を押します。プロジェクトを聞かれたら「新しいプロジェクトで作成」を選びます。</li>
+                <li>表示されたキー（<code>AIza…</code> で始まる文字列）の横の<strong>コピー</strong>ボタンを押します。</li>
+                <li>アプリに戻り、「AI 設定」→ Gemini の API キー欄に<strong>貼り付け</strong>て保存します。</li>
+                <li>「モデル一覧を取得」を押すと、そのキーで使えるモデルがメニューに並びます。無料枠で使うなら <strong>Flash</strong> 系を選びます。</li>
+            </ol>
+            <div class="note">利用規約と料金は <a class="ext" href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">Gemini API の料金ページ</a> を確認してください。無料枠は1日あたりの回数に上限があり、超えると「上限に達しました」と返ってきます（翌日戻ります）。</div>
+            <p class="verified">最終確認日: 2026-09-07</p>
+
+            <h2 id="others">6. 他の会社のキーを取る</h2>
+            <p>会社名をタップすると手順が開きます。どの会社も流れは同じで、<strong>「アカウント作成 → キー管理ページ → 新しいキーを作成 → コピー → アプリに貼り付け」</strong>です。</p>
+
+            <details id="groq">
+                <summary>Groq <span class="tag tag-free">無料枠あり</span></summary>
+                <ol>
+                    <li><a class="ext" href="https://console.groq.com/keys" target="_blank" rel="noopener noreferrer">Groq Console の API Keys</a> を開き、Google などでサインアップします。</li>
+                    <li>「<strong>Create API Key</strong>」→ 名前を付けて作成 → 表示されたキー（<code>gsk_…</code>）をコピーします。</li>
+                    <li>アプリの「AI 設定」→ Groq の API キー欄に貼り付けます。</li>
+                </ol>
+                <p>無料枠は 1 分 30 回・1 日 1,000 回まで（<a class="ext" href="https://console.groq.com/docs/rate-limits" target="_blank" rel="noopener noreferrer">レート制限の公式ページ</a>）。オープンモデル（gpt-oss・Llama など）を高速に動かす会社です。</p>
+                <p class="verified">最終確認日: 2026-09-07</p>
+            </details>
+
+            <details id="cerebras">
+                <summary>Cerebras <span class="tag tag-free">無料枠あり</span></summary>
+                <ol>
+                    <li><a class="ext" href="https://cloud.cerebras.ai" target="_blank" rel="noopener noreferrer">Cerebras Cloud Console</a> でアカウントを作ります（登録時に $5 分の無料クレジット）。</li>
+                    <li>左メニューの「<strong>API Keys</strong>」→ 新しいキーを作成 → コピーします。</li>
+                    <li>アプリの「AI 設定」→ Cerebras の API キー欄に貼り付けます。</li>
+                </ol>
+                <p>料金は <a class="ext" href="https://www.cerebras.ai/pricing" target="_blank" rel="noopener noreferrer">Cerebras の料金ページ</a> を確認してください。</p>
+                <p class="verified">最終確認日: 2026-09-07</p>
+            </details>
+
+            <details id="openrouter">
+                <summary>OpenRouter <span class="tag tag-part">無料モデルあり</span></summary>
+                <ol>
+                    <li><a class="ext" href="https://openrouter.ai/keys" target="_blank" rel="noopener noreferrer">OpenRouter の Keys ページ</a> を開き、サインアップします。</li>
+                    <li>「<strong>Create Key</strong>」→ 名前を付けて作成 → 表示されたキー（<code>sk-or-…</code>）をコピーします。</li>
+                    <li>アプリの「AI 設定」→ OpenRouter の API キー欄に貼り付けます。</li>
+                </ol>
+                <p>1 つのキーで多くの会社のモデルが使えます。モデル名が「<strong>:free</strong>」で終わるものは無料ですが、クレジット無しだと 1 日 50 回まで（$10 以上入れると 1 日 1,000 回）。詳細は <a class="ext" href="https://openrouter.ai/docs/faq" target="_blank" rel="noopener noreferrer">OpenRouter の FAQ</a>。</p>
+                <p class="verified">最終確認日: 2026-09-07</p>
+            </details>
+
+            <details id="mistral">
+                <summary>Mistral <span class="tag tag-free">無料枠あり</span></summary>
+                <ol>
+                    <li><a class="ext" href="https://console.mistral.ai" target="_blank" rel="noopener noreferrer">Mistral Studio（旧 La Plateforme）</a> でアカウントを作り、<strong>Free モード</strong>で有効化します。</li>
+                    <li>「<strong>API Keys</strong>」→ 新しいキーを作成 → コピーします。</li>
+                    <li>アプリの「AI 設定」→ Mistral の API キー欄に貼り付けます。</li>
+                </ol>
+                <p>Free モードの条件（電話番号認証など）や上限は <a class="ext" href="https://docs.mistral.ai/getting-started/quickstarts" target="_blank" rel="noopener noreferrer">Mistral の Quickstart</a> を確認してください。</p>
+                <p class="verified">最終確認日: 2026-09-07</p>
+            </details>
+
+            <details id="openai">
+                <summary>ChatGPT（OpenAI） <span class="tag tag-paid">前払い</span></summary>
+                <ol>
+                    <li><a class="ext" href="https://platform.openai.com/api-keys" target="_blank" rel="noopener noreferrer">OpenAI Platform の API keys</a> を開き、ログインします（ChatGPT のアカウントと同じで構いませんが、<strong>ChatGPT Plus の料金とは別</strong>です）。</li>
+                    <li>「<strong>Create new secret key</strong>」→ 名前を付けて作成 → 表示されたキー（<code>sk-…</code>）をコピーします。<strong>この画面を閉じると二度と表示されません。</strong></li>
+                    <li>「Billing」でクレジットを購入します（数ドルから）。上限額（Usage limits）も設定しておくと安心です。</li>
+                    <li>アプリの「AI 設定」→ ChatGPT の API キー欄に貼り付けます。</li>
+                </ol>
+                <p>料金は <a class="ext" href="https://openai.com/api/pricing/" target="_blank" rel="noopener noreferrer">OpenAI API の料金ページ</a> を確認してください。</p>
+                <p class="verified">最終確認日: 2026-09-07</p>
+            </details>
+
+            <details id="anthropic">
+                <summary>Claude（Anthropic） <span class="tag tag-paid">前払い</span></summary>
+                <ol>
+                    <li><a class="ext" href="https://platform.claude.com/settings/keys" target="_blank" rel="noopener noreferrer">Claude Console の API Keys</a> を開き、アカウントを作ります（Claude アプリの Pro 契約とは<strong>別</strong>です）。</li>
+                    <li>「<strong>Create Key</strong>」→ 名前を付けて作成 → 表示されたキー（<code>sk-ant-…</code>）をコピーします。</li>
+                    <li>「Billing」でクレジットを購入します。</li>
+                    <li>アプリの「AI 設定」→ Claude の API キー欄に貼り付けます。</li>
+                </ol>
+                <p>料金は <a class="ext" href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">Claude の料金ページ</a> を確認してください。</p>
+                <p class="verified">最終確認日: 2026-09-07</p>
+            </details>
+
+            <details id="xai">
+                <summary>Grok（xAI） <span class="tag tag-paid">前払い</span></summary>
+                <ol>
+                    <li><a class="ext" href="https://console.x.ai" target="_blank" rel="noopener noreferrer">xAI Console</a> でアカウントを作ります。</li>
+                    <li>先に「Billing」で<strong>クレジットを入れます</strong>（公式ガイドが「クレジットを入れてから API を使う」と案内しています）。</li>
+                    <li>「<strong>API Keys</strong>」→ 新しいキーを作成 → コピーします。</li>
+                    <li>アプリの「AI 設定」→ Grok の API キー欄に貼り付けます。</li>
+                </ol>
+                <p>料金は <a class="ext" href="https://docs.x.ai/developers/models" target="_blank" rel="noopener noreferrer">xAI のモデル一覧（料金付き）</a> を確認してください。</p>
+                <p class="verified">最終確認日: 2026-09-07</p>
+            </details>
+
+            <div class="note" id="more">AiKeyHub には上記以外の会社（DeepSeek・Kimi・GLM・Qwen・Together AI・Fireworks AI・Perplexity・NVIDIA NIM）も入っています。流れは同じで、各社のコンソール（開発者向けページ）の「API Keys」から作ってコピーしてください。無料枠の有無は会社ごとに違うので、各社の料金ページを確認してください。</div>
+
+            <h2 id="back">7. アプリに戻って貼り付ける</h2>
+            <ol>
+                <li>コピーしたキーを、アプリの「AI 設定」→ その会社の <strong>API キー</strong>欄に貼り付けて保存します。</li>
+                <li>「<strong>モデル一覧を取得</strong>」を押して、使うモデルを選びます（無料枠のある会社は無料のモデルを）。</li>
+                <li>記録や点検の画面から「<strong>AI に聞く</strong>」を押して、返事が来れば完了です。</li>
+            </ol>
+            <div class="note">AiKeyHub に入れた場合は、MainteTree の「AI 設定」で「AiKeyHub の設定を使う」を ON にし、AiKeyHub 側で MainteTree を承認してください。以後、キーの変更は AiKeyHub だけで済みます。</div>
+
+            <h2 id="trouble">8. うまくいかないとき</h2>
+            <ul>
+                <li><strong>「キーが無効」と出る</strong>: コピー時に前後の空白や改行が混ざっていないか確認します。キーを作り直すのが早いです。</li>
+                <li><strong>「上限に達した」「429」と出る</strong>: 無料枠の回数を使い切っています。翌日まで待つか、別の会社を追加してください。複数の会社を入れておくと「Auto」が空いている社へ自動で切り替えます。</li>
+                <li><strong>モデル一覧が空</strong>: 前払いの会社はクレジットが 0 だと一覧も返ってきません。Billing を確認してください。</li>
+                <li><strong>手順が画面と違う</strong>: 各社が画面をよく変えます。上の「最終確認日」より新しい変更の可能性があるので、公式ページの案内を優先してください。気づいたら下記の連絡先へ教えていただけると助かります。</li>
+            </ul>
+
+            <p style="font-size: 12px; color: #94A3B8; margin-top: 30px;">各社の名称・ロゴは各社の商標です。当開発者は各社とは無関係の第三者であり、各社のサービス内容・料金を保証するものではありません。<br>連絡先：<strong>hiro.ai.playground@gmail.com</strong> ／ 公開日：2026年9月7日</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="index.html">ホーム</a>
+            <a href="terms.html">利用規約</a>
+            <a href="privacy.html">プライバシーポリシー一覧</a>
+            <a href="mailto:hiro.ai.playground@gmail.com">お問い合わせ</a>
+        </div>
+
+        <div class="copyright">
+            &copy; 2026 Hiro @ AI Playground. All Rights Reserved.
+        </div>
+    </div>
+
+</body>
+</html>
