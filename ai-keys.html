@@ -74,7 +74,15 @@
         .footer-links a { color: var(--secondary-color); text-decoration: none; font-weight: 600; font-size: 13px; margin: 0 15px; transition: color 0.3s; }
         .footer-links a:hover { color: var(--primary-color); }
         .copyright { text-align: center; margin-top: 20px; font-size: 11px; color: #94A3B8; }
-        @media (max-width: 600px) { .policy-card { padding: 24px 18px; } h1 { font-size: 22px; } }
+        @media (max-width: 600px) {
+            .policy-card { padding: 24px 18px; }
+            h1 { font-size: 22px; }
+            /* スマホ幅では固定ヘッダーが3行に膨らみ、アンカー先の見出しが隠れる（2026-09-07 akita で実測）。固定をやめて小さくする */
+            header { position: static; padding: 10px 4%; }
+            .logo span { display: none !important; }
+            nav a { margin-left: 12px; font-size: 13px; }
+            h2, details { scroll-margin-top: 12px; }
+        }
     </style>
 </head>
 <body>
@@ -109,7 +117,7 @@
                 <tr><th>会社</th><th>無料枠</th><th>ひとこと</th></tr>
                 <tr><td><a href="#google">Gemini（Google）</a></td><td><span class="tag tag-free">無料枠あり</span></td><td>Flash 系モデルが無料。<strong>まずはこれ</strong></td></tr>
                 <tr><td><a href="#groq">Groq</a></td><td><span class="tag tag-free">無料枠あり</span></td><td>1日1,000回・1分30回まで無料。応答が速い</td></tr>
-                <tr><td><a href="#cerebras">Cerebras</a></td><td><span class="tag tag-free">無料枠あり</span></td><td>登録時に $5 分のクレジット</td></tr>
+                <tr><td><a href="#cerebras">Cerebras</a></td><td><span class="tag tag-part">条件付き</span></td><td>カード不要の無料枠は 2026-08 に終了。支払い方法を登録すると $5 クレジット（30日で失効）</td></tr>
                 <tr><td><a href="#openrouter">OpenRouter</a></td><td><span class="tag tag-part">無料モデルあり</span></td><td>「:free」モデルは無料（クレジット無しだと1日50回）</td></tr>
                 <tr><td><a href="#mistral">Mistral</a></td><td><span class="tag tag-free">無料枠あり</span></td><td>Studio の Free モードで開始できる</td></tr>
                 <tr><td><a href="#openai">ChatGPT（OpenAI）</a></td><td><span class="tag tag-paid">前払い</span></td><td>クレジットを購入して使う</td></tr>
@@ -159,13 +167,14 @@
             </details>
 
             <details id="cerebras">
-                <summary>Cerebras <span class="tag tag-free">無料枠あり</span></summary>
+                <summary>Cerebras <span class="tag tag-part">条件付き</span></summary>
                 <ol>
-                    <li><a class="ext" href="https://cloud.cerebras.ai" target="_blank" rel="noopener noreferrer">Cerebras Cloud Console</a> でアカウントを作ります（登録時に $5 分の無料クレジット）。</li>
+                    <li><a class="ext" href="https://cloud.cerebras.ai" target="_blank" rel="noopener noreferrer">Cerebras Cloud Console</a> でアカウントを作ります。</li>
+                    <li>「Billing」で<strong>支払い方法を登録</strong>します（登録すると $5 分のクレジットが付き、30 日で失効します。カード不要の無料枠は 2026 年 8 月に終了しました）。</li>
                     <li>左メニューの「<strong>API Keys</strong>」→ 新しいキーを作成 → コピーします。</li>
                     <li>アプリの「AI 設定」→ Cerebras の API キー欄に貼り付けます。</li>
                 </ol>
-                <p>料金は <a class="ext" href="https://www.cerebras.ai/pricing" target="_blank" rel="noopener noreferrer">Cerebras の料金ページ</a> を確認してください。</p>
+                <p>料金は <a class="ext" href="https://www.cerebras.ai/pricing" target="_blank" rel="noopener noreferrer">Cerebras の料金ページ</a> を確認してください。<strong>料金ページに「無料クレジット」と残っていても、支払い方法の登録なしでは 402（支払いが必要）が返ります</strong>（2026-09-05 に実測）。</p>
                 <p class="verified">最終確認日: 2026-09-07</p>
             </details>
 
