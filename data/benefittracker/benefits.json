@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "dataVersion": "2026-09-06.2",
+ "dataVersion": "2026-09-06.3",
  "updatedAt": "2026-09-06",
  "categories": [
   "外食",
@@ -26,7 +26,8 @@
    "balanceUnit": "円分",
    "quantityUnit": "回",
    "exchange": "東証",
-   "usageNotes": "1ポイント単位で利用可・端数調整OK"
+   "usageNotes": "1ポイント単位で利用可・端数調整OK",
+   "shipMonths": "6,12"
   },
   {
    "company": "すかいらーくHD",
@@ -41,7 +42,8 @@
    "balanceUnit": "円",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "usageNotes": "優待カード残高式・1円単位で利用可"
+   "usageNotes": "優待カード残高式・1円単位で利用可",
+   "shipMonths": "3,9"
   },
   {
    "company": "マクドナルドHD",
@@ -145,7 +147,8 @@
    "balanceUnit": "ポイント",
    "quantityUnit": "回",
    "exchange": "東証",
-   "usageNotes": "1ポイント=1円で1円単位利用可"
+   "usageNotes": "1ポイント=1円で1円単位利用可",
+   "shipMonths": "6,12"
   },
   {
    "company": "王将フードサービス",
@@ -218,7 +221,8 @@
    "unitPrice": 500,
    "balanceUnit": "円",
    "quantityUnit": "枚",
-   "exchange": "東証"
+   "exchange": "東証",
+   "shipMonths": "5,11"
   },
   {
    "company": "エターナルホスピタリティグループ",
@@ -536,7 +540,8 @@
    "unitPrice": 1000,
    "balanceUnit": "円",
    "quantityUnit": "枚",
-   "exchange": "東証"
+   "exchange": "東証",
+   "shipMonths": "5,11"
   },
   {
    "company": "ヤマダHD",
@@ -550,7 +555,8 @@
    "unitPrice": 500,
    "balanceUnit": "円",
    "quantityUnit": "枚",
-   "exchange": "東証"
+   "exchange": "東証",
+   "shipMonths": "6,12"
   },
   {
    "company": "マツキヨココカラ＆カンパニー",
@@ -803,7 +809,8 @@
    "unitPrice": 500,
    "balanceUnit": "円",
    "quantityUnit": "枚",
-   "exchange": "東証"
+   "exchange": "東証",
+   "shipMonths": "6"
   },
   {
    "company": "コメリ",
