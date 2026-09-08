@@ -12,7 +12,9 @@
 
 1. `benefits.json` の `templates` 配列を編集（追加・修正・削除）
 2. `dataVersion` を更新（`YYYY-MM-DD.連番`）、`updatedAt` を当日に
-3. commit → push（GitHub Pages に反映されるまで数分）
+3. **push 前に `python scripts/build_benefits_pages.py` を流す**（銘柄ごとの静的ページ `benefits/<ticker>.html`・
+   `benefits.html` の静的一覧・`sitemap.xml` を再生成する。2026-09-09 新設。標準ライブラリのみ、冪等）
+4. commit → push（GitHub Pages に反映されるまで数分）
 
 ## スキーマの約束
 
