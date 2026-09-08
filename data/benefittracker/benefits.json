@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
- "dataVersion": "2026-09-07.4",
- "updatedAt": "2026-09-07",
+ "dataVersion": "2026-09-09.1",
+ "updatedAt": "2026-09-09",
  "categories": [
   "外食",
   "小売",
@@ -1802,7 +1802,20 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "100株以上・3月末と9月末の年2回。QUOカード500円分ほか計5種類から選ぶ申込制（申し込まないと受け取れない）",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "quo": {
+    "tiers": [
+     {
+      "minShares": 100,
+      "minHoldMonths": 0,
+      "amountYen": 500,
+      "timesPerYear": 2
+     }
+    ],
+    "rightsMonths": "3,9",
+    "note": "申込制（申し込まないと受け取れない）。QUOカードほか計5種類から選択。QUO を選んだ場合の金額",
+    "auditedAt": "2026-09-09"
+   }
   },
   {
    "company": "エスリード",
@@ -2062,7 +2075,18 @@
    "balanceUnit": "円分",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "quo": {
+    "tiers": [
+     {
+      "minShares": 100,
+      "minHoldMonths": 12,
+      "amountYen": 500
+     }
+    ],
+    "note": "年回数の記載が無いため年間額は計算できない（手打ち）。1,000株以上は地元特産カタログ3,000円相当",
+    "auditedAt": "2026-09-09"
+   }
   },
   {
    "company": "南都銀行",
@@ -2254,7 +2278,20 @@
    "exchange": "東証",
    "usageNotes": "長期保有限定（クロス不可）: 500株以上を6か月以上継続保有（名簿連続2回）。初回2027年2月末は経過措置（2026年11月末から連続記載でOK）。国内居住者限定",
    "siteGroup": "QUOカード",
-   "auditedAt": "2026-09-05"
+   "auditedAt": "2026-09-05",
+   "quo": {
+    "tiers": [
+     {
+      "minShares": 500,
+      "minHoldMonths": 6,
+      "amountYen": 30000,
+      "timesPerYear": 2
+     }
+    ],
+    "rightsMonths": "2,8",
+    "note": "長期保有限定（クロス不可）。初回2027年2月末は経過措置（2026年11月末の名簿から連続保有で対象）。国内居住者限定",
+    "auditedAt": "2026-09-09"
+   }
   },
   {
    "company": "フタバ産業",
@@ -2271,7 +2308,32 @@
    "exchange": "東証",
    "usageNotes": "初回2026年9月末は保有期間不問・一律1,000円分。2027年9月以降は1年以上の継続保有が必須（クロス取得は初回のみ可）。3年以上・500株以上で増額",
    "siteGroup": "QUOカード",
-   "auditedAt": "2026-09-05"
+   "auditedAt": "2026-09-05",
+   "quo": {
+    "tiers": [
+     {
+      "minShares": 100,
+      "minHoldMonths": 12,
+      "amountYen": 1000,
+      "timesPerYear": 1
+     },
+     {
+      "minShares": 100,
+      "minHoldMonths": 36,
+      "amountYen": 2000,
+      "timesPerYear": 1
+     },
+     {
+      "minShares": 500,
+      "minHoldMonths": 36,
+      "amountYen": 3000,
+      "timesPerYear": 1
+     }
+    ],
+    "rightsMonths": "9",
+    "note": "初回2026年9月末のみ保有期間不問で一律1,000円分。継続保有は同一株主番号の名簿連続記録で判定",
+    "auditedAt": "2026-09-09"
+   }
   },
   {
    "company": "たけびし",
@@ -2287,7 +2349,19 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "siteGroup": "QUOカード",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "quo": {
+    "tiers": [
+     {
+      "minShares": 100,
+      "minHoldMonths": 0,
+      "amountYen": 1000,
+      "timesPerYear": 2
+     }
+    ],
+    "note": "長期保有による増額は2021年に廃止済み",
+    "auditedAt": "2026-09-09"
+   }
   },
   {
    "company": "稲畑産業",
@@ -2304,7 +2378,33 @@
    "exchange": "東証",
    "siteGroup": "QUOカード",
    "usageNotes": "9月末基準の年1回・12月初旬に第2四半期株主通信と同封で届く。100株は継続保有6か月未満500円分/6か月以上3年未満1,000円分/3年以上2,000円分",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "quo": {
+    "tiers": [
+     {
+      "minShares": 100,
+      "minHoldMonths": 0,
+      "amountYen": 500,
+      "timesPerYear": 1
+     },
+     {
+      "minShares": 100,
+      "minHoldMonths": 6,
+      "amountYen": 1000,
+      "timesPerYear": 1
+     },
+     {
+      "minShares": 100,
+      "minHoldMonths": 36,
+      "amountYen": 2000,
+      "timesPerYear": 1
+     }
+    ],
+    "rightsMonths": "9",
+    "note": "株数に応じた増額もあるが金額は未記載（100株の段階だけ構造化）",
+    "auditedAt": "2026-09-09"
+   },
+   "shipMonths": "12"
   }
  ]
 }
