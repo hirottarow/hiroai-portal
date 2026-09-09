@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "dataVersion": "2026-09-10.3",
+ "dataVersion": "2026-09-10.4",
  "updatedAt": "2026-09-10",
  "categories": [
   "外食",
@@ -3838,8 +3838,8 @@
    "balanceUnit": "セット",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分（100株以上を1年以上で一律1セット。株数区分そのものが無い）"
   },
   {
    "company": "ヤクルト本社",
@@ -3854,8 +3854,8 @@
    "balanceUnit": "セット",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分（株数と継続保有で中身は変わるが金額の記載が無く、辞書の単位（セット）では1固定のため段階表なし）"
   },
   {
    "company": "味の素",
@@ -3870,8 +3870,41 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 6,
+     "amount": 500,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 200,
+     "minHoldMonths": 6,
+     "amount": 2000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 6,
+     "amount": 4000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 2000,
+     "minHoldMonths": 6,
+     "amount": 5000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 2000,
+     "minHoldMonths": 36,
+     "amount": 8000,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "2025年4月1日の株式分割（1株→2株）に伴う変更後の区分で、2026年3月31日基準から適用済み。3月31日基準の年1回。全段階に「100株以上を継続半年以上」の条件がある（3月31日・9月30日の名簿に同一株主番号で2回以上連続）。2,000株以上を継続3年以上の8,000円相当は絶対額で置き換わり、5,000円相当とは重複しない。変更前は100〜499株1,500円・500〜999株3,000円・1,000株以上4,000円・1,000株以上継続3年以上7,000円だった"
   },
   {
    "company": "カゴメ",
@@ -3886,8 +3919,23 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証・名証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 6,
+     "amount": 2000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 6,
+     "amount": 6000,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "6月末日基準の年1回。2019年から半年以上の継続保有が条件になっており、保有期間を問わない段階は無い。半年以上とは割当基準日（6月末日）とその前年の12月末日に同じ株主番号で連続して株主名簿に記載されていること"
   },
   {
    "company": "キリンHD",
@@ -4000,8 +4048,23 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 6,
+     "amount": 1500,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 6,
+     "amount": 5000,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "3月31日基準の年1回。全段階に継続保有6ヵ月以上の条件があり、保有期間を問わない段階は無い（3月31日・9月30日の名簿に同一株主番号で2回以上連続記載）。ただし初回基準日の2026年3月31日に限り、100株以上を保有していれば継続保有期間を問わず対象とされた。500株の段の継続保有は「500株以上を2回以上連続」で判定する"
   },
   {
    "company": "江崎グリコ",
@@ -4016,8 +4079,47 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 6,
+     "amount": 1200,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 6,
+     "amount": 2400,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 6,
+     "amount": 4800,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 100,
+     "minHoldMonths": 36,
+     "amount": 1800,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 36,
+     "amount": 3600,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 36,
+     "amount": 7200,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "2025年8月6日開示の新制度で、2026年6月末日基準から適用。6月末日基準の年1回（12月上旬贈呈）。半年以上の継続保有が最低条件で、保有期間を問わない段階は無い（前年12月末日と基準日の名簿に同一株主番号で2回以上連続記載）。3年以上の段階は絶対額で置き換わり、上乗せではない（6月30日・12月31日の名簿に連続7回以上）。旧制度は100〜499株で3年未満1,000円・3年以上1,500円だった"
   },
   {
    "company": "明治HD",
@@ -4032,8 +4134,29 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 1500,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 200,
+     "minHoldMonths": 0,
+     "amount": 2500,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 5500,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "3月31日基準の年1回（10月末頃お届け）。継続保有3年以上の株主には通常の優待品に加えて「長期保有感謝BOX」が付くが、公式の表では100株以上の行にだけ記載があり金額も示されていないため段階表に入れていない。長期保有は3月末・9月末の株主名簿に同一株主番号で100株以上が7回以上連続記載されること。優待品に代えて福祉団体等への寄贈も選べる"
   },
   {
    "company": "キユーピー",
@@ -4048,8 +4171,35 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 6,
+     "amount": 1000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 6,
+     "amount": 3000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 100,
+     "minHoldMonths": 36,
+     "amount": 1500,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 36,
+     "amount": 5000,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "11月30日基準の年1回で、3月に贈呈。全段階に継続保有半年以上の条件があり、保有期間を問わない段階は無い。半年以上とは5月31日と11月30日の株主名簿に同一株主番号で連続2回以上記載されること。3年以上の段階は絶対額で置き換わり、上乗せではない"
   },
   {
    "company": "日本ハム",
@@ -4064,8 +4214,8 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分（公式ページに株数区分の表も金額も無い（株主様専用WEBサイトのカタログ制）。2026年10月の株式分割で2027年3月末基準から内容変更予定）"
   },
   {
    "company": "伊藤ハム米久HD",
@@ -4080,8 +4230,17 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 200,
+     "minHoldMonths": 0,
+     "amount": 5000,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "200株以上が対象で、100株では優待が無い（2023年10月1日の株式併合に伴い基準を変更）。3月31日基準の年1回で、6月中旬ごろより順次お届け。株数による段階は無く、200株以上は一律5,000円相当の株主様限定オリジナル優待品"
   },
   {
    "company": "小林製薬",
@@ -4122,8 +4281,26 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 6,
+     "amount": 1000
+    },
+    {
+     "minShares": 200,
+     "minHoldMonths": 6,
+     "amount": 2000
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 6,
+     "amount": 3000
+    }
+   ],
+   "tiersNote": "3月31日および9月30日の株主名簿に同じ株主番号で2回以上連続して100株以上の記載があることが条件（＝半年以上の継続保有）。公式ページに贈呈時期・回数の記載が無いため timesPerYear を入れていない。グループ製品詰合せのほか寄付なども選べる"
   },
   {
    "company": "東洋水産",
@@ -4138,8 +4315,29 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 12,
+     "amount": 2000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 12,
+     "amount": 3500,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 3000,
+     "minHoldMonths": 12,
+     "amount": 5000,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "3月31日基準の年1回（7月中旬〜8月下旬お届け）。全段階に1年以上の継続保有の条件があり、保有期間を問わない段階は無い（年2回・9月と3月に確定する株主名簿に同じ株主番号で3回以上連続記載）。自社製品詰合わせセットに代えて社会貢献活動団体への寄付も選べる"
   },
   {
    "company": "ダイドーGHD",
@@ -4154,8 +4352,17 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 200,
+     "minHoldMonths": 6,
+     "amount": 6000,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "200株以上が対象で、100株では優待が無い（2024年7月20日以降は200株以上）。1月20日基準の年1回で、半年以上の継続保有が条件（1月20日とその前年7月20日の名簿に同一株主番号で連続記載）。2026年から発送時期が4月中旬から6月下旬に変わった。株数による段階は無く一律6,000円相当。別枠で5年以上保有の株主に記念品が1回限り贈られるが、金額の記載が無いため段階表に入れていない"
   },
   {
    "company": "タカラトミー",
@@ -4171,8 +4378,8 @@
    "quantityUnit": "個",
    "exchange": "東証",
    "usageNotes": "100株は3月末基準でオリジナルトミカ2台セット。タカラトミーモールの割引は1年未満10%・1年以上30%・3年以上40%で、各期間10万円まで",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分（株数で変わるのは中身の台数（トミカ2台／4台）で、辞書の単位（セット）は1固定。金額の記載も無い）"
   },
   {
    "company": "KDDI",
@@ -4631,8 +4838,8 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分（区分A（100〜399株）とB・C・D（400株以上）はあるが金額の記載が無く段階表を書けない）"
   },
   {
    "company": "コーセーホールディングス",
@@ -4648,8 +4855,8 @@
    "quantityUnit": "セット",
    "exchange": "東証",
    "usageNotes": "100株・3年未満は4,000〜6,000円相当の自社製品A〜Dから1点を選ぶ申込制。6月末・12月末基準",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分（株数×継続保有の4区分はあるが金額の記載が無い（製品セットからの選択制））"
   },
   {
    "company": "ポーラ・オルビスHD",
@@ -4664,8 +4871,8 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分（優待ポイント制で、株数→ポイントの表が本文に無く（画像）PDFも取得できない。辞書の単位（円相当）に落とせない）"
   },
   {
    "company": "花王",
@@ -4680,8 +4887,25 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 400,
+     "minHoldMonths": 6,
+     "amount": 6000,
+     "timesPerYear": 1,
+     "note": "化粧品セットか家庭品セットを選択"
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 6,
+     "amount": 10000,
+     "timesPerYear": 1,
+     "note": "化粧品セットか家庭品セットを選択"
+    }
+   ],
+   "tiersNote": "2026年8月5日開示の新設優待で、初回基準日は2026年12月31日。12月31日基準の年1回で、半年以上の継続保有が条件（6月30日・12月31日の名簿に同一株主番号で連続記載。ただし初回に限り連続保有要件は適用しない）。100〜399株の区分は抽選制で、当選者のみ自社製品が贈られる形のため金額の記載が無く段階表に入れていない（辞書の balance 2,000円相当はこの区分に対応する公式の裏付けが無い）。株数の判定は6月30日と12月31日のうち少ない方。2026年7月1日付で1株につき2株の株式分割を実施済み"
   },
   {
    "company": "ロート製薬",
@@ -5051,8 +5275,17 @@
    "quantityUnit": "回",
    "exchange": "東証",
    "usageNotes": "長期保有限定（クロス不可）: 500株以上を継続1年以上（3/31・9/30の名簿に同一株主番号で連続3回）。初回2027年3月末のみ6か月（2026-09-30と2027-03-31の連続2回）。各基準日の断面で500株以上が必須。全売却後の買い直しは株主番号が変わり連続性が切れる。申込ハガキ返送制・期限超過で失効。議決権行使QUOカード(500円)は同時に終了",
-   "auditedAt": "2026-09-06",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 500,
+     "minHoldMonths": 12,
+     "amount": 5000,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "2026年8月31日開示の新設優待で、初回基準日は2027年3月31日。以降も毎年3月31日基準の年1回。500株以上を1年以上継続保有が条件（3月31日・9月30日の名簿に同一株主番号で3回以上連続記載）で、初回に限り6か月以上（2026年9月30日と2027年3月31日の連続2回）。株数による段階は無く一律5,000円相当で、グループの取引先・投資先の商品が贈られる。各基準日の断面で500株以上が必要なため、9月30日を過ぎてから買い増しても初回は対象外"
   },
   {
    "company": "豊田合成",
@@ -5069,8 +5302,29 @@
    "exchange": "東証",
    "usageNotes": "長期保有限定（クロス不可）: 100株以上を継続1年以上（3/31基準で前年9/30・当年3/31の名簿に同一株主番号で100株以上が連続3回以上）。初回2027年3月末のみ半年（2026-09-30と2027-03-31の連続2回）。2026-09-30の判定は分割前のため20株以上を100株以上として扱う。イベント参加（抽選）は500株以上のみ。全売却後の買い直しは株主番号が変わり連続性が切れる",
    "shipMonths": "6",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 12,
+     "amount": 1000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 12,
+     "amount": 5000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 3000,
+     "minHoldMonths": 12,
+     "amount": 30000,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "2026年8月27日開示の新設優待で、初回基準日は2027年3月31日（Re-S商品は2027年6月以降順次発送）。3月31日基準の年1回で、100株以上を1年以上継続保有が条件（前年9月30日と3月31日の名簿に同一株主番号で3回以上連続記録）。導入初年度の2027年3月31日基準に限り、継続保有の条件が半年以上に緩和される。2026年10月1日付で1株につき5株の株式分割を実施予定で、2026年9月30日時点の判定では20株以上を100株以上として扱う。500株以上にはRe-S商品に加えてイベントへの招待（抽選）も付く"
   }
  ],
  "siteOnly": [
