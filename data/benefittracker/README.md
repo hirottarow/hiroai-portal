@@ -12,9 +12,12 @@
 
 1. `benefits.json` の `templates` 配列を編集（追加・修正・削除）
 2. `dataVersion` を更新（`YYYY-MM-DD.連番`）、`updatedAt` を当日に
-3. **push 前に `python scripts/build_benefits_pages.py` を流す**（銘柄ごとの静的ページ `benefits/<ticker>.html`・
+3. **push 前に `python scripts/validate_benefits.py` を流す**（JSON構文・必須項目・型・`ticker`重複・
+   `tiers`/`quo.tiers`のminShares順序・`dataVersion`/`auditedAt`の形式を検証する。2026-09-10 新設。
+   標準ライブラリのみ。エラーがあれば終了コードが0以外になるので、直してから次へ進む）
+4. **push 前に `python scripts/build_benefits_pages.py` を流す**（銘柄ごとの静的ページ `benefits/<ticker>.html`・
    `benefits.html` の静的一覧・`sitemap.xml` を再生成する。2026-09-09 新設。標準ライブラリのみ、冪等）
-4. commit → push（GitHub Pages に反映されるまで数分）
+5. commit → push（GitHub Pages に反映されるまで数分）
 
 ### `quo` ブロック（QUO カード銘柄の年間目安・2026-09-09 新設・追加フィールド）
 
