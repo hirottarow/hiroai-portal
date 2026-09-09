@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "dataVersion": "2026-09-10.2",
+ "dataVersion": "2026-09-10.3",
  "updatedAt": "2026-09-10",
  "categories": [
   "外食",
@@ -1543,8 +1543,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "2026年2月末基準分からキャッシュバック率が改定され、100株は3%→1%（200株2%・300株以上3%）。オーナーズカードを提示して買い、後日返金される方式（金券ではない）",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分（株数で変わるのは還元率でオーナーズカードは1枚固定のため段階表なし）"
   },
   {
    "company": "ビックカメラ",
@@ -1848,8 +1848,29 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "500円券・お釣り不可・1会計で複数枚使える。調剤／たばこ／雑誌／商品券等は対象外。1枚も使わなければPB詰合せ等の商品に交換もできる",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 5000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 0,
+     "amount": 10000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 15000,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "継続保有条件なし。2月末日基準の年1回で、5月下旬開催の株主総会終了後に発送。金額は1回ぶんで、株主ギフト券冊子1冊にまとまっている"
   },
   {
    "company": "クスリのアオキ",
@@ -1865,8 +1886,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "割引カード（100株=3%）とギフトカードの2本立て。カードの使用期間は10月1日〜翌年9月30日。調剤／商品券／たばこ／切手／雑誌は割引の対象外",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分（株数で変わるのは割引率でカードは1枚固定のため段階表なし）"
   },
   {
    "company": "ニトリHD",
@@ -1882,8 +1903,29 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "2025年10月の1:5分割により対象が500株以上になった（100株では貰えない）。1枚で10%割引・1枚につき買上10万円まで。ニトリ／デコホーム／島忠／ホームズで使えるがネットショップは対象外",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 500,
+     "minHoldMonths": 0,
+     "amount": 5,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 12,
+     "amount": 10,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 2500,
+     "minHoldMonths": 12,
+     "amount": 15,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "500株以上が対象で、100株では優待が無い。3月31日基準の年1回（定時株主総会招集ご通知に同封して発送）。1枚につき10％割引で、1枚あたり10万円のお買上げが上限。継続保有1年以上とは3月31日・9月30日の株主名簿に同一株主番号で連続3回以上記載され、その間ずっと所定の株式数以上であること。ニトリのほかデコホーム・島忠・ホームズ・Nプラスで使える"
   },
   {
    "company": "エディオン",
@@ -2105,8 +2147,47 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "1,000円券・有効期限なし・直営店の商品に使える（店舗内テナント／一部商品は不可）。2月末に100株以上を1年以上継続保有が条件で、商品券／PB詰合せ／寄付の選択制",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 12,
+     "amount": 2000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 12,
+     "amount": 3000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 12,
+     "amount": 5000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 100,
+     "minHoldMonths": 36,
+     "amount": 3000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 36,
+     "amount": 4000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 36,
+     "amount": 6000,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "2月末日基準の年1回。100株以上を1年以上継続保有が最低条件で、保有期間を問わない段階は無い。3年以上の段階は絶対額で置き換わり、上乗せではない。継続保有は2月末・8月末の株主名簿に同一株主番号で3回以上（1年以上）／7回以上（3年以上）連続して記載されること。商品券のほかPB商品詰合せや寄付も選べる（5月下旬に申込書が届き、無記入なら商品券になる）"
   },
   {
    "company": "ユナイテッド・スーパー",
@@ -2122,13 +2203,59 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "100円券・税込1,000円ごとに1枚・換金不可・有効期限は約6か月",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 3000,
+     "timesPerYear": 2,
+     "note": "100円券30枚"
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 0,
+     "amount": 6000,
+     "timesPerYear": 2,
+     "note": "100円券60枚"
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 10000,
+     "timesPerYear": 2,
+     "note": "100円券100枚"
+    },
+    {
+     "minShares": 2000,
+     "minHoldMonths": 0,
+     "amount": 20000,
+     "timesPerYear": 2,
+     "note": "100円券200枚"
+    },
+    {
+     "minShares": 3000,
+     "minHoldMonths": 0,
+     "amount": 30000,
+     "timesPerYear": 2,
+     "note": "100円券300枚"
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 36,
+     "amount": 1000,
+     "timesPerYear": 1,
+     "note": "2月末基準の年1回のみ加算。100円券10枚",
+     "additive": true
+    }
+   ],
+   "tiersNote": "2月末・8月末基準の年2回（2月末基準は6月中旬、8月末基準は12月中旬に発送）で、金額は1回ぶん。長期保有の上乗せは3年以上かつ1,000株以上の継続保有が条件で、2月末基準の年1回だけ付く。100円の値引券で、1回の買い上げ金額1,000円ごとに1枚しか使えない。優待券に代えて優待品も選べる"
   },
   {
    "company": "良品計画",
    "title": "株主様ご優待カード",
-   "balance": 5,
+   "balance": 7,
    "category": "小売",
    "ticker": "7453",
    "usableStores": "無印良品全店",
@@ -2139,8 +2266,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "MUJIアプリの電子クーポン（7%割引）",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分（100株以上一律7％で株数区分なし）"
   },
   {
    "company": "三越伊勢丹HD",
@@ -2155,8 +2282,8 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分（株数で変わるのは利用限度額でカードは1枚固定のため段階表なし）"
   },
   {
    "company": "高島屋",
@@ -2172,8 +2299,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "10%割引カード（金券ではない）。100株の年間利用限度額は15万円（200株30万円・1,000株以上は限度なし）",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分（株数で変わるのは利用限度額でカードは1枚固定のため段階表なし）"
   },
   {
    "company": "J.フロントリテイリング",
@@ -2189,8 +2316,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "10%割引カード（金券ではない）。100株の年間利用限度額は継続保有3年未満50万円・3年以上150万円。5月中旬に発行され翌年5月31日まで。大丸松坂屋オンラインストア・DEPACOでも使える",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分（株数で変わるのは年間利用限度額でカードは1枚固定のため段階表なし）"
   },
   {
    "company": "コーナン商事",
@@ -2206,8 +2333,88 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "1,000円の商品券・有効期限なし。2023年1月以降はお釣りが出ない（現金への引換も不可）。コーナン／コーナンPRO／CAMP DEPOT／ビーバートザン等で使える",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 1000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 200,
+     "minHoldMonths": 0,
+     "amount": 2000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 300,
+     "minHoldMonths": 0,
+     "amount": 3000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 400,
+     "minHoldMonths": 0,
+     "amount": 4000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 0,
+     "amount": 5000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 600,
+     "minHoldMonths": 0,
+     "amount": 6000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 700,
+     "minHoldMonths": 0,
+     "amount": 7000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 800,
+     "minHoldMonths": 0,
+     "amount": 8000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 900,
+     "minHoldMonths": 0,
+     "amount": 9000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 10000,
+     "timesPerYear": 1,
+     "note": "10枚が上限。1,000株を超えても増えない"
+    },
+    {
+     "minShares": 300,
+     "minHoldMonths": 36,
+     "amount": 1000,
+     "timesPerYear": 1,
+     "note": "300株以上1,000株未満の上乗せ",
+     "additive": true
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 36,
+     "amount": 3000,
+     "timesPerYear": 1,
+     "note": "1,000株以上の上乗せ",
+     "additive": true
+    }
+   ],
+   "tiersNote": "100株につき1,000円分を1枚で、10枚（1万円分）が上限。毎期末（2月末）基準の年1回で、期末配当金計算書とともに送付される。中間期（8月末）は優待を実施していない。長期保有の上乗せは3年以上継続保有（同一株主番号で2月末・8月末を基準日として連続7回以上）が条件で、対象は300株以上（100〜299株には上乗せが無い）"
   },
   {
    "company": "DCMホールディングス",
@@ -2280,8 +2487,70 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "1,000円券・有効期限なし・お釣り不可（現金への引換も不可）。コメリパワー／ハード&グリーン／PRO／アテーナで使えるほか、株主限定カタログの商品交換にも使える",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 1000,
+     "timesPerYear": 1,
+     "note": "1,000円券1枚"
+    },
+    {
+     "minShares": 300,
+     "minHoldMonths": 0,
+     "amount": 3000,
+     "timesPerYear": 1,
+     "note": "1,000円券3枚"
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 0,
+     "amount": 4000,
+     "timesPerYear": 1,
+     "note": "1,000円券4枚"
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 8000,
+     "timesPerYear": 1,
+     "note": "1,000円券8枚"
+    },
+    {
+     "minShares": 3000,
+     "minHoldMonths": 0,
+     "amount": 15000,
+     "timesPerYear": 1,
+     "note": "1,000円券15枚"
+    },
+    {
+     "minShares": 100,
+     "minHoldMonths": 36,
+     "amount": 1000,
+     "timesPerYear": 1,
+     "note": "100株以上500株未満の上乗せ",
+     "additive": true
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 36,
+     "amount": 2000,
+     "timesPerYear": 1,
+     "note": "500株以上1,000株未満の上乗せ",
+     "additive": true
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 36,
+     "amount": 3000,
+     "timesPerYear": 1,
+     "note": "1,000株以上の上乗せ",
+     "additive": true
+    }
+   ],
+   "tiersNote": "毎年6月下旬に配当金関係書類とともに郵送される年1回（公式ページは発送時期を書いており、基本の基準日は明記していないが、長期保有の判定を3月31日時点としている）。長期保有の上乗せは3月31日時点で保有継続期間が3年を超えていること（9月末日・3月末日それぞれの株主名簿に同一株主番号で連続7回以上記録）が条件。ギフトカードは1,000円券で有効期限なし・お釣りも出ない。株主様限定カタログの商品交換にも使える"
   },
   {
    "company": "パン・パシフィック(ドンキ)",
@@ -2297,8 +2566,29 @@
    "quantityUnit": "回",
    "exchange": "東証",
    "usageNotes": "majicaポイント・1円単位で利用可",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 300,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 300,
+     "minHoldMonths": 0,
+     "amount": 1000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 0,
+     "amount": 2000,
+     "timesPerYear": 2
+    }
+   ],
+   "tiersNote": "2025年10月1日の株式分割に伴い、2025年12月31日を基準日とする優待から適用される区分。6月末・12月末基準の年2回で、ポイントは1回ぶん。公式の区分表の最上段は「500株保有」と書かれていて「以上」の明記が無いため、500株を超える段階はここに入れていない（多く見せない側に倒した）。受け取りにはmajicaアプリの会員登録が必要で、有効期限は最終付与日から1年"
   },
   {
    "company": "イズミ",
@@ -2309,13 +2599,116 @@
    "usableStores": "ゆめタウン等",
    "description": "【基本情報】\n西日本大手。ゆめカードと連携。値引きの極意。\n\n【見て楽しくなる情報】\nゆめタウン。値引きカード。 \n\n【お得情報】\nゆめ。値引き。 \n\n【裏技】\n値引き。\n\n【2026-08-31 監査による訂正・条件】\n証券コードは8273（8308はりそなホールディングス・別会社）。",
    "rating": 4,
-   "unitPrice": 500,
+   "unitPrice": 100,
    "balanceUnit": "円",
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "100円券・税込1,000円ごとに1枚・換金不可。有効期限は約6か月（5月発送分は11/30、11月発送分は5/31）",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 1000,
+     "timesPerYear": 2,
+     "note": "10枚"
+    },
+    {
+     "minShares": 300,
+     "minHoldMonths": 0,
+     "amount": 2000,
+     "timesPerYear": 2,
+     "note": "20枚"
+    },
+    {
+     "minShares": 600,
+     "minHoldMonths": 0,
+     "amount": 3000,
+     "timesPerYear": 2,
+     "note": "30枚"
+    },
+    {
+     "minShares": 900,
+     "minHoldMonths": 0,
+     "amount": 4000,
+     "timesPerYear": 2,
+     "note": "40枚"
+    },
+    {
+     "minShares": 1200,
+     "minHoldMonths": 0,
+     "amount": 5000,
+     "timesPerYear": 2,
+     "note": "50枚"
+    },
+    {
+     "minShares": 1500,
+     "minHoldMonths": 0,
+     "amount": 6000,
+     "timesPerYear": 2,
+     "note": "60枚"
+    },
+    {
+     "minShares": 3000,
+     "minHoldMonths": 0,
+     "amount": 10000,
+     "timesPerYear": 2,
+     "note": "100枚"
+    },
+    {
+     "minShares": 6000,
+     "minHoldMonths": 0,
+     "amount": 20000,
+     "timesPerYear": 2,
+     "note": "200枚"
+    },
+    {
+     "minShares": 9000,
+     "minHoldMonths": 0,
+     "amount": 30000,
+     "timesPerYear": 2,
+     "note": "300枚"
+    },
+    {
+     "minShares": 12000,
+     "minHoldMonths": 0,
+     "amount": 40000,
+     "timesPerYear": 2,
+     "note": "400枚"
+    },
+    {
+     "minShares": 15000,
+     "minHoldMonths": 0,
+     "amount": 50000,
+     "timesPerYear": 2,
+     "note": "500枚"
+    },
+    {
+     "minShares": 18000,
+     "minHoldMonths": 0,
+     "amount": 60000,
+     "timesPerYear": 2,
+     "note": "600枚"
+    },
+    {
+     "minShares": 900,
+     "minHoldMonths": 24,
+     "amount": 2000,
+     "timesPerYear": 1,
+     "note": "長期保有特典の自社商品券。2月末基準の年1回",
+     "additive": true
+    },
+    {
+     "minShares": 3000,
+     "minHoldMonths": 24,
+     "amount": 4000,
+     "timesPerYear": 1,
+     "note": "長期保有特典の自社商品券。2月末基準の年1回",
+     "additive": true
+    }
+   ],
+   "tiersNote": "2026年3月1日を効力発生日とする株式分割（1株→3株）後の区分で、2026年8月31日付の株主名簿から適用。2月末・8月末基準の年2回（5月下旬・11月上旬お届け）で、金額は1回ぶん。1枚100円相当で、税込1,000円ごとに1枚しか使えない。長期保有特典の対象条件は公式が「一定数以上保有、もしくは保有継続期間が2年以上」と書いており両者の関係が読み取れないため、ここでは厳しい側（2年以上）を条件に入れてある。優待券に代えてQUOカードも選べる（100株以上500円相当・3,000株以上2,000円相当）"
   },
   {
    "company": "バローHD",
@@ -2467,8 +2860,47 @@
    "quantityUnit": "P",
    "exchange": "東証",
    "usageNotes": "公式アプリでの利用のみ・1ポイント=1円。100株を1年以上の継続保有が条件。有効期限は付与から1年。オートバックス各店と公式通販で使える",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 12,
+     "amount": 1000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 300,
+     "minHoldMonths": 12,
+     "amount": 3000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 700,
+     "minHoldMonths": 12,
+     "amount": 7000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 12,
+     "amount": 10000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 700,
+     "minHoldMonths": 36,
+     "amount": 8000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 36,
+     "amount": 13000,
+     "timesPerYear": 2
+    }
+   ],
+   "tiersNote": "保有期間1年未満には優待が無く、全段階に継続保有1年以上の条件がある。3月末・9月末基準の年2回で、ポイントは1回ぶん。継続保有は株主名簿に連続して記載された同一株主番号の回数で判定する（1年以上3年未満＝連続3〜6回、3年以上＝連続7回以上）。1ポイント=1円で、有効期限は付与日から1年後の月末。2024年11月発送分からギフト券に代わって限定Vポイントになった"
   },
   {
    "company": "JR東日本",
@@ -3374,9 +3806,24 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-09-09",
-   "auditScope": "券種・金額・使える店・使い方の注意・金額・区分・回数（Manus指摘の再確認）",
-   "usageNotes": "直営店で1回の買物につき1枚使える20％割引券（対象外商品・対象外店舗あり、転売禁止）。100株以上1,000株未満10枚、1,000株以上20枚。公式オンラインとクラブオーダーも株主IDログインで20％割引（割引後価格に5％／10％ポイント）。3月末基準のオンライン利用期間は7/1〜11/20、9月末基準は12/1〜翌年6/20"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "usageNotes": "直営店で1回の買物につき1枚使える20％割引券（対象外商品・対象外店舗あり、転売禁止）。100株以上1,000株未満10枚、1,000株以上20枚。公式オンラインとクラブオーダーも株主IDログインで20％割引（割引後価格に5％／10％ポイント）。3月末基準のオンライン利用期間は7/1〜11/20、9月末基準は12/1〜翌年6/20",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 10,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 20,
+     "timesPerYear": 2
+    }
+   ],
+   "tiersNote": "継続保有条件なし。3月末・9月末基準の年2回で、3月末基準分は同年7月1日〜11月20日、9月末基準分は12月1日〜翌年6月20日が利用期間。直営店で使う20％割引券。区分は2017年10月の単元株式数変更（1,000株→100株）に合わせて決めたもので、2025年4月1日の株式分割後も制度は変更されていない（同じ株数基準のまま分割したので実質拡充）"
   },
   {
    "company": "ライオン",
@@ -3980,13 +4427,34 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 3,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 4,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 3000,
+     "minHoldMonths": 0,
+     "amount": 5,
+     "timesPerYear": 2
+    }
+   ],
+   "tiersNote": "継続保有条件なし。3月31日・9月30日基準の年2回で、3月末基準は同年7月上旬（有効期限は翌年6月末）、9月末基準は同年12月上旬（有効期限は翌年12月末）に郵送。20％割引券で、1回の買い上げに1枚のみ有効。各オンラインショップとアウトレット業態では使えない"
   },
   {
    "company": "はるやまHD",
    "title": "株主優待割引券等",
-   "balance": 1,
+   "balance": 2,
    "category": "小売",
    "ticker": "7416",
    "usableStores": "はるやま商事各店",
@@ -3997,8 +4465,37 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "20%割引券と商品贈呈券（税込6,600円までのシャツ・ネクタイ等と交換）。金券ではない。他の割引券とは1種類まで併用可・オンラインストアでも使える",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 2,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 6,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 3000,
+     "minHoldMonths": 0,
+     "amount": 10,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 100,
+     "minHoldMonths": 12,
+     "amount": 1,
+     "timesPerYear": 1,
+     "note": "商品贈呈券1枚。株数によらず一律",
+     "additive": true
+    }
+   ],
+   "tiersNote": "3月末日基準の年1回（6月末頃に発送）。枚数は商品割引券（20％）のもので、継続保有の条件は無い。商品贈呈券1枚は別枠で、100株以上を1年以上継続保有（3月末・9月末の株主名簿に同一株主番号で3回以上連続して100株以上）が条件、株数によらず一律1枚。税込6,600円までのネクタイ・ワイシャツ・ブラウス・カットソー・カジュアルシャツ・ポロシャツと交換できる"
   },
   {
    "company": "ユナイテッドアローズ",
@@ -4013,8 +4510,35 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 2,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 200,
+     "minHoldMonths": 0,
+     "amount": 4,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 0,
+     "amount": 6,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 10,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "継続保有条件なし。3月31日基準の年1回。まず優待取得チケット（QRコード）が配当金関連書類とともに届き、読み取って株数に応じた枚数の電子優待券を取得する方式で、チケット自体は株数によらず1人1枚。15％割引券で1枚1回限り。店舗では2枚同時利用で上限を税抜50万円にできる（3枚以上は不可）"
   },
   {
    "company": "アルペン",
@@ -4030,8 +4554,53 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "1,000円券・お釣り不可・現金への引換も不可・ネット販売では使えない。他の割引企画とは併用可だが、ギフト券／商品配送代金／早割・特割リフト券等は対象外",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 1000,
+     "timesPerYear": 2,
+     "note": "1,000円券1枚"
+    },
+    {
+     "minShares": 200,
+     "minHoldMonths": 0,
+     "amount": 2000,
+     "timesPerYear": 2,
+     "note": "1,000円券2枚"
+    },
+    {
+     "minShares": 300,
+     "minHoldMonths": 0,
+     "amount": 4000,
+     "timesPerYear": 2,
+     "note": "1,000円券4枚"
+    },
+    {
+     "minShares": 400,
+     "minHoldMonths": 0,
+     "amount": 6000,
+     "timesPerYear": 2,
+     "note": "1,000円券6枚"
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 0,
+     "amount": 10000,
+     "timesPerYear": 2,
+     "note": "1,000円券10枚"
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 20000,
+     "timesPerYear": 2,
+     "note": "1,000円券20枚"
+    }
+   ],
+   "tiersNote": "2025年3月26日開示の変更後の区分で、2025年6月30日現在の株主名簿から適用。6月30日（夏季）・12月31日（冬季）基準の年2回で、9月中旬・3月中旬に発送。金額は1回ぶん。変更前（2024年12月31日基準まで）は500円券で100〜499株2,000円・500〜999株5,000円・1,000株以上7,500円だった。店舗のほかフィットネスクラブ・スキー場・ゴルフ場でも使える"
   },
   {
    "company": "オンワードHD",
@@ -4046,8 +4615,8 @@
    "balanceUnit": "回分",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分（買物割引券は100株以上一律6回・20％で株数区分なし）"
   },
   {
    "company": "資生堂",
