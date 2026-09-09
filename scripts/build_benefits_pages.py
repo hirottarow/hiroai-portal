@@ -244,6 +244,9 @@ def build_sections(t):
         sections.append(("使えるお店", t["usableStores"]))
     if t.get("usageNotes"):
         sections.append(("使い方の注意", t["usageNotes"]))
+    tiers_text = tiers_section_text(t)
+    if tiers_text:
+        sections.append(("株数ごとの優待（1回に届く額）", tiers_text))
     if t.get("description"):
         sections.append(("詳しい情報", t["description"]))
     if t.get("shipMonths"):
@@ -256,6 +259,32 @@ def build_sections(t):
             f'        <div class="section"><h2>{esc(label)}</h2><p>{esc(value)}</p></div>'
         )
     return "\n".join(html_blocks)
+
+
+def tiers_section_text(t):
+    """templates の `tiers`（株数段階）を1行1段階の文にする。無ければ空文字（2026-09-09）。"""
+    tiers = t.get("tiers") or []
+    if not tiers:
+        return ""
+    unit = t.get("balanceUnit") or "円"
+    lines = []
+    for tier in tiers:
+        hold = int(tier.get("minHoldMonths") or 0)
+        if hold <= 0:
+            hold_text = "保有期間不問"
+        elif hold % 12 == 0:
+            hold_text = f"{hold // 12}年以上"
+        else:
+            hold_text = f"{hold}か月以上"
+        times = tier.get("timesPerYear")
+        times_text = f"×年{times}回" if times else ""
+        note = tier.get("note") or ""
+        note_text = f"（{note}）" if note else ""
+        plus = "＋" if tier.get("additive") else ""
+        lines.append(f"{tier.get('minShares', 0)}株〜 {hold_text} {plus}{int(tier.get('amount') or 0):,}{unit}{times_text}{note_text}")
+    if t.get("tiersNote"):
+        lines.append("※ " + t["tiersNote"])
+    return chr(10).join(lines)
 
 
 def ship_months_text(raw):

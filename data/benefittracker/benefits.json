@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "dataVersion": "2026-09-09.6",
+ "dataVersion": "2026-09-09.7",
  "updatedAt": "2026-09-09",
  "categories": [
   "外食",
@@ -28,8 +28,29 @@
    "exchange": "東証",
    "usageNotes": "1ポイント単位で利用可・端数調整OK",
    "shipMonths": "6,12",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-09",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 3000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 6000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 2000,
+     "minHoldMonths": 0,
+     "amount": 12000,
+     "timesPerYear": 2
+    }
+   ],
+   "tiersNote": "継続保有条件なし。3月末・9月末基準（12月・6月付与）。カード再発行は500pt差引"
   },
   {
    "company": "すかいらーくHD",
@@ -46,8 +67,35 @@
    "exchange": "東証",
    "usageNotes": "電子チケット（バーコード式）。2025年9月発送分からプラスチックカードは廃止。100株は1回2,000円分・1円単位で使える。6月末基準は9月中旬、12月末基準は3月中旬に届く",
    "shipMonths": "3,9",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-09",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 2000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 300,
+     "minHoldMonths": 0,
+     "amount": 5000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 0,
+     "amount": 8000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 17000,
+     "timesPerYear": 2
+    }
+   ],
+   "tiersNote": "継続保有条件なし。6月末・12月末基準"
   },
   {
    "company": "マクドナルドHD",
@@ -166,8 +214,29 @@
    "exchange": "東証",
    "usageNotes": "1ポイント=1円で1円単位利用可",
    "shipMonths": "6,12",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-09",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 500,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 0,
+     "amount": 2500,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 5000,
+     "timesPerYear": 2
+    }
+   ],
+   "tiersNote": "2026年9月末基準（2026年12月付与）から半減。2026年6月付与分までは100株 1,000pt／500株 5,000pt／1,000株 10,000pt。継続保有条件なし。3月末・9月末基準"
   },
   {
    "company": "王将フードサービス",
@@ -251,8 +320,106 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "shipMonths": "5,11",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-09",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 1500,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 200,
+     "minHoldMonths": 0,
+     "amount": 3000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 300,
+     "minHoldMonths": 0,
+     "amount": 4000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 400,
+     "minHoldMonths": 0,
+     "amount": 5000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 0,
+     "amount": 6000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 800,
+     "minHoldMonths": 0,
+     "amount": 8000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 1200,
+     "minHoldMonths": 0,
+     "amount": 10000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 2000,
+     "minHoldMonths": 0,
+     "amount": 14000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 6000,
+     "minHoldMonths": 0,
+     "amount": 20000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 12000,
+     "minHoldMonths": 0,
+     "amount": 24000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 18000,
+     "minHoldMonths": 0,
+     "amount": 30000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 800,
+     "minHoldMonths": 12,
+     "amount": 2000,
+     "timesPerYear": 2,
+     "note": "2月末・8月末の名簿に800株以上を同一株主番号で連続3回以上",
+     "additive": true
+    },
+    {
+     "minShares": 6000,
+     "minHoldMonths": 12,
+     "amount": 4000,
+     "timesPerYear": 2,
+     "additive": true
+    },
+    {
+     "minShares": 12000,
+     "minHoldMonths": 12,
+     "amount": 6000,
+     "timesPerYear": 2,
+     "additive": true
+    },
+    {
+     "minShares": 18000,
+     "minHoldMonths": 12,
+     "amount": 8000,
+     "timesPerYear": 2,
+     "additive": true
+    }
+   ],
+   "tiersNote": "2025年8月末基準で1:2の株式分割。この区分は2026年2月末基準から（2025年8月末分は旧区分: 100株 2,000円〜）。継続保有の判定株数は直近3回の基準日の最少株数"
   },
   {
    "company": "エターナルホスピタリティグループ",
@@ -612,7 +779,7 @@
   {
    "company": "ビックカメラ",
    "title": "株主様御優待券",
-   "balance": 2000,
+   "balance": 1000,
    "category": "小売",
    "ticker": "3048",
    "usableStores": "ビック、コジマ等",
@@ -624,8 +791,53 @@
    "exchange": "東証",
    "shipMonths": "5,11",
    "usageNotes": "1,000円券・お釣り不可・優待利用分はポイント対象外。コジマ／ソフマップの店舗でも使える。ネット通販は利用票と優待券を郵送する方式",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-09",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 1000,
+     "timesPerYear": 2,
+     "note": "2月末 2,000円・8月末 1,000円"
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 0,
+     "amount": 2000,
+     "timesPerYear": 2,
+     "note": "2月末 3,000円・8月末 2,000円"
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 5000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 10000,
+     "minHoldMonths": 0,
+     "amount": 25000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 100,
+     "minHoldMonths": 12,
+     "amount": 1000,
+     "timesPerYear": 1,
+     "note": "8月末のみ。1年以上2年未満（半期名簿に連続3〜4回）",
+     "additive": true
+    },
+    {
+     "minShares": 100,
+     "minHoldMonths": 24,
+     "amount": 2000,
+     "timesPerYear": 1,
+     "note": "8月末のみ。2年以上（半期名簿に連続5回以上）",
+     "additive": true
+    }
+   ],
+   "tiersNote": "長期保有の上乗せは株数に関係なく100株以上で一律。貸株・全株売却後の買い戻し・証券会社変更で株主番号が変わると対象外"
   },
   {
    "company": "コジマ",
@@ -642,13 +854,64 @@
    "exchange": "東証",
    "shipMonths": "5,11",
    "usageNotes": "1,000円券・お釣り不可。ビックカメラ／ソフマップ／ビックカメラアウトレットの店舗でも使える（通信販売は不可）。商品券・各種割引券・ポイントと併用可。有効期限は発行翌年の11月30日",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-09",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 2000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 0,
+     "amount": 4000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 6000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 3000,
+     "minHoldMonths": 0,
+     "amount": 6000,
+     "timesPerYear": 2,
+     "note": "2月末 6,000円・8月末 16,000円"
+    },
+    {
+     "minShares": 5000,
+     "minHoldMonths": 0,
+     "amount": 6000,
+     "timesPerYear": 2,
+     "note": "2月末 6,000円・8月末 21,000円"
+    },
+    {
+     "minShares": 100,
+     "minHoldMonths": 12,
+     "amount": 1000,
+     "timesPerYear": 1,
+     "note": "8月末のみ。1年以上2年未満（半期名簿に連続3〜4回）",
+     "additive": true
+    },
+    {
+     "minShares": 100,
+     "minHoldMonths": 24,
+     "amount": 2000,
+     "timesPerYear": 1,
+     "note": "8月末のみ。2年以上（半期名簿に連続5回以上）",
+     "additive": true
+    }
+   ],
+   "tiersNote": "2026年8月末基準から8月末分を拡充（100株 1枚→2枚など）。長期保有の上乗せは株数に関係なく100株以上で一律。貸株・証券会社変更・NISA口座への切替で株主番号が変わると対象外"
   },
   {
    "company": "ヤマダHD",
    "title": "お買物優待券",
-   "balance": 1500,
+   "balance": 500,
    "category": "小売",
    "ticker": "9831",
    "usableStores": "ヤマダデンキ各店",
@@ -660,8 +923,37 @@
    "exchange": "東証",
    "shipMonths": "6,12",
    "usageNotes": "500円券・税込1,000円ごとに1枚（1会計50枚まで）・通販では使えない。3月末基準分は同年12月末、9月末基準分は翌年6月末まで。修理／工事／たばこ／POSAカード等は対象外",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-09",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 500,
+     "timesPerYear": 2,
+     "note": "3月末 500円・9月末 1,000円"
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 0,
+     "amount": 2000,
+     "timesPerYear": 2,
+     "note": "3月末 2,000円・9月末 3,000円"
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 5000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 10000,
+     "minHoldMonths": 0,
+     "amount": 25000,
+     "timesPerYear": 2
+    }
+   ],
+   "tiersNote": "継続保有条件なし。3月末・9月末基準"
   },
   {
    "company": "マツキヨココカラ＆カンパニー",
@@ -965,8 +1257,50 @@
    "exchange": "東証",
    "shipMonths": "6",
    "usageNotes": "500円券・お釣り不可・現金への引換も不可。有効期限は毎年6月から1年",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-09",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 500,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 0,
+     "amount": 1000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 2000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 100,
+     "minHoldMonths": 36,
+     "amount": 2000,
+     "timesPerYear": 1,
+     "note": "3年以上"
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 36,
+     "amount": 3000,
+     "timesPerYear": 1,
+     "note": "3年以上"
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 36,
+     "amount": 5000,
+     "timesPerYear": 1,
+     "note": "3年以上"
+    }
+   ],
+   "tiersNote": "年1回・2月末基準。3年以上＝2月末と8月末の株主名簿に同一株主番号で7回以上連続"
   },
   {
    "company": "コメリ",
@@ -1605,8 +1939,46 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-09",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 12,
+     "amount": 500,
+     "timesPerYear": 1,
+     "note": "1年以上3年未満"
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 12,
+     "amount": 1000,
+     "timesPerYear": 1,
+     "note": "1年以上3年未満"
+    },
+    {
+     "minShares": 100,
+     "minHoldMonths": 36,
+     "amount": 2000,
+     "timesPerYear": 1,
+     "note": "3年以上。プレミアム優待の抽選つき"
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 36,
+     "amount": 4000,
+     "timesPerYear": 1,
+     "note": "3年以上"
+    },
+    {
+     "minShares": 3000,
+     "minHoldMonths": 36,
+     "amount": 6000,
+     "timesPerYear": 1,
+     "note": "3年以上"
+    }
+   ],
+   "tiersNote": "2024年12月期分から継続保有1年以上が必須（1年未満は対象外）。1年以上＝3・6・9・12月末の株主名簿に同一株主番号で5回以上連続。3年以上は公式に回数の明記なし。年1回・12月末基準"
   },
   {
    "company": "日清食品HD",
