@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "dataVersion": "2026-09-09.3",
+ "dataVersion": "2026-09-09.4",
  "updatedAt": "2026-09-09",
  "categories": [
   "外食",
@@ -2327,7 +2327,7 @@
    "balanceUnit": "円",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "usageNotes": "初回2026年9月末は保有期間不問・一律1,000円分。2027年9月以降は1年以上の継続保有が必須（クロス取得は初回のみ可）。3年以上・500株以上で増額",
+   "usageNotes": "初回2026年9月末は保有期間不問・一律1,000円分。2027年9月以降は1年以上の継続保有が必須。100〜499株: 1年以上1,000円/3年以上2,000円、500株以上: 1年以上2,000円/3年以上3,000円",
    "siteGroup": "QUOカード",
    "auditedAt": "2026-09-05",
    "quo": {
@@ -2346,13 +2346,19 @@
      },
      {
       "minShares": 500,
+      "minHoldMonths": 12,
+      "amountYen": 2000,
+      "timesPerYear": 1
+     },
+     {
+      "minShares": 500,
       "minHoldMonths": 36,
       "amountYen": 3000,
       "timesPerYear": 1
      }
     ],
     "rightsMonths": "9",
-    "note": "初回2026年9月末のみ保有期間不問で一律1,000円分。継続保有は同一株主番号の名簿連続記録で判定",
+    "note": "初回2026年9月末のみ保有期間不問で一律1,000円分。2027年9月以降は1年以上の継続保有が必須（同一株主番号の名簿連続記録で判定）。区分は2026-07-30 開示",
     "auditedAt": "2026-09-09"
    }
   },
@@ -2378,11 +2384,19 @@
       "minHoldMonths": 0,
       "amountYen": 1000,
       "timesPerYear": 2
+     },
+     {
+      "minShares": 1000,
+      "minHoldMonths": 0,
+      "amountYen": 2000,
+      "timesPerYear": 2
      }
     ],
-    "note": "長期保有による増額は2021年に廃止済み",
+    "rightsMonths": "3,9",
+    "note": "3月末・9月末の年2回。長期保有による増額は2021年に廃止済み（同年に年2回化）",
     "auditedAt": "2026-09-09"
-   }
+   },
+   "usageNotes": "3月末・9月末の年2回。100株で1,000円分、1,000株以上で2,000円分（長期増額は2021年に廃止）"
   },
   {
    "company": "稲畑産業",
@@ -2398,7 +2412,7 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "siteGroup": "QUOカード",
-   "usageNotes": "9月末基準の年1回・12月初旬に第2四半期株主通信と同封で届く。100株は継続保有6か月未満500円分/6か月以上3年未満1,000円分/3年以上2,000円分",
+   "usageNotes": "9月末基準の年1回・12月初旬に第2四半期株主通信と同封で届く。100株: 6か月未満500円/6か月以上1,000円/3年以上2,000円。200株: 2,000円/3,000円、300株: 3,000円/5,000円（6か月以上/3年以上）",
    "auditedAt": "2026-09-07",
    "quo": {
     "tiers": [
@@ -2419,10 +2433,34 @@
       "minHoldMonths": 36,
       "amountYen": 2000,
       "timesPerYear": 1
+     },
+     {
+      "minShares": 200,
+      "minHoldMonths": 6,
+      "amountYen": 2000,
+      "timesPerYear": 1
+     },
+     {
+      "minShares": 200,
+      "minHoldMonths": 36,
+      "amountYen": 3000,
+      "timesPerYear": 1
+     },
+     {
+      "minShares": 300,
+      "minHoldMonths": 6,
+      "amountYen": 3000,
+      "timesPerYear": 1
+     },
+     {
+      "minShares": 300,
+      "minHoldMonths": 36,
+      "amountYen": 5000,
+      "timesPerYear": 1
      }
     ],
     "rightsMonths": "9",
-    "note": "株数に応じた増額もあるが金額は未記載（100株の段階だけ構造化）",
+    "note": "9月末基準・年1回・12月初旬に第2四半期株主通信と同封。継続保有は3・6・9・12月末の名簿に同一株主番号で連続記録。6か月未満は株数によらず500円",
     "auditedAt": "2026-09-09"
    },
    "shipMonths": "12"
