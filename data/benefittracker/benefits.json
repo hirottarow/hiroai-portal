@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "dataVersion": "2026-09-09.1",
+ "dataVersion": "2026-09-09.2",
  "updatedAt": "2026-09-09",
  "categories": [
   "外食",
@@ -1801,7 +1801,7 @@
    "balanceUnit": "円",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "usageNotes": "100株以上・3月末と9月末の年2回。QUOカード500円分ほか計5種類から選ぶ申込制（申し込まないと受け取れない）",
+   "usageNotes": "100株以上・3月末と9月末の年2回。QUOカード500円分（300株以上 1,500円分・5,000株以上 2,500円分）ほか計5種類から選ぶ申込制（申し込まないと受け取れない）",
    "auditedAt": "2026-09-07",
    "quo": {
     "tiers": [
@@ -1810,10 +1810,22 @@
       "minHoldMonths": 0,
       "amountYen": 500,
       "timesPerYear": 2
+     },
+     {
+      "minShares": 300,
+      "minHoldMonths": 0,
+      "amountYen": 1500,
+      "timesPerYear": 2
+     },
+     {
+      "minShares": 5000,
+      "minHoldMonths": 0,
+      "amountYen": 2500,
+      "timesPerYear": 2
      }
     ],
     "rightsMonths": "3,9",
-    "note": "申込制（申し込まないと受け取れない）。QUOカードほか計5種類から選択。QUO を選んだ場合の金額",
+    "note": "申込制（申し込まないと受け取れない）。QUOカードほか計5種類から選択。QUO を選んだ場合の金額。株数区分は公式サイト（100〜299株 500円／300〜4,999株 1,500円／5,000株以上 2,500円、年2回）",
     "auditedAt": "2026-09-09"
    }
   },
