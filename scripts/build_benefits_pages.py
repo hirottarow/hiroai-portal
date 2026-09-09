@@ -35,6 +35,63 @@ EXCLUDE_PATTERNS = (re.compile(r"^google[0-9a-f]+\.html$"),)
 QUO_KEYWORDS = ("QUO", "クオ")
 
 
+STALE_DAYS = 180          # 確認日からこれを超えた銘柄は「古い可能性」を出し、AUDIT.md に載せる
+AUDIT_PATH = os.path.join(ROOT, "data", "benefittracker", "AUDIT.md")
+
+
+def days_since(ymd):
+    """'YYYY-MM-DD' から今日までの日数。形式が違えば None。"""
+    import datetime
+    try:
+        d = datetime.date.fromisoformat(str(ymd)[:10])
+    except Exception:
+        return None
+    return (datetime.date.today() - d).days
+
+
+def write_audit_report(templates, site_only):
+    """確認日が古い銘柄の一覧を AUDIT.md に書く（生成物。棚卸しの合図）。
+    auditedAt は「その日に見た」の記録で、見た項目は auditScope に書く。日付だけで安心しない（2026-09-09 の教訓）。"""
+    import datetime
+    rows = []
+    for t in list(templates) + list(site_only):
+        d = days_since(t.get("auditedAt", ""))
+        q = t.get("quo") or {}
+        qd = days_since(q.get("auditedAt", "")) if q else None
+        rows.append((t.get("ticker", ""), t.get("company", ""), t.get("auditedAt", ""), d,
+                     t.get("auditScope", ""), q.get("auditedAt", "") if q else "", qd))
+    stale = [r for r in rows if r[3] is None or r[3] > STALE_DAYS]
+    stale_quo = [r for r in rows if r[5] and (r[6] is None or r[6] > STALE_DAYS)]
+    lines = [
+        "# 優待辞書の確認日レポート（生成物・`scripts/build_benefits_pages.py` が書く）",
+        "",
+        f"生成日: {datetime.date.today().isoformat()} ／ 閾値: 最終確認から {STALE_DAYS} 日",
+        "",
+        f"- 銘柄数: {len(rows)}（templates {len(templates)}・siteOnly {len(site_only)}）",
+        f"- **{STALE_DAYS} 日超・または確認日なし: {len(stale)} 件**",
+        f"- quo ブロックの確認が {STALE_DAYS} 日超: {len(stale_quo)} 件",
+        "",
+        "`auditedAt` は「その日に見た」の記録。何を見たかは `auditScope`。日付が新しくても、その用途で要る項目を見ていなければ古いのと同じ。",
+        "",
+        "## 古い銘柄（確認日の古い順）",
+        "",
+        "| コード | 会社 | 最終確認 | 経過日 | 確認した項目 |",
+        "|---|---|---|---|---|",
+    ]
+    for r in sorted(stale, key=lambda r: (r[3] is None, -(r[3] or 0))):
+        lines.append(f"| {r[0]} | {r[1]} | {r[2] or '(なし)'} | {r[3] if r[3] is not None else '-'} | {r[4]} |")
+    if not stale:
+        lines.append("| - | （なし） | | | |")
+    lines += ["", "## quo ブロックが古い銘柄", "", "| コード | 会社 | quo の確認日 | 経過日 |", "|---|---|---|---|"]
+    for r in stale_quo:
+        lines.append(f"| {r[0]} | {r[1]} | {r[5]} | {r[6] if r[6] is not None else '-'} |")
+    if not stale_quo:
+        lines.append("| - | （なし） | | |")
+    with open(AUDIT_PATH, "w", encoding="utf-8", newline="\n") as f:
+        f.write("\n".join(lines) + "\n")
+    return len(stale), len(stale_quo)
+
+
 def is_excluded(fname):
     if fname in EXCLUDE_FROM_TOP_SITEMAP:
         return True
@@ -113,6 +170,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
         .section h2 {{ font-size: 15px; color: var(--secondary-color); margin-bottom: 6px; }}
         .section p {{ font-size: 14px; white-space: pre-line; }}
         .updated {{ font-size: 12px; color: var(--secondary-color); margin-top: 24px; }}
+        .stale-notice {{ margin: 16px 0 4px; padding: 10px 12px; border-radius: 8px; background: #fff4e5; color: #7a4b00; font-size: 0.92em; }}
         .app-banner {{ margin-top: 26px; background: linear-gradient(135deg, #8B5A2B 0%, #6B4520 100%); color: #FFF; border-radius: 14px; padding: 18px; font-size: 13.5px; }}
         .app-banner strong {{ display: block; font-size: 15px; margin-bottom: 6px; }}
         .footer-links {{ margin-top: 40px; text-align: center; font-size: 13px; }}
@@ -244,8 +302,16 @@ def build_page(t, updated_at, is_site_only=False):
     }
 
     audited_line = ""
+    stale_notice = ""
     if t.get("auditedAt"):
         audited_line = f" ／ 銘柄情報の最終確認日: {esc(t['auditedAt'])}"
+        if t.get("auditScope"):
+            audited_line += f"（確認した項目: {esc(t['auditScope'])}）"
+        days = days_since(t["auditedAt"])
+        if days is not None and days > STALE_DAYS:
+            # 確認日は「その日に見た」の記録にすぎない。古くなった銘柄は読む側に先に伝える（2026-09-09）
+            stale_notice = (f'        <div class="stale-notice">⚠ この銘柄の情報は最終確認から {days} 日経っています。'
+                            f'優待の条件が変わっている可能性があります。</div>')
 
     breadcrumb_links = (
         f'<a href="../index.html">トップ</a> &rsaquo; <a href="../benefits.html">株主優待</a> '
@@ -260,6 +326,7 @@ def build_page(t, updated_at, is_site_only=False):
         build_info_items(t),
         "        </div>",
         build_sections(t),
+        stale_notice,
         f'        <div class="updated">データ更新日: {esc(updated_at)}{audited_line}</div>',
         "",
         APP_BANNER_SITE_ONLY if is_site_only else APP_BANNER_NORMAL,
@@ -490,6 +557,8 @@ def main():
     print(f"pages written: {len(written)}")
     print(f"stale pages removed: {len(stale)}")
     print(f"sitemap urls: {url_count}")
+    n_old, n_old_quo = write_audit_report(templates, site_only)
+    print(f"audit: {n_old} items older than {STALE_DAYS} days ({n_old_quo} quo) -> data/benefittracker/AUDIT.md")
 
 
 if __name__ == "__main__":

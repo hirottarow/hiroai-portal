@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "dataVersion": "2026-09-09.4",
+ "dataVersion": "2026-09-09.5",
  "updatedAt": "2026-09-09",
  "categories": [
   "外食",
@@ -28,7 +28,8 @@
    "exchange": "東証",
    "usageNotes": "1ポイント単位で利用可・端数調整OK",
    "shipMonths": "6,12",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "すかいらーくHD",
@@ -45,7 +46,8 @@
    "exchange": "東証",
    "usageNotes": "電子チケット（バーコード式）。2025年9月発送分からプラスチックカードは廃止。100株は1回2,000円分・1円単位で使える。6月末基準は9月中旬、12月末基準は3月中旬に届く",
    "shipMonths": "3,9",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "マクドナルドHD",
@@ -61,7 +63,8 @@
    "quantityUnit": "冊",
    "exchange": "東証",
    "usageNotes": "金額券ではなく商品引換券（バーガー・サイド・ドリンク引換）",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ゼンショーHD",
@@ -77,7 +80,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "500円券・お釣り不可。2026年3月末基準分から発送方法が変わり、6月初旬の「株主総会招集ご通知」に同封される。優待券での支払いは各種ポイントの付与対象外",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "トリドールHD",
@@ -93,7 +97,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "100円券の冊子ではなくチャージ式のカード型。カード裏のQRコードをレジで読み取り、100円単位から10円単位で使える。丸亀製麺・肉のヤマ牛・譚仔等の国内店で使える。200株以上を1年以上でさらに上乗せ",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "吉野家HD",
@@ -109,7 +114,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "500円券・お釣り不可。100株は1回2,000円相当×年2回（2月末・8月末）。年6,000円分から年4,000円分へ減額済み。別枠で3月末に1年以上の継続保有者へQUOカード1,000円",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "松屋フーズHD",
@@ -125,7 +131,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "食事引換券（メニュー引換式・金額券ではない）",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "コロワイド",
@@ -141,7 +148,8 @@
    "quantityUnit": "回",
    "exchange": "東証",
    "usageNotes": "1ポイント=1円で1円単位利用可",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "アトム",
@@ -158,7 +166,8 @@
    "exchange": "東証",
    "usageNotes": "1ポイント=1円で1円単位利用可",
    "shipMonths": "6,12",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "王将フードサービス",
@@ -174,7 +183,8 @@
    "balanceUnit": "円分",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "コメダHD",
@@ -190,7 +200,8 @@
    "quantityUnit": "回",
    "exchange": "東証",
    "usageNotes": "KOMECAにチャージされ1円単位で利用可",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "くら寿司",
@@ -206,7 +217,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "電子チケット（紙の優待券ではない）。くら寿司・無添蔵の国内全店で使える。4月末基準・7月中旬発送",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "FOOD & LIFE COMPANIES",
@@ -222,7 +234,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "2026年1月利用分から1円単位で使える。紙のバーコード提示でもスマホの電子チケットでも可。スシロー全店・京樽系（一部除く）とスシローのお持ち帰りネット注文で使える。6月配布分は7/1〜12/31、12月配布分は翌1/1〜6/30が有効期間",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "クリエイト・レストランツ",
@@ -238,7 +251,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "shipMonths": "5,11",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "エターナルホスピタリティグループ",
@@ -254,7 +268,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "電子チケット（案内のQRコードからアクセスする方式）。鳥貴族・torikizoku等のグループ店で使える",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "サンマルクHD",
@@ -270,7 +285,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "20%割引カード（会計から割引・金券ではない）",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ドトール・日レスHD",
@@ -286,7 +302,8 @@
    "quantityUnit": "回",
    "exchange": "東証",
    "usageNotes": "1,000円分の優待カード。ドトールコーヒーショップ・エクセルシオール カフェ等で使える。残高をドトール バリューカードへまとめられる。5月末に贈呈",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "力の源ホールディングス",
@@ -302,7 +319,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "アプリの電子カード・1円単位で利用可",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "リンガーハット",
@@ -318,7 +336,8 @@
    "quantityUnit": "P",
    "exchange": "東証",
    "usageNotes": "電子ポイント制（スマホ専用）",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "木曽路",
@@ -334,7 +353,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "800円券。有効期限は3月末基準分が翌年7月末、9月末基準分が翌々年1月末。グループ全店で食事のほかお土産・お中元・お歳暮・おせち・持ち帰りにも使える",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ロイヤルHD",
@@ -350,7 +370,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "500円券・お釣り不可・1会計で複数枚利用可",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ジョイフル",
@@ -366,7 +387,8 @@
    "quantityUnit": "枚",
    "exchange": "福証",
    "usageNotes": "15%割引券（金券ではない）",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ワタミ",
@@ -382,7 +404,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "500円券・お釣り不可・税込2,000円ごとに1枚利用可",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "大戸屋HD",
@@ -398,7 +421,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "ポイントは1円単位で利用可（コロワイド系列共通）",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "モスフードサービス",
@@ -414,7 +438,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "500円券。モスバーガー・ミスタードーナツ等で使える。3年以上の継続保有で1.1〜1.5倍に増額",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "壱番屋",
@@ -430,7 +455,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "500円券・お釣り不可",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "幸楽苑HD",
@@ -445,7 +471,8 @@
    "balanceUnit": "円分",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ユニシアホールディングス",
@@ -460,7 +487,8 @@
    "balanceUnit": "円",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ハイデイ日高",
@@ -476,7 +504,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "500円券。100株は食事割引券2枚とお米の選択制。2月末・8月末の年2回",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "銀座ルノアール",
@@ -492,7 +521,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "500円券。喫茶室ルノアール・カフェ ミヤマ・ミヤマ珈琲・ニューヨーカーズカフェ等で使える。株主総会後に発送",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ギフトHD",
@@ -508,7 +538,8 @@
    "quantityUnit": "P",
    "exchange": "東証",
    "usageNotes": "2026年4月権利分から紙券は廃止され電子ポイント制（アプリ）。100株は1年未満1,500ポイント・1年以上2,500ポイントを年2回",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "テンアライド",
@@ -524,7 +555,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "電子株主優待券（届いたQRコードをスマホで読み取って使う）。旬鮮酒場天狗・テング酒場・神田屋等で使える",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ヴィア・HD",
@@ -540,7 +572,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "500円割引券。税込1,000円ごとに1枚使えるので実質50%割引。全国約300店舗。2026年3月権利分から年間5,000円相当→8,000円相当（16枚）に拡充",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ホットランド",
@@ -556,7 +589,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "500円券。100株は3枚×年2回。築地銀だこ・銀のあん等のグループ店で使える",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "イオン",
@@ -572,7 +606,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "2026年2月末基準分からキャッシュバック率が改定され、100株は3%→1%（200株2%・300株以上3%）。オーナーズカードを提示して買い、後日返金される方式（金券ではない）",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ビックカメラ",
@@ -589,7 +624,8 @@
    "exchange": "東証",
    "shipMonths": "5,11",
    "usageNotes": "1,000円券・お釣り不可・優待利用分はポイント対象外。コジマ／ソフマップの店舗でも使える。ネット通販は利用票と優待券を郵送する方式",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "コジマ",
@@ -606,7 +642,8 @@
    "exchange": "東証",
    "shipMonths": "5,11",
    "usageNotes": "1,000円券・お釣り不可。ビックカメラ／ソフマップ／ビックカメラアウトレットの店舗でも使える（通信販売は不可）。商品券・各種割引券・ポイントと併用可。有効期限は発行翌年の11月30日",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ヤマダHD",
@@ -623,7 +660,8 @@
    "exchange": "東証",
    "shipMonths": "6,12",
    "usageNotes": "500円券・税込1,000円ごとに1枚（1会計50枚まで）・通販では使えない。3月末基準分は同年12月末、9月末基準分は翌年6月末まで。修理／工事／たばこ／POSAカード等は対象外",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "マツキヨココカラ＆カンパニー",
@@ -639,7 +677,8 @@
    "quantityUnit": "P",
    "exchange": "東証",
    "usageNotes": "商品券は廃止されポイント制。受け取りには案内のURL・QRコードからの申込が必須（期限内に申し込まないと失効）。マツキヨ・ココカラ各店とオンラインストアで使える（処方薬は不可）。寄付も選べる",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "スギHD",
@@ -655,7 +694,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "1,000円券・お釣り不可・有効期限は翌年6月30日。調剤／雑誌／たばこ／POSAカード／宅配便料金／商品券の購入には使えない",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "サンドラッグ",
@@ -671,7 +711,8 @@
    "quantityUnit": "セット",
    "exchange": "東証",
    "usageNotes": "100株はPB商品の無料引換券（12種から1つ選択）と買物優待券の選択制。有効期限は約9か月。他クーポンとの併用・他商品への交換・返金は不可",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ツルハHD",
@@ -687,7 +728,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "500円券・お釣り不可・1会計で複数枚使える。調剤／たばこ／雑誌／商品券等は対象外。1枚も使わなければPB詰合せ等の商品に交換もできる",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "クスリのアオキ",
@@ -703,7 +745,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "割引カード（100株=3%）とギフトカードの2本立て。カードの使用期間は10月1日〜翌年9月30日。調剤／商品券／たばこ／切手／雑誌は割引の対象外",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ニトリHD",
@@ -719,7 +762,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "2025年10月の1:5分割により対象が500株以上になった（100株では貰えない）。1枚で10%割引・1枚につき買上10万円まで。ニトリ／デコホーム／島忠／ホームズで使えるがネットショップは対象外",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "エディオン",
@@ -735,7 +779,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "1円単位で使える・有効期限2年。エディオン／100満ボルト各店とネットショップで使える（ネットはカード番号とPINコードを入力）",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ケーズHD",
@@ -751,7 +796,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "1,000円券・お釣り不可・1会計32枚まで・有効期限6か月。工事／修理／部品代にも使えるが、POSAカードとオンラインショップでは使えない",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "しまむら",
@@ -766,7 +812,8 @@
    "balanceUnit": "円",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "西松屋チェーン",
@@ -782,7 +829,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "1円単位で使えるプリペイド式（チャージ不可の使い切り）・有効期限は約6か月。1会計で店舗は5枚まで、オンラインストアは1枚まで",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ライフコーポ",
@@ -798,7 +846,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "1,000円券・有効期限なし・直営店の商品に使える（店舗内テナント／一部商品は不可）。2月末に100株以上を1年以上継続保有が条件で、商品券／PB詰合せ／寄付の選択制",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ユナイテッド・スーパー",
@@ -814,7 +863,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "100円券・税込1,000円ごとに1枚・換金不可・有効期限は約6か月",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "良品計画",
@@ -830,7 +880,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "MUJIアプリの電子クーポン（7%割引）",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "三越伊勢丹HD",
@@ -845,7 +896,8 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "高島屋",
@@ -861,7 +913,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "10%割引カード（金券ではない）。100株の年間利用限度額は15万円（200株30万円・1,000株以上は限度なし）",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "J.フロントリテイリング",
@@ -877,7 +930,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "10%割引カード（金券ではない）。100株の年間利用限度額は継続保有3年未満50万円・3年以上150万円。5月中旬に発行され翌年5月31日まで。大丸松坂屋オンラインストア・DEPACOでも使える",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "コーナン商事",
@@ -893,7 +947,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "1,000円の商品券・有効期限なし。2023年1月以降はお釣りが出ない（現金への引換も不可）。コーナン／コーナンPRO／CAMP DEPOT／ビーバートザン等で使える",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "DCMホールディングス",
@@ -910,7 +965,8 @@
    "exchange": "東証",
    "shipMonths": "6",
    "usageNotes": "500円券・お釣り不可・現金への引換も不可。有効期限は毎年6月から1年",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "コメリ",
@@ -926,7 +982,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "1,000円券・有効期限なし・お釣り不可（現金への引換も不可）。コメリパワー／ハード&グリーン／PRO／アテーナで使えるほか、株主限定カタログの商品交換にも使える",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "パン・パシフィック(ドンキ)",
@@ -942,7 +999,8 @@
    "quantityUnit": "回",
    "exchange": "東証",
    "usageNotes": "majicaポイント・1円単位で利用可",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "イズミ",
@@ -958,7 +1016,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "100円券・税込1,000円ごとに1枚・換金不可。有効期限は約6か月（5月発送分は11/30、11月発送分は5/31）",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "バローHD",
@@ -974,7 +1033,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "Lu Vitカードにチャージ済みのギフトカード（JCB PREMO搭載）。電子マネー残高に有効期限はなく、バローグループのほかJCB PREMO加盟店でも使える",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "平和堂",
@@ -990,7 +1050,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "100円券・税込1,000円ごとに1枚（1枚のレシートの税込金額で判定）",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "オートバックスセブン",
@@ -1006,7 +1067,8 @@
    "quantityUnit": "P",
    "exchange": "東証",
    "usageNotes": "公式アプリでの利用のみ・1ポイント=1円。100株を1年以上の継続保有が条件。有効期限は付与から1年。オートバックス各店と公式通販で使える",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "JR東日本",
@@ -1021,7 +1083,8 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "JR西日本",
@@ -1037,7 +1100,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "エリア内のきっぷが5割引。1枚の乗車券に1枚だけ（2枚重ねて使えない）。3月末基準で年1回・6月下旬に送付、有効期限は7月1日〜翌年6月30日",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "JR東海",
@@ -1052,7 +1116,8 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "JR九州",
@@ -1067,7 +1132,8 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証・福証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "日本航空(JAL)",
@@ -1083,7 +1149,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "国内線が50%割引。100株は3月末・9月末に各1枚。有効期間は航空券の発行日翌日から1年か券面記載の期間の短いほう",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ANA HD",
@@ -1099,7 +1166,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "100〜499株は1回分の株主優待番号。2026年3月権利分からツアーの割引が2〜5%→10%に拡大。3月末・9月末が基準日",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "東急",
@@ -1114,7 +1182,8 @@
    "balanceUnit": "セット",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "小田急電鉄",
@@ -1129,7 +1198,8 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "京王電鉄",
@@ -1144,7 +1214,8 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "京成電鉄",
@@ -1159,7 +1230,8 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "西武HD",
@@ -1174,7 +1246,8 @@
    "balanceUnit": "セット",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "阪急阪神HD",
@@ -1189,7 +1262,8 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "近鉄グループHD",
@@ -1204,7 +1278,8 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "名古屋鉄道",
@@ -1219,7 +1294,8 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証・名証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "京急電鉄",
@@ -1235,7 +1311,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "100〜200株未満は年1回（3月末基準）で、電車・バス全線きっぷ2枚が5月中旬に届く。200株以上になると年2回",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "相鉄HD",
@@ -1250,7 +1327,8 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "富士急行",
@@ -1266,7 +1344,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "100株は電車・バス・観光施設の共通優待券と割引券冊子のセット。3月末・9月末の年2回",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "HIS",
@@ -1281,7 +1360,8 @@
    "balanceUnit": "円分",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "オリエンタルランド",
@@ -1296,7 +1376,8 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "サンリオ",
@@ -1312,7 +1393,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "電子チケット化（Sanrio+）・紙券は廃止",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ラウンドワン",
@@ -1327,7 +1409,8 @@
    "balanceUnit": "円分",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "第一興商",
@@ -1342,7 +1425,8 @@
    "balanceUnit": "円",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "コシダカHD",
@@ -1358,7 +1442,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "500円券。2026年から年1回（8月）→年2回（2月末・8月末）になり優待額も倍増。100株は3年未満で1回2,000円分、3年以上（同一株主番号で連続7回以上）で4,000円分",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "東宝",
@@ -1374,7 +1459,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "映画招待券（無料で1本観られる）。2026年8月権利分から年1回（8月末基準）に変更され有効期限は1年へ。TOHOシネマズで使える",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "松竹",
@@ -1389,7 +1475,8 @@
    "balanceUnit": "ポイント",
    "quantityUnit": "P",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "スタジオアリス",
@@ -1405,7 +1492,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "撮影料が無料になる撮影券（四切写真付き）。決算期の変更で基準日が6月末→8月末に。11月に事業報告書と同封で届く",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "アシックス",
@@ -1421,7 +1509,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "20%割引の電子チケット（金券ではない）。1枚で税込5万円までの買物に使える。オンラインストアで使うにはマイページへ株主番号の登録が必要",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ミズノ",
@@ -1436,7 +1525,8 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ライオン",
@@ -1451,7 +1541,8 @@
    "balanceUnit": "セット",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ヤクルト本社",
@@ -1466,7 +1557,8 @@
    "balanceUnit": "セット",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "味の素",
@@ -1481,7 +1573,8 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "カゴメ",
@@ -1496,7 +1589,8 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証・名証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "キリンHD",
@@ -1511,7 +1605,8 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "日清食品HD",
@@ -1526,7 +1621,8 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "カルビー",
@@ -1541,7 +1637,8 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "江崎グリコ",
@@ -1556,7 +1653,8 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "明治HD",
@@ -1571,7 +1669,8 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "キユーピー",
@@ -1586,7 +1685,8 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "日本ハム",
@@ -1601,7 +1701,8 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "伊藤ハム米久HD",
@@ -1616,7 +1717,8 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "小林製薬",
@@ -1632,7 +1734,8 @@
    "quantityUnit": "セット",
    "exchange": "東証",
    "usageNotes": "100株は5,000円相当の自社製品詰合せ（複数コースや寄付から選ぶ）と自社通販10%割引。6月末・12月末の年2回。12月末の復興支援ギフトは3年以上の継続保有が条件",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ハウス食品G",
@@ -1647,7 +1750,8 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "東洋水産",
@@ -1662,7 +1766,8 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ダイドーGHD",
@@ -1677,7 +1782,8 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "タカラトミー",
@@ -1693,7 +1799,8 @@
    "quantityUnit": "個",
    "exchange": "東証",
    "usageNotes": "100株は3月末基準でオリジナルトミカ2台セット。タカラトミーモールの割引は1年未満10%・1年以上30%・3年以上40%で、各期間10万円まで",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "KDDI",
@@ -1709,7 +1816,8 @@
    "quantityUnit": "セット",
    "exchange": "東証",
    "usageNotes": "2025年3月の1:2分割後は200株以上が対象（100株では貰えない）。1年以上の継続保有が必須で、1〜5年は2,000円相当・5年以上は3,000円相当。Pontaはau PAYマーケットの交換所で1.5倍に増量できる",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "日本電信電話(NTT)",
@@ -1725,7 +1833,8 @@
    "quantityUnit": "P",
    "exchange": "東証",
    "usageNotes": "進呈には毎年エントリー手続きが必須",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "リコーリース",
@@ -1740,7 +1849,8 @@
    "balanceUnit": "円",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ひろぎんHD",
@@ -1756,7 +1866,8 @@
    "quantityUnit": "セット",
    "exchange": "東証",
    "usageNotes": "500株未満はギフトカード500円分、1,000株以上はカタログギフト。受け取りはギフトパッドの専用サイトからの申込制（受付期限あり）",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "日本管財ホールディングス",
@@ -1771,7 +1882,8 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ヒューリック",
@@ -1786,7 +1898,8 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "TOKAIHD",
@@ -1826,8 +1939,10 @@
     ],
     "rightsMonths": "3,9",
     "note": "申込制（申し込まないと受け取れない）。QUOカードほか計5種類から選択。QUO を選んだ場合の金額。株数区分は公式サイト（100〜299株 500円／300〜4,999株 1,500円／5,000株以上 2,500円、年2回）",
-    "auditedAt": "2026-09-09"
-   }
+    "auditedAt": "2026-09-09",
+    "auditScope": "株数区分・年回数・権利月（公式区分表と突き合わせ）"
+   },
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "エスリード",
@@ -1843,7 +1958,8 @@
    "quantityUnit": "セット",
    "exchange": "東証",
    "usageNotes": "100株は3,000円相当のカタログから選択。申込はハガキの返送のみでネットからはできない。申込期限あり",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ソフトバンク",
@@ -1858,7 +1974,8 @@
    "balanceUnit": "ポイント",
    "quantityUnit": "P",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "沖縄セルラー",
@@ -1874,7 +1991,8 @@
    "quantityUnit": "セット",
    "exchange": "東証",
    "usageNotes": "カタログから商品を選択する方式",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ほくほくフィナンシャル",
@@ -1889,7 +2007,8 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証・札証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "大和証券グループ",
@@ -1904,7 +2023,8 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証・名証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "青山商事",
@@ -1919,7 +2039,8 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "はるやまHD",
@@ -1935,7 +2056,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "20%割引券と商品贈呈券（税込6,600円までのシャツ・ネクタイ等と交換）。金券ではない。他の割引券とは1種類まで併用可・オンラインストアでも使える",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ユナイテッドアローズ",
@@ -1950,7 +2072,8 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "アルペン",
@@ -1966,7 +2089,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "1,000円券・お釣り不可・現金への引換も不可・ネット販売では使えない。他の割引企画とは併用可だが、ギフト券／商品配送代金／早割・特割リフト券等は対象外",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "オンワードHD",
@@ -1981,7 +2105,8 @@
    "balanceUnit": "回分",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "資生堂",
@@ -1996,7 +2121,8 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "コーセーホールディングス",
@@ -2012,7 +2138,8 @@
    "quantityUnit": "セット",
    "exchange": "東証",
    "usageNotes": "100株・3年未満は4,000〜6,000円相当の自社製品A〜Dから1点を選ぶ申込制。6月末・12月末基準",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ポーラ・オルビスHD",
@@ -2027,7 +2154,8 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "花王",
@@ -2042,7 +2170,8 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ロート製薬",
@@ -2057,7 +2186,8 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "リゾートトラスト",
@@ -2072,7 +2202,8 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "四国銀行",
@@ -2105,9 +2236,11 @@
     ],
     "rightsMonths": "3",
     "note": "3月末基準・年1回。継続保有1年以上＝基準日の3月末と前年3月末・9月末の名簿に同一株主番号で100株以上が連続記載。1,000株以上は地元特産品3,000円相当、2,000株以上は6,000円相当（QUO ではない）",
-    "auditedAt": "2026-09-09"
+    "auditedAt": "2026-09-09",
+    "auditScope": "株数区分・年回数・権利月（公式区分表と突き合わせ）"
    },
-   "usageNotes": "3月末基準・年1回。100株以上を1年以上継続保有で QUO カード500円分、200株以上で1,500円分。1,000株以上は地元特産品カタログ（3,000円相当）"
+   "usageNotes": "3月末基準・年1回。100株以上を1年以上継続保有で QUO カード500円分、200株以上で1,500円分。1,000株以上は地元特産品カタログ（3,000円相当）",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "南都銀行",
@@ -2122,7 +2255,8 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "滋賀銀行",
@@ -2137,7 +2271,8 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "ブロンコビリー",
@@ -2152,7 +2287,8 @@
    "balanceUnit": "円",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "チムニー",
@@ -2168,7 +2304,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "2025年3月末基準分から紙の優待券は廃止されデジタルクーポンに。100株以上500株未満は500円券6枚×年2回（旧10枚から減）。申込制で、申込期限とクーポンの使用期限が別にあるので両方を見る",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "フジオフードHD",
@@ -2184,7 +2321,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "100株は3,000円相当。株主優待食事券・国産米・カレーセット・PB商品などから1点を選ぶ申込制。6月末基準は9月、12月末基準は1月末に申込書が届く",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "グローバルダイニング",
@@ -2199,7 +2337,8 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31"
+   "auditedAt": "2026-08-31",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "大崎電気工業",
@@ -2215,7 +2354,8 @@
    "quantityUnit": "回",
    "exchange": "東証",
    "usageNotes": "継続保有条件なし。受取は手続き制: 10月下旬のDMからオンラインで交換先を選択、期限2027年1月31日（超過で失効）",
-   "auditedAt": "2026-09-05"
+   "auditedAt": "2026-09-05",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "AZ-COM丸和HD",
@@ -2231,7 +2371,8 @@
    "quantityUnit": "回",
    "exchange": "東証",
    "usageNotes": "400株以上が対象（100株では貰えない）・継続保有条件なし。専用サイト登録制（2026年11月公開予定）。連続保有で最大1回繰越可・WILLsCoin合算/ふるさと納税可",
-   "auditedAt": "2026-09-05"
+   "auditedAt": "2026-09-05",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "京阪神ビルディング",
@@ -2247,7 +2388,8 @@
    "quantityUnit": "回",
    "exchange": "東証",
    "usageNotes": "600株以上が対象（600株未満では貰えない）・継続保有条件なし。1,000株以上で50,000ポイント。ポイントの繰越は不可。専用サイト登録制（案内送付・サイト開設とも2026年11月中旬予定）。電話申込も可だが選べる商品が限られる。WILLsCoin合算可",
-   "auditedAt": "2026-09-06"
+   "auditedAt": "2026-09-06",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "日本アジア投資",
@@ -2263,7 +2405,8 @@
    "quantityUnit": "回",
    "exchange": "東証",
    "usageNotes": "長期保有限定（クロス不可）: 500株以上を継続1年以上（3/31・9/30の名簿に同一株主番号で連続3回）。初回2027年3月末のみ6か月（2026-09-30と2027-03-31の連続2回）。各基準日の断面で500株以上が必須。全売却後の買い直しは株主番号が変わり連続性が切れる。申込ハガキ返送制・期限超過で失効。議決権行使QUOカード(500円)は同時に終了",
-   "auditedAt": "2026-09-06"
+   "auditedAt": "2026-09-06",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "豊田合成",
@@ -2280,7 +2423,8 @@
    "exchange": "東証",
    "usageNotes": "長期保有限定（クロス不可）: 100株以上を継続1年以上（3/31基準で前年9/30・当年3/31の名簿に同一株主番号で100株以上が連続3回以上）。初回2027年3月末のみ半年（2026-09-30と2027-03-31の連続2回）。2026-09-30の判定は分割前のため20株以上を100株以上として扱う。イベント参加（抽選）は500株以上のみ。全売却後の買い直しは株主番号が変わり連続性が切れる",
    "shipMonths": "6",
-   "auditedAt": "2026-09-07"
+   "auditedAt": "2026-09-07",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   }
  ],
  "siteOnly": [
@@ -2311,8 +2455,10 @@
     ],
     "rightsMonths": "2,8",
     "note": "長期保有限定（クロス不可）。初回2027年2月末は経過措置（2026年11月末の名簿から連続保有で対象）。国内居住者限定",
-    "auditedAt": "2026-09-09"
-   }
+    "auditedAt": "2026-09-09",
+    "auditScope": "株数区分・年回数・権利月（公式区分表と突き合わせ）"
+   },
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "フタバ産業",
@@ -2359,8 +2505,10 @@
     ],
     "rightsMonths": "9",
     "note": "初回2026年9月末のみ保有期間不問で一律1,000円分。2027年9月以降は1年以上の継続保有が必須（同一株主番号の名簿連続記録で判定）。区分は2026-07-30 開示",
-    "auditedAt": "2026-09-09"
-   }
+    "auditedAt": "2026-09-09",
+    "auditScope": "株数区分・年回数・権利月（公式区分表と突き合わせ）"
+   },
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "たけびし",
@@ -2394,9 +2542,11 @@
     ],
     "rightsMonths": "3,9",
     "note": "3月末・9月末の年2回。長期保有による増額は2021年に廃止済み（同年に年2回化）",
-    "auditedAt": "2026-09-09"
+    "auditedAt": "2026-09-09",
+    "auditScope": "株数区分・年回数・権利月（公式区分表と突き合わせ）"
    },
-   "usageNotes": "3月末・9月末の年2回。100株で1,000円分、1,000株以上で2,000円分（長期増額は2021年に廃止）"
+   "usageNotes": "3月末・9月末の年2回。100株で1,000円分、1,000株以上で2,000円分（長期増額は2021年に廃止）",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   },
   {
    "company": "稲畑産業",
@@ -2461,9 +2611,11 @@
     ],
     "rightsMonths": "9",
     "note": "9月末基準・年1回・12月初旬に第2四半期株主通信と同封。継続保有は3・6・9・12月末の名簿に同一株主番号で連続記録。6か月未満は株数によらず500円",
-    "auditedAt": "2026-09-09"
+    "auditedAt": "2026-09-09",
+    "auditScope": "株数区分・年回数・権利月（公式区分表と突き合わせ）"
    },
-   "shipMonths": "12"
+   "shipMonths": "12",
+   "auditScope": "券種・金額・使える店・使い方の注意"
   }
  ]
 }
