@@ -19,11 +19,14 @@ push 前に止めるためのもの。標準ライブラリのみ使用。
   - dataVersion の形式違反（YYYY-MM-DD.連番）
   - auditedAt の形式違反（YYYY-MM-DD。quo.auditedAt も対象）
 
-警告（終了コードは 0 のまま。2026-09-10 追加）:
-  - アプリの BenefitTierCalculator.select が絶対に選ばない tiers の段
-    （株数条件を満たす段のうち amount 最大を採るため、amount が前の段より下がる段は死ぬ）。
-    amount が意図的に下がる正当な優待（相鉄HD 9003 の5,000株＝回数券が減る代わりに定期券が付く）が
-    実在するので、エラーにして push を止めない。段の note を読んで意図どおりか判断すること。
+警告（終了コードは 0 のまま。2026-09-10 追加。2026-09-11 に判定を作り直した）:
+  - アプリの BenefitTierCalculator.select が絶対に選ばない tiers の段。
+    v1.15.03.046（2026-09-10）で select の base 選択が「amount 最大」から
+    「株数区分（minShares）最大 → minHoldMonths → amount」に変わったため、
+    amount が前の段より下がるだけでは段は死ななくなった（相鉄HD 9003 の5,000株や
+    阪急阪神HD 9042 の6,200株以上のように、区分が上がると額が下がる優待は正しく選ばれる）。
+    いま死ぬのは (minShares, minHoldMonths) が完全に重複していて amount が小さい段だけ。
+    判定は select と同じ関数を当てて行う（規則を2箇所に書かないため）。
 
 エラーがあれば終了コードを 0 以外にする。正常なら何も出さず 0 で終わる。
 """
@@ -287,17 +290,37 @@ def validate(text):
     return errors
 
 
-def tier_sort_key(tier):
-    """BenefitTierCalculator.select と同じ比較（amount → minHoldMonths → minShares）。"""
-    return (tier.get("amount", 0), tier.get("minHoldMonths", 0), tier.get("minShares", 0))
+def select_base(tiers, shares, months_held):
+    """BenefitTierCalculator.select の base 選択をそのまま写したもの（v1.15.03.046 以降）。
+
+    条件を満たす非 additive の段のうち (minShares, minHoldMonths, amount) が最大のものを採る。
+    additive（上乗せ型）は別枠なのでここでは扱わない。
+    """
+    def hold_ok(t):
+        return t.get("minHoldMonths", 0) <= 0 or (
+            months_held is not None and months_held >= t.get("minHoldMonths", 0)
+        )
+
+    eligible = [
+        t for t in tiers
+        if not t.get("additive")
+        and shares >= t.get("minShares", 0)
+        and hold_ok(t)
+    ]
+    if not eligible:
+        return None
+    return max(
+        eligible,
+        key=lambda t: (t.get("minShares", 0), t.get("minHoldMonths", 0), t.get("amount", 0)),
+    )
 
 
 def collect_unreachable_tiers(text):
     """アプリが絶対に選ばない tiers の段を (行, ラベル, メッセージ) で返す（警告用）。
 
-    select は「株数と継続保有の条件を満たす段のうち amount 最大」を採る。ある段 T について、
-    T の条件を満たす株主は T より緩い条件の段も全部満たすので、その中に T より amount の大きい段が
-    あれば T は永久に選ばれない。additive（上乗せ型）は別枠で選ばれるので対象外。
+    ある段 T のしきい値ちょうど（T.minShares 株・T.minHoldMonths か月）の株主に select を当てて、
+    T 以外が採られるなら T は永久に選ばれない。株数区分が大きいほど強いので、
+    実際に引っかかるのは (minShares, minHoldMonths) が重複していて amount が小さい段だけになる。
     """
     try:
         data = json.loads(text)
@@ -313,24 +336,21 @@ def collect_unreachable_tiers(text):
         for i, item in enumerate(items):
             if not isinstance(item, dict):
                 continue
-            tiers = [t for t in (item.get("tiers") or []) if isinstance(t, dict) and not t.get("additive")]
-            if len(tiers) < 2:
+            tiers = [t for t in (item.get("tiers") or []) if isinstance(t, dict)]
+            if len([t for t in tiers if not t.get("additive")]) < 2:
                 continue
             line = line_of(text, spans[i][0]) if i < len(spans) else 1
             for tier in tiers:
-                eligible = [
-                    u for u in tiers
-                    if u.get("minShares", 0) <= tier.get("minShares", 0)
-                    and u.get("minHoldMonths", 0) <= tier.get("minHoldMonths", 0)
-                ]
-                best = max(eligible, key=tier_sort_key)
-                if tier_sort_key(best) > tier_sort_key(tier):
+                if tier.get("additive"):
+                    continue
+                best = select_base(tiers, tier.get("minShares", 0), tier.get("minHoldMonths", 0))
+                if best is not None and best is not tier:
                     warnings.append((
                         line, item_label(item, i),
-                        "%d株〜 の段（amount=%s）は %d株〜 の段（amount=%s）に負けるためアプリが選びません。"
-                        "意図どおりか note を確認してください" % (
-                            tier.get("minShares", 0), tier.get("amount", 0),
-                            best.get("minShares", 0), best.get("amount", 0),
+                        "%d株〜/%dか月 の段（amount=%s）は %d株〜/%dか月 の段（amount=%s）に負けるため"
+                        "アプリが選びません。株数区分か継続保有月数が重複していないか確認してください" % (
+                            tier.get("minShares", 0), tier.get("minHoldMonths", 0), tier.get("amount", 0),
+                            best.get("minShares", 0), best.get("minHoldMonths", 0), best.get("amount", 0),
                         ),
                     ))
     return warnings
