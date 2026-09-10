@@ -19,6 +19,12 @@ push 前に止めるためのもの。標準ライブラリのみ使用。
   - dataVersion の形式違反（YYYY-MM-DD.連番）
   - auditedAt の形式違反（YYYY-MM-DD。quo.auditedAt も対象）
 
+警告（終了コードは 0 のまま。2026-09-10 追加）:
+  - アプリの BenefitTierCalculator.select が絶対に選ばない tiers の段
+    （株数条件を満たす段のうち amount 最大を採るため、amount が前の段より下がる段は死ぬ）。
+    amount が意図的に下がる正当な優待（相鉄HD 9003 の5,000株＝回数券が減る代わりに定期券が付く）が
+    実在するので、エラーにして push を止めない。段の note を読んで意図どおりか判断すること。
+
 エラーがあれば終了コードを 0 以外にする。正常なら何も出さず 0 で終わる。
 """
 import json
@@ -281,6 +287,55 @@ def validate(text):
     return errors
 
 
+def tier_sort_key(tier):
+    """BenefitTierCalculator.select と同じ比較（amount → minHoldMonths → minShares）。"""
+    return (tier.get("amount", 0), tier.get("minHoldMonths", 0), tier.get("minShares", 0))
+
+
+def collect_unreachable_tiers(text):
+    """アプリが絶対に選ばない tiers の段を (行, ラベル, メッセージ) で返す（警告用）。
+
+    select は「株数と継続保有の条件を満たす段のうち amount 最大」を採る。ある段 T について、
+    T の条件を満たす株主は T より緩い条件の段も全部満たすので、その中に T より amount の大きい段が
+    あれば T は永久に選ばれない。additive（上乗せ型）は別枠で選ばれるので対象外。
+    """
+    try:
+        data = json.loads(text)
+    except ValueError:
+        return []
+    warnings = []
+    for key in ("templates", "siteOnly"):
+        items = data.get(key)
+        if not isinstance(items, list):
+            continue
+        open_idx = find_array_open(text, key)
+        spans = scan_top_level_objects(text, open_idx) if open_idx is not None else []
+        for i, item in enumerate(items):
+            if not isinstance(item, dict):
+                continue
+            tiers = [t for t in (item.get("tiers") or []) if isinstance(t, dict) and not t.get("additive")]
+            if len(tiers) < 2:
+                continue
+            line = line_of(text, spans[i][0]) if i < len(spans) else 1
+            for tier in tiers:
+                eligible = [
+                    u for u in tiers
+                    if u.get("minShares", 0) <= tier.get("minShares", 0)
+                    and u.get("minHoldMonths", 0) <= tier.get("minHoldMonths", 0)
+                ]
+                best = max(eligible, key=tier_sort_key)
+                if tier_sort_key(best) > tier_sort_key(tier):
+                    warnings.append((
+                        line, item_label(item, i),
+                        "%d株〜 の段（amount=%s）は %d株〜 の段（amount=%s）に負けるためアプリが選びません。"
+                        "意図どおりか note を確認してください" % (
+                            tier.get("minShares", 0), tier.get("amount", 0),
+                            best.get("minShares", 0), best.get("amount", 0),
+                        ),
+                    ))
+    return warnings
+
+
 def main():
     if not os.path.exists(DATA_PATH):
         print("ERROR: %s が見つかりません" % DATA_PATH, file=sys.stderr)
@@ -290,6 +345,10 @@ def main():
         text = f.read()
 
     errors = validate(text)
+
+    for line, label, message in collect_unreachable_tiers(text):
+        print("WARN [%d行目] %s: %s" % (line, label, message))
+
     if not errors:
         print("OK: %s は正常です" % os.path.relpath(DATA_PATH, ROOT))
         return 0

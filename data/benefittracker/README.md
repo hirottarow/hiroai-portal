@@ -14,7 +14,11 @@
 2. `dataVersion` を更新（`YYYY-MM-DD.連番`）、`updatedAt` を当日に
 3. **push 前に `python scripts/validate_benefits.py` を流す**（JSON構文・必須項目・型・`ticker`重複・
    `tiers`/`quo.tiers`のminShares順序・`dataVersion`/`auditedAt`の形式を検証する。2026-09-10 新設。
-   標準ライブラリのみ。エラーがあれば終了コードが0以外になるので、直してから次へ進む）
+   標準ライブラリのみ。エラーがあれば終了コードが0以外になるので、直してから次へ進む）。
+   **`WARN` 行は終了コードを変えない**（2026-09-10 追加）。アプリの `BenefitTierCalculator.select` は
+   「株数条件を満たす段のうち amount 最大」を採るので、amount が前の段より下がる段は永久に選ばれない。
+   これを警告で出す。**相鉄HD(9003)の5,000株のように意図して下がる優待が実在する**（回数券が160枚→80枚に
+   減る代わりに定期券方式が付く）ため、エラーにして push を止めない。出たら段の `note` を読んで意図どおりか判断する
 4. **push 前に `python scripts/build_benefits_pages.py` を流す**（銘柄ごとの静的ページ `benefits/<ticker>.html`・
    `benefits.html` の静的一覧・`sitemap.xml` を再生成する。2026-09-09 新設。標準ライブラリのみ、冪等）
 5. commit → push（GitHub Pages に反映されるまで数分）
