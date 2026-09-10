@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "dataVersion": "2026-09-10.8",
+ "dataVersion": "2026-09-10.9",
  "updatedAt": "2026-09-10",
  "categories": [
   "外食",
@@ -1456,7 +1456,7 @@
   {
    "company": "ギフトHD",
    "title": "優待ポイント",
-   "balance": 1500,
+   "balance": 1000,
    "category": "外食",
    "ticker": "9279",
    "usableStores": "町田商店等",
@@ -1467,8 +1467,95 @@
    "quantityUnit": "P",
    "exchange": "東証",
    "usageNotes": "2026年4月権利分から紙券は廃止され電子ポイント制（アプリ）。100株は1年未満1,500ポイント・1年以上2,500ポイントを年2回",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 1000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 200,
+     "minHoldMonths": 0,
+     "amount": 1500,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 300,
+     "minHoldMonths": 0,
+     "amount": 2000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 400,
+     "minHoldMonths": 0,
+     "amount": 2500,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 0,
+     "amount": 3500,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 4500,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 2000,
+     "minHoldMonths": 0,
+     "amount": 5500,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 100,
+     "minHoldMonths": 12,
+     "amount": 2000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 200,
+     "minHoldMonths": 12,
+     "amount": 2500,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 300,
+     "minHoldMonths": 12,
+     "amount": 3000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 400,
+     "minHoldMonths": 12,
+     "amount": 3500,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 12,
+     "amount": 4500,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 12,
+     "amount": 5500,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 2000,
+     "minHoldMonths": 12,
+     "amount": 6500,
+     "timesPerYear": 2
+    }
+   ],
+   "tiersNote": "2026年7月15日開示の変更（拡充）後の区分で、株数は2026年8月31日基準の株式分割後のもの。2026年10月末日基準の贈呈から適用される。4月末日・10月末日基準の年2回で、金額は1回ぶん。1年以上の段階は絶対額で置き換わり、上乗せではない。継続保有1年以上とは分割後100株以上を保有し、同一株主番号で当該基準日を含む直近3回の基準日に連続して記載されていること。分割前の区分は100株以上1,500円／2,500円だった"
   },
   {
    "company": "テンアライド",
@@ -2127,8 +2214,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "1,000円券・お釣り不可・1会計32枚まで・有効期限6か月。工事／修理／部品代にも使えるが、POSAカードとオンラインショップでは使えない",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分（公式ページが urllib・curl ともタイムアウトし Chrome も許可外ドメイン。適時開示にも優待の変更開示が見当たらず、株数区分を公式で確認できなかった）"
   },
   {
    "company": "しまむら",
@@ -2143,8 +2230,35 @@
    "balanceUnit": "円",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 2000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 3000,
+     "minHoldMonths": 0,
+     "amount": 4000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 9000,
+     "minHoldMonths": 0,
+     "amount": 6000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 15000,
+     "minHoldMonths": 0,
+     "amount": 10000,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "2026年2月21日を効力発生日とする株式分割（1株→3株）後の区分。継続保有条件なし。2月20日基準の年1回で、金額は小売価額での相当額。分割前は100〜999株2,000円・1,000〜2,999株4,000円・3,000〜4,999株6,000円・5,000株以上10,000円だった。分割前に100株だった株主は分割後300株になり優待内容は変わらず、新たに分割後100株からも対象になる形で実質的に拡充されている"
   },
   {
    "company": "西松屋チェーン",
@@ -4133,8 +4247,8 @@
    "balanceUnit": "円分",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分（公式の株主優待ページが404でIRトップにもリンクが無く、適時開示にも優待の開示が見当たらないため確認できなかった）"
   },
   {
    "company": "第一興商",
@@ -5143,8 +5257,8 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分（公式IRに株主優待のページが無く、適時開示にも優待の開示が見当たらないため株数区分を確認できなかった）"
   },
   {
    "company": "ヒューリック",
@@ -6099,8 +6213,8 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分（公式の株式情報ページに優待の記載が無く、適時開示にも優待の開示が見当たらないため確認できなかった）"
   },
   {
    "company": "大崎電気工業",
@@ -6116,8 +6230,23 @@
    "quantityUnit": "回",
    "exchange": "東証",
    "usageNotes": "継続保有条件なし。受取は手続き制: 10月下旬のDMからオンラインで交換先を選択、期限2027年1月31日（超過で失効）",
-   "auditedAt": "2026-09-05",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 1000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 5000,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "2026年6月26日開示の新設優待で、初回基準日は2026年9月30日。以降も毎年9月末日基準の年1回。継続保有条件なし。ダイレクトメールが10月下旬に届き、オンラインで交換先を選ぶ方式で、受取（選択）期限は2027年1月31日23:59まで。期限を過ぎると受け取れない"
   },
   {
    "company": "AZ-COM丸和HD",
@@ -6133,8 +6262,53 @@
    "quantityUnit": "回",
    "exchange": "東証",
    "usageNotes": "400株以上が対象（100株では貰えない）・継続保有条件なし。専用サイト登録制（2026年11月公開予定）。連続保有で最大1回繰越可・WILLsCoin合算/ふるさと納税可",
-   "auditedAt": "2026-09-05",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 400,
+     "minHoldMonths": 0,
+     "amount": 3000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 0,
+     "amount": 6000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 600,
+     "minHoldMonths": 0,
+     "amount": 10000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 700,
+     "minHoldMonths": 0,
+     "amount": 12000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 18000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1500,
+     "minHoldMonths": 0,
+     "amount": 30000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 2000,
+     "minHoldMonths": 0,
+     "amount": 50000,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "2026年7月22日開示の新設優待（プレミアム優待倶楽部）で、初回は2026年9月末日基準。400株（4単元）以上が対象で、100株では優待が無い。9月末日基準の年1回で、進呈は毎年11月頃の予定。1ポイント≒1円相当。継続保有条件なし。他のプレミアム優待倶楽部導入企業のポイントと合算できる共通コイン「WILLsCoin」にも交換でき、ふるさと納税にも使える"
   },
   {
    "company": "京阪神ビルディング",
