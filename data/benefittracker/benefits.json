@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "dataVersion": "2026-09-10.5",
+ "dataVersion": "2026-09-10.6",
  "updatedAt": "2026-09-10",
  "categories": [
   "外食",
@@ -4395,8 +4395,23 @@
    "quantityUnit": "セット",
    "exchange": "東証",
    "usageNotes": "2025年3月の1:2分割後は200株以上が対象（100株では貰えない）。1年以上の継続保有が必須で、1〜5年は2,000円相当・5年以上は3,000円相当。Pontaはau PAYマーケットの交換所で1.5倍に増量できる",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 200,
+     "minHoldMonths": 12,
+     "amount": 2000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 200,
+     "minHoldMonths": 60,
+     "amount": 3000,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "200株以上が対象で、100株では優待が無い。3月31日基準の年1回（6月贈呈）。全段階に1年以上の継続保有の条件があり、5年以上は絶対額で置き換わる。継続保有期間は同一株主番号で3月31日の株主名簿に連続して記録されている年数。株数による段階は無く、200株以上はいくら持っても同額"
   },
   {
    "company": "日本電信電話(NTT)",
@@ -4412,8 +4427,8 @@
    "quantityUnit": "P",
    "exchange": "東証",
    "usageNotes": "進呈には毎年エントリー手続きが必須",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分（進呈が「2年以上3年未満」「5年以上6年未満」という保有期間の帯で決まり、tiers の「minHoldMonths 以上」では表せない（3〜4年・6年以上は対象外なのに条件を満たしてしまう））"
   },
   {
    "company": "リコーリース",
@@ -4428,8 +4443,47 @@
    "balanceUnit": "円",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 2000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 300,
+     "minHoldMonths": 0,
+     "amount": 5000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 100,
+     "minHoldMonths": 12,
+     "amount": 4000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 300,
+     "minHoldMonths": 12,
+     "amount": 8000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 100,
+     "minHoldMonths": 36,
+     "amount": 5000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 300,
+     "minHoldMonths": 36,
+     "amount": 10000,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "3月末日基準の年1回。保有期間の段階は絶対額で置き換わり、上乗せではない。継続保有の認定は半期ごとの株主名簿に同一株主番号で連続記録された回数（1年以上＝連続3回以上、3年以上＝連続7回以上）。2022年以降は9月末の保有確認時に100株以上であることも条件で、下回ると継続期間がリセットされる。カタログギフトは寄付も選べる"
   },
   {
    "company": "ひろぎんHD",
@@ -4445,8 +4499,39 @@
    "quantityUnit": "セット",
    "exchange": "東証",
    "usageNotes": "500株未満はギフトカード500円分、1,000株以上はカタログギフト。受け取りはギフトパッドの専用サイトからの申込制（受付期限あり）",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 500,
+     "timesPerYear": 1,
+     "note": "ギフトカード500円券"
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 0,
+     "amount": 1000,
+     "timesPerYear": 1,
+     "note": "ギフトカード1,000円券"
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 5000,
+     "timesPerYear": 1,
+     "note": "ギフトカードは無くなり、5,000円相当のカタログギフトか定期預金の金利上乗せ（＋0.1％）の選択制になる"
+    },
+    {
+     "minShares": 5000,
+     "minHoldMonths": 0,
+     "amount": 15000,
+     "timesPerYear": 1,
+     "note": "15,000円相当のカタログギフトか定期預金の金利上乗せ（＋0.3％）の選択制"
+    }
+   ],
+   "tiersNote": "継続保有条件なし。3月31日基準の年1回。1,000株以上になると券種がギフトカードからカタログギフト（または定期預金の金利上乗せ）に変わるので、金額は受け取る価値で揃えてある。別枠で広島の観戦・鑑賞への応募口数（1口／10口／50口）と、100〜499株にはひろしま美術館招待券2枚が付く"
   },
   {
    "company": "日本管財ホールディングス",
@@ -4467,7 +4552,7 @@
   {
    "company": "ヒューリック",
    "title": "グルメカタログ",
-   "balance": 3000,
+   "balance": 6000,
    "category": "カタログ",
    "ticker": "3003",
    "usableStores": "カタログより選択",
@@ -4477,8 +4562,18 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 300,
+     "minHoldMonths": 24,
+     "amount": 6000,
+     "timesPerYear": 1,
+     "note": "3,000円相当を2点。グルメカタログギフトとホテル施設ご利用券から組み合わせて選ぶ"
+    }
+   ],
+   "tiersNote": "2025年12月31日基準から適用の変更後の内容。300株以上を2年以上継続保有が条件で、100株では優待が無い。12月31日基準の年1回（2月下旬〜3月上旬送付）。株数による段階は無く、条件を満たせば一律6,000円相当。保有期間は保有を始めた年の年末を起算日とする。証券会社の変更・貸株・NISA口座への切替などで株主番号が変わると対象外"
   },
   {
    "company": "TOKAIHD",
@@ -4494,7 +4589,7 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "100株以上・3月末と9月末の年2回。QUOカード500円分（300株以上 1,500円分・5,000株以上 2,500円分）ほか計5種類から選ぶ申込制（申し込まないと受け取れない）",
-   "auditedAt": "2026-09-07",
+   "auditedAt": "2026-09-10",
    "quo": {
     "tiers": [
      {
@@ -4521,7 +4616,28 @@
     "auditedAt": "2026-09-09",
     "auditScope": "株数区分・年回数・権利月（公式区分表と突き合わせ）"
    },
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 500,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 300,
+     "minHoldMonths": 0,
+     "amount": 1500,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 5000,
+     "minHoldMonths": 0,
+     "amount": 2500,
+     "timesPerYear": 2
+    }
+   ],
+   "tiersNote": "継続保有条件なし。3月31日・9月30日基準の年2回で、金額は1回ぶん。金額はQUOカードを選んだ場合のもので、ほかに飲料水宅配サービス関連商品・レストランお食事券・TLCポイント・LIBMO月額割引の5種類から1点を選ぶ。希望者にはグループ結婚式場の婚礼10％割引券とレストランの食事20％割引券も付く"
   },
   {
    "company": "エスリード",
@@ -4537,8 +4653,8 @@
    "quantityUnit": "セット",
    "exchange": "東証",
    "usageNotes": "100株は3,000円相当のカタログから選択。申込はハガキの返送のみでネットからはできない。申込期限あり",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分（100株以上一律3,000円相当のカタログギフトで株数区分なし）"
   },
   {
    "company": "ソフトバンク",
@@ -4553,8 +4669,17 @@
    "balanceUnit": "ポイント",
    "quantityUnit": "P",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 12,
+     "amount": 1000,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "100株以上を1年以上継続保有が条件で、保有期間を問わない段階は無い。株数による段階も無く、100株以上は一律1,000円分のPayPayマネーライト。基準日は3月31日と9月30日のうち、株主名簿に載った日から先に到来する方が株主ごとに適用されるため、受け取りは年1回。同一株主番号で3月31日・9月30日の名簿に3回以上連続記載されていることが条件"
   },
   {
    "company": "沖縄セルラー",
@@ -4602,8 +4727,23 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証・札証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 2500,
+     "minHoldMonths": 12,
+     "amount": 5000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 10000,
+     "minHoldMonths": 12,
+     "amount": 10000,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "2027年3月31日基準から適用の変更後の区分で、株数は2026年10月1日の株式分割（1株→10株）後のもの（分割前換算では250株以上・1,000株以上）。3月31日基準の年1回で、1年以上の継続保有が条件（3月31日・9月30日の名簿に同一株主番号で連続3回以上記載）。分割前の現行区分は500株以上5,000円相当・2,000株以上10,000円相当"
   },
   {
    "company": "大和証券グループ",
@@ -4618,8 +4758,46 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証・名証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 2000,
+     "timesPerYear": 2,
+     "note": "2,000円のQUOカード"
+    },
+    {
+     "minShares": 2000,
+     "minHoldMonths": 0,
+     "amount": 3000,
+     "timesPerYear": 2,
+     "note": "カタログから1点"
+    },
+    {
+     "minShares": 3000,
+     "minHoldMonths": 0,
+     "amount": 4000,
+     "timesPerYear": 2,
+     "note": "1,000円のQUOカード＋カタログ3,000円相当から1点"
+    },
+    {
+     "minShares": 5000,
+     "minHoldMonths": 0,
+     "amount": 5000,
+     "timesPerYear": 2,
+     "note": "カタログから1点"
+    },
+    {
+     "minShares": 10000,
+     "minHoldMonths": 0,
+     "amount": 10000,
+     "timesPerYear": 2,
+     "note": "5,000円相当を2点、または10,000円相当を1点"
+    }
+   ],
+   "tiersNote": "2026年9月30日基準から適用の変更後の区分（2,000株以上の区分を新設して5区分になった）。1,000株以上が対象で、100株では優待が無い。3月31日・9月30日基準の年2回で、金額は1回ぶん。変更前は1,000株以上2,000円相当・3,000株以上4,000円相当・5,000株以上5,000円相当・10,000株以上10,000円相当の4区分だった"
   },
   {
    "company": "青山商事",
@@ -4977,8 +5155,60 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 200,
+     "minHoldMonths": 0,
+     "amount": 1,
+     "timesPerYear": 1,
+     "note": "3割引券1枚"
+    },
+    {
+     "minShares": 2000,
+     "minHoldMonths": 0,
+     "amount": 1,
+     "timesPerYear": 1,
+     "note": "5割引券1枚。枚数は同じだが割引率が上がる"
+    },
+    {
+     "minShares": 4000,
+     "minHoldMonths": 0,
+     "amount": 2,
+     "timesPerYear": 1,
+     "note": "5割引券2枚"
+    },
+    {
+     "minShares": 8000,
+     "minHoldMonths": 0,
+     "amount": 3,
+     "timesPerYear": 1,
+     "note": "5割引券3枚"
+    },
+    {
+     "minShares": 12000,
+     "minHoldMonths": 0,
+     "amount": 4,
+     "timesPerYear": 1,
+     "note": "5割引券4枚"
+    },
+    {
+     "minShares": 20000,
+     "minHoldMonths": 0,
+     "amount": 5,
+     "timesPerYear": 1,
+     "note": "5割引券5枚"
+    },
+    {
+     "minShares": 40000,
+     "minHoldMonths": 0,
+     "amount": 10,
+     "timesPerYear": 1,
+     "note": "5割引券10枚"
+    }
+   ],
+   "tiersNote": "200株以上が対象で、100株では優待が無い。3月31日基準の年1回（6月末〜7月上旬に電子チケットを発行）。200株と2,000株はどちらも1枚だが、割引率が3割から5割に上がる。レストランは1枚で1グループ5名まで1回分、ホテルトラスティは1枚で1泊5ルームまで、カハラ横浜は1泊2ルームまで割引。連泊は1泊につき1枚必要で、1枚あたりの対象利用金額は27万5,000円が上限"
   },
   {
    "company": "四国銀行",
@@ -4993,7 +5223,7 @@
    "balanceUnit": "円分",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
+   "auditedAt": "2026-09-10",
    "quo": {
     "tiers": [
      {
@@ -5015,7 +5245,38 @@
     "auditScope": "株数区分・年回数・権利月（公式区分表と突き合わせ）"
    },
    "usageNotes": "3月末基準・年1回。100株以上を1年以上継続保有で QUO カード500円分、200株以上で1,500円分。1,000株以上は地元特産品カタログ（3,000円相当）",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 12,
+     "amount": 500,
+     "timesPerYear": 1,
+     "note": "クオカード500円"
+    },
+    {
+     "minShares": 200,
+     "minHoldMonths": 12,
+     "amount": 1500,
+     "timesPerYear": 1,
+     "note": "クオカード1,500円"
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 12,
+     "amount": 3000,
+     "timesPerYear": 1,
+     "note": "地元特産品カタログ。クオカードではない"
+    },
+    {
+     "minShares": 2000,
+     "minHoldMonths": 12,
+     "amount": 6000,
+     "timesPerYear": 1,
+     "note": "地元特産品カタログ。クオカードではない"
+    }
+   ],
+   "tiersNote": "2023年3月末基準から適用の内容。3月末基準の年1回で、全段階に1年以上の継続保有の条件がある（基準日の3月末とその前年の3月末・9月末の名簿に同一株主番号で100株以上が連続記載）。1,000株以上になると券種がクオカードから地元特産品の専用カタログに変わる（6月上旬にカタログ発送）"
   },
   {
    "company": "南都銀行",
@@ -5030,8 +5291,35 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 2000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 2500,
+     "minHoldMonths": 0,
+     "amount": 3000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 36,
+     "amount": 3000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 2500,
+     "minHoldMonths": 36,
+     "amount": 5000,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "2026年3月31日基準から適用の改定後の区分で、株数は2026年4月1日の株式分割（1株→5株）後のもの。3月31日基準の年1回。3年以上の段階は絶対額で置き換わり、上乗せではない（保有期間は3月31日・9月30日の株主名簿に同一株主番号で連続記載された年数）。分割後100株以上には定期預金の優遇（期間1年・10万円以上500万円以内）が用意されているが、金額に換算できないため段階表に入れていない"
   },
   {
    "company": "滋賀銀行",
@@ -5241,8 +5529,23 @@
    "quantityUnit": "回",
    "exchange": "東証",
    "usageNotes": "600株以上が対象（600株未満では貰えない）・継続保有条件なし。1,000株以上で50,000ポイント。ポイントの繰越は不可。専用サイト登録制（案内送付・サイト開設とも2026年11月中旬予定）。電話申込も可だが選べる商品が限られる。WILLsCoin合算可",
-   "auditedAt": "2026-09-06",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 600,
+     "minHoldMonths": 0,
+     "amount": 25000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 50000,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "600株以上が対象で、100株では優待が無い。9月末日基準の年1回で、11月中旬にプレミアム優待倶楽部の案内が届く。1ポイント≒1円相当。ポイントの繰越はできない。他のプレミアム優待倶楽部導入企業のポイントと合算できる共通コイン「WILLsCoin」にも交換でき、ふるさと納税にも使える"
   },
   {
    "company": "MIRARTHホールディングス",
@@ -5259,7 +5562,40 @@
    "exchange": "東証",
    "usageNotes": "1,000株以上が対象（1,000株未満では貰えない）・継続保有条件なし（毎年9月末の断面のみ）。1,000〜1,499株=3,000pt／1,500〜2,499株=6,000pt／2,500〜3,499株=10,000pt／3,500〜4,999株=20,000pt／5,000株以上=23,000pt。専用サイト登録制（2026年12月公開予定）。電話申込も可だが選べる商品が限られる。同一株主番号で連続保有かつ1,000株以上なら最大1回繰越可・WILLsCoin合算/ふるさと納税可",
    "auditedAt": "2026-09-10",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 3000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1500,
+     "minHoldMonths": 0,
+     "amount": 6000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 2500,
+     "minHoldMonths": 0,
+     "amount": 10000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 3500,
+     "minHoldMonths": 0,
+     "amount": 20000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 5000,
+     "minHoldMonths": 0,
+     "amount": 23000,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "2026年8月7日開示の新設優待で、初回は2026年9月末日基準。1,000株（10単元）以上が対象で、100株では優待が無い。9月末日基準の年1回で、進呈は毎年12月頃の予定。1ポイント≒1円。同一株主番号で連続記載かつ1,000株以上を継続保有していれば、ポイントは最大1回まで翌年へ繰り越せる。2021年3月末基準で一度廃止した制度を、ポイント方式に設計を変えて再導入したもの"
   },
   {
    "company": "日本アジア投資",
