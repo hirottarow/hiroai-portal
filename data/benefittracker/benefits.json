@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "dataVersion": "2026-09-10.7",
+ "dataVersion": "2026-09-10.8",
  "updatedAt": "2026-09-10",
  "categories": [
   "外食",
@@ -3958,8 +3958,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "100株は電車・バス・観光施設の共通優待券と割引券冊子のセット。3月末・9月末の年2回",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分（共通優待券の枚数は株数で変わるが、辞書の単位（セット）では1固定で表せない）"
   },
   {
    "company": "HIS",
@@ -4013,13 +4013,67 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 500,
+     "minHoldMonths": 0,
+     "amount": 1,
+     "timesPerYear": 1,
+     "note": "3月末基準のみ。年間1枚"
+    },
+    {
+     "minShares": 2000,
+     "minHoldMonths": 0,
+     "amount": 1,
+     "timesPerYear": 2,
+     "note": "3月末・9月末の両方で1枚ずつ。年間2枚"
+    },
+    {
+     "minShares": 4000,
+     "minHoldMonths": 0,
+     "amount": 2,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 6000,
+     "minHoldMonths": 0,
+     "amount": 3,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 8000,
+     "minHoldMonths": 0,
+     "amount": 4,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 10000,
+     "minHoldMonths": 0,
+     "amount": 5,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 12000,
+     "minHoldMonths": 0,
+     "amount": 6,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 100,
+     "minHoldMonths": 36,
+     "amount": 1,
+     "timesPerYear": 1,
+     "note": "100〜499株は通常0枚。3年以上の継続保有で年1回1枚（12月配布）"
+    }
+   ],
+   "tiersNote": "3月末・9月末基準で、枚数は1回ぶん。500〜1,999株は3月末基準のみの年1回、2,000株以上は両方の基準日で年2回もらえる。100〜499株は通常0枚で、100株以上を3年以上継続保有した株主にだけ年1回1枚が配られる（3月末・9月末の名簿に同一株主番号で連続7回以上）。この長期の1枚は本来どの区分にも追加されるが、段階表では100株の行にだけ反映してある（多く見せない側に倒した）"
   },
   {
    "company": "サンリオ",
    "title": "共通優待券",
-   "balance": 3,
+   "balance": 1,
    "category": "レジャー",
    "ticker": "8136",
    "usableStores": "ピューロランド等",
@@ -4030,8 +4084,41 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "電子チケット化（Sanrio+）・紙券は廃止",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 1,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 1500,
+     "minHoldMonths": 0,
+     "amount": 3,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 7500,
+     "minHoldMonths": 0,
+     "amount": 6,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 15000,
+     "minHoldMonths": 0,
+     "amount": 9,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 30000,
+     "minHoldMonths": 0,
+     "amount": 12,
+     "timesPerYear": 2
+    }
+   ],
+   "tiersNote": "2026年4月1日の株式分割後の株数による区分で、2026年3月末基準（2026年7月発送予定）から適用。枚数はテーマパーク共通優待券のもので、3月末・9月末基準の年2回。500〜1,499株は100株と同じ1枚なので段階表では100株の行にまとめてある。500株以上には別枠で1,000円割引の電子クーポンが付く（15,000株以上は2枚）。3年以上の長期保有には1,500株以上で株主様限定アクリルスタンド等が加わるが、金額が示されないため段階表に入れていない。優待は電子チケット化され Sanrio＋ で受け取る"
   },
   {
    "company": "ラウンドワン",
@@ -4062,8 +4149,25 @@
    "balanceUnit": "円",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 200,
+     "minHoldMonths": 0,
+     "amount": 5000,
+     "timesPerYear": 2,
+     "note": "500円券10枚綴り1冊"
+    },
+    {
+     "minShares": 2000,
+     "minHoldMonths": 0,
+     "amount": 12500,
+     "timesPerYear": 2,
+     "note": "500円券25枚綴り1冊"
+    }
+   ],
+   "tiersNote": "200株以上が対象で、100株では優待が無い。3月31日・9月30日基準の年2回で、金額は1回ぶん。2026年3月末基準（2026年6月送付）分から有効期間が6か月間から8か月間に延びた。優待券に代えてアルバムCD（200株1枚・2,000株2枚）を選ぶこともできる。ビッグエコー・カラオケマックのほか楽蔵・ウメ子の家・じぶんどき等の飲食店でも使える"
   },
   {
    "company": "コシダカHD",
@@ -4079,8 +4183,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "500円券。2026年から年1回（8月）→年2回（2月末・8月末）になり優待額も倍増。100株は3年未満で1回2,000円分、3年以上（同一株主番号で連続7回以上）で4,000円分",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分（株数区分が画像PDFで、テキストとして取得できない（公式ページ本文には金額・株数の記載がない））"
   },
   {
    "company": "東宝",
@@ -4096,8 +4200,47 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "映画招待券（無料で1本観られる）。2026年8月権利分から年1回（8月末基準）に変更され有効期限は1年へ。TOHOシネマズで使える",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 1,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 0,
+     "amount": 2,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 2500,
+     "minHoldMonths": 0,
+     "amount": 6,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 5000,
+     "minHoldMonths": 0,
+     "amount": 10,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 10000,
+     "minHoldMonths": 0,
+     "amount": 20,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 25000,
+     "minHoldMonths": 0,
+     "amount": 30,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "継続保有条件なし。8月末基準の年1回で、枚数は年間発行枚数（＝1回ぶん）。TOHOシネマズ直営劇場と共同経営劇場で使え、有効期間は翌年1月〜12月。別枠で50,000株以上には演劇株主ご招待状（S席相当のペア2枚）が付く"
   },
   {
    "company": "松竹",
@@ -4112,8 +4255,47 @@
    "balanceUnit": "ポイント",
    "quantityUnit": "P",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 80,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 200,
+     "minHoldMonths": 0,
+     "amount": 160,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 300,
+     "minHoldMonths": 0,
+     "amount": 200,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 0,
+     "amount": 280,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 800,
+     "minHoldMonths": 0,
+     "amount": 400,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 480,
+     "timesPerYear": 2
+    }
+   ],
+   "tiersNote": "継続保有条件なし。2月末・8月末基準の年2回で、ポイントは1回（優待権利期間6ヶ月）ぶん。映画は1名10ポイント（3D は15ポイント、新宿ピカデリーのみ1名20ポイント・3D 30ポイント）。6ヶ月の総ポイントとは別に1ヶ月に使える上限が決まっている（100株は40ポイント、1,000株は140ポイント）。別枠で300株以上には演劇優待（6ヶ月2枚〜）が付く"
   },
   {
    "company": "スタジオアリス",
