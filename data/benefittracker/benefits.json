@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "dataVersion": "2026-09-10.6",
+ "dataVersion": "2026-09-10.7",
  "updatedAt": "2026-09-10",
  "categories": [
   "外食",
@@ -757,8 +757,8 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "20%割引カード（会計から割引・金券ではない）",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分（100株以上一律で株主様ご優待カード1枚。株数区分そのものが無い（2027年3月末基準から半年以上の継続保有要件が加わる））"
   },
   {
    "company": "ドトール・日レスHD",
@@ -1320,7 +1320,7 @@
   {
    "company": "ユニシアホールディングス",
    "title": "お食事優待券",
-   "balance": 1000,
+   "balance": 2000,
    "category": "外食",
    "ticker": "3547",
    "usableStores": "串カツ田中全店",
@@ -1330,8 +1330,35 @@
    "balanceUnit": "円",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 2000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 300,
+     "minHoldMonths": 0,
+     "amount": 4000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 600,
+     "minHoldMonths": 0,
+     "amount": 6000,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 900,
+     "minHoldMonths": 0,
+     "amount": 8000,
+     "timesPerYear": 2
+    }
+   ],
+   "tiersNote": "継続保有条件なし。5月末日・11月末日基準の年2回で、金額は1回ぶん（公式は年間額も併記している）。電子チケットで贈呈され、串カツ田中のほか鳥玉・焼肉くるとん・PISOLA などグループ店で使える。旧・串カツ田中ホールディングスから社名変更した会社で、以前は年1回（11月末基準）だった"
   },
   {
    "company": "ハイデイ日高",
@@ -1402,8 +1429,29 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "500円券。喫茶室ルノアール・カフェ ミヤマ・ミヤマ珈琲・ニューヨーカーズカフェ等で使える。株主総会後に発送",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 1000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 0,
+     "amount": 5000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 10000,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "継続保有条件なし。3月31日基準の年1回で、株主総会終了後に決議ご通知と同封して発送される。1,000株以上にはこれに加えて4,500円相当のオリジナルアイスコーヒーセットが付くが、優待券とは別枠なので段階表の金額には含めていない。喫茶室ルノアール・ニューヨーカーズカフェ・ミヤマ珈琲などで使え、店舗併設の貸会議室マイ・スペースにも利用できる"
   },
   {
    "company": "ギフトHD",
@@ -1488,8 +1536,47 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "500円割引券。税込1,000円ごとに1枚使えるので実質50%割引。全国約300店舗。2026年3月権利分から年間5,000円相当→8,000円相当（16枚）に拡充",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 8000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 300,
+     "minHoldMonths": 0,
+     "amount": 12000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 600,
+     "minHoldMonths": 0,
+     "amount": 18000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 24000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 5000,
+     "minHoldMonths": 0,
+     "amount": 36000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 10000,
+     "minHoldMonths": 0,
+     "amount": 48000,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "継続保有条件なし。3月末日基準の年1回なので、公式の「年間◯◯円相当」がそのまま1回ぶんの額になる。2026年3月末日を基準日とする優待から適用される区分。1回の飲食代金1,000円（税込）ごとに1枚（500円割引）使え、複数枚を同時に使える"
   },
   {
    "company": "ホットランド",
@@ -2915,8 +3002,90 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 300,
+     "minHoldMonths": 0,
+     "amount": 1,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 400,
+     "minHoldMonths": 0,
+     "amount": 2,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 600,
+     "minHoldMonths": 0,
+     "amount": 3,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 700,
+     "minHoldMonths": 0,
+     "amount": 4,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 900,
+     "minHoldMonths": 0,
+     "amount": 5,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1200,
+     "minHoldMonths": 0,
+     "amount": 6,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1500,
+     "minHoldMonths": 0,
+     "amount": 7,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 2000,
+     "minHoldMonths": 0,
+     "amount": 9,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 3000,
+     "minHoldMonths": 0,
+     "amount": 11,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 4000,
+     "minHoldMonths": 0,
+     "amount": 13,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 5000,
+     "minHoldMonths": 0,
+     "amount": 15,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 10000,
+     "minHoldMonths": 0,
+     "amount": 25,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 100,
+     "minHoldMonths": 24,
+     "amount": 1,
+     "timesPerYear": 1,
+     "note": "300株未満は通常0枚。100株以上を2年以上継続保有した場合にだけ1枚"
+    }
+   ],
+   "tiersNote": "3月31日基準の年1回（6月下旬発送）。300株未満は通常0枚で、2年以上の継続保有をした株主にだけ1枚発行される。この長期保有の1枚は本来どの区分にも追加されるが、段階表では100株の行にだけ反映してある（多く見せない側に倒した）。10,000株を超える区分（12,500株以上30枚〜300,000株以上500枚）は入れていない。1枚で4割引、2枚以上の同時利用はできない"
   },
   {
    "company": "JR西日本",
@@ -2932,8 +3101,95 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "エリア内のきっぷが5割引。1枚の乗車券に1枚だけ（2枚重ねて使えない）。3月末基準で年1回・6月下旬に送付、有効期限は7月1日〜翌年6月30日",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 1,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 400,
+     "minHoldMonths": 0,
+     "amount": 2,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 600,
+     "minHoldMonths": 0,
+     "amount": 3,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 800,
+     "minHoldMonths": 0,
+     "amount": 4,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 5,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1200,
+     "minHoldMonths": 0,
+     "amount": 6,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1400,
+     "minHoldMonths": 0,
+     "amount": 7,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1600,
+     "minHoldMonths": 0,
+     "amount": 8,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1800,
+     "minHoldMonths": 0,
+     "amount": 9,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 2000,
+     "minHoldMonths": 0,
+     "amount": 10,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 600,
+     "minHoldMonths": 36,
+     "amount": 1,
+     "timesPerYear": 1,
+     "note": "3年以上継続保有の追加分（600〜999株）",
+     "additive": true
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 36,
+     "amount": 2,
+     "timesPerYear": 1,
+     "note": "3年以上継続保有の追加分（1,000〜1,999株）",
+     "additive": true
+    },
+    {
+     "minShares": 2000,
+     "minHoldMonths": 36,
+     "amount": 3,
+     "timesPerYear": 1,
+     "note": "3年以上継続保有の追加分（2,000株以上）",
+     "additive": true
+    }
+   ],
+   "tiersNote": "50％割引の鉄道割引券の枚数で、3月31日基準の年1回（6月下旬発送・有効期限は翌年6月30日）。3年以上の継続保有による追加は600株以上が対象。2,000株を超えると「10枚＋2,000株超過分が400株到達ごとに1枚」の計算になるため、その先の区分は入れていない。別枠で200株以上にWESTERポイント1,000ポイント、京都鉄道博物館の入館割引券やグループ各社の割引券も付く"
   },
   {
    "company": "JR東海",
@@ -2948,8 +3204,78 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 500,
+     "minHoldMonths": 0,
+     "amount": 1,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 2,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1500,
+     "minHoldMonths": 0,
+     "amount": 3,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 2000,
+     "minHoldMonths": 0,
+     "amount": 4,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 2500,
+     "minHoldMonths": 0,
+     "amount": 5,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 3000,
+     "minHoldMonths": 0,
+     "amount": 6,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 3500,
+     "minHoldMonths": 0,
+     "amount": 7,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 4000,
+     "minHoldMonths": 0,
+     "amount": 8,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 4500,
+     "minHoldMonths": 0,
+     "amount": 9,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 5000,
+     "minHoldMonths": 0,
+     "amount": 10,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 100,
+     "minHoldMonths": 36,
+     "amount": 1,
+     "timesPerYear": 1,
+     "note": "100株以上500株未満は通常0枚。3年以上の継続保有をした場合にだけ1枚"
+    }
+   ],
+   "tiersNote": "3月31日基準の年1回。500株以上は500株ごとに1枚で、5,000株の10枚まで。100〜499株は通常0枚で、3年以上の継続保有をした株主にだけ1枚発行される。この長期保有の1枚は本来どの区分にも追加されるが、段階表では100株の行にだけ反映してある（多く見せない側に倒した）。5,000株を超える区分は「10枚＋5,000株超過分1,000株ごとに1枚」などの計算式になるため入れていない。1枚で運賃と料金の双方を1割引にできる"
   },
   {
    "company": "JR九州",
@@ -2964,8 +3290,8 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証・福証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分（株数区分の表が画像で、テキストとして取得できない）"
   },
   {
    "company": "日本航空(JAL)",
@@ -3147,8 +3473,8 @@
    "balanceUnit": "セット",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分（優待乗車証等は冊子でまとめて届き、辞書の単位（セット）では1固定。株数で変わる乗車証の枚数を表せない）"
   },
   {
    "company": "小田急電鉄",
@@ -3268,8 +3594,42 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 1,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 2,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 5000,
+     "minHoldMonths": 0,
+     "amount": 10,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 10000,
+     "minHoldMonths": 0,
+     "amount": 20,
+     "timesPerYear": 2
+    },
+    {
+     "minShares": 30000,
+     "minHoldMonths": 0,
+     "amount": 30,
+     "timesPerYear": 2,
+     "note": "6種類から1つを選ぶ形で、回数券式を選んだ場合が30枚"
+    }
+   ],
+   "tiersNote": "枚数は「回数券式（電車）」のもので、3月31日・9月30日基準の年2回。500株以上には継続保有特典のクオカード（500株500円分／1,000株1,000円分／10,000株3,000円分）、1,000株以上には株主ご優待券1冊が別枠で付く。500〜999株は100株の区分と同じ1枚なので段階表では100株の行にまとめてある"
   },
   {
    "company": "西武HD",
@@ -3284,8 +3644,8 @@
    "balanceUnit": "セット",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分（優待乗車券・施設割引は冊子でまとめて届き、辞書の単位（セット）では1固定。株数で変わる片道きっぷの枚数を表せない）"
   },
   {
    "company": "阪急阪神HD",
@@ -3300,8 +3660,8 @@
    "balanceUnit": "枚",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "auditedAt": "2026-08-31",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分（回数カードの枚数が株数に対して単調でなく（480株3枚→1,000株1枚）、amount 最大を採る段階表では誤った枚数を選んでしまう。実質の価値は乗車回数だが辞書の単位は枚）"
   },
   {
    "company": "近鉄グループHD",
@@ -3428,8 +3788,63 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "100〜200株未満は年1回（3月末基準）で、電車・バス全線きっぷ2枚が5月中旬に届く。200株以上になると年2回",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 2,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 500,
+     "minHoldMonths": 0,
+     "amount": 4,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 750,
+     "minHoldMonths": 0,
+     "amount": 6,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1500,
+     "minHoldMonths": 0,
+     "amount": 8,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 2500,
+     "minHoldMonths": 0,
+     "amount": 15,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 5000,
+     "minHoldMonths": 0,
+     "amount": 30,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 36,
+     "amount": 4,
+     "timesPerYear": 1,
+     "note": "3年以上継続保有の追加分（1,000〜2,499株）",
+     "additive": true
+    },
+    {
+     "minShares": 2500,
+     "minHoldMonths": 36,
+     "amount": 8,
+     "timesPerYear": 1,
+     "note": "3年以上継続保有の追加分（2,500株以上）",
+     "additive": true
+    }
+   ],
+   "tiersNote": "枚数は「電車・バス全線きっぷ」のもので、3月31日基準の年1回（5月中旬発送）。別枠で京急グループ施設株主優待割引券が1冊、半期に1回配られ、500株以上には京急プレミアポイントも贈られる。3年以上の継続保有による追加は1,000株以上が対象。1,000株の区分は750株の区分と同じ6枚なので段階表では750株の行にまとめてある"
   },
   {
    "company": "相鉄HD",
@@ -5462,8 +5877,32 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "100株は3,000円相当。株主優待食事券・国産米・カレーセット・PB商品などから1点を選ぶ申込制。6月末基準は9月、12月末基準は1月末に申込書が届く",
-   "auditedAt": "2026-09-07",
-   "auditScope": "券種・金額・使える店・使い方の注意"
+   "auditedAt": "2026-09-10",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 0,
+     "amount": 3000,
+     "timesPerYear": 2,
+     "note": "1セット"
+    },
+    {
+     "minShares": 300,
+     "minHoldMonths": 0,
+     "amount": 6000,
+     "timesPerYear": 2,
+     "note": "2セット"
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 12000,
+     "timesPerYear": 2,
+     "note": "4セット"
+    }
+   ],
+   "tiersNote": "継続保有条件なし。6月30日・12月31日基準の年2回で、金額は1回ぶん（1セット3,000円相当）。申込書が8月と1月に届き、選んだ優待品は11月頃と5月頃から順次発送される"
   },
   {
    "company": "グローバルダイニング",
