@@ -62,6 +62,28 @@ def write_audit_report(templates, site_only):
                      t.get("auditScope", ""), q.get("auditedAt", "") if q else "", qd))
     stale = [r for r in rows if r[3] is None or r[3] > STALE_DAYS]
     stale_quo = [r for r in rows if r[5] and (r[6] is None or r[6] > STALE_DAYS)]
+    # 終了済み（validUntil が過ぎた）エントリ（2026-09-19 追加）。**消す対象ではなく棚卸しの対象**——
+    # アプリは辞書に残したまま「終了」バッジを付けて最後に並べるので、残っていること自体は正常。
+    # ここに出るのは「もう出番が無いので消してよいか / 会社が再実施したので条件を書き直すか」の判断待ち。
+    today = datetime.date.today()
+    now_key = today.year * 12 + today.month
+
+    def expired_ym(vu):
+        """validUntil("YYYY-MM") がもう過ぎているか。その月の末日までは有効（アプリの ValidUntil と同じ規則）。"""
+        if not isinstance(vu, str):
+            return False
+        vu = vu.strip()
+        if len(vu) != 7 or vu[4] != "-" or not vu[:4].isdigit() or not vu[5:].isdigit():
+            return False
+        month = int(vu[5:7])
+        if month < 1 or month > 12:
+            return False
+        return (int(vu[:4]) * 12 + month) < now_key
+
+    all_items = list(templates) + list(site_only)
+    with_limit = [t for t in all_items if isinstance(t.get("validUntil"), str) and t.get("validUntil")]
+    ended = [(t.get("ticker", ""), t.get("company", ""), t.get("validUntil", ""))
+             for t in all_items if expired_ym(t.get("validUntil"))]
     lines = [
         "# 優待辞書の確認日レポート（生成物・`scripts/build_benefits_pages.py` が書く）",
         "",
@@ -70,6 +92,7 @@ def write_audit_report(templates, site_only):
         f"- 銘柄数: {len(rows)}（templates {len(templates)}・siteOnly {len(site_only)}）",
         f"- **{STALE_DAYS} 日超・または確認日なし: {len(stale)} 件**",
         f"- quo ブロックの確認が {STALE_DAYS} 日超: {len(stale_quo)} 件",
+        f"- 有効期限（`validUntil`）つき: {len(with_limit)} 件／うち**終了済み: {len(ended)} 件**",
         "",
         "`auditedAt` は「その日に見た」の記録。何を見たかは `auditScope`。日付が新しくても、その用途で要る項目を見ていなければ古いのと同じ。",
         "",
@@ -87,6 +110,20 @@ def write_audit_report(templates, site_only):
         lines.append(f"| {r[0]} | {r[1]} | {r[5]} | {r[6] if r[6] is not None else '-'} |")
     if not stale_quo:
         lines.append("| - | （なし） | | |")
+    lines += [
+        "",
+        "## 終了済み（`validUntil` が過ぎた優待）",
+        "",
+        "辞書からは**消さない**。アプリは「終了」バッジを付けて最後に並べ、次回予定も残高計算も出さない。",
+        "ここに出たら「消してよいか／会社が再実施したので条件を書き直すか」を決める。",
+        "",
+        "| コード | 会社 | 有効期限 |",
+        "|---|---|---|",
+    ]
+    for tk, cp, vu in sorted(ended, key=lambda r: r[2]):
+        lines.append(f"| {tk} | {cp} | {vu} |")
+    if not ended:
+        lines.append("| - | （なし） | |")
     with open(AUDIT_PATH, "w", encoding="utf-8", newline="\n") as f:
         f.write("\n".join(lines) + "\n")
     return len(stale), len(stale_quo)

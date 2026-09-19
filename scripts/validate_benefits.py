@@ -27,6 +27,8 @@ push 前に止めるためのもの。標準ライブラリのみ使用。
     阪急阪神HD 9042 の6,200株以上のように、区分が上がると額が下がる優待は正しく選ばれる）。
     いま死ぬのは (minShares, minHoldMonths) が完全に重複していて amount が小さい段だけ。
     判定は select と同じ関数を当てて行う（規則を2箇所に書かないため）。
+  - `validUntil` が過ぎたエントリ・段（2026-09-19 追加）。**エラーにはしない**——期限切れは
+    辞書から消さずに残す設計なので、残っていること自体は正常。棚卸しの入口として出すだけ。
 
 エラーがあれば終了コードを 0 以外にする。正常なら何も出さず 0 で終わる。
 """
@@ -44,6 +46,8 @@ DATA_PATH = os.path.join(ROOT, "data", "benefittracker", "benefits.json")
 
 DATA_VERSION_RE = re.compile(r"^\d{4}-\d{2}-\d{2}\.\d+$")
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+# validUntil は月粒度（"YYYY-MM"・その月末まで有効）。→ data/benefittracker/README.md
+YEAR_MONTH_RE = re.compile(r"^\d{4}-(0[1-9]|1[0-2])$")
 
 # 現行データで全件に存在する文字列項目（空文字は不可）
 REQUIRED_STR_FIELDS = (
@@ -55,7 +59,7 @@ REQUIRED_STR_FIELDS = (
 REQUIRED_INT_FIELDS = ("balance", "unitPrice", "rating")
 
 # 型が決まっている任意項目（あれば型だけ見る）
-OPTIONAL_STR_FIELDS = ("usageNotes", "shipMonths", "tiersNote", "siteGroup")
+OPTIONAL_STR_FIELDS = ("usageNotes", "shipMonths", "tiersNote", "siteGroup", "validUntil")
 
 TIER_INT_FIELDS = ("minShares", "minHoldMonths", "amount")
 QUO_TIER_INT_FIELDS = ("minShares", "minHoldMonths", "amountYen")
@@ -155,6 +159,11 @@ def validate_tiers(tiers, line, label, errors, int_fields, where):
                 errors.add(line, label, "%s[%d].%s が数値ではありません（値: %r）" % (where, i, f, tier[f]))
         if "timesPerYear" in tier and tier["timesPerYear"] is not None and not is_int(tier["timesPerYear"]):
             errors.add(line, label, "%s[%d].timesPerYear が数値ではありません（値: %r）" % (where, i, tier["timesPerYear"]))
+        vu = tier.get("validUntil")
+        if "validUntil" in tier and not is_str(vu):
+            errors.add(line, label, "%s[%d].validUntil が文字列ではありません（値: %r）" % (where, i, vu))
+        elif is_str(vu) and vu and not YEAR_MONTH_RE.match(vu):
+            errors.add(line, label, "%s[%d].validUntil の形式が不正です（YYYY-MM ではない: %r）" % (where, i, vu))
         min_shares = tier.get("minShares")
         hold = tier.get("minHoldMonths")
         if is_int(min_shares) and is_int(hold):
@@ -195,6 +204,10 @@ def validate_item(item, line, index, errors, is_site_only):
     auditedAt = item.get("auditedAt")
     if is_str(auditedAt) and auditedAt and not DATE_RE.match(auditedAt):
         errors.add(line, label, "auditedAt の形式が不正です（YYYY-MM-DD ではない: %r）" % auditedAt)
+
+    valid_until = item.get("validUntil")
+    if is_str(valid_until) and valid_until and not YEAR_MONTH_RE.match(valid_until):
+        errors.add(line, label, "validUntil の形式が不正です（YYYY-MM ではない: %r）" % valid_until)
 
     if "tiers" in item:
         validate_tiers(item["tiers"], line, label, errors, TIER_INT_FIELDS, "tiers")
@@ -356,6 +369,56 @@ def collect_unreachable_tiers(text):
     return warnings
 
 
+def collect_expired(text, today=None):
+    """`validUntil` が過ぎたエントリ・段を (行, ラベル, メッセージ) で返す（警告用。2026-09-19 追加）。
+
+    **エラーにはしない。** 期限が過ぎたエントリは辞書から消さずに残す設計で（アプリは「終了」バッジを
+    付けて最後に並べる）、残っていること自体は正常だから。ここで出すのは**棚卸しの入口**——
+    「もう出番が無いので消してよいか、会社が再実施したので条件を書き直すか」を人が決めるための一覧。
+    """
+    import datetime
+    if today is None:
+        today = datetime.date.today()
+    now_key = today.year * 12 + today.month
+
+    def expired(vu):
+        if not isinstance(vu, str):
+            return False
+        m = YEAR_MONTH_RE.match(vu.strip())
+        if not m:
+            return False
+        y, mo = int(vu.strip()[:4]), int(vu.strip()[5:7])
+        return (y * 12 + mo) < now_key
+
+    try:
+        data = json.loads(text)
+    except ValueError:
+        return []
+    out = []
+    for key in ("templates", "siteOnly"):
+        items = data.get(key)
+        if not isinstance(items, list):
+            continue
+        open_idx = find_array_open(text, key)
+        spans = scan_top_level_objects(text, open_idx) if open_idx is not None else []
+        for i, item in enumerate(items):
+            if not isinstance(item, dict):
+                continue
+            line = line_of(text, spans[i][0]) if i < len(spans) else 1
+            label = item_label(item, i)
+            if expired(item.get("validUntil")):
+                out.append((line, label, "validUntil=%s が過ぎています（終了済み）。"
+                                         "消してよいか、会社が再実施したので条件を書き直すかを判断してください"
+                            % item.get("validUntil")))
+            for where in ("tiers", "quo.tiers"):
+                tiers = (item.get("quo") or {}).get("tiers") if where == "quo.tiers" else item.get("tiers")
+                for j, tier in enumerate(tiers or []):
+                    if isinstance(tier, dict) and expired(tier.get("validUntil")):
+                        out.append((line, label, "%s[%d].validUntil=%s が過ぎています（この段は終了済み）"
+                                    % (where, j, tier.get("validUntil"))))
+    return out
+
+
 def main():
     if not os.path.exists(DATA_PATH):
         print("ERROR: %s が見つかりません" % DATA_PATH, file=sys.stderr)
@@ -367,6 +430,9 @@ def main():
     errors = validate(text)
 
     for line, label, message in collect_unreachable_tiers(text):
+        print("WARN [%d行目] %s: %s" % (line, label, message))
+
+    for line, label, message in collect_expired(text):
         print("WARN [%d行目] %s: %s" % (line, label, message))
 
     if not errors:
