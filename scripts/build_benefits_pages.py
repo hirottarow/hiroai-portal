@@ -207,6 +207,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
         .section h2 {{ font-size: 15px; color: var(--secondary-color); margin-bottom: 6px; }}
         .section p {{ font-size: 14px; white-space: pre-line; }}
         .updated {{ font-size: 12px; color: var(--secondary-color); margin-top: 24px; }}
+        .source-line {{ font-size: 13px; color: var(--secondary-color); margin-top: 20px; }}
         .stale-notice {{ margin: 16px 0 4px; padding: 10px 12px; border-radius: 8px; background: #fff4e5; color: #7a4b00; font-size: 0.92em; }}
         .app-banner {{ margin-top: 26px; background: linear-gradient(135deg, #8B5A2B 0%, #6B4520 100%); color: #FFF; border-radius: 14px; padding: 18px; font-size: 13.5px; }}
         .app-banner strong {{ display: block; font-size: 15px; margin-bottom: 6px; }}
@@ -260,6 +261,9 @@ def build_info_items(t):
         items.append(("カテゴリ", t["category"]))
     if t.get("exchange"):
         items.append(("上場市場", t["exchange"]))
+    former = former_names(t)
+    if former:
+        items.append(("旧社名", "・".join(former)))
     if t.get("balance"):
         unit = t.get("balanceUnit") or "円"
         items.append(("優待の目安", f"{t['balance']:,}{unit}"))
@@ -273,6 +277,27 @@ def build_info_items(t):
             f'<div class="value">{esc(value)}</div></div>'
         )
     return "\n".join(html_lines)
+
+
+def former_names(t):
+    """旧社名・旧ブランド名（2026-09-26 新設 `formerNames`）。形が違えば黙って空（validate が別に止める）。"""
+    fn = t.get("formerNames")
+    if not isinstance(fn, list):
+        return []
+    return [n for n in fn if isinstance(n, str) and n.strip()]
+
+
+def source_line(t):
+    """確認元の1行（2026-09-26）。公式で確かめたと記録された銘柄だけリンクを出す。推測で「公式」と書かない。"""
+    src = t.get("auditSource") or ""
+    url = t.get("sourceUrl") or ""
+    if src == "official" and url:
+        text = f'確認元: 公式確認済み（<a href="{esc(url)}" rel="noopener" target="_blank">{esc(url)}</a>）'
+    elif src == "secondary":
+        text = "確認元: 未確認（二次情報）"
+    else:
+        text = "確認元: 未確認（公式ページで確かめた記録はまだありません）"
+    return f'        <div class="source-line">{text}</div>'
 
 
 def build_sections(t):
@@ -392,6 +417,7 @@ def build_page(t, updated_at, is_site_only=False):
         build_info_items(t),
         "        </div>",
         build_sections(t),
+        source_line(t),
         stale_notice,
         f'        <div class="updated">データ更新日: {esc(updated_at)}{audited_line}</div>',
         "",
@@ -534,7 +560,9 @@ def update_benefits_html(items):
 
     lines = [STATIC_LIST_BEGIN, '<ul class="static-benefit-list">']
     for t in templates_sorted:
-        lines.append(f'<li><a href="benefits/{esc(t["ticker"])}.html">{esc(t["company"])}</a></li>')
+        former = former_names(t)
+        former_text = f'（旧: {esc("・".join(former))}）' if former else ""
+        lines.append(f'<li><a href="benefits/{esc(t["ticker"])}.html">{esc(t["company"])}</a>{former_text}</li>')
     lines.append("</ul>")
 
     if site_only_sorted:

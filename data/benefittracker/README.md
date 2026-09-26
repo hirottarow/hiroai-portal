@@ -10,20 +10,9 @@
 
 ## 更新手順
 
-1. `benefits.json` の `templates` 配列を編集（追加・修正・削除）
-2. `dataVersion` を更新（`YYYY-MM-DD.連番`）、`updatedAt` を当日に
-3. **push 前に `python scripts/validate_benefits.py` を流す**（JSON構文・必須項目・型・`ticker`重複・
-   `tiers`/`quo.tiers`のminShares順序・`dataVersion`/`auditedAt`の形式を検証する。2026-09-10 新設。
-   標準ライブラリのみ。エラーがあれば終了コードが0以外になるので、直してから次へ進む）。
-   **`WARN` 行は終了コードを変えない**（2026-09-10 追加。判定は 2026-09-11 に作り直した）。
-   アプリの `BenefitTierCalculator.select` を写した関数を当てて、**永久に選ばれない段**を警告で出す。
-   v1.15.03.046 で採用規則が「株数区分（minShares）最大」に変わったので、
-   **amount が前の段より下がるだけでは段は死なない**（相鉄HD(9003)の5,000株＝回数券160枚→80枚、
-   阪急阪神HD(9042)の6,200株以上＝60回→10回＋全線パスは、いずれも正しく選ばれる）。
-   いま鳴るのは `(minShares, minHoldMonths)` が重複していて amount が小さい段だけ。出たら段の `note` を読んで判断する
-4. **push 前に `python scripts/build_benefits_pages.py` を流す**（銘柄ごとの静的ページ `benefits/<ticker>.html`・
-   `benefits.html` の静的一覧・`sitemap.xml` を再生成する。2026-09-09 新設。標準ライブラリのみ、冪等）
-5. commit → push（GitHub Pages に反映されるまで数分）
+**手順は親ワークスペースのスキル `benefit-audit`（`.claude/skills/benefit-audit/SKILL.md`）に置く**（2026-09-26 移設。
+公式 IR を先に読む → 基準日ごとに書き取る → 確認元と旧社名を記録 → `scripts/validate_benefits.py` → `scripts/build_benefits_pages.py`
+→ コミット・push → 公開の裏取り）。このファイルには項目の定義だけを残す（同じことを2か所に書かない）。
 
 ### `quo` ブロック（QUO カード銘柄の年間目安・2026-09-09 新設・追加フィールド）
 
@@ -81,7 +70,17 @@ QUO カード銘柄（`siteOnly` と、`templates` のうち QUO を選べる銘
 - `auditScope`: その確認で見た項目を短く書く（例 `券種・金額・使える店・使い方の注意` ／ quo 側は `株数区分・年回数・権利月`）。
   日付が新しくても、いま要る項目が scope に無ければ未確認として扱う（2026-09-09: 確認日 9/7 の TOKAIHD の株数区分が欠けていた）。
 - 生成スクリプトが `AUDIT.md` に「最終確認から 180 日超の銘柄」を一覧し、サイトの銘柄ページにも「古い可能性」の1行を出す。
-  棚卸しは AUDIT.md を見て、確認したら `auditedAt` と `auditScope` を書き直す。
+
+### `auditSource` / `sourceUrl` / `formerNames`（2026-09-26 追加）
+
+- `auditSource`: その確認で**何を読んだか**。
+  - `"official"` … 各社の公式 IR・株主優待ページ・適時開示・会社概要を読んだ。`sourceUrl` に読んだページの URL を入れる
+    （空だと `validate_benefits.py` が WARN）。
+  - `"secondary"` … 優待情報サイト・検索結果までしか読めていない。
+  - `""` … 不明。**2026-09-26 時点の既存データは全件 `""` から始めた**（確認元が分からないものを推測で `official` にしない）。
+- 銘柄ページには「確認元: 公式確認済み（リンク）」／「未確認（二次情報）」／「未確認（公式ページで確かめた記録はまだありません）」の1行が出る。
+- `formerNames`: 旧社名・旧ブランド名の配列（例 8173 の `["上新電機"]`）。サイトの銘柄ページ・一覧に「旧社名」として出し、
+  一覧の検索でも引ける。アプリは辞書検索・券面スキャンの銘柄同定・登録済みカードのカテゴリ照合で旧名も照合する。
 
 ### `validUntil` … いつまで有効か（2026-09-19 新設）
 
@@ -109,14 +108,7 @@ QUO カード銘柄（`siteOnly` と、`templates` のうち QUO を選べる銘
 **辞書からは消さない。** 消すかどうかは人が決める（会社が翌年も出したら、削除ではなく条件の書き直しになる）。
 `validate_benefits.py` が期限切れを **WARN** で出し、`AUDIT.md` にも「終了済み」の節が出るので、そこが棚卸しの入口。
 
-### 記念優待を入れる時の型
-
-1. `validUntil` にその優待が終わる月を書く（発送月。9212 なら `"2026-12"`）。
-2. `shipMonths` は**入れてよい**（一回きりでも発送月は開示に書かれている）。`quo.rightsMonths` は空のままにする。
-3. `usageNotes` と `quo.note` の両方に「今回限り」「翌年以降は未定」を書く。
-4. 恒常優待への上乗せなら、`tiers` に `additive: true` の段を足して `validUntil` を書く。
-   **上乗せに保有期間の条件が無いなら `minHoldMonths: 0` にする**——アプリは保有開始が未入力でも
-   `minHoldMonths == 0` の上乗せを採用する（2026-09-19 修正。条件つきの上乗せは従来どおり未入力では付かない）。
+記念優待を入れる時の手順はスキル `benefit-audit` の「形ごとの追加手順」。
 
 ## スキーマの約束
 
@@ -149,19 +141,21 @@ QUO カード銘柄（`siteOnly` と、`templates` のうち QUO を選べる銘
 | tiersNote | string | 段階表に載らない条件。画面にそのまま出す | "" |
 | validUntil | string | いつまで有効か（`YYYY-MM`・その月末まで）。一回限りの優待に書く（→「`validUntil`」） | ""（期限なし） |
 | auditedAt | string | **その銘柄の内容を最後に各社の公表資料で確かめた日**（`YYYY-MM-DD`）。古い順に並べれば次に見るべき銘柄が出る | "" |
+| auditScope | string | その確認で見た項目（→「`auditedAt` と `auditScope`」） | "" |
+| auditSource | string | 確認元。`official`（公式 IR・適時開示・会社概要）/ `secondary`（優待情報サイト・検索）/ `""`（不明）（2026-09-26） | "" |
+| sourceUrl | string | `official` で確かめたページの URL（2026-09-26） | "" |
+| formerNames | array of string | 旧社名・旧ブランド名（2026-09-26。→「`auditSource` / `sourceUrl` / `formerNames`」） | [] |
 
-### `usageNotes` を足したら数値も読み直す（2026-09-07 追加）
+### `unitPrice` の規約（形態ごと）
 
-`usageNotes` に「1円単位で使える」「ポイント制」と書いたのに `unitPrice` を券面額のまま残す事故を
-**同じ日に4件**やった（エディオン・西松屋・バロー・オートバックス）。本文だけを直して数値を
-置き去りにするのも同じで、マツキヨは「商品券→ポイント制へ変更」と本文に書いた状態で
-title が「商品券」のまま数日残った。**注記と数値は同じレコードにある。片方を触ったら必ずもう片方を見る。**
-
-規約の対応:
 - 券・枚数系 … `unitPrice` = 券面額
 - 物品セット・カタログ系 … `unitPrice` = `balance`
 - **ポイント・チャージ・電子チケット・1円単位のカード … `unitPrice` = 0**
 - 割引券・割引カード … `unitPrice` = 1 / `balanceUnit` = `枚` / `balance` = 枚数（金券ではないので円で持たない）
+- **例外: 1回に使える額が買物額に比例して決まるプリペイド**（例 8173 Joshin「2,000円ごとに200円分」）… `unitPrice` = 1回分の額 /
+  `quantityUnit` = `回`。チャージ系だが 0 にしない（0 だと「1回使う」が消え、残高の減り方を表せない。2026-09-26）。
+
+`usageNotes` と数値は同じレコードにある。片方を触ったらもう片方も見る（手順はスキル `benefit-audit`）。
 
 `balance` は**1回に届く額**で持つ（年2回の銘柄で年間合計を入れない）。
 
@@ -185,30 +179,16 @@ QUOカードは**有効期限が無く、発行元と関係のないコンビニ
 `siteOnly` を足しても旧バージョンのアプリは壊れない。**`templates` から外した銘柄は
 アプリの辞書から消える**（登録済みのカードは消えない）ので、移す前に管理する価値があるかを確かめること。
 
-### QUOカード優待の育て方（2026-09-09 新設）
+### QUOカード優待
 
-**QUOカード（クオカード）そのものが優待品の銘柄は `siteOnly` に足す。`templates` には入れない**
-（アプリの辞書が汚れる。QUOカードは有効期限が無く発行元と無関係の店で使えるため、
-残高・期限の管理対象にならない上、`usableStores`が「コンビニ・書店」等の一般名詞になり
-券面スキャンの銘柄同定で誤爆する）。
+**QUOカード（クオカード）そのものが優待品の銘柄は `siteOnly` に置き、`templates` には入れない**（理由は上）。
+`siteOnly` に置いた銘柄は、生成スクリプトが個別ページ `benefits/<ticker>.html`（バナー文言だけ「優待辞書には未収録」）・
+`benefits/quo.html`（QUOカード優待の比較表。`title`/`usableStores` に「QUO」「クオ」を含む `templates` 側の銘柄も入る）・
+一覧・`sitemap.xml` に出す。足し方はスキル `benefit-audit`。
 
-**1件 `siteOnly` に足すだけで、push前に `scripts/build_benefits_pages.py` を流せば自動で**:
-- 個別ページ `benefits/<ticker>.html` が生成される（`templates` と同じ雛形。バナー文言だけ
-  「BenefitTrackerの優待辞書には未収録」に変わる）
-- `benefits/quo.html`（QUOカード優待の比較表）に1行追加される
-  （`title`/`usableStores`に「QUO」「クオ」を含む`templates`側の銘柄もここに自動で入る）
-- `benefits.html` の静的一覧・`sitemap.xml` にも反映される
+## 同梱スナップショット
 
-手で編集するのは `benefits.json` の `siteOnly` 配列だけでよい。
-
-## 同梱スナップショットの同期（任意）
-
-アプリのリリースビルドを焼く時は、初回オフライン用の同梱データも最新化しておく:
-
-```
-cp data/benefittracker/benefits.json ../BenefitTracker/app/src/main/assets/benefits.json
-```
-
-（同期を忘れても、オンラインになれば最新が取得されるので実害は小さい）
+アプリには初回オフライン用に `BenefitTracker/app/src/main/assets/benefits.json`（このファイルの写し）が入っている。
+同期はリリースビルドの時だけ（手順はスキル `benefit-audit`）。忘れてもオンラインで最新に追いつく。
 
 技術的経緯の正本は SecondBrain `research/benefittracker.md`。

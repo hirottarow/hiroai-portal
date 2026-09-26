@@ -232,7 +232,7 @@
 <li><a href="benefits/3099.html">三越伊勢丹HD</a></li>
 <li><a href="benefits/3167.html">TOKAIHD</a></li>
 <li><a href="benefits/3178.html">チムニー</a></li>
-<li><a href="benefits/3193.html">エターナルホスピタリティグループ</a></li>
+<li><a href="benefits/3193.html">エターナルホスピタリティグループ</a>（旧: 鳥貴族）</li>
 <li><a href="benefits/3196.html">ホットランド</a></li>
 <li><a href="benefits/3197.html">すかいらーくHD</a></li>
 <li><a href="benefits/3222.html">ユナイテッド・スーパー</a></li>
@@ -241,7 +241,7 @@
 <li><a href="benefits/3395.html">サンマルクHD</a></li>
 <li><a href="benefits/3397.html">トリドールHD</a></li>
 <li><a href="benefits/3543.html">コメダHD</a></li>
-<li><a href="benefits/3547.html">ユニシアホールディングス</a></li>
+<li><a href="benefits/3547.html">ユニシアホールディングス</a>（旧: 串カツ田中ホールディングス）</li>
 <li><a href="benefits/3549.html">クスリのアオキ</a></li>
 <li><a href="benefits/3561.html">力の源ホールディングス</a></li>
 <li><a href="benefits/3563.html">FOOD &amp; LIFE COMPANIES</a></li>
@@ -252,7 +252,7 @@
 <li><a href="benefits/4681.html">リゾートトラスト</a></li>
 <li><a href="benefits/4911.html">資生堂</a></li>
 <li><a href="benefits/4912.html">ライオン</a></li>
-<li><a href="benefits/4922.html">コーセーホールディングス</a></li>
+<li><a href="benefits/4922.html">コーセーホールディングス</a>（旧: コーセー）</li>
 <li><a href="benefits/4927.html">ポーラ・オルビスHD</a></li>
 <li><a href="benefits/4967.html">小林製薬</a></li>
 <li><a href="benefits/5868.html">ロココ</a></li>
@@ -286,7 +286,7 @@
 <li><a href="benefits/8136.html">サンリオ</a></li>
 <li><a href="benefits/8153.html">モスフードサービス</a></li>
 <li><a href="benefits/8160.html">木曽路</a></li>
-<li><a href="benefits/8173.html">上新電機</a></li>
+<li><a href="benefits/8173.html">Joshin</a>（旧: 上新電機）</li>
 <li><a href="benefits/8179.html">ロイヤルHD</a></li>
 <li><a href="benefits/8194.html">ライフコーポ</a></li>
 <li><a href="benefits/8200.html">リンガーハット</a></li>
@@ -309,7 +309,7 @@
 <li><a href="benefits/8601.html">大和証券グループ</a></li>
 <li><a href="benefits/8818.html">京阪神ビルディング</a></li>
 <li><a href="benefits/8877.html">エスリード</a></li>
-<li><a href="benefits/8897.html">MIRARTHホールディングス</a></li>
+<li><a href="benefits/8897.html">MIRARTHホールディングス</a>（旧: タカラレーベン）</li>
 <li><a href="benefits/9003.html">相鉄HD</a></li>
 <li><a href="benefits/9005.html">東急</a></li>
 <li><a href="benefits/9006.html">京急電鉄</a></li>
@@ -330,7 +330,7 @@
 <li><a href="benefits/9202.html">ANA HD</a></li>
 <li><a href="benefits/9278.html">ブックオフグループホールディングス</a></li>
 <li><a href="benefits/9279.html">ギフトHD</a></li>
-<li><a href="benefits/9347.html">日本管財ホールディングス</a></li>
+<li><a href="benefits/9347.html">日本管財ホールディングス</a>（旧: 日本管財）</li>
 <li><a href="benefits/9432.html">日本電信電話(NTT)</a></li>
 <li><a href="benefits/9433.html">KDDI</a></li>
 <li><a href="benefits/9434.html">ソフトバンク</a></li>
@@ -405,7 +405,9 @@
                 var matchCat = activeCategory === 'すべて' || (t.category || 'その他') === activeCategory;
                 if (!matchCat) return false;
                 if (!q) return true;
-                var hay = [t.company, t.ticker, t.title, t.usableStores, t.description]
+                // formerNames: 旧社名でも引けるように（2026-09-26。例: 上新電機 → Joshin）
+                var former = Array.isArray(t.formerNames) ? t.formerNames.join(' ') : '';
+                var hay = [t.company, former, t.ticker, t.title, t.usableStores, t.description]
                     .join('\n').toLowerCase();
                 return hay.indexOf(q) !== -1;
             });
@@ -437,7 +439,8 @@
                 head.className = 'card-head';
                 var company = document.createElement('span');
                 company.className = 'company';
-                company.textContent = t.company;
+                company.textContent = t.company +
+                    (Array.isArray(t.formerNames) && t.formerNames.length ? '（旧: ' + t.formerNames.join('・') + '）' : '');
                 var ticker = document.createElement('span');
                 ticker.className = 'ticker';
                 ticker.textContent = (t.ticker ? t.ticker + ' ' : '') + (t.exchange || '');

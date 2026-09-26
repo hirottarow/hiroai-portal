@@ -18,6 +18,7 @@ push 前に止めるためのもの。標準ライブラリのみ使用。
   - tiers / quo.tiers の minShares が昇順でない
   - dataVersion の形式違反（YYYY-MM-DD.連番）
   - auditedAt の形式違反（YYYY-MM-DD。quo.auditedAt も対象）
+  - auditSource が "official" / "secondary" / "" 以外、formerNames が文字列の配列でない（2026-09-26 追加）
 
 警告（終了コードは 0 のまま。2026-09-10 追加。2026-09-11 に判定を作り直した）:
   - アプリの BenefitTierCalculator.select が絶対に選ばない tiers の段。
@@ -29,6 +30,8 @@ push 前に止めるためのもの。標準ライブラリのみ使用。
     判定は select と同じ関数を当てて行う（規則を2箇所に書かないため）。
   - `validUntil` が過ぎたエントリ・段（2026-09-19 追加）。**エラーにはしない**——期限切れは
     辞書から消さずに残す設計なので、残っていること自体は正常。棚卸しの入口として出すだけ。
+  - auditSource が "official" なのに sourceUrl が空（2026-09-26 追加）。「公式で確かめた」と書くなら
+    どのページを読んだかを残す。
 
 エラーがあれば終了コードを 0 以外にする。正常なら何も出さず 0 で終わる。
 """
@@ -59,7 +62,10 @@ REQUIRED_STR_FIELDS = (
 REQUIRED_INT_FIELDS = ("balance", "unitPrice", "rating")
 
 # 型が決まっている任意項目（あれば型だけ見る）
-OPTIONAL_STR_FIELDS = ("usageNotes", "shipMonths", "tiersNote", "siteGroup", "validUntil")
+OPTIONAL_STR_FIELDS = ("usageNotes", "shipMonths", "tiersNote", "siteGroup", "validUntil",
+                       "auditSource", "sourceUrl")
+# 確認元（2026-09-26）。official=各社の公式 IR・適時開示・会社概要 / secondary=優待情報サイト・検索 / ""=不明
+AUDIT_SOURCES = ("official", "secondary", "")
 
 TIER_INT_FIELDS = ("minShares", "minHoldMonths", "amount")
 QUO_TIER_INT_FIELDS = ("minShares", "minHoldMonths", "amountYen")
@@ -204,6 +210,19 @@ def validate_item(item, line, index, errors, is_site_only):
     auditedAt = item.get("auditedAt")
     if is_str(auditedAt) and auditedAt and not DATE_RE.match(auditedAt):
         errors.add(line, label, "auditedAt の形式が不正です（YYYY-MM-DD ではない: %r）" % auditedAt)
+
+    audit_source = item.get("auditSource")
+    if is_str(audit_source) and audit_source not in AUDIT_SOURCES:
+        errors.add(line, label, "auditSource は official / secondary / 空文字のどれか（値: %r）" % audit_source)
+
+    if "formerNames" in item:
+        fn = item["formerNames"]
+        if not isinstance(fn, list):
+            errors.add(line, label, "formerNames が配列ではありません（値: %r）" % (fn,))
+        else:
+            for name in fn:
+                if not is_str(name) or name.strip() == "":
+                    errors.add(line, label, "formerNames の要素は空でない文字列にする（値: %r）" % (name,))
 
     valid_until = item.get("validUntil")
     if is_str(valid_until) and valid_until and not YEAR_MONTH_RE.match(valid_until):
@@ -419,6 +438,28 @@ def collect_expired(text, today=None):
     return out
 
 
+def collect_official_without_url(text):
+    """auditSource が official なのに sourceUrl が空のもの（2026-09-26）。WARN だけで止めない。"""
+    out = []
+    try:
+        data = json.loads(text)
+    except ValueError:
+        return out
+    for key in ("templates", "siteOnly"):
+        items = data.get(key)
+        if not isinstance(items, list):
+            continue
+        open_idx = find_array_open(text, key)
+        spans = scan_top_level_objects(text, open_idx) if open_idx is not None else []
+        for i, item in enumerate(items):
+            if not isinstance(item, dict):
+                continue
+            if item.get("auditSource") == "official" and not item.get("sourceUrl"):
+                line = line_of(text, spans[i][0]) if i < len(spans) else 1
+                out.append((line, item_label(item, i), "auditSource が official なのに sourceUrl が空"))
+    return out
+
+
 def main():
     if not os.path.exists(DATA_PATH):
         print("ERROR: %s が見つかりません" % DATA_PATH, file=sys.stderr)
@@ -433,6 +474,9 @@ def main():
         print("WARN [%d行目] %s: %s" % (line, label, message))
 
     for line, label, message in collect_expired(text):
+        print("WARN [%d行目] %s: %s" % (line, label, message))
+
+    for line, label, message in collect_official_without_url(text):
         print("WARN [%d行目] %s: %s" % (line, label, message))
 
     if not errors:
