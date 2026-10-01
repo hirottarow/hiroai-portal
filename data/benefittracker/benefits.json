@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "dataVersion": "2026-10-02.1",
+ "dataVersion": "2026-10-02.2",
  "updatedAt": "2026-10-02",
  "categories": [
   "外食",
@@ -1021,19 +1021,19 @@
    "balance": 500,
    "category": "外食",
    "ticker": "8179",
-   "usableStores": "ロロイアルホスト等",
+   "usableStores": "ロイヤルホスト・てんや・シズラー・リッチモンドホテル等（一部使えない店あり）",
    "description": "【基本情報】\n上質なファミリーレストラン、ロイヤルホスト。てんや等でも使える汎用性の高さが強み。\n\n【見て楽しくなる情報】\nロイホの伝統のオニオングラタンスープ。こだわりの一品を優待券でもっと身近に。\n\n【お得情報】\n500円単位.お会計時にさっと提示するだけで、格調高い食事がカジュアルな価格に変わります。\n\n【裏技】\nリッチモンドホテルズ等の宿泊やレストランでも利用可能。旅行時の食事代を浮かすテクニック。\n\n【もらえる条件】\n200株以上が条件（100株は対象外）。200株=500円券1枚×年2回。",
    "rating": 4,
    "unitPrice": 500,
    "balanceUnit": "円",
    "quantityUnit": "枚",
    "exchange": "東証",
-   "usageNotes": "500円券・お釣り不可・1会計で複数枚利用可",
+   "usageNotes": "500円券・お釣り不可・1会計で複数枚利用可・本人以外も利用可。有効期限は6月末基準分が翌年9月末、12月末基準分が翌年3月末",
    "shipMonths": "3,9",
-   "auditedAt": "2026-09-11",
-   "auditScope": "券種・金額・使える店・使い方の注意・株数区分・発送時期",
-   "auditSource": "",
-   "sourceUrl": "",
+   "auditedAt": "2026-10-02",
+   "auditScope": "券種・金額・使える店・使い方の注意・株数区分・発送時期・有効期限（公式IRページで確認）",
+   "auditSource": "official",
+   "sourceUrl": "https://www.royal-holdings.co.jp/ir/stock/preference/",
    "tiers": [
     {
      "minShares": 200,
