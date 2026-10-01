@@ -90,6 +90,8 @@ def write_audit_report(templates, site_only):
         f"生成日: {datetime.date.today().isoformat()} ／ 閾値: 最終確認から {STALE_DAYS} 日",
         "",
         f"- 銘柄数: {len(rows)}（templates {len(templates)}・siteOnly {len(site_only)}）",
+        # 公式で確かめた件数（2026-10-01 毎日巡回の進み具合を見るため）。sourceUrl が空の official は数えない
+        f"- 確認元が公式（`auditSource: official` かつ `sourceUrl` あり）: **{sum(1 for t in all_items if t.get('auditSource') == 'official' and t.get('sourceUrl'))} 件** ／ 二次情報: {sum(1 for t in all_items if t.get('auditSource') == 'secondary')} 件 ／ 未確認: {sum(1 for t in all_items if not t.get('auditSource'))} 件",
         f"- **{STALE_DAYS} 日超・または確認日なし: {len(stale)} 件**",
         f"- quo ブロックの確認が {STALE_DAYS} 日超: {len(stale_quo)} 件",
         f"- 有効期限（`validUntil`）つき: {len(with_limit)} 件／うち**終了済み: {len(ended)} 件**",
