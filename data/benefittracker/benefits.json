@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
- "dataVersion": "2026-10-01.1",
- "updatedAt": "2026-10-01",
+ "dataVersion": "2026-10-02.1",
+ "updatedAt": "2026-10-02",
  "categories": [
   "外食",
   "小売",
@@ -1166,10 +1166,10 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "1ポイント=1円で飲食代金に充当（コロワイドグループ共通の株主様ご優待ポイントカード）。ポイントの有効期限は付与日から1年間で、期限切れは理由を問わず利用不可。各種ギフト商品との交換も可。株式を売却しても株主名簿に記載されない時期がない限り既存カードを継続使用。牛角・しゃぶしゃぶ温野菜・土間土間・フレッシュネスバーガー・カフェ・ベローチェ・珈琲館・海外店舗などは対象外。",
-   "auditedAt": "2026-09-09",
-   "auditScope": "券種・金額・使える店・使い方の注意・金額・区分・回数（Manus指摘の再確認）",
-   "auditSource": "",
-   "sourceUrl": "",
+   "auditedAt": "2026-10-02",
+   "auditScope": "株数区分・ポイント数・基準日と発行月・1ポイント1円・有効期限・売却時のカード継続・ギフト商品への交換（公式IRページで確認）",
+   "auditSource": "official",
+   "sourceUrl": "https://www.ootoya.jp/shareholder/stock/dividends.html",
    "shipMonths": "6,12",
    "tiers": [
     {
@@ -1801,7 +1801,7 @@
   },
   {
    "company": "ビックカメラ",
-   "title": "株主様御優待券",
+   "title": "株主様お買物優待券",
    "balance": 1000,
    "category": "小売",
    "ticker": "3048",
@@ -1813,11 +1813,11 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "shipMonths": "5,11",
-   "usageNotes": "1,000円券・お釣り不可・優待利用分はポイント対象外。コジマ／ソフマップの店舗でも使える。ネット通販は利用票と優待券を郵送する方式",
-   "auditedAt": "2026-09-09",
-   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
-   "auditSource": "",
-   "sourceUrl": "",
+   "usageNotes": "1,000円券・お釣り不可・優待利用分はポイント対象外。コジマ／ソフマップの店舗でも使える（ソフマップはユーフロントではネット通販不可）。ネット通販は利用票と優待券を郵送する方式。有効期限は2月末日基準日(5月発行分)が発行年の11月30日まで、8月末日基準日(11月発行分)が発行翌年の5月31日まで",
+   "auditedAt": "2026-10-02",
+   "auditScope": "基準日・発送月・株数区分×基準日の金額・保有期間の上乗せと判定回数・有効期限・使える店（公式IRページで確認）",
+   "auditSource": "official",
+   "sourceUrl": "https://www.biccamera.co.jp/ir/service/",
    "tiers": [
     {
      "minShares": 100,
@@ -2213,10 +2213,10 @@
    "quantityUnit": "枚",
    "exchange": "東証",
    "usageNotes": "ギフトカードにチャージされた金額を限度に利用可（買上金額の制限なし）。エディオン店舗（フランチャイズ含む）とエディオンネットショップで使える。1回の買い物で同時に使えるのは最大10枚。有効期限は翌年6月30日まで（1年間）",
-   "auditedAt": "2026-09-09",
-   "auditScope": "券種・金額・使える店・使い方の注意・金額・区分・回数（Manus指摘の再確認）",
-   "auditSource": "",
-   "sourceUrl": "",
+   "auditedAt": "2026-10-02",
+   "auditScope": "基準日・株数区分と金額・長期保有の加算額と判定回数・発送時期・有効期限（公式IRページで確認）",
+   "auditSource": "official",
+   "sourceUrl": "https://www.edion.co.jp/ir/benefit",
    "shipMonths": "6",
    "tiers": [
     {
@@ -4979,10 +4979,10 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-09-09",
-   "auditScope": "券種・金額・使える店・使い方の注意・株数区分",
-   "auditSource": "",
-   "sourceUrl": "",
+   "auditedAt": "2026-10-02",
+   "auditScope": "継続保有期間×株数の表・基準日・1年以上の判定（名簿5回連続）・3年以上のプレミアム優待（抽選）（公式IRページで確認）",
+   "auditSource": "official",
+   "sourceUrl": "https://www.kirinholdings.com/jp/investors/stock/benefit/",
    "tiers": [
     {
      "minShares": 100,
@@ -5035,10 +5035,10 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-09-09",
-   "auditScope": "券種・金額・使える店・使い方の注意・金額・区分・回数（Manus指摘の再確認）",
-   "auditSource": "",
-   "sourceUrl": "",
+   "auditedAt": "2026-10-02",
+   "auditScope": "株数区分・金額・基準日と回数・3択・ワンランク上の条件・毎回申込・クーポンの注意（公式IRページで確認）",
+   "auditSource": "official",
+   "sourceUrl": "https://www.nissin.com/jp/company/ir/investors/preferential/",
    "usageNotes": "3月末分は6月上旬、9月末分は11月上旬に案内が届き、WEB（プレミアム優待倶楽部マイページ）か電話で毎回申し込む（申込がないと届かない、はがき申込は廃止）。商品詰め合わせ・国連WFP協会への寄付・日清食品グループオンラインストアのクーポンから1つ選択。クーポンはオンラインストア限定で会員登録が必要、1回のみ・譲渡不可・お釣りなし・繰越不可・他クーポンやポイントと併用不可・超過分は自己負担・送料無料",
    "tiers": [
     {
@@ -7187,7 +7187,9 @@
   },
   {
    "company": "ブルーゾーンホールディングス",
-   "formerNames": ["ヤオコー"],
+   "formerNames": [
+    "ヤオコー"
+   ],
    "title": "株主ご優待券",
    "balance": 2000,
    "category": "小売",
@@ -7243,6 +7245,146 @@
    "auditScope": "対象株主・基準日・継続保有条件・株数区分・金額・発送時期・株式分割（公式IRページ・適時開示PDFで確認）",
    "auditSource": "official",
    "sourceUrl": "https://www.bluezonesholdings.co.jp/ir/stock/dividend.html"
+  },
+  {
+   "company": "サッポロビール",
+   "formerNames": [
+    "サッポロホールディングス"
+   ],
+   "title": "電子クーポン／ビール／飲料／寄付（選択制）",
+   "balance": 1000,
+   "category": "自社商品",
+   "ticker": "2501",
+   "exchange": "東証",
+   "usableStores": "サッポログループのECサイト・サッポロライオングループ等の国内店舗（一部除く）。ビール・飲料は配送",
+   "description": "【基本情報】\nビール・飲料・社会貢献活動への寄付から選べる電子クーポン中心の優待制度。2026年12月期から株式分割にあわせて新設されました。\n\n【見て楽しくなる情報】\n黒ラベルやヱビスの缶ビールか、キレートレモン等の飲料か、寄付か。毎年「今年はどれにしよう」と選ぶ楽しみがあります。\n\n【お得情報】\n電子クーポンを選ぶと他の選択肢より増額。1,000株以上保有ならサッポロライオン等で使える20%割引券も5枚もらえます。\n\n【もらえる条件】\n100株以上・12月末基準で年1回。1年以上継続保有（6月末・12月末の名簿に3回以上連続）が条件、3年以上でさらに増額。新制度の初年度（2026年12月31日時点）は100株以上なら保有1年未満でも1年保有とみなされます。",
+   "rating": 4,
+   "unitPrice": 0,
+   "balanceUnit": "円相当",
+   "quantityUnit": "回",
+   "usageNotes": "電子クーポンは株主限定Webサイトに会員登録して取得し、1ポイント=1円で使う（サイトは2026年中に開設予定）。案内は定時株主総会の招集通知に同封（2026年12月期分は2027年3月頃）",
+   "tiers": [
+    {
+     "minShares": 100,
+     "minHoldMonths": 12,
+     "amount": 1000,
+     "timesPerYear": 1,
+     "note": "電子クーポンのみ"
+    },
+    {
+     "minShares": 300,
+     "minHoldMonths": 12,
+     "amount": 2000,
+     "timesPerYear": 1,
+     "note": "電子クーポン2,000pt か寄付2,000円"
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 12,
+     "amount": 4000,
+     "timesPerYear": 1,
+     "note": "電子クーポン4,000pt か寄付4,000円"
+    },
+    {
+     "minShares": 2000,
+     "minHoldMonths": 12,
+     "amount": 8000,
+     "timesPerYear": 1,
+     "note": "電子クーポン8,000pt か寄付8,000円"
+    },
+    {
+     "minShares": 100,
+     "minHoldMonths": 36,
+     "amount": 1000,
+     "timesPerYear": 1,
+     "note": "3年以上。電子クーポンのみ"
+    },
+    {
+     "minShares": 300,
+     "minHoldMonths": 36,
+     "amount": 4000,
+     "timesPerYear": 1,
+     "note": "3年以上。電子クーポン4,000pt／ビール12缶・飲料3,000円相当・寄付3,000円"
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 36,
+     "amount": 8000,
+     "timesPerYear": 1,
+     "note": "3年以上。電子クーポン8,000pt／ビール24缶・飲料6,000円相当・寄付6,000円"
+    },
+    {
+     "minShares": 2000,
+     "minHoldMonths": 36,
+     "amount": 15000,
+     "timesPerYear": 1,
+     "note": "3年以上。電子クーポン15,000pt／ビール48缶・飲料12,000円相当・寄付12,000円"
+    }
+   ],
+   "tiersNote": "12月末基準・年1回（2026年12月期から。2026年1月1日に1株→5株の分割後の株数）。1年以上＝6月末・12月末の名簿に同一株主番号で3回以上連続、3年以上＝7回以上連続。初年度（2026年12月31日）は100株以上なら1年未満でも1年保有とみなす。1,000株以上は別に飲食20%割引券5枚",
+   "auditedAt": "2026-10-02",
+   "auditSource": "official",
+   "sourceUrl": "https://www.sapporobreweries.com/ir/investor/benefit/",
+   "auditScope": "対象株主・継続保有条件（3回/7回連続）・株数区分とポイント表・適用時期・社名（公式IRページ・適時開示PDFで確認）"
+  },
+  {
+   "company": "テイクアンドギヴ・ニーズ",
+   "title": "プレミアム優待倶楽部ポイント",
+   "balance": 5000,
+   "category": "カタログ",
+   "ticker": "4331",
+   "exchange": "東証",
+   "usableStores": "テイクアンドギヴ・ニーズプレミアム優待倶楽部（株主限定サイト）",
+   "description": "【基本情報】\nブライダル・パーティー事業の企業による、株主限定サイトで使えるポイント優待（2026年12月から新設）。\n\n【見て楽しくなる情報】\nお米やブランド牛、スイーツ、電化製品、体験ギフトまで5,000種類以上から選べ、迷う時間も楽しみのひとつ。\n\n【お得情報】\n他のプレミアム優待倶楽部導入企業のポイントと合算できる「WILLsCoin」にも交換可能。ふるさと納税にも使えます。\n\n【もらえる条件】\n700株以上・12月末基準で年1回。700〜799株は5,000ポイント、株数が増えるほど増額（3,000株以上で90,000ポイント）。繰越は12月末の名簿に同一株主番号で2回以上連続かつ700株以上継続保有の時だけ（最大1回まで）。",
+   "rating": 3,
+   "unitPrice": 0,
+   "balanceUnit": "円相当",
+   "quantityUnit": "回",
+   "shipMonths": "2",
+   "usageNotes": "株主限定サイト（2027年2月開設予定）に登録して、グルメ・家電・体験ギフト・電子マネー等5,000種類以上と交換。WILLsCoinにも交換可。繰越は12月末の名簿に同一株主番号で連続2回以上・700株以上継続保有の時だけ（最大1回）。案内は2月中旬",
+   "tiers": [
+    {
+     "minShares": 700,
+     "minHoldMonths": 0,
+     "amount": 5000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 800,
+     "minHoldMonths": 0,
+     "amount": 6000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 900,
+     "minHoldMonths": 0,
+     "amount": 8000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 1000,
+     "minHoldMonths": 0,
+     "amount": 20000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 2000,
+     "minHoldMonths": 0,
+     "amount": 40000,
+     "timesPerYear": 1
+    },
+    {
+     "minShares": 3000,
+     "minHoldMonths": 0,
+     "amount": 90000,
+     "timesPerYear": 1
+    }
+   ],
+   "tiersNote": "12月末基準・年1回（2026年12月から新設）。700株未満は対象外。1ポイント≒1円",
+   "auditedAt": "2026-10-02",
+   "auditSource": "official",
+   "sourceUrl": "https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260929/20260929542059.pdf",
+   "auditScope": "対象株主・株数区分とポイント表・繰越条件・案内時期（適時開示PDFで確認）"
   }
  ],
  "siteOnly": [
