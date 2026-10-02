@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "dataVersion": "2026-10-02.7",
+ "dataVersion": "2026-10-02.8",
  "updatedAt": "2026-10-02",
  "categories": [
   "外食",
@@ -5678,10 +5678,56 @@
    "balanceUnit": "円相当",
    "quantityUnit": "セット",
    "exchange": "東証",
-   "auditedAt": "2026-09-10",
-   "auditScope": "券種・金額・使える店・使い方の注意・株数区分（公式ページに株数区分の表も金額も無い（株主様専用WEBサイトのカタログ制）。2026年10月の株式分割で2027年3月末基準から内容変更予定）",
-   "auditSource": "",
-   "sourceUrl": ""
+   "auditedAt": "2026-10-02",
+   "auditScope": "株数区分（分割前・分割後）・継続保有条件・基準日ごとの内容（3月=ご優待品、9月=オンラインショップクーポン）・適用時期・寄付の選択肢（公式IRページと 2026-08-07 株主優待制度の一部変更のお知らせPDF・同日FAQ PDFで確認）",
+   "auditSource": "official",
+   "sourceUrl": "https://www.nipponham.co.jp/corporate/ir/stock-info/yutai/guide.html",
+   "next": {
+    "from": "2027-03",
+    "label": "2027年3月末基準から（株式分割後の新制度）",
+    "balance": 1000,
+    "unitPrice": 1000,
+    "tiers": [
+     {
+      "minShares": 100,
+      "minHoldMonths": 6,
+      "amount": 1000,
+      "timesPerYear": 1,
+      "note": "3月末基準のご優待品"
+     },
+     {
+      "minShares": 300,
+      "minHoldMonths": 6,
+      "amount": 2000,
+      "timesPerYear": 1,
+      "note": "3月末基準のご優待品。別に9月末基準で当社指定オンラインショップクーポン1,000円"
+     },
+     {
+      "minShares": 900,
+      "minHoldMonths": 6,
+      "amount": 3000,
+      "timesPerYear": 1,
+      "note": "3月末基準のご優待品。別に9月末基準でクーポン2,000円"
+     },
+     {
+      "minShares": 1500,
+      "minHoldMonths": 6,
+      "amount": 6000,
+      "timesPerYear": 1,
+      "note": "3月末基準のご優待品。別に9月末基準でクーポン3,000円"
+     },
+     {
+      "minShares": 1500,
+      "minHoldMonths": 60,
+      "amount": 10000,
+      "timesPerYear": 1,
+      "note": "5年以上保有。3月末基準のご優待品。別に9月末基準でクーポン3,000円"
+     }
+    ],
+    "tiersNote": "2026年10月1日の1→3株式分割後の株数。2027年3月31日基準から適用（2026年9月末基準分までは分割前の旧制度）。継続半年以上＝3月末・9月末の株主名簿に同一株主番号で2回以上連続記載。amount は3月末基準のご優待品（カタログから1つ選ぶ）の相当額で、9月末基準の当社指定オンラインショップクーポンは含めていない",
+    "usageNotes": "3月末基準でご優待品（カタログから1つ選ぶ・寄付も可）、300株以上は9月末基準で当社指定オンラインショップクーポン（300株1,000円・900株2,000円・1,500株以上3,000円）。3月末・9月末の名簿に同一株主番号で2回以上連続記載が条件。発送月は未公表（2027年6月上旬に案内予定）"
+   },
+   "tiersNote": "今の制度（2026年9月末基準分まで・株式分割前）。2027年3月末基準からは next の新制度"
   },
   {
    "company": "伊藤ハム米久HD",

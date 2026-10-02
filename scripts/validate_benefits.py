@@ -67,6 +67,9 @@ OPTIONAL_STR_FIELDS = ("usageNotes", "shipMonths", "tiersNote", "siteGroup", "va
 # 確認元（2026-09-26）。official=各社の公式 IR・適時開示・会社概要 / secondary=優待情報サイト・検索 / ""=不明
 AUDIT_SOURCES = ("official", "secondary", "")
 
+# next（次の制度・2026-10-02）。from 以外は任意で、無い項目は本体の値を使う
+NEXT_OPTIONAL_STR = ("label", "title", "balanceUnit", "quantityUnit", "usageNotes", "tiersNote", "shipMonths")
+NEXT_OPTIONAL_INT = ("balance", "unitPrice")
 # legacy[]（旧制度・2026-10-02）
 LEGACY_REQUIRED_STR = ("until", "title", "balanceUnit", "quantityUnit")
 LEGACY_REQUIRED_INT = ("balance", "unitPrice")
@@ -262,6 +265,23 @@ def validate_item(item, line, index, errors, is_site_only):
                 if is_str(old.get("until")) and not YEAR_MONTH_RE.match(old["until"]):
                     errors.add(line, label, "legacy[%d].until の形式が不正です（YYYY-MM ではない: %r）" % (i, old["until"]))
 
+    # 次の制度（2026-10-02）。本体＝今の制度、next＝まだ始まっていない新制度。from（最初の基準月）から読み替える。
+    if "next" in item:
+        nx = item["next"]
+        if not isinstance(nx, dict):
+            errors.add(line, label, "next がオブジェクトではありません（値: %r）" % (nx,))
+        else:
+            if not (is_str(nx.get("from")) and YEAR_MONTH_RE.match(nx["from"])):
+                errors.add(line, label, "next.from が無いか形式が不正です（YYYY-MM・最初の基準月: %r）" % (nx.get("from"),))
+            for f in NEXT_OPTIONAL_STR:
+                if f in nx and not is_str(nx[f]):
+                    errors.add(line, label, "next.%s が文字列ではありません" % f)
+            for f in NEXT_OPTIONAL_INT:
+                if f in nx and not is_int(nx[f]):
+                    errors.add(line, label, "next.%s が数値ではありません（値: %r）" % (f, nx[f]))
+            if "tiers" in nx:
+                validate_tiers(nx["tiers"], line, label, errors, TIER_INT_FIELDS, "next.tiers")
+
     quo = item.get("quo")
     if quo is not None:
         if not isinstance(quo, dict):
@@ -456,6 +476,13 @@ def collect_expired(text, today=None):
                 continue
             line = line_of(text, spans[i][0]) if i < len(spans) else 1
             label = item_label(item, i)
+            nx = item.get("next")
+            if isinstance(nx, dict) and isinstance(nx.get("from"), str) and YEAR_MONTH_RE.match(nx["from"]):
+                y, mo = int(nx["from"][:4]), int(nx["from"][5:7])
+                if y * 12 + mo <= now_key:
+                    out.append((line, label, "next.from=%s を迎えました。本体へ昇格し（next の値で本体を書き換え）、"
+                                "まだ手元に残る旧制度の券があれば legacy へ移してください（旧アプリは next を読まない）"
+                                % nx["from"]))
             for j, old in enumerate(item.get("legacy") or []):
                 if isinstance(old, dict) and expired(old.get("until")):
                     out.append((line, label, "legacy[%d].until=%s が過ぎています（旧制度は表示されない。消してよい）"

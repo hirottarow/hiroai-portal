@@ -320,6 +320,16 @@ def ym_passed(ym, today=None):
 
 def switch_section_text(t):
     """制度の切り替わり（`currentFrom` / `legacy`・2026-10-02）。旧制度の券がまだ使える間は新旧を並べる。"""
+    nx = t.get("next")
+    if isinstance(nx, dict) and nx.get("from") and not ym_passed(nx.get("from")):
+        # 次の制度（2026-10-02）。本体＝今の制度、next＝from の基準日から始まる新制度
+        lines = [f"{ym_text(nx['from'])}末の基準日の前まで: 今の制度（{t.get('title', '')}）",
+                 f"{ym_text(nx['from'])}末の基準日から: {nx.get('label') or nx.get('title') or '新制度'}"]
+        if nx.get("usageNotes"):
+            lines.append(f"新制度の内容: {nx['usageNotes']}")
+        if nx.get("tiersNote"):
+            lines.append(f"新制度の株数区分: {nx['tiersNote']}")
+        return "\n".join(lines)
     olds = [o for o in (t.get("legacy") or []) if isinstance(o, dict) and not ym_passed(o.get("until"))]
     if not olds:
         return ""
@@ -336,7 +346,7 @@ def build_sections(t):
     sections = []
     switch_text = switch_section_text(t)
     if switch_text:
-        sections.append(("制度の切り替わり（新旧どちらも使える期間）", switch_text))
+        sections.append(("制度の切り替わり", switch_text))
     if t.get("usableStores"):
         sections.append(("使えるお店", t["usableStores"]))
     if t.get("usageNotes"):
