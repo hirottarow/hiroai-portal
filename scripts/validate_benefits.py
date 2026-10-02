@@ -67,6 +67,11 @@ OPTIONAL_STR_FIELDS = ("usageNotes", "shipMonths", "tiersNote", "siteGroup", "va
 # 確認元（2026-09-26）。official=各社の公式 IR・適時開示・会社概要 / secondary=優待情報サイト・検索 / ""=不明
 AUDIT_SOURCES = ("official", "secondary", "")
 
+# legacy[]（旧制度・2026-10-02）
+LEGACY_REQUIRED_STR = ("until", "title", "balanceUnit", "quantityUnit")
+LEGACY_REQUIRED_INT = ("balance", "unitPrice")
+LEGACY_OPTIONAL_STR = ("usageNotes", "label")
+
 TIER_INT_FIELDS = ("minShares", "minHoldMonths", "amount")
 QUO_TIER_INT_FIELDS = ("minShares", "minHoldMonths", "amountYen")
 QUO_STR_FIELDS = ("rightsMonths", "note", "auditedAt", "auditScope")
@@ -172,7 +177,8 @@ def validate_tiers(tiers, line, label, errors, int_fields, where):
             errors.add(line, label, "%s[%d].validUntil の形式が不正です（YYYY-MM ではない: %r）" % (where, i, vu))
         min_shares = tier.get("minShares")
         hold = tier.get("minHoldMonths")
-        if is_int(min_shares) and is_int(hold):
+        # additive（上乗せ）の段は自動採用されず「＋◯円」と表示するだけなので、段の並び（昇順）の検査から外す（2026-10-02）
+        if is_int(min_shares) and is_int(hold) and not tier.get("additive"):
             prev = prev_by_hold.get(hold)
             if prev is not None and min_shares <= prev:
                 errors.add(
@@ -230,6 +236,31 @@ def validate_item(item, line, index, errors, is_site_only):
 
     if "tiers" in item:
         validate_tiers(item["tiers"], line, label, errors, TIER_INT_FIELDS, "tiers")
+
+    # 制度の切り替わり（2026-10-02）。本体＝新しい制度、legacy＝まだ手元に残る旧制度。→ README「`legacy` / `currentFrom`」
+    current_from = item.get("currentFrom")
+    if "currentFrom" in item and not (is_str(current_from) and YEAR_MONTH_RE.match(current_from)):
+        errors.add(line, label, "currentFrom の形式が不正です（YYYY-MM ではない: %r）" % (current_from,))
+    if "legacy" in item:
+        lg = item["legacy"]
+        if not isinstance(lg, list):
+            errors.add(line, label, "legacy が配列ではありません（値: %r）" % (lg,))
+        else:
+            for i, old in enumerate(lg):
+                if not isinstance(old, dict):
+                    errors.add(line, label, "legacy[%d] がオブジェクトではありません" % i)
+                    continue
+                for f in LEGACY_REQUIRED_STR:
+                    if not is_str(old.get(f)) or old.get(f).strip() == "":
+                        errors.add(line, label, "legacy[%d].%s が無いか空です" % (i, f))
+                for f in LEGACY_REQUIRED_INT:
+                    if not is_int(old.get(f)):
+                        errors.add(line, label, "legacy[%d].%s が数値ではありません（値: %r）" % (i, f, old.get(f)))
+                for f in LEGACY_OPTIONAL_STR:
+                    if f in old and not is_str(old[f]):
+                        errors.add(line, label, "legacy[%d].%s が文字列ではありません" % (i, f))
+                if is_str(old.get("until")) and not YEAR_MONTH_RE.match(old["until"]):
+                    errors.add(line, label, "legacy[%d].until の形式が不正です（YYYY-MM ではない: %r）" % (i, old["until"]))
 
     quo = item.get("quo")
     if quo is not None:
@@ -425,6 +456,10 @@ def collect_expired(text, today=None):
                 continue
             line = line_of(text, spans[i][0]) if i < len(spans) else 1
             label = item_label(item, i)
+            for j, old in enumerate(item.get("legacy") or []):
+                if isinstance(old, dict) and expired(old.get("until")):
+                    out.append((line, label, "legacy[%d].until=%s が過ぎています（旧制度は表示されない。消してよい）"
+                                % (j, old.get("until"))))
             if expired(item.get("validUntil")):
                 out.append((line, label, "validUntil=%s が過ぎています（終了済み）。"
                                          "消してよいか、会社が再実施したので条件を書き直すかを判断してください"

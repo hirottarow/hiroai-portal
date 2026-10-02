@@ -302,8 +302,41 @@ def source_line(t):
     return f'        <div class="source-line">{text}</div>'
 
 
+def ym_text(ym):
+    """"YYYY-MM" → "YYYY年M月"。形が違えばそのまま。"""
+    if isinstance(ym, str) and len(ym) == 7 and ym[4] == "-" and ym[:4].isdigit() and ym[5:].isdigit():
+        return f"{ym[:4]}年{int(ym[5:])}月"
+    return ym or ""
+
+
+def ym_passed(ym, today=None):
+    """"YYYY-MM" の月末を過ぎたか（アプリの ValidUntil と同じ規則）。形が違えば過ぎていない扱い。"""
+    import datetime
+    if not (isinstance(ym, str) and len(ym) == 7 and ym[:4].isdigit() and ym[5:].isdigit()):
+        return False
+    today = today or datetime.date.today()
+    return int(ym[:4]) * 12 + int(ym[5:]) < today.year * 12 + today.month
+
+
+def switch_section_text(t):
+    """制度の切り替わり（`currentFrom` / `legacy`・2026-10-02）。旧制度の券がまだ使える間は新旧を並べる。"""
+    olds = [o for o in (t.get("legacy") or []) if isinstance(o, dict) and not ym_passed(o.get("until"))]
+    if not olds:
+        return ""
+    since = f"{ym_text(t.get('currentFrom'))}以降" if t.get("currentFrom") else "今の制度"
+    lines = [f"{since}: {t.get('title', '')}"]
+    for o in olds:
+        name = o.get("label") or o.get("title") or ""
+        note = f"（{o['usageNotes']}）" if o.get("usageNotes") else ""
+        lines.append(f"{ym_text(o.get('until'))}まで: {name}{note}")
+    return "\n".join(lines)
+
+
 def build_sections(t):
     sections = []
+    switch_text = switch_section_text(t)
+    if switch_text:
+        sections.append(("制度の切り替わり（新旧どちらも使える期間）", switch_text))
     if t.get("usableStores"):
         sections.append(("使えるお店", t["usableStores"]))
     if t.get("usageNotes"):
