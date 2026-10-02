@@ -473,6 +473,34 @@ def collect_expired(text, today=None):
     return out
 
 
+def collect_store_separator(text):
+    """usableStores のブランドを「・」で区切っているもの（2026-10-02）。WARN だけ。
+
+    アプリの券面スキャン（CardTextParser.BRAND_SPLIT = [、,／/]）はこの欄をブランドに分けて券面と照合する。
+    「・」区切りだと全体が1語になり、配布中の旧アプリも含めて銘柄を当てられなくなる（7550 すき家で実際に起きた）。
+    「・」が2つ以上あるのに「、,／/」が1つも無いものを出す（ザ・メンチ等、名前の中の「・」1つは対象外）。
+    """
+    out = []
+    try:
+        data = json.loads(text)
+    except ValueError:
+        return out
+    items = data.get("templates")
+    if not isinstance(items, list):
+        return out
+    open_idx = find_array_open(text, "templates")
+    spans = scan_top_level_objects(text, open_idx) if open_idx is not None else []
+    for i, item in enumerate(items):
+        if not isinstance(item, dict):
+            continue
+        us = item.get("usableStores") or ""
+        if isinstance(us, str) and us.count("・") >= 2 and not re.search(r"[、,／/]", us):
+            line = line_of(text, spans[i][0]) if i < len(spans) else 1
+            out.append((line, item_label(item, i),
+                        "usableStores のブランドが「・」区切り。券面スキャンが拾えないので「、」で区切る（README）"))
+    return out
+
+
 def collect_official_without_url(text):
     """auditSource が official なのに sourceUrl が空のもの（2026-09-26）。WARN だけで止めない。"""
     out = []
@@ -511,6 +539,8 @@ def main():
     for line, label, message in collect_expired(text):
         print("WARN [%d行目] %s: %s" % (line, label, message))
 
+    for line, label, message in collect_store_separator(text):
+        print("WARN [%d行目] %s: %s" % (line, label, message))
     for line, label, message in collect_official_without_url(text):
         print("WARN [%d行目] %s: %s" % (line, label, message))
 
