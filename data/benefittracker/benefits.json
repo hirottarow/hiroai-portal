@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "2026-10-04.1",
-  "updatedAt": "2026-10-04",
+  "dataVersion": "2026-10-05.1",
+  "updatedAt": "2026-10-05",
   "categories": [
     "外食",
     "小売",
@@ -8288,6 +8288,65 @@
       "auditScope": "金額・割引券の枚数・株数区分・基準日・贈呈時期（公式IRページで確認）。券面額・有効期限・使える店は公式に記載なく未確認",
       "auditSource": "official",
       "sourceUrl": "https://yossix.co.jp/ir/stockholder.html"
+    },
+    {
+      "company": "神戸物産",
+      "title": "Gyomucaカード",
+      "balance": 1000,
+      "category": "小売",
+      "ticker": "3038",
+      "usableStores": "業務スーパー",
+      "description": "【基本情報】\n「業務スーパー」を展開。優待は業務スーパーで使えるGyomucaカード。\n\n【もらえる条件】\n10月31日基準の年1回（1月中旬発送）。100株以上で1,000円分、1,000株以上で10,000円分、2,000株以上で15,000円分。継続保有3年以上（同一株主番号で連続7回以上）は3,000円・15,000円・20,000円分に増える。希望すればVJAギフトカードかグループ商品の詰め合わせに引き換えもできる（申込期限あり）。",
+      "rating": 4,
+      "unitPrice": 0,
+      "balanceUnit": "円分",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "Gyomucaカード（業務スーパーで使うプリペイドカード）。カードの有効期限と使えない店は公式の優待ページに記載なし。希望者はVJAギフトカードかグループ商品の詰め合わせに引き換え可（一定の申込期限あり）",
+      "shipMonths": "1",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 1000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 100,
+          "minHoldMonths": 36,
+          "amount": 3000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 0,
+          "amount": 10000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 36,
+          "amount": 15000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 2000,
+          "minHoldMonths": 0,
+          "amount": 15000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 2000,
+          "minHoldMonths": 36,
+          "amount": 20000,
+          "timesPerYear": 1
+        }
+      ],
+      "tiersNote": "10月31日基準の年1回・1月中旬発送。3年以上は同一株主番号で連続7回以上（期末・中間期末）で、3年未満の額と置き換わる（上乗せではない）。100株未満は対象外",
+      "auditedAt": "2026-10-05",
+      "auditScope": "券種・株数区分・金額・継続保有の条件・基準日と回数・発送時期・引換えの選択肢。カードの有効期限・使える店は未確認（公式IRページで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.kobebussan.co.jp/ir/shareholder.php"
     }
   ],
   "siteOnly": [

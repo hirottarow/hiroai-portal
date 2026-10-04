@@ -1,9 +1,9 @@
 # 優待辞書の確認日レポート（生成物・`scripts/build_benefits_pages.py` が書く）
 
-生成日: 2026-10-04 ／ 閾値: 最終確認から 180 日
+生成日: 2026-10-05 ／ 閾値: 最終確認から 180 日
 
-- 銘柄数: 164（templates 157・siteOnly 7）
-- 確認元が公式（`auditSource: official` かつ `sourceUrl` あり）: **164 件** ／ 二次情報: 0 件 ／ 未確認: 0 件
+- 銘柄数: 165（templates 158・siteOnly 7）
+- 確認元が公式（`auditSource: official` かつ `sourceUrl` あり）: **165 件** ／ 二次情報: 0 件 ／ 未確認: 0 件
 - **180 日超・または確認日なし: 0 件**
 - quo ブロックの確認が 180 日超: 0 件
 - 有効期限（`validUntil`）つき: 1 件／うち**終了済み: 0 件**
