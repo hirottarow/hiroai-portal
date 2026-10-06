@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "2026-10-05.1",
-  "updatedAt": "2026-10-05",
+  "dataVersion": "2026-10-07.1",
+  "updatedAt": "2026-10-07",
   "categories": [
     "外食",
     "小売",
@@ -8347,6 +8347,86 @@
       "auditScope": "券種・株数区分・金額・継続保有の条件・基準日と回数・発送時期・引換えの選択肢。カードの有効期限・使える店は未確認（公式IRページで確認）",
       "auditSource": "official",
       "sourceUrl": "https://www.kobebussan.co.jp/ir/shareholder.php"
+    },
+    {
+      "company": "あみやき亭",
+      "title": "株主優待食事券",
+      "balance": 1000,
+      "category": "外食",
+      "ticker": "2753",
+      "usableStores": "あみやき亭（「感動の肉と米」「お肉の工場直売市」等の一部店舗では利用不可）",
+      "description": "【基本情報】\n焼肉・ステーキ等の「あみやき亭」を展開。優待は1,000円券（飲食券）。\n\n【もらえる条件】\n9月30日・3月31日基準。株数区分は2024年9月30日基準の株式分割後の区分（100株以上から）。100株以上で1,000円、200株以上で2,000円、300株以上で4,000円、600株以上で7,000円、900株以上で12,000円、1500株以上で18,000円。継続保有3年以上（同一株主番号で連続7回以上）は300株以上から上乗せがある。",
+      "rating": 3,
+      "unitPrice": 1000,
+      "balanceUnit": "円分",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "1,000円券（1,000円×1枚）。株主優待券と各種割引券は併用可（公式FAQ）。券面の有効期限・発送月は公式に記載なし。一部店舗では利用不可（「感動の肉と米」「お肉の工場直売市」等）",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 1000
+        },
+        {
+          "minShares": 200,
+          "minHoldMonths": 0,
+          "amount": 2000
+        },
+        {
+          "minShares": 300,
+          "minHoldMonths": 0,
+          "amount": 4000
+        },
+        {
+          "minShares": 600,
+          "minHoldMonths": 0,
+          "amount": 7000
+        },
+        {
+          "minShares": 900,
+          "minHoldMonths": 0,
+          "amount": 12000
+        },
+        {
+          "minShares": 1500,
+          "minHoldMonths": 0,
+          "amount": 18000
+        },
+        {
+          "minShares": 300,
+          "minHoldMonths": 36,
+          "amount": 1000,
+          "additive": true,
+          "note": "3年以上（連続7回以上・同一株主番号）で上乗せ"
+        },
+        {
+          "minShares": 600,
+          "minHoldMonths": 36,
+          "amount": 1000,
+          "additive": true,
+          "note": "3年以上（連続7回以上・同一株主番号）で上乗せ"
+        },
+        {
+          "minShares": 900,
+          "minHoldMonths": 36,
+          "amount": 2000,
+          "additive": true,
+          "note": "3年以上（連続7回以上・同一株主番号）で上乗せ"
+        },
+        {
+          "minShares": 1500,
+          "minHoldMonths": 36,
+          "amount": 4000,
+          "additive": true,
+          "note": "3年以上（連続7回以上・同一株主番号）で上乗せ"
+        }
+      ],
+      "tiersNote": "基準日ごとの回数（年1回か2回か）は公式に記載なし。900株以上は全部引換で新潟県産コシヒカリ7.5kg（1500株以上は10kg）に替えられる（公式ページの表）",
+      "auditedAt": "2026-10-07",
+      "auditScope": "段の数値（株数区分・金額・長期保有の上乗せ）・お米引換・使えない店舗・併用可（FAQ）（公式IRページで確認）。有効期限・発送月・年の回数は公式に無いため未入力",
+      "auditSource": "official",
+      "sourceUrl": "https://amiyakitei.co.jp/ir/ir_incentives/"
     }
   ],
   "siteOnly": [
