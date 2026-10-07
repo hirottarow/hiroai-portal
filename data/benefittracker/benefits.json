@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "2026-10-07.1",
-  "updatedAt": "2026-10-07",
+  "dataVersion": "2026-10-08.1",
+  "updatedAt": "2026-10-08",
   "categories": [
     "外食",
     "小売",
@@ -8427,6 +8427,335 @@
       "auditScope": "段の数値（株数区分・金額・長期保有の上乗せ）・お米引換・使えない店舗・併用可（FAQ）（公式IRページで確認）。有効期限・発送月・年の回数は公式に無いため未入力",
       "auditSource": "official",
       "sourceUrl": "https://amiyakitei.co.jp/ir/ir_incentives/"
+    },
+    {
+      "company": "共立メンテナンス",
+      "title": "株主様ご優待割引電子チケット",
+      "balance": 2000,
+      "category": "レジャー",
+      "ticker": "9616",
+      "usableStores": "ドーミーイン、共立リゾート、一期一会グループ、共立オアシス、共立トラスト NETSHOP",
+      "description": "【基本情報】\nビジネスホテル「ドーミーイン」などを運営する共立メンテナンスの株主優待。年2回、所有株数に応じた電子チケット（お会計時に額面分を割引）とリゾートホテルご優待電子チケットが届く。\n\n【見て楽しくなる情報】\n出張先や旅先のドーミーインで、館内の居酒屋や大浴場のついでにサッと使える気軽さが魅力。\n\n【お得情報】\n3月31日時点で3年以上継続保有していると、通常のご優待割引に長期保有特典分が上乗せされる。\n\n【裏技】\n1円単位で使えるので、出張や旅先の端数の飲食代もぴったり使い切れる。\n\n【もらえる条件】\n3月31日・9月30日基準の年2回、100株以上でご優待割引電子チケットとリゾートホテルご優待電子チケットを発行。3月31日時点で3年以上継続保有だと長期保有特典分を合算（9月分には適用なし）。有効期限は3月基準分が翌年7月31日、9月基準分が翌年12月31日。",
+      "rating": 3,
+      "unitPrice": 0,
+      "balanceUnit": "円分",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "電子チケットは指定店舗で額面分をお会計時に割引として使える（1円単位・お釣りなし）。対象はドーミーイン、共立リゾート、一期一会グループ（共立フーズサービス）、共立オアシス、共立トラスト NETSHOPなど。別に「リゾートホテルご優待電子チケット」（年2回・1枚で1泊・大人10名まで・事前予約必要・ドーミーイン/御宿野乃は対象外）も同時に届くが、残高管理の対象は上の割引チケットのみ。48期中間決算分（2026年12月上旬配送予定）から電子チケットの利用方法が紙チケット＋QRコードへリニューアル予定（金額・条件に変更なし）。",
+      "shipMonths": "7,12",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 2000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 200,
+          "minHoldMonths": 0,
+          "amount": 4000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 0,
+          "amount": 8000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 0,
+          "amount": 16000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 2000,
+          "minHoldMonths": 0,
+          "amount": 30000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 5000,
+          "minHoldMonths": 0,
+          "amount": 50000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 10000,
+          "minHoldMonths": 0,
+          "amount": 120000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 100,
+          "minHoldMonths": 36,
+          "amount": 2000,
+          "timesPerYear": 1,
+          "additive": true,
+          "note": "3月31日時点で3年以上継続保有が対象。3月発行分（7月上旬届け）のみに合算、9月発行分には付かない"
+        },
+        {
+          "minShares": 200,
+          "minHoldMonths": 36,
+          "amount": 4000,
+          "timesPerYear": 1,
+          "additive": true,
+          "note": "同上"
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 36,
+          "amount": 6000,
+          "timesPerYear": 1,
+          "additive": true,
+          "note": "同上"
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 36,
+          "amount": 10000,
+          "timesPerYear": 1,
+          "additive": true,
+          "note": "同上"
+        },
+        {
+          "minShares": 2000,
+          "minHoldMonths": 36,
+          "amount": 20000,
+          "timesPerYear": 1,
+          "additive": true,
+          "note": "同上"
+        },
+        {
+          "minShares": 5000,
+          "minHoldMonths": 36,
+          "amount": 40000,
+          "timesPerYear": 1,
+          "additive": true,
+          "note": "同上"
+        },
+        {
+          "minShares": 10000,
+          "minHoldMonths": 36,
+          "amount": 60000,
+          "timesPerYear": 1,
+          "additive": true,
+          "note": "同上"
+        }
+      ],
+      "tiersNote": "表の金額は基準日（3月末・9月末）ごとの1回分。長期保有特典（3年以上継続保有）は3月31日基準分のみに付き、9月30日基準分には付かない。",
+      "auditedAt": "2026-10-08",
+      "auditScope": "基準日・株数区分・金額・長期保有特典・有効期限・発送時期・利用方法リニューアルの告知（公式IRページ原文、くわえて利用方法リニューアルのご案内PDFで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.kyoritsugroup.co.jp/ir/stock/benefits/"
+    },
+    {
+      "company": "亀田製菓",
+      "title": "通販いちば クーポン",
+      "balance": 500,
+      "category": "自社商品",
+      "ticker": "2220",
+      "usableStores": "亀田製菓公式通信販売「通販いちば」",
+      "description": "【基本情報】\n柿の種やハッピーターンでおなじみ亀田製菓の株主優待。公式通販サイト「通販いちば」で使えるクーポンが年1回届く。\n\n【見て楽しくなる情報】\n柿の種の詰め合わせやここでしか買えない限定パッケージを、クーポン片手に選ぶ時間も楽しい。\n\n【お得情報】\n配送料が無料になるので、クーポン分がそのままお得に。\n\n【裏技】\nクーポンの有効期限は発行から1年あるので、新商品が出るタイミングまで待ってまとめ買いに使うのも手。\n\n【もらえる条件】\n毎年9月30日時点で100株以上保有の株主が対象。年1回・12月中旬頃発送（2015年度より年2回から年1回に変更）。",
+      "rating": 3,
+      "unitPrice": 0,
+      "balanceUnit": "円相当",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "亀田製菓公式通信販売「通販いちば」で使えるクーポン。有効期限は発行から1年間。配送料は無料。",
+      "shipMonths": "12",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 500,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 300,
+          "minHoldMonths": 0,
+          "amount": 1000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 0,
+          "amount": 2000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 0,
+          "amount": 3000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 3000,
+          "minHoldMonths": 0,
+          "amount": 4000,
+          "timesPerYear": 1
+        }
+      ],
+      "tiersNote": "9月30日基準の年1回。継続保有条件なし。",
+      "auditedAt": "2026-10-08",
+      "auditScope": "基準日・株数区分・金額・有効期限・配送料（公式IRページで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.kamedaseika.co.jp/ir/shareholders/benefit/"
+    },
+    {
+      "company": "中村屋",
+      "title": "株主優待（当社商品／優待券・通販割引／寄付から選択）",
+      "balance": 2000,
+      "category": "自社商品",
+      "ticker": "2204",
+      "usableStores": "中村屋店舗・通信販売（優待券利用可能店舗一覧は公式ページ参照）",
+      "description": "【基本情報】\n純印度式カリーや中華まんでおなじみ中村屋の株主優待。毎年3月末基準で、当社商品・優待券（店舗＋通販で15%割引）・寄付のいずれか1つを選べる。\n\n【見て楽しくなる情報】\nレストランでのカリーも、通販の月餅も、優待券の15%割引でちょっとぜいたくに楽しめる。\n\n【お得情報】\n500株以上だと当社商品と優待券の両方を選べる年も出てくるので、持株数を増やすほど選択の幅が広がる。\n\n【裏技】\n通販での優待割引はフリーダイヤル注文で年20回まで使えるので、こまめな買い物にも向く。\n\n【もらえる条件】\n毎年3月31日時点で100株以上保有の株主が対象、年1回。2027年3月末基準から「100株以上を継続的に1年以上保有」の条件が新設される予定（2026年4月30日公表）。あわせて、3月末基準で100株以上を継続保有して5年目（以降5年ごと）の株主に「新宿中村屋本店で使えるお買い物・お食事券3,000円分（使用期限1年）」が2027年3月末基準から追加される予定。",
+      "rating": 3,
+      "unitPrice": 2000,
+      "balanceUnit": "円相当",
+      "quantityUnit": "個",
+      "exchange": "東証",
+      "usageNotes": "「A.当社商品」「B.株主優待券＋通信販売での優待割引」「C.社会貢献活動団体への寄付」のいずれか1つを選択（500株以上はBとCがそれぞれ商品を含む組み合わせになる）。優待券（1冊20枚綴り）は500円以上の飲食・買物1回につき代金の15%割引。通信販売での優待割引はフリーダイヤル注文で15%割引・年20回まで（要株主確認）。寄付は国連世界食糧計画WFP協会の学校給食支援に活用。【2027年3月基準からの制度変更（2026-04-30公表、next未反映）】継続保有条件の新設（3月末時点で100株以上を継続的に1年以上保有。移行経過期間として2027年3月末基準に限り半年以上保有も対象）、および100株以上を継続保有して5年ごとの株主への「新宿中村屋本店 お買い物・お食事券3,000円分（使用期限1年）」追加。発送時期は公式ページに記載なし。",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 2000,
+          "timesPerYear": 1,
+          "note": "A選択時。B選択時は株主優待券1冊＋通信販売割引、C選択時は2,000円を寄付"
+        },
+        {
+          "minShares": 300,
+          "minHoldMonths": 0,
+          "amount": 3000,
+          "timesPerYear": 1,
+          "note": "A選択時。B選択時は株主優待券2冊＋通信販売割引、C選択時は3,000円を寄付"
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 0,
+          "amount": 5000,
+          "timesPerYear": 1,
+          "note": "A選択時。B選択時は株主優待券2冊＋通信販売割引＋3,000円相当の当社商品、C選択時は4,000円を寄付＋株主優待券1冊＋通信販売割引"
+        }
+      ],
+      "tiersNote": "A（当社商品）・B（優待券＋通販割引）・C（寄付）のいずれか1つを選択。amountはA選択時の額。基準日は3月末、年1回。2027年3月末基準から継続保有条件（1年以上）が新設予定。",
+      "auditedAt": "2026-10-08",
+      "auditScope": "基準日・株数区分・A/B/C選択内容・優待券の割引率・通販割引の回数上限・2027年3月基準からの制度変更（公式IRページ原文＋2026-04-30付け制度変更PDF原文で確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.nakamuraya.co.jp/company/ir/complimentary.html"
+    },
+    {
+      "company": "モロゾフ",
+      "title": "株主優待券または自社商品",
+      "balance": 1000,
+      "category": "自社商品",
+      "ticker": "2217",
+      "usableStores": "モロゾフ指定店舗・通信販売",
+      "description": "【基本情報】\nチョコレートとプリンでおなじみモロゾフの株主優待。毎年7月末基準で、自社商品（チョコレートなど）か優待券（20%割引）を保有株数・継続保有年数に応じて選べる。\n\n【見て楽しくなる情報】\nプレミアムチョコレートコレクションが届く年も、優待券で好きな商品を選ぶ年も、どちらも楽しみな優待。\n\n【お得情報】\n3年以上継続保有すると選べる個数が増え、3,000株以上では優待券10冊（最大4万円分の割引）まで狙える。\n\n【裏技】\n優待券の使用期限は翌々年5月31日までと長いので、焦らず好きなタイミングで使える。\n\n【もらえる条件】\n毎年7月末日時点で100株以上を半年以上保有の株主が対象、年1回・11月下旬発送。300株以上は9月中旬頃に優待品選択の案内が届く。",
+      "rating": 3,
+      "unitPrice": 1000,
+      "balanceUnit": "円相当",
+      "quantityUnit": "個",
+      "exchange": "東証",
+      "usageNotes": "100〜299株は自社商品のみ（半年以上保有1,000円相当／3年以上保有2,000円相当）。300〜2,999株・3,000株以上は自社商品か優待券（20枚綴り、1枚につき税込1,000円までの買物・飲食を20%割引）かを選択（3年以上保有はさらに1つ追加で選べる）。優待券は指定店・通信販売で使用可、使用期限は翌々年5月31日。半年以上保有の判定は株主名簿（1月31日・7月31日の年2回発行）に同一株主番号で2回以上連続記載、3年以上は7回以上連続記載。2026年度の内容で、2027年度以降は変更の可能性があると公式に明記。",
+      "shipMonths": "11",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 6,
+          "amount": 1000,
+          "timesPerYear": 1,
+          "note": "半年以上3年未満。自社商品のみ"
+        },
+        {
+          "minShares": 100,
+          "minHoldMonths": 36,
+          "amount": 2000,
+          "timesPerYear": 1,
+          "note": "3年以上。自社商品のみ"
+        },
+        {
+          "minShares": 300,
+          "minHoldMonths": 6,
+          "amount": 2000,
+          "timesPerYear": 1,
+          "note": "半年以上3年未満。優待券5冊（20枚綴＝最大4,000円分の割引）または2,000円相当の自社商品から1つ選択"
+        },
+        {
+          "minShares": 300,
+          "minHoldMonths": 36,
+          "amount": 4000,
+          "timesPerYear": 1,
+          "note": "3年以上。優待券5冊・2,000円相当の自社商品A・2,000円相当の自社商品Bから2つ選択（amountは2つ分の目安）"
+        },
+        {
+          "minShares": 3000,
+          "minHoldMonths": 6,
+          "amount": 3000,
+          "timesPerYear": 1,
+          "note": "半年以上3年未満。優待券10冊（20枚綴＝最大8,000円分の割引）または3,000円相当の自社商品から1つ選択"
+        },
+        {
+          "minShares": 3000,
+          "minHoldMonths": 36,
+          "amount": 6000,
+          "timesPerYear": 1,
+          "note": "3年以上。優待券10冊・3,000円相当の自社商品A・3,000円相当の自社商品Bから2つ選択（amountは2つ分の目安）"
+        }
+      ],
+      "tiersNote": "選択式のため amount は自社商品を選んだ場合の目安額。優待券を選んだ場合の割引上限額は note を参照。基準日は7月末、年1回。",
+      "auditedAt": "2026-10-08",
+      "auditScope": "基準日・継続保有年数の判定・株数区分・選択表の金額（公式IRページ原文＋選択表画像で確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.morozoff.co.jp/company_ir/special/index.html"
+    },
+    {
+      "company": "イオンファンタジー",
+      "title": "株主さまご優待券",
+      "balance": 2000,
+      "category": "レジャー",
+      "ticker": "4343",
+      "usableStores": "モーリーファンタジー、モーリーファンタジーf、PALO、キッズーナ、にこはぴきっず、OYUGIWA、ちきゅうのにわ、ミューの森",
+      "description": "【基本情報】\nイオンモール内のゲームセンター「モーリーファンタジー」などを運営するイオンファンタジーの株主優待。年2回、株数に応じた優待券が届く。\n\n【見て楽しくなる情報】\n子どもとのお出かけでメダルゲームや体感ゲーム、乗り物にサッと使える優待券は家族連れに嬉しい。\n\n【お得情報】\n1,000株以上は2月末基準の優待券にくわえ、有名ブランド米やイオンギフトカード、胡蝶蘭、飲むトマトの中から1つが付く。\n\n【裏技】\n優待券は施設利用料金に使えるものが多いので、入場料だけ先に優待券で済ませてメダル代を手元に残す使い方もできる。\n\n【もらえる条件】\n2月末日・8月末日基準の年2回、100株以上で優待券が届く（継続保有条件なし）。",
+      "rating": 3,
+      "unitPrice": 2000,
+      "balanceUnit": "円分",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "対象施設はモーリーファンタジー、モーリーファンタジーf、PALO（メダル〔有料イベント除く〕・体感ゲーム・定置乗り物・メリーゴーランド・スキッズガーデン・わいわいぱーく・のびっこ・よくばりパス）、キッズーナ、にこはぴきっず、OYUGIWA（入館料のみ、回数券除く）、ちきゅうのにわ、ミューの森（当社サイト現地決済の宿泊のみ、1万円ごとに1,000円分使用可）。1,000株以上の2月末基準分には優待券に加え、有名ブランド米5kg・イオンギフトカード4,000円分・胡蝶蘭・飲むトマト1,000ml3本セットのいずれか1つが付く（胡蝶蘭は6月下旬前後、ギフトカードは8月上旬前後、お米は10月下旬前後が目安）。有効期限は公式ページに記載なし。",
+      "shipMonths": "2,8",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 2000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 200,
+          "minHoldMonths": 0,
+          "amount": 4000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 300,
+          "minHoldMonths": 0,
+          "amount": 6000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 0,
+          "amount": 10000,
+          "timesPerYear": 2
+        }
+      ],
+      "tiersNote": "2月末・8月末基準の年2回、各回とも同額の優待券。1,000株以上の2月末分のみ米・ギフトカード等の副賞が付く（上の usageNotes 参照）。継続保有条件なし。",
+      "auditedAt": "2026-10-08",
+      "auditScope": "基準日・株数区分・金額・副賞の内容と発送時期・対象施設と利用条件（公式IRページで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.fantasy.co.jp/company/ircontent/stock_bond/stock_bond_03.html"
     }
   ],
   "siteOnly": [
