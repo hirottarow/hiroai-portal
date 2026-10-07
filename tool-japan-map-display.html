@@ -146,6 +146,9 @@
         function loadSettings() {
             try { return { ...DEFAULT_SETTINGS, ...(JSON.parse(localStorage.getItem(SETTINGS_KEY)) || {}) }; } catch (e) { return { ...DEFAULT_SETTINGS }; }
         }
+        function escapeHtml(s) {
+            return s.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+        }
 
         const SVGNS = 'http://www.w3.org/2000/svg';
         const mapSvg = document.getElementById('mapSvg');
@@ -215,7 +218,7 @@
             document.getElementById('progressBig').textContent = `${achievedCount} / 47`;
             document.getElementById('totalCount').textContent = entries.length;
             document.getElementById('titleLine').innerHTML = settings.title
-                ? `<span class="collected">${settings.title}</span> 制覇チャレンジ`
+                ? `<span class="collected">${escapeHtml(settings.title)}</span> 制覇チャレンジ`
                 : '日本地図 制覇チャレンジ';
 
             const isComplete = achievedCount === 47;
