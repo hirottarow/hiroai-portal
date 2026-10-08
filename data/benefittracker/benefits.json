@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "2026-10-08.1",
-  "updatedAt": "2026-10-08",
+  "dataVersion": "2026-10-09.1",
+  "updatedAt": "2026-10-09",
   "categories": [
     "外食",
     "小売",
@@ -8756,6 +8756,86 @@
       "auditScope": "基準日・株数区分・金額・副賞の内容と発送時期・対象施設と利用条件（公式IRページで確認）",
       "auditSource": "official",
       "sourceUrl": "https://www.fantasy.co.jp/company/ircontent/stock_bond/stock_bond_03.html"
+    },
+    {
+      "company": "コカ・コーラ ボトラーズジャパンHD",
+      "title": "CokeON ドリンクチケット",
+      "balance": 5,
+      "category": "自社商品",
+      "ticker": "2579",
+      "usableStores": "CokeON対応自販機",
+      "description": "【基本情報】\nコカ・コーラ系飲料の製造・販売大手。優待は「CokeON」アプリで自販機のドリンクを買えるチケットで、100株以上を半年以上持つと年2回届く。\n\n【見て楽しくなる情報】\n自販機でスマホをかざすだけで、1本分のチケットが減っていく手軽さ。\n\n【お得情報】\n継続保有が3年以上になると枚数が倍になる。\n\n【裏技】\n優待券1枚をアプリに取り込むとドリンクチケット5枚分になる。スマホを使わない家族への贈答は可（転売は禁止）。\n\n【もらえる条件】\n6月30日・12月31日の株主名簿で100株以上を半年以上継続保有（同一の株主番号で名簿に3回以上連続して記載）。",
+      "rating": 3,
+      "unitPrice": 0,
+      "balanceUnit": "枚",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "優待品はCokeONドリンクチケットのみ（製品やグッズの選択はなし）。優待券1枚でCokeONドリンクチケット5枚分をダウンロードでき、利用には「CokeON」アプリのインストールが必要。有効期限は手元のCokeONドリンクチケットに記載（期限後の再発行・代替なし）。紛失しても再発行なし。転売は禁止。12月末基準分の発送月は公式ページに記載なし。",
+      "shipMonths": "8",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 6,
+          "amount": 5,
+          "timesPerYear": 2,
+          "note": "半年以上3年未満。優待券の枚数ではなくドリンクチケットの枚数"
+        },
+        {
+          "minShares": 100,
+          "minHoldMonths": 36,
+          "amount": 10,
+          "timesPerYear": 2,
+          "note": "3年以上"
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 6,
+          "amount": 10,
+          "timesPerYear": 2,
+          "note": "半年以上3年未満"
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 36,
+          "amount": 20,
+          "timesPerYear": 2,
+          "note": "3年以上"
+        }
+      ],
+      "tiersNote": "6月末・12月末基準の年2回、各回「ドリンクチケット◯枚」（優待券1枚＝ドリンクチケット5枚分）。半年以上の継続保有が必須（未満は対象外）。証券会社の変更などで株主番号が変わると継続保有がリセットされる。公式の発送時期の記載は2026年中間（8月31日発送予定）のみ。",
+      "auditedAt": "2026-10-09",
+      "auditScope": "基準日・株数区分・継続保有の条件・優待の形態・発送時期（2026年中間分）・有効期限の扱い（公式IRページで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.ccbj-holdings.com/ir/stockholder/preferential.php"
+    },
+    {
+      "company": "ユーグレナ",
+      "title": "オンラインショップ割引クーポン",
+      "balance": 2000,
+      "category": "自社商品",
+      "ticker": "2931",
+      "usableStores": "ユーグレナ・オンラインショップ",
+      "description": "【基本情報】\nミドリムシ（ユーグレナ）の健康食品・化粧品を手がける企業。100株以上で自社ECサイトの割引クーポンと株主優待割引が使える。\n\n【見て楽しくなる情報】\n普段買っているサプリや化粧品を、クーポンと割引で試せる。\n\n【お得情報】\n税込3,500円以上の購入で2,000円引き＋送料無料。\n\n【裏技】\n株主優待割引では、定期購入が30%割引＋送料無料、都度購入が10%割引になる。\n\n【もらえる条件】\n12月末の株主名簿に100株以上で記載（継続保有条件なし）。",
+      "rating": 3,
+      "unitPrice": 2000,
+      "balanceUnit": "円分",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "当社ECサイト「ユーグレナ・オンラインショップ」で使える割引クーポン券（1枚2,000円分）。税込3,500円以上の購入1回につき2,000円割引＋送料無料。クーポン券と専用カタログは第21期定時株主総会招集ご通知に同封されて届く。株主優待割引は健康食品・化粧品の都度購入10%割引、定期購入30%割引＋送料無料、株主様限定の特別セットなど。有効期限は公式ページに記載なし。公式ページに載っているのは2025年12月末基準日分のみで、2026年12月末以降の分は公式に記載なし。",
+      "shipMonths": "3",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 2000,
+          "timesPerYear": 1
+        }
+      ],
+      "tiersNote": "12月末基準の年1回。100株以上のみ（区分は1つ）。継続保有条件なし。公式ページは2025年12月末基準日分の内容。",
+      "auditedAt": "2026-10-09",
+      "auditScope": "基準日・株数区分・金額・利用条件・発送時期（2025年12月末基準日分）（公式IRページで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.euglena.jp/ir/shareholders/"
     }
   ],
   "siteOnly": [
