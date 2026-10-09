@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "2026-10-09.1",
-  "updatedAt": "2026-10-09",
+  "dataVersion": "2026-10-10.1",
+  "updatedAt": "2026-10-10",
   "categories": [
     "外食",
     "小売",
@@ -8836,6 +8836,103 @@
       "auditScope": "基準日・株数区分・金額・利用条件・発送時期（2025年12月末基準日分）（公式IRページで確認）",
       "auditSource": "official",
       "sourceUrl": "https://www.euglena.jp/ir/shareholders/"
+    },
+    {
+      "company": "東京テアトル",
+      "title": "株主ご優待綴（映画ご招待券・提示割引証）",
+      "balance": 4,
+      "category": "レジャー",
+      "ticker": "9633",
+      "usableStores": "テアトルシネマグループなどの対象映画館、テアトルダイニング、西洋銀座、串鳥、リノまま、イオンシネマ（ACチケット）",
+      "description": "【基本情報】\n映画ご招待券と提示割引証が綴られた「株主ご優待綴」が、3月末・9月末の年2回届きます。100株で招待券4枚。\n\n【お得情報】\n招待券1枚で1名が1回無料。提示割引証では1名に限り通常料金興行が1,100円になり、都内の飲食店などの割引もあります。\n\n【もらえる条件】\n2026年9月末の権利確定分から、200株以上を1年以上・3年以上続けて持つとイオンシネマで使えるACチケットが追加されます。",
+      "rating": 4,
+      "unitPrice": 1,
+      "balanceUnit": "枚",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "映画ご招待券は1枚で1名が1回無料（3D作品・odessa EDITION は追加料金）。綴の半分は前半3ヶ月、半分は後半3ヶ月有効で、切り離し無効（表紙がないと使えない）。公開初日から最初の日曜日（祝休日が連続する場合はその祝休日）までは全館で使えず、特別興行（先行上映・舞台挨拶など）やオンライン予約も対象外。有効期間は3月末分が8月1日〜翌年1月31日、9月末分が2月1日〜同年7月31日。提示割引証は1名に限り1,100円（通常料金興行）。飲食はテアトルダイニング・串鳥が1組10%割引、西洋銀座は1組お一人1杯のウェルカムドリンク、リノままは工事代金100万円（税抜）以上で5%引き（上限10万円）。家族以外への譲渡は有償・無償とも不可。紛失しても再発行しない",
+      "shipMonths": "1,7",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 4,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 200,
+          "minHoldMonths": 0,
+          "amount": 8,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 300,
+          "minHoldMonths": 0,
+          "amount": 12,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 400,
+          "minHoldMonths": 0,
+          "amount": 16,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 0,
+          "amount": 20,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 0,
+          "amount": 32,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 2000,
+          "minHoldMonths": 0,
+          "amount": 48,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 200,
+          "minHoldMonths": 12,
+          "amount": 1,
+          "timesPerYear": 2,
+          "note": "ACチケット1枚（200株以上の区分。同一株主番号で3月末・9月末の名簿に3回連続して記載が条件）",
+          "additive": true
+        },
+        {
+          "minShares": 200,
+          "minHoldMonths": 36,
+          "amount": 2,
+          "timesPerYear": 2,
+          "note": "ACチケット2枚（同7回連続が条件）",
+          "additive": true
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 12,
+          "amount": 2,
+          "timesPerYear": 2,
+          "note": "ACチケット2枚（1,000株以上の区分。3回連続が条件）",
+          "additive": true
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 36,
+          "amount": 3,
+          "timesPerYear": 2,
+          "note": "ACチケット3枚（同7回連続が条件）",
+          "additive": true
+        }
+      ],
+      "tiersNote": "映画ご招待券の枚数は権利確定日（3月末・9月末）ごとの1回ぶん。長期保有特典のACチケットは2026年9月末の権利確定分から適用で、全国のイオンシネマで使え、優待券と同梱で1月・7月に発送予定。100株は特典の対象外",
+      "auditedAt": "2026-10-10",
+      "auditScope": "券種・株数区分（枚数）・基準日・発送時期・有効期間・長期保有特典（ACチケット）・使い方の注意・提示割引証・飲食割引・上場市場（公式IRページと会社概要で確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.theatres.co.jp/investor/complimentary/"
     }
   ],
   "siteOnly": [
