@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "2026-10-11.1",
-  "updatedAt": "2026-10-11",
+  "dataVersion": "2026-10-12.1",
+  "updatedAt": "2026-10-12",
   "categories": [
     "外食",
     "小売",
@@ -8976,6 +8976,84 @@
       "auditScope": "対象株主・割引率（株数区分）・購入額の上限・優待期間・事前登録の手順・使える場所・商品券贈呈の終了（公式IRページとお知らせPDFで確認）",
       "auditSource": "official",
       "sourceUrl": "https://www.wacoalholdings.jp/ir/welcome/"
+    },
+    {
+      "company": "エスフーズ",
+      "title": "自社グループ商品・国産牛肉",
+      "balance": 3000,
+      "category": "自社商品",
+      "ticker": "2292",
+      "usableStores": "配送",
+      "description": "【基本情報】\n食肉・食品メーカーのエスフーズが、株数に応じて自社グループ商品や国産牛肉などの現物を贈る優待です。\n\n【もらえる条件】\n500株以上で自社グループ商品（2026年2月末分は3,000円相当）、2027年2月末以降は国産牛肉5,000円相当。2,000株以上は10,000円相当の国産牛肉または国産豚肉。100株以上は優待価格での特別販売（金額券ではありません）。",
+      "rating": 3,
+      "unitPrice": 3000,
+      "balanceUnit": "円相当",
+      "quantityUnit": "セット",
+      "exchange": "東証",
+      "usageNotes": "現物（自社グループ商品・国産牛肉・国産豚肉）が届く優待で、金額券ではない。100株以上は優待価格での特別販売で、金額の優待は届かない。継続保有条件・有効期限は公式に記載なし",
+      "shipMonths": "11",
+      "auditedAt": "2026-10-12",
+      "auditScope": "株数区分・内容・金額・基準日・実施時期・単元株式数（公式IRページで確認）。継続保有条件と有効期限は公式に記載なし。上場市場は公式ページに無く未確認",
+      "auditSource": "official",
+      "sourceUrl": "https://www.sfoods.co.jp/ir06.html",
+      "tiers": [
+        {
+          "minShares": 500,
+          "minHoldMonths": 0,
+          "amount": 3000,
+          "timesPerYear": 1,
+          "note": "2026年2月末分は3,000円相当の自社グループ商品。2027年2月末以降は5,000円相当の国産牛肉"
+        },
+        {
+          "minShares": 2000,
+          "minHoldMonths": 0,
+          "amount": 10000,
+          "timesPerYear": 1,
+          "note": "国産牛肉または国産豚肉"
+        }
+      ],
+      "tiersNote": "2月末基準の年1回。500〜1,999株は11月初旬、2,000株以上は11月中旬に実施。100株以上の8月末・2月末は優待価格での特別販売で現物の贈呈ではない（実施は2月末分が6月末〜8月末、8月末分が10月末〜12月末）。単元株式数は100株"
+    },
+    {
+      "company": "アークランズ",
+      "title": "株主ご優待券",
+      "balance": 1100,
+      "category": "小売",
+      "ticker": "9842",
+      "usableStores": "アークランズ（スーパーセンタームサシなどの小売店）、かつや（アークランドサービスの飲食店。券売機店・海外店舗は不可）",
+      "description": "【基本情報】\nアークランズグループの小売店と飲食店の両方で使える550円券の優待券です。\n\n【もらえる条件】\n2月末・8月末に100株（1単元）以上を保有する株主に贈られ、100株で1,100円分（550円券2枚）、200株で2,200円分、1,000株で11,000円分です。",
+      "rating": 3,
+      "unitPrice": 550,
+      "balanceUnit": "円分",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "550円券。小売店と飲食店で共通で使える（海外店舗・券売機店は不可）。使える店舗は公式の店舗一覧PDFを確認。2026年2月末分の優待券の有効期限は2026年11月30日。他の基準日の期限は公式に記載なし",
+      "shipMonths": "5,10",
+      "auditedAt": "2026-10-12",
+      "auditScope": "株数区分・券種・金額・基準日・発送月・使える店舗（公式IRページと店舗一覧PDFで確認）。継続保有条件は公式に記載なし",
+      "auditSource": "official",
+      "sourceUrl": "https://www.arclands.co.jp/ja/ir/stock/yuutai.html",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 1100,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 200,
+          "minHoldMonths": 0,
+          "amount": 2200,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 0,
+          "amount": 11000,
+          "timesPerYear": 2
+        }
+      ],
+      "tiersNote": "2月末・8月末の年2回。2月末分は5月下旬頃、8月末分は10月下旬頃に発送。ジョイフル本田との共同持株会社設立（株式移転）を公式が発表済みで、2026-07-03 付の公式発表では東証の上場廃止日は未定（当初予定は2027年2月25日）。設立後の優待の扱いは公式に記載なし"
     }
   ],
   "siteOnly": [
