@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "2026-10-14.1",
-  "updatedAt": "2026-10-14",
+  "dataVersion": "2026-10-15.1",
+  "updatedAt": "2026-10-15",
   "categories": [
     "外食",
     "小売",
@@ -9151,6 +9151,261 @@
         }
       ],
       "tiersNote": "毎年5月末の基準日の1回ぶん。1年以上の継続保有が条件（5月末とその前年の5月末・11月末のすべてで同一株主番号で100株以上）。貸株や証券会社の変更で株主番号が変わると対象外"
+    },
+    {
+      "company": "B-Rサーティワンアイスクリーム",
+      "title": "株主優待eGift（電子ギフト）",
+      "balance": 1200,
+      "category": "外食",
+      "ticker": "2268",
+      "usableStores": "サーティワンアイスクリーム店舗（弊社製品との引換え）",
+      "description": "【基本情報】\nサーティワンアイスクリームの店舗で、アイスクリームと引き換えられる電子ギフト（eGift）が年2回届きます。\n\n【見て楽しくなる情報】\n二次元バーコードを開いて店頭で見せるだけ。フレーバーを選ぶ時間がそのまま優待の楽しみです。\n\n【お得情報】\n100株で600円×2枚、1,000株で600円×5枚。年2回（6月末・12月末）の権利確定です。\n\n【裏技】\nバーコードは紛失しても再発行できません。届いたらブックマークに保存しておくと安心です。",
+      "rating": 3,
+      "unitPrice": 600,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "電子ギフト（600円×枚数）。店舗でバーコードを提示して商品と引き換える。ご利用の際は別途消費税がかかる。バーコードは紛失しても再発行できない。有効期限は公式ページに記載なし。6月末分は9月中旬、12月末分は翌年3月末に送付予定",
+      "auditedAt": "2026-10-15",
+      "auditScope": "券種・金額・株数区分・基準日・発送時期・使い方の注意（公式IRページで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.31ice.co.jp/contents/company/ir/individual/investors/",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 1200,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 0,
+          "amount": 1800,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 0,
+          "amount": 3000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 5000,
+          "minHoldMonths": 0,
+          "amount": 6000,
+          "timesPerYear": 2
+        }
+      ],
+      "tiersNote": "継続保有条件なし。6月末・12月末の年2回で、金額は1回ぶん（600円券の枚数は2・3・5・10枚）",
+      "shipMonths": "9,3"
+    },
+    {
+      "company": "丸千代山岡家",
+      "title": "株主優待券（ラーメン無料券）",
+      "balance": 2,
+      "category": "外食",
+      "ticker": "3399",
+      "usableStores": "ラーメン山岡家、味噌ラーメン山岡家、煮干しラーメン山岡家",
+      "description": "【基本情報】\n山岡家のラーメン1杯と引き換えられる無料券が年2回届きます。200株以上は乾麺セットかお米への切り替えも選べます。\n\n【見て楽しくなる情報】\n1枚でお好きなラーメン1杯。大盛・中盛・セットメニューも対象で、自分の好きな一杯に使えます。\n\n【お得情報】\n100株で2枚、2,000株以上なら9枚。1月末・7月末の年2回です。\n\n【裏技】\n200株以上は、お米や乾麺セットとの選択制。ラーメンを食べに行けない時期はそちらに切り替えられます。",
+      "rating": 3,
+      "unitPrice": 1,
+      "balanceUnit": "枚",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "ラーメン無料券1枚でお好きなラーメン1杯（570円～1,490円、大盛・中盛・セットメニュー含む）と引き換え。金額は固定でない。その他の注意は券の裏面。有効期限は公式ページに記載なし（券裏面）。200株以上はお米・乾麺セットとの選択制",
+      "auditedAt": "2026-10-15",
+      "auditScope": "券種・株数区分・基準日・発送時期・使える店・使い方の注意・上場市場（公式IRページで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://maruchiyo.yamaokaya.com/ir/incentives/",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 2,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 200,
+          "minHoldMonths": 0,
+          "amount": 3,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 0,
+          "amount": 5,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 0,
+          "amount": 7,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 2000,
+          "minHoldMonths": 0,
+          "amount": 9,
+          "timesPerYear": 2
+        }
+      ],
+      "tiersNote": "継続保有条件なし。1月末・7月末の年2回で、枚数は1回ぶん。200株以上はラーメン無料券の代わりにお米（2・4・6・8kg）か乾麺セット（1・2・3・4個）を選べる。100株台は2枚固定",
+      "shipMonths": "6,7,11,12"
+    },
+    {
+      "company": "第一交通産業",
+      "title": "株主ご優待クーポン券シート（タクシー）",
+      "balance": 1000,
+      "category": "交通",
+      "ticker": "9035",
+      "usableStores": "第一交通産業グループ提携のタクシー（全国）",
+      "description": "【基本情報】\n全国のNo.1タクシーネットワーク提携のタクシーで使えるクーポン券シートが年2回届きます。1枚1,000円分です。\n\n【見て楽しくなる情報】\n出張や旅行先でも、提携タクシーなら全国で使えます。\n\n【お得情報】\n100株で1枚、保有3年以上になると1,000株以上で枚数が増えます。2026年3月末基準分から有効期限は1年に延びました。\n\n【裏技】\n券面額の範囲内で「逸品マルシェ掲載商品」と引き換えられます（株主限定）。沖縄の那覇バス・琉球バス交通の指定営業所ではOKICAへのチャージにも使えます。",
+      "rating": 4,
+      "unitPrice": 1000,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "福証",
+      "usageNotes": "1枚1,000円分のタクシークーポン券（シート方式）。贈呈翌年の6月末（3月末基準分）／12月末（9月末基準分）まで有効（2026年3月31日基準分から有効期限1年）。券面額の範囲内で「逸品マルシェ掲載商品」と引き換え可。那覇バス・琉球バス交通の指定営業所でOKICAにチャージ可。500株以上はマイホーム割引券（分譲マンション・戸建建物の1%、1,000株以上は2%）、ゴルフ練習場の利用券（400円分）も付く",
+      "auditedAt": "2026-10-15",
+      "auditScope": "券種・金額・株数区分・継続保有の条件と額・基準日・贈呈時期・有効期限・使える先・上場市場（公式IRページ、2026-02-25 の制度変更の適時開示PDFで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.daiichi-koutsu.co.jp/ir/shareholder_benefit",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 1000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 600,
+          "minHoldMonths": 0,
+          "amount": 2000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 0,
+          "amount": 3000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 2000,
+          "minHoldMonths": 0,
+          "amount": 5000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 3000,
+          "minHoldMonths": 0,
+          "amount": 8000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 4000,
+          "minHoldMonths": 0,
+          "amount": 10000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 5000,
+          "minHoldMonths": 0,
+          "amount": 13000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 6000,
+          "minHoldMonths": 0,
+          "amount": 15000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 7000,
+          "minHoldMonths": 0,
+          "amount": 18000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 8000,
+          "minHoldMonths": 0,
+          "amount": 20000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 9000,
+          "minHoldMonths": 0,
+          "amount": 25000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 10001,
+          "minHoldMonths": 0,
+          "amount": 30000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 36,
+          "amount": 4000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 2000,
+          "minHoldMonths": 36,
+          "amount": 8000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 3000,
+          "minHoldMonths": 36,
+          "amount": 12000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 4000,
+          "minHoldMonths": 36,
+          "amount": 15000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 5000,
+          "minHoldMonths": 36,
+          "amount": 20000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 6000,
+          "minHoldMonths": 36,
+          "amount": 23000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 7000,
+          "minHoldMonths": 36,
+          "amount": 27000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 8000,
+          "minHoldMonths": 36,
+          "amount": 30000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 9000,
+          "minHoldMonths": 36,
+          "amount": 38000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 10001,
+          "minHoldMonths": 36,
+          "amount": 45000,
+          "timesPerYear": 2
+        }
+      ],
+      "tiersNote": "3月末・9月末の年2回で、金額は1回ぶん（1枚=1,000円）。保有3年以上は3月末・9月末の直近株主名簿に同一株主番号で連続7回以上記載された場合（段階は絶対枚数で、上乗せではない。100〜599株と600〜999株は3年未満と同じ）。マイホーム割引券・ゴルフ練習場利用券は金額に換算していない",
+      "shipMonths": "6,12"
     }
   ],
   "siteOnly": [
