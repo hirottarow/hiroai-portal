@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "2026-10-15.1",
-  "updatedAt": "2026-10-15",
+  "dataVersion": "2026-10-16.1",
+  "updatedAt": "2026-10-16",
   "categories": [
     "外食",
     "小売",
@@ -9704,7 +9704,7 @@
       "siteGroup": "QUOカード",
       "shipMonths": "12",
       "validUntil": "2026-12",
-      "auditedAt": "2026-10-03",
+      "auditedAt": "2026-10-16",
       "quo": {
         "tiers": [
           {
