@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "2026-10-17.1",
-  "updatedAt": "2026-10-17",
+  "dataVersion": "2026-10-18.1",
+  "updatedAt": "2026-10-18",
   "categories": [
     "外食",
     "小売",
@@ -9447,6 +9447,238 @@
       ],
       "tiersNote": "継続保有条件の記載なし。毎年11月末基準・年1回で、2026年11月末が初回。300株未満は対象外。制度の内容は変更・中止される場合がある",
       "shipMonths": "2"
+    },
+    {
+      "company": "ロック・フィールド",
+      "title": "そうざい券",
+      "balance": 500,
+      "category": "小売",
+      "ticker": "2910",
+      "usableStores": "全国のロック・フィールド店舗（オンラインショップ・一部の店舗・海外店舗は不可）",
+      "description": "【基本情報】\nロック・フィールドの店舗で使える「そうざい券」が、4月末・10月末の基準日ごとに年2回届きます。100株以上を1年以上続けて持っていることが条件です。\n\n【見て楽しくなる情報】\n全国のロック・フィールド店舗で使えます。2026年4月30日時点の対象株主から現行の条件（継続1年以上）を適用しています。\n\n【お得情報】\n100株で500円分、5年以上持つと1,000円分に増えます。株数が増えるほど額が大きくなり、1,000株以上では5,000円分（5年以上は7,500円分）です。\n\n【裏技】\n継続1年は「同じ株主番号で基準日に連続3回」。貸株や証券会社の変更で株主番号が変わると数え直しになります。",
+      "rating": 3,
+      "unitPrice": 0,
+      "balanceUnit": "円分",
+      "quantityUnit": "回",
+      "exchange": "東証",
+      "usageNotes": "そうざい券（贈呈額は「円分」。券面額の刻みは公式に記載なし）。4月末基準分は7月下旬、10月末基準分は1月下旬に贈呈。使えない店舗: ロック・フィールドオンラインショップ、東京都プレッセプレミアム東京ミッドタウン店・麻布台ヒルズ店・キッザニア東京店、愛知県ドンク＆RF1高岳店、兵庫県キッザニア甲子園店、福岡県キッザニア福岡店、海外店舗、とよおか採れたて元気むら内の神戸ポテト工場販売所、催事など期間限定の出店店舗（一部は使用可）。有効期限は公式に記載なし",
+      "shipMonths": "7,1",
+      "auditedAt": "2026-10-18",
+      "auditScope": "券種・金額（贈呈額一覧表）・株数区分・継続保有の条件（1年以上・5年以上）・基準日・贈呈時期・使えない店舗（公式IRページで確認。有効期限は記載なし）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.rockfield.co.jp/ir/stock/yutai/",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 12,
+          "amount": 500,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 200,
+          "minHoldMonths": 12,
+          "amount": 1000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 12,
+          "amount": 1500,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 12,
+          "amount": 5000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 3000,
+          "minHoldMonths": 12,
+          "amount": 8000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 5000,
+          "minHoldMonths": 12,
+          "amount": 15000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 100,
+          "minHoldMonths": 60,
+          "amount": 1000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 200,
+          "minHoldMonths": 60,
+          "amount": 1500,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 60,
+          "amount": 2500,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 60,
+          "amount": 7500,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 3000,
+          "minHoldMonths": 60,
+          "amount": 11000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 5000,
+          "minHoldMonths": 60,
+          "amount": 17500,
+          "timesPerYear": 2
+        }
+      ],
+      "tiersNote": "4月末・10月末の年2回で、金額は1回ぶん。継続1年以上は基準日（4月30日・10月31日）の株主名簿に同一株主番号で連続3回以上、5年以上は連続11回以上の記載。100株以上を1年未満しか持っていない株主は対象外（2024年12月改定の表）。2026年4月30日時点の対象株主から現行の条件を適用"
+    },
+    {
+      "company": "カンロ",
+      "title": "株主優待（選べる3コース）",
+      "balance": 1000,
+      "category": "自社商品",
+      "ticker": "2216",
+      "usableStores": "配送（自社商品の詰め合わせ）／国連WFPへの寄付",
+      "description": "【基本情報】\n毎年12月31日の株主名簿に300株以上で記載された株主が、3つのコースから選べます。Aコース=カンロバラエティセット（飴・グミ・素材菓子）、Bコース=ヒトツブカンロ満喫セット（直営店「ヒトツブカンロ」の商品）、Cコース=国連WFPへの寄付です。\n\n【見て楽しくなる情報】\nどのコースも金額は同じ。お菓子を受け取っても、寄付に回してもかまいません。\n\n【お得情報】\n300株で1,000円相当、1,800株で2,000円相当、3,000株で3,000円相当。3,000株以上を3年以上持つと5,000円相当になります。\n\n【裏技】\n3年以上の判定は、3,000株以上の保有記録が同一株主番号で7回以上連続している場合。2025年6月30日までの名簿は1,000株以上の記録でも数えられます。",
+      "rating": 3,
+      "unitPrice": 1000,
+      "balanceUnit": "円相当",
+      "quantityUnit": "セット",
+      "exchange": "東証",
+      "usageNotes": "Aコース（カンロバラエティセット）・Bコース（ヒトツブカンロ満喫セット）は当社商品の詰め合わせで、1セットで使い切り。Cコースは国連WFP「学校給食支援」への寄付（カンロが株主に代わって寄付するため株主の負担なし・領収書の発行なし）。発送時期・有効期限は公式ページに記載なし",
+      "auditedAt": "2026-10-18",
+      "auditScope": "対象株数・3コースの内容・株数区分・継続保有3年以上の条件と額・基準日（公式IRページで確認。発送時期・期限は記載なし）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.kanro.co.jp/ir/individual/stock_benefit/",
+      "tiers": [
+        {
+          "minShares": 300,
+          "minHoldMonths": 0,
+          "amount": 1000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 1800,
+          "minHoldMonths": 0,
+          "amount": 2000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 3000,
+          "minHoldMonths": 0,
+          "amount": 3000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 3000,
+          "minHoldMonths": 36,
+          "amount": 5000,
+          "timesPerYear": 1
+        }
+      ],
+      "tiersNote": "毎年12月31日基準の年1回で、金額は1回ぶん。300株未満は対象外。継続3年以上は、基準日（12月31日・6月30日）の株主名簿に3,000株以上の保有記録が同一株主番号で7回以上連続（2025年6月30日までの名簿は1,000株以上の記録でも可）。Cコース（寄付）は同じ額を寄付"
+    },
+    {
+      "company": "ブルボン",
+      "title": "自社グループ商品詰合せ＋オンラインショップクーポン",
+      "balance": 1200,
+      "category": "自社商品",
+      "ticker": "2208",
+      "usableStores": "配送（自社グループ商品詰合せ）／ブルボンオンラインショップ（優待クーポン）",
+      "description": "【基本情報】\n毎年9月末の株主に、自社グループ商品詰合せが年1回、11月下旬〜12月中旬に届きます。2026年9月30日の株主から制度が変わり、株数と継続保有期間（6ヵ月以上3年未満／3年以上）で内容が決まります。\n\n【見て楽しくなる情報】\n200株以上は3,000円相当の詰合せ。株数や保有期間が増えると、ブルボンオンラインショップで使えるクーポンも付きます。\n\n【お得情報】\n3年以上は新設の区分で、クーポンが多くなります。5,000株以上は新潟県産コシヒカリ5kgも付きます。\n\n【裏技】\nクーポンはブルボンオンラインショップ専用（会員登録とログインが必要）で、1枚1回限り、おつりは出ません。",
+      "rating": 3,
+      "unitPrice": 1200,
+      "balanceUnit": "円相当",
+      "quantityUnit": "セット",
+      "exchange": "東証",
+      "usageNotes": "詰合せは1セットで使い切り。優待クーポンはブルボンオンラインショップのみ（電話注文は不可・会員登録とログイン必要）、1枚につき1回限り、換金・他クーポンとの併用不可、利用額が額面を下回ってもおつりなし、再発行なし。クーポンの有効期限は券面記載の期日まで",
+      "shipMonths": "11,12",
+      "auditedAt": "2026-10-18",
+      "auditScope": "株数区分（画像の表を目視で確認）・継続保有の条件と内容・基準日・送付時期・クーポンの利用条件（公式IRページで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.bourbon.co.jp/ir/stock/shareholder_benefits.html",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 6,
+          "amount": 1200,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 200,
+          "minHoldMonths": 6,
+          "amount": 3000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 6,
+          "amount": 3000,
+          "timesPerYear": 1,
+          "note": "オンラインショップクーポン1,000円分付き"
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 6,
+          "amount": 3000,
+          "timesPerYear": 1,
+          "note": "オンラインショップクーポン3,000円分付き"
+        },
+        {
+          "minShares": 5000,
+          "minHoldMonths": 6,
+          "amount": 3000,
+          "timesPerYear": 1,
+          "note": "オンラインショップクーポン3,000円分＋新潟県産コシヒカリ5kg付き"
+        },
+        {
+          "minShares": 100,
+          "minHoldMonths": 36,
+          "amount": 1200,
+          "timesPerYear": 1,
+          "note": "オンラインショップクーポン500円分付き"
+        },
+        {
+          "minShares": 200,
+          "minHoldMonths": 36,
+          "amount": 3000,
+          "timesPerYear": 1,
+          "note": "オンラインショップクーポン1,000円分付き"
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 36,
+          "amount": 3000,
+          "timesPerYear": 1,
+          "note": "オンラインショップクーポン2,000円分付き"
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 36,
+          "amount": 3000,
+          "timesPerYear": 1,
+          "note": "オンラインショップクーポン5,000円分付き"
+        },
+        {
+          "minShares": 5000,
+          "minHoldMonths": 36,
+          "amount": 3000,
+          "timesPerYear": 1,
+          "note": "オンラインショップクーポン5,000円分＋新潟県産コシヒカリ5kg付き"
+        }
+      ],
+      "tiersNote": "毎年9月末基準の年1回で、金額は商品詰合せの額（クーポンは別・note に記載）。6ヵ月以上3年未満は基準日（3月31日・9月30日）の株主名簿に同一株主番号で連続2回以上、3年以上は連続7回以上（いずれも100株以上）の記録。2026年9月30日現在の株主から新制度。クーポンの金額・コシヒカリの有無は段の note に記載（金額には含めていない）"
     }
   ],
   "siteOnly": [
