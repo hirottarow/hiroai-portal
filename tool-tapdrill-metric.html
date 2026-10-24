@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>メートルねじタップ下穴径一覧表（JIS B 1004準拠） ｜ ひろAI工房</title>
+    <meta name="description" content="メートル並目・細目ねじ（M1〜M24）のタップ加工用下穴ドリル径・下穴径許容範囲の早見表。JIS規格（JIS B 1004）に準拠した一次情報データ。現場で素早く検索・照会できます。">
+    <link rel="canonical" href="https://hirottarow.github.io/hiroai-portal/tool-tapdrill-metric.html">
+    <meta property="og:title" content="メートルねじタップ下穴径一覧表（JIS B 1004準拠） ｜ ひろAI工房">
+    <meta property="og:description" content="メートル並目・細目ねじ（M1〜M24）のタップ加工用下穴ドリル径早見表。JIS B 1004準拠。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hirottarow.github.io/hiroai-portal/tool-tapdrill-metric.html">
+    <meta property="og:image" content="https://hirottarow.github.io/hiroai-portal/logo.png">
+    <meta name="twitter:card" content="summary">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FAF6F0;
+            --primary-color: #8B5A2B;
+            --secondary-color: #5A4A42;
+            --text-color: #2C2520;
+            --card-bg: #FFFFFF;
+            --accent-color: #EAD8C3;
+            --border-color: #E2D7CE;
+            --font-outfit: 'Outfit', 'Noto Sans JP', sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: var(--font-outfit);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        header {
+            background-color: rgba(90, 74, 66, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-logo {
+            color: #FFFFFF;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .header-links a {
+            color: #EAD8C3;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 0.9rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            color: var(--secondary-color);
+            font-size: 1.6rem;
+            margin-bottom: 12px;
+        }
+
+        .lead {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+        }
+
+        .search-box {
+            background: var(--card-bg);
+            padding: 16px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 24px;
+            border: 1px solid var(--border-color);
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 1.05rem;
+            border: 2px solid var(--accent-color);
+            border-radius: 8px;
+            outline: none;
+            font-family: inherit;
+        }
+
+        .search-input:focus {
+            border-color: var(--primary-color);
+        }
+
+        .table-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            overflow-x: auto;
+            border: 1px solid var(--border-color);
+            margin-bottom: 24px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+
+        th, td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #F0EAE1;
+        }
+
+        th {
+            background-color: #F5EFEB;
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+
+        tr:hover {
+            background-color: #FAF6F0;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            font-size: 0.75rem;
+            border-radius: 4px;
+            background: #EAD8C3;
+            color: #5A4A42;
+            font-weight: 600;
+        }
+
+        .drill-size {
+            font-weight: 700;
+            color: #8B5A2B;
+            font-size: 1.05rem;
+        }
+
+        .source-box {
+            background: #F3ECE6;
+            padding: 16px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .source-box h2 {
+            font-size: 0.95rem;
+            color: var(--secondary-color);
+            margin-bottom: 6px;
+        }
+
+        .no-result {
+            padding: 30px;
+            text-align: center;
+            color: #999;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="header-logo">ひろAI工房</a>
+        <div class="header-links">
+            <a href="tools.html">ツール一覧</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>メートルねじ タップ下穴径一覧表（早見表）</h1>
+        <p class="lead">切削タップ加工における推奨下穴ドリル径および許容範囲です。JIS B 1004規格に基づき、現場で頻出するサイズ（M1〜M24）を整理しています。</p>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" class="search-input" placeholder="サイズで絞り込み（例: M8, M6, 1.25 等）" autofocus>
+        </div>
+
+        <div class="table-card">
+            <table id="drillTable">
+                <thead>
+                    <tr>
+                        <th>呼び記号</th>
+                        <th>ピッチ (mm)</th>
+                        <th>種別</th>
+                        <th>推奨ドリル径 (mm)</th>
+                        <th>下穴径許容範囲 (mm)</th>
+                        <th>参考下穴計算式</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>M1</strong></td><td>0.25</td><td><span class="badge">並目</span></td><td class="drill-size">0.75</td><td>0.729 〜 0.785</td><td>呼び径 − ピッチ</td></tr>
+                    <tr><td><strong>M1.2</strong></td><td>0.25</td><td><span class="badge">並目</span></td><td class="drill-size">0.95</td><td>0.929 〜 0.985</td><td>呼び径 − ピッチ</td></tr>
+                    <tr><td><strong>M1.4</strong></td><td>0.3</td><td><span class="badge">並目</span></td><td class="drill-size">1.1</td><td>1.075 〜 1.142</td><td>呼び径 − ピッチ</td></tr>
+                    <tr><td><strong>M1.6</strong></td><td>0.35</td><td><span class="badge">並目</span></td><td class="drill-size">1.25</td><td>1.221 〜 1.321</td><td>呼び径 − ピッチ</td></tr>
+                    <tr><td><strong>M2</strong></td><td>0.4</td><td><span class="badge">並目</span></td><td class="drill-size">1.6</td><td>1.567 〜 1.679</td><td>呼び径 − ピッチ</td></tr>
+                    <tr><td><strong>M2.5</strong></td><td>0.45</td><td><span class="badge">並目</span></td><td class="drill-size">2.05</td><td>2.013 〜 2.138</td><td>呼び径 − ピッチ</td></tr>
+                    <tr><td><strong>M3</strong></td><td>0.5</td><td><span class="badge">並目</span></td><td class="drill-size">2.5</td><td>2.459 〜 2.599</td><td>呼び径 − ピッチ</td></tr>
+                    <tr><td><strong>M4</strong></td><td>0.7</td><td><span class="badge">並目</span></td><td class="drill-size">3.3</td><td>3.242 〜 3.422</td><td>呼び径 − ピッチ</td></tr>
+                    <tr><td><strong>M5</strong></td><td>0.8</td><td><span class="badge">並目</span></td><td class="drill-size">4.2</td><td>4.134 〜 4.334</td><td>呼び径 − ピッチ</td></tr>
+                    <tr><td><strong>M6</strong></td><td>1.0</td><td><span class="badge">並目</span></td><td class="drill-size">5.0</td><td>4.917 〜 5.153</td><td>呼び径 − ピッチ</td></tr>
+                    <tr><td><strong>M8</strong></td><td>1.25</td><td><span class="badge">並目</span></td><td class="drill-size">6.8</td><td>6.647 〜 6.912</td><td>常用: 6.8 (6.7〜6.9)</td></tr>
+                    <tr><td><strong>M8</strong></td><td>1.0</td><td><span class="badge">細目</span></td><td class="drill-size">7.0</td><td>6.917 〜 7.153</td><td>呼び径 − ピッチ</td></tr>
+                    <tr><td><strong>M10</strong></td><td>1.5</td><td><span class="badge">並目</span></td><td class="drill-size">8.5</td><td>8.376 〜 8.676</td><td>常用: 8.5 (8.4〜8.7)</td></tr>
+                    <tr><td><strong>M10</strong></td><td>1.25</td><td><span class="badge">細目</span></td><td class="drill-size">8.8</td><td>8.647 〜 8.912</td><td>常用: 8.8</td></tr>
+                    <tr><td><strong>M12</strong></td><td>1.75</td><td><span class="badge">並目</span></td><td class="drill-size">10.3</td><td>10.106 〜 10.441</td><td>常用: 10.2〜10.3</td></tr>
+                    <tr><td><strong>M12</strong></td><td>1.5</td><td><span class="badge">細目</span></td><td class="drill-size">10.5</td><td>10.376 〜 10.676</td><td>常用: 10.5</td></tr>
+                    <tr><td><strong>M14</strong></td><td>2.0</td><td><span class="badge">並目</span></td><td class="drill-size">12.0</td><td>11.835 〜 12.210</td><td>呼び径 − ピッチ</td></tr>
+                    <tr><td><strong>M16</strong></td><td>2.0</td><td><span class="badge">並目</span></td><td class="drill-size">14.0</td><td>13.835 〜 14.210</td><td>呼び径 − ピッチ</td></tr>
+                    <tr><td><strong>M18</strong></td><td>2.5</td><td><span class="badge">並目</span></td><td class="drill-size">15.5</td><td>15.294 〜 15.744</td><td>常用: 15.5</td></tr>
+                    <tr><td><strong>M20</strong></td><td>2.5</td><td><span class="badge">並目</span></td><td class="drill-size">17.5</td><td>17.294 〜 17.744</td><td>常用: 17.5</td></tr>
+                    <tr><td><strong>M22</strong></td><td>2.5</td><td><span class="badge">並目</span></td><td class="drill-size">19.5</td><td>19.294 〜 19.744</td><td>常用: 19.5</td></tr>
+                    <tr><td><strong>M24</strong></td><td>3.0</td><td><span class="badge">並目</span></td><td class="drill-size">21.0</td><td>20.752 〜 21.252</td><td>呼び径 − ピッチ</td></tr>
+                </tbody>
+            </table>
+            <div id="noResult" class="no-result">一致するねじ規格が見つかりません。</div>
+        </div>
+
+        <div class="source-box">
+            <h2>出典・技術的留意事項</h2>
+            <p>・<strong>規格基準</strong>: JIS B 1004: 2020「メートル普通目ねじの下穴径」及び JIS B 0205-2「メートル並目ねじ」に準拠。</p>
+            <p>・<strong>下穴径の選定</strong>: 一般的なめねじ加工（ひっかかり率おおむね75〜85%を想定）における推奨ドリル径です。切削タップ加工用であり、転造タップ（ロールタップ）には適用できません。高硬度材や薄板など被削材・締結要件に応じて適宜調整してください。</p>
+            <p>※本ページは規格数値の参照用です。JIS本文の転載は行っておりません。</p>
+        </div>
+    </div>
+
+    <script>
+        const input = document.getElementById('searchInput');
+        const table = document.getElementById('drillTable');
+        const rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+        const noResult = document.getElementById('noResult');
+
+        input.addEventListener('input', function() {
+            const query = this.value.trim().toUpperCase().replace(/×/g, 'X');
+            let visibleCount = 0;
+
+            for (let i = 0; i < rows.length; i++) {
+                const text = rows[i].textContent.toUpperCase().replace(/×/g, 'X');
+                if (text.includes(query)) {
+                    rows[i].style.display = '';
+                    visibleCount++;
+                } else {
+                    rows[i].style.display = 'none';
+                }
+            }
+
+            if (visibleCount === 0) {
+                noResult.style.display = 'block';
+            } else {
+                noResult.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
