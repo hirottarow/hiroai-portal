@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>メートルねじタップ下穴径一覧表（JIS B 1004準拠） ｜ ひろAI工房</title>
-    <meta name="description" content="メートル並目・細目ねじ（M1〜M24）のタップ加工用下穴ドリル径・下穴径許容範囲の早見表。JIS規格（JIS B 1004）に準拠した一次情報データ。現場で素早く検索・照会できます。">
+    <title>メートルねじタップ下穴径一覧表（JIS規格に基づく早見表） ｜ ひろAI工房</title>
+    <meta name="description" content="メートル並目・主要細目ねじ（M1〜M24）のタップ加工用下穴ドリル径および内ねじ内径許容限界（6H）の早見表。JIS B 1004およびJIS B 0209の考え方に基づく技術データ。">
     <link rel="canonical" href="https://hirottarow.github.io/hiroai-portal/tool-tapdrill-metric.html">
-    <meta property="og:title" content="メートルねじタップ下穴径一覧表（JIS B 1004準拠） ｜ ひろAI工房">
-    <meta property="og:description" content="メートル並目・細目ねじ（M1〜M24）のタップ加工用下穴ドリル径早見表。JIS B 1004準拠。">
+    <meta property="og:title" content="メートルねじタップ下穴径一覧表（JIS規格に基づく早見表） ｜ ひろAI工房">
+    <meta property="og:description" content="メートル並目・主要細目ねじ（M1〜M24）のタップ加工用下穴ドリル径早見表。内ねじ内径6H許容限界明記。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hirottarow.github.io/hiroai-portal/tool-tapdrill-metric.html">
     <meta property="og:image" content="https://hirottarow.github.io/hiroai-portal/logo.png">
@@ -64,7 +64,7 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 920px;
             margin: 30px auto;
             padding: 0 20px;
         }
@@ -117,7 +117,7 @@
             width: 100%;
             border-collapse: collapse;
             text-align: left;
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             white-space: nowrap;
         }
 
@@ -146,6 +146,11 @@
             font-weight: 600;
         }
 
+        .badge-fine {
+            background: #E0E7FF;
+            color: #3730A3;
+        }
+
         .drill-size {
             font-weight: 700;
             color: #8B5A2B;
@@ -154,16 +159,20 @@
 
         .source-box {
             background: #F3ECE6;
-            padding: 16px;
+            padding: 20px;
             border-radius: 8px;
             font-size: 0.85rem;
             color: #555;
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
         .source-box h2 {
             font-size: 0.95rem;
             color: var(--secondary-color);
+            margin-bottom: 8px;
+        }
+
+        .source-box p {
             margin-bottom: 6px;
         }
 
@@ -185,8 +194,8 @@
     </header>
 
     <div class="container">
-        <h1>メートルねじ タップ下穴径一覧表（早見表）</h1>
-        <p class="lead">切削タップ加工における推奨下穴ドリル径および許容範囲です。JIS B 1004規格に基づき、現場で頻出するサイズ（M1〜M24）を整理しています。</p>
+        <h1>メートルねじ タップ下穴径一覧表（並目・主要細目）</h1>
+        <p class="lead">切削タップ加工における推奨下穴ドリル径および内ねじ内径の許容限界（6H）です。JIS規格（JIS B 1004 / JIS B 0205-4 / JIS B 0209）の考え方に基づき、現場で頻出するサイズ（M1〜M24）を整理しています。</p>
 
         <div class="search-box">
             <input type="text" id="searchInput" class="search-input" placeholder="サイズで絞り込み（例: M8, M6, 1.25 等）" autofocus>
@@ -200,33 +209,33 @@
                         <th>ピッチ (mm)</th>
                         <th>種別</th>
                         <th>推奨ドリル径 (mm)</th>
-                        <th>下穴径許容範囲 (mm)</th>
-                        <th>参考下穴計算式</th>
+                        <th>内ねじ内径の許容限界 (6H) (mm)</th>
+                        <th>備考・目安</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td><strong>M1</strong></td><td>0.25</td><td><span class="badge">並目</span></td><td class="drill-size">0.75</td><td>0.729 〜 0.785</td><td>呼び径 − ピッチ</td></tr>
-                    <tr><td><strong>M1.2</strong></td><td>0.25</td><td><span class="badge">並目</span></td><td class="drill-size">0.95</td><td>0.929 〜 0.985</td><td>呼び径 − ピッチ</td></tr>
-                    <tr><td><strong>M1.4</strong></td><td>0.3</td><td><span class="badge">並目</span></td><td class="drill-size">1.1</td><td>1.075 〜 1.142</td><td>呼び径 − ピッチ</td></tr>
-                    <tr><td><strong>M1.6</strong></td><td>0.35</td><td><span class="badge">並目</span></td><td class="drill-size">1.25</td><td>1.221 〜 1.321</td><td>呼び径 − ピッチ</td></tr>
-                    <tr><td><strong>M2</strong></td><td>0.4</td><td><span class="badge">並目</span></td><td class="drill-size">1.6</td><td>1.567 〜 1.679</td><td>呼び径 − ピッチ</td></tr>
-                    <tr><td><strong>M2.5</strong></td><td>0.45</td><td><span class="badge">並目</span></td><td class="drill-size">2.05</td><td>2.013 〜 2.138</td><td>呼び径 − ピッチ</td></tr>
-                    <tr><td><strong>M3</strong></td><td>0.5</td><td><span class="badge">並目</span></td><td class="drill-size">2.5</td><td>2.459 〜 2.599</td><td>呼び径 − ピッチ</td></tr>
-                    <tr><td><strong>M4</strong></td><td>0.7</td><td><span class="badge">並目</span></td><td class="drill-size">3.3</td><td>3.242 〜 3.422</td><td>呼び径 − ピッチ</td></tr>
-                    <tr><td><strong>M5</strong></td><td>0.8</td><td><span class="badge">並目</span></td><td class="drill-size">4.2</td><td>4.134 〜 4.334</td><td>呼び径 − ピッチ</td></tr>
-                    <tr><td><strong>M6</strong></td><td>1.0</td><td><span class="badge">並目</span></td><td class="drill-size">5.0</td><td>4.917 〜 5.153</td><td>呼び径 − ピッチ</td></tr>
-                    <tr><td><strong>M8</strong></td><td>1.25</td><td><span class="badge">並目</span></td><td class="drill-size">6.8</td><td>6.647 〜 6.912</td><td>常用: 6.8 (6.7〜6.9)</td></tr>
-                    <tr><td><strong>M8</strong></td><td>1.0</td><td><span class="badge">細目</span></td><td class="drill-size">7.0</td><td>6.917 〜 7.153</td><td>呼び径 − ピッチ</td></tr>
-                    <tr><td><strong>M10</strong></td><td>1.5</td><td><span class="badge">並目</span></td><td class="drill-size">8.5</td><td>8.376 〜 8.676</td><td>常用: 8.5 (8.4〜8.7)</td></tr>
-                    <tr><td><strong>M10</strong></td><td>1.25</td><td><span class="badge">細目</span></td><td class="drill-size">8.8</td><td>8.647 〜 8.912</td><td>常用: 8.8</td></tr>
-                    <tr><td><strong>M12</strong></td><td>1.75</td><td><span class="badge">並目</span></td><td class="drill-size">10.3</td><td>10.106 〜 10.441</td><td>常用: 10.2〜10.3</td></tr>
-                    <tr><td><strong>M12</strong></td><td>1.5</td><td><span class="badge">細目</span></td><td class="drill-size">10.5</td><td>10.376 〜 10.676</td><td>常用: 10.5</td></tr>
-                    <tr><td><strong>M14</strong></td><td>2.0</td><td><span class="badge">並目</span></td><td class="drill-size">12.0</td><td>11.835 〜 12.210</td><td>呼び径 − ピッチ</td></tr>
-                    <tr><td><strong>M16</strong></td><td>2.0</td><td><span class="badge">並目</span></td><td class="drill-size">14.0</td><td>13.835 〜 14.210</td><td>呼び径 − ピッチ</td></tr>
-                    <tr><td><strong>M18</strong></td><td>2.5</td><td><span class="badge">並目</span></td><td class="drill-size">15.5</td><td>15.294 〜 15.744</td><td>常用: 15.5</td></tr>
-                    <tr><td><strong>M20</strong></td><td>2.5</td><td><span class="badge">並目</span></td><td class="drill-size">17.5</td><td>17.294 〜 17.744</td><td>常用: 17.5</td></tr>
-                    <tr><td><strong>M22</strong></td><td>2.5</td><td><span class="badge">並目</span></td><td class="drill-size">19.5</td><td>19.294 〜 19.744</td><td>常用: 19.5</td></tr>
-                    <tr><td><strong>M24</strong></td><td>3.0</td><td><span class="badge">並目</span></td><td class="drill-size">21.0</td><td>20.752 〜 21.252</td><td>呼び径 − ピッチ</td></tr>
+                    <tr><td><strong>M1</strong></td><td>0.25</td><td><span class="badge">並目</span></td><td class="drill-size">0.75</td><td>0.729 〜 0.774</td><td>呼び径 − ピッチ</td></tr>
+                    <tr><td><strong>M1.2</strong></td><td>0.25</td><td><span class="badge">並目</span></td><td class="drill-size">0.95</td><td>0.929 〜 0.974</td><td>呼び径 − ピッチ</td></tr>
+                    <tr><td><strong>M1.4</strong></td><td>0.3</td><td><span class="badge">並目</span></td><td class="drill-size">1.1</td><td>1.075 〜 1.128</td><td>呼び径 − ピッチ</td></tr>
+                    <tr><td><strong>M1.6</strong></td><td>0.35</td><td><span class="badge">並目</span></td><td class="drill-size">1.25</td><td>1.221 〜 1.284</td><td>呼び径 − ピッチ</td></tr>
+                    <tr><td><strong>M2</strong></td><td>0.4</td><td><span class="badge">並目</span></td><td class="drill-size">1.6</td><td>1.567 〜 1.638</td><td>呼び径 − ピッチ</td></tr>
+                    <tr><td><strong>M2.5</strong></td><td>0.45</td><td><span class="badge">並目</span></td><td class="drill-size">2.05</td><td>2.013 〜 2.093</td><td>呼び径 − ピッチ</td></tr>
+                    <tr><td><strong>M3</strong></td><td>0.5</td><td><span class="badge">並目</span></td><td class="drill-size">2.5</td><td>2.459 〜 2.549</td><td>呼び径 − ピッチ</td></tr>
+                    <tr><td><strong>M4</strong></td><td>0.7</td><td><span class="badge">並目</span></td><td class="drill-size">3.3</td><td>3.242 〜 3.354</td><td>呼び径 − ピッチ</td></tr>
+                    <tr><td><strong>M5</strong></td><td>0.8</td><td><span class="badge">並目</span></td><td class="drill-size">4.2</td><td>4.134 〜 4.259</td><td>呼び径 − ピッチ</td></tr>
+                    <tr><td><strong>M6</strong></td><td>1.0</td><td><span class="badge">並目</span></td><td class="drill-size">5.0</td><td>4.917 〜 5.067</td><td>呼び径 − ピッチ</td></tr>
+                    <tr><td><strong>M8</strong></td><td>1.25</td><td><span class="badge">並目</span></td><td class="drill-size">6.8</td><td>6.647 〜 6.817</td><td>常用: 6.8 (6.7〜6.8)</td></tr>
+                    <tr><td><strong>M8</strong></td><td>1.0</td><td><span class="badge badge-fine">細目</span></td><td class="drill-size">7.0</td><td>6.917 〜 7.067</td><td>呼び径 − ピッチ</td></tr>
+                    <tr><td><strong>M10</strong></td><td>1.5</td><td><span class="badge">並目</span></td><td class="drill-size">8.5</td><td>8.376 〜 8.566</td><td>常用: 8.5 (8.4〜8.5)</td></tr>
+                    <tr><td><strong>M10</strong></td><td>1.25</td><td><span class="badge badge-fine">細目</span></td><td class="drill-size">8.8</td><td>8.647 〜 8.817</td><td>常用: 8.8</td></tr>
+                    <tr><td><strong>M12</strong></td><td>1.75</td><td><span class="badge">並目</span></td><td class="drill-size">10.2</td><td>10.106 〜 10.318</td><td>常用: 10.2 (10.3も可)</td></tr>
+                    <tr><td><strong>M12</strong></td><td>1.5</td><td><span class="badge badge-fine">細目</span></td><td class="drill-size">10.5</td><td>10.376 〜 10.566</td><td>常用: 10.5</td></tr>
+                    <tr><td><strong>M14</strong></td><td>2.0</td><td><span class="badge">並目</span></td><td class="drill-size">12.0</td><td>11.835 〜 12.071</td><td>呼び径 − ピッチ</td></tr>
+                    <tr><td><strong>M16</strong></td><td>2.0</td><td><span class="badge">並目</span></td><td class="drill-size">14.0</td><td>13.835 〜 14.071</td><td>呼び径 − ピッチ</td></tr>
+                    <tr><td><strong>M18</strong></td><td>2.5</td><td><span class="badge">並目</span></td><td class="drill-size">15.5</td><td>15.294 〜 15.574</td><td>常用: 15.5</td></tr>
+                    <tr><td><strong>M20</strong></td><td>2.5</td><td><span class="badge">並目</span></td><td class="drill-size">17.5</td><td>17.294 〜 17.574</td><td>常用: 17.5</td></tr>
+                    <tr><td><strong>M22</strong></td><td>2.5</td><td><span class="badge">並目</span></td><td class="drill-size">19.5</td><td>19.294 〜 19.574</td><td>常用: 19.5</td></tr>
+                    <tr><td><strong>M24</strong></td><td>3.0</td><td><span class="badge">並目</span></td><td class="drill-size">21.0</td><td>20.752 〜 21.067</td><td>呼び径 − ピッチ</td></tr>
                 </tbody>
             </table>
             <div id="noResult" class="no-result">一致するねじ規格が見つかりません。</div>
@@ -234,9 +243,11 @@
 
         <div class="source-box">
             <h2>出典・技術的留意事項</h2>
-            <p>・<strong>規格基準</strong>: JIS B 1004: 2020「メートル普通目ねじの下穴径」及び JIS B 0205-2「メートル並目ねじ」に準拠。</p>
-            <p>・<strong>下穴径の選定</strong>: 一般的なめねじ加工（ひっかかり率おおむね75〜85%を想定）における推奨ドリル径です。切削タップ加工用であり、転造タップ（ロールタップ）には適用できません。高硬度材や薄板など被削材・締結要件に応じて適宜調整してください。</p>
-            <p>※本ページは規格数値の参照用です。JIS本文の転載は行っておりません。</p>
+            <p>・<strong>出典規格</strong>: 本表の寸法および公差は、JIS B 1004（ねじ下穴径）、JIS B 0205-4（一般用メートルねじ－第4部: 基準寸法）、およびJIS B 0209-1〜3（一般用メートルねじ－公差）の考え方に基づいています。</p>
+            <p>・<strong>下穴径とひっかかり率</strong>: 推奨ドリル径は一般に「呼び径 − ピッチ（d − P）」を基準としており、ひっかかり率は約90%（88〜95%程度）となります。内ねじ内径の許容限界（6H）の上限付近で加工した場合は、ひっかかり率約75〜85%となります。</p>
+            <p>・<strong>加工上の注意</strong>: 本表は切削タップ（ハンドタップ・スパイラルタップ・ポイントタップ等）加工用です。盛り上げタップ（転造タップ・ロールタップ）には適用できません。被削材の硬度や伸び、締結強度要件に応じて適宜ドリル径を調整してください。</p>
+            <p>・<strong>免責事項</strong>: 掲載数値の正確性には万全を期しておりますが、数値の誤りや加工・締結作業に伴ういかなる損害についても責任を負いかねます。実加工にあたっては必ず事前の試し加工を行ってください。</p>
+            <p>・<strong>確認日</strong>: 2026年10月25日（※本ページは規格数値の照会用であり、JIS規格本文の転載は行っておりません）</p>
         </div>
     </div>
 
