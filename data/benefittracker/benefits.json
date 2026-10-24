@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "2026-10-23.1",
-  "updatedAt": "2026-10-23",
+  "dataVersion": "2026-10-25.1",
+  "updatedAt": "2026-10-25",
   "categories": [
     "外食",
     "小売",
@@ -9679,6 +9679,162 @@
         }
       ],
       "tiersNote": "毎年9月末基準の年1回で、金額は商品詰合せの額（クーポンは別・note に記載）。6ヵ月以上3年未満は基準日（3月31日・9月30日）の株主名簿に同一株主番号で連続2回以上、3年以上は連続7回以上（いずれも100株以上）の記録。2026年9月30日現在の株主から新制度。クーポンの金額・コシヒカリの有無は段の note に記載（金額には含めていない）"
+    },
+    {
+      "company": "東和フードサービス",
+      "title": "株主優待割引券（500円券）／椿屋珈琲グループアプリポイント",
+      "balance": 1000,
+      "category": "外食",
+      "ticker": "3329",
+      "usableStores": "椿屋珈琲、ダッキーダック、イタリアンダイニングDONA、こてがえし、ぱすたかん、プロント（優待券のみ。アプリポイントはプロント不可。店舗一覧は公式の「ご利用可能な店舗一覧」で確認）",
+      "description": "【基本情報】\n椿屋珈琲などを運営する東和フードサービスの優待です。4月末・10月末に100株以上で、500円券か椿屋珈琲グループアプリポイントのどちらかを選べます。\n\n【見て楽しくなる情報】\n券は椿屋珈琲やダッキーダックなど自社の店舗で使えます。ポイントを選べばオンラインショップでも使えます。\n\n【お得情報】\n100株で年5枚（2,500円分）、4月と10月で枚数が違います。400株以上は4月・10月が同数です。\n\n【裏技】\n券は他のクーポンや割引券と併用できます。アプリポイントなら継続保有で有効期限が延び、実質無期限です。",
+      "rating": 3,
+      "unitPrice": 500,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "500円券・お釣りなし。有効期限は約1年（券に記載）。当社・各店舗発行のクーポンや割引券と併用できる。催事販売では使えない。4月末基準分は6月下旬、10月末基準分は翌年1月上旬に発送。券のかわりに椿屋珈琲グループアプリポイント（1ポイント＝1円・申込書の返送が必要）を選べる。2026年4月末基準から「ご優待品の詰め合わせ」への交換は終了",
+      "shipMonths": "6,1",
+      "auditedAt": "2026-10-25",
+      "auditScope": "株数区分・券額・枚数・基準日・発送時期・有効期限・お釣り・併用・使える店・アプリポイントの選択（公式IRページ・FAQで確認。店舗一覧PDFは未読）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.towafood-net.co.jp/incentive/",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 1000,
+          "timesPerYear": 2,
+          "note": "4月末 500円券3枚（1,500円）／10月末 2枚（1,000円）"
+        },
+        {
+          "minShares": 200,
+          "minHoldMonths": 0,
+          "amount": 1500,
+          "timesPerYear": 2,
+          "note": "4月末 500円券4枚（2,000円）／10月末 3枚（1,500円）"
+        },
+        {
+          "minShares": 400,
+          "minHoldMonths": 0,
+          "amount": 3500,
+          "timesPerYear": 2,
+          "note": "4月末・10月末とも 500円券7枚"
+        },
+        {
+          "minShares": 800,
+          "minHoldMonths": 0,
+          "amount": 7000,
+          "timesPerYear": 2,
+          "note": "4月末・10月末とも 500円券14枚"
+        },
+        {
+          "minShares": 2400,
+          "minHoldMonths": 0,
+          "amount": 12000,
+          "timesPerYear": 2,
+          "note": "4月末・10月末とも 500円券24枚"
+        },
+        {
+          "minShares": 4000,
+          "minHoldMonths": 0,
+          "amount": 18000,
+          "timesPerYear": 2,
+          "note": "4月末・10月末とも 500円券36枚"
+        }
+      ],
+      "tiersNote": "4月末・10月末の年2回で、金額は1回ぶん（枚数が違う区分は少ない方の額）。継続保有の条件は公式に記載なし"
+    },
+    {
+      "company": "光フードサービス",
+      "title": "食事券（電子チケット）",
+      "balance": 5000,
+      "category": "外食",
+      "ticker": "138A",
+      "usableStores": "光フードサービスの店舗（対象店舗は適時開示に記載なし・公式の優待ページは未確認）",
+      "description": "【基本情報】\n名古屋を中心に居酒屋を展開する光フードサービスの優待です。5月末・11月末に100株以上で、食事券（電子チケット）が届きます。\n\n【見て楽しくなる情報】\n2026年11月末の基準日から、長く持つほど増える「長期保有株主優遇制度」が始まります。\n\n【お得情報】\n現行は100株で年2回 5,000円分。2026年12月1日に1株→2株の株式分割があり、2027年5月末基準からは100株・200株・600株・1,000株の区分に変わります。\n\n【裏技】\n分割後は100株の区分が新設され（分割前の50株相当）、少ない株数でも対象になります。",
+      "rating": 3,
+      "unitPrice": 0,
+      "balanceUnit": "円分",
+      "quantityUnit": "回",
+      "exchange": "東証グロース・名証ネクスト",
+      "usageNotes": "食事券（電子チケット）。贈呈は5月末・11月末基準の年2回。2026年11月末基準分は2027年2月、2027年5月末基準分は2027年8月にご案内の予定。使える店舗・有効期限は適時開示に記載なし（公式の優待ページは未確認）",
+      "shipMonths": "2,8",
+      "auditedAt": "2026-10-25",
+      "auditScope": "株数区分（分割前・分割後）・長期保有株主優遇制度の条件・株式分割の日程・基準日・案内の時期（2026-10-14 適時開示PDFで確認。使える店・有効期限は記載なし）",
+      "auditSource": "official",
+      "sourceUrl": "https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20261014/20261009548538.pdf",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 5000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 300,
+          "minHoldMonths": 0,
+          "amount": 15000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 0,
+          "amount": 25000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 100,
+          "minHoldMonths": 12,
+          "amount": 1000,
+          "timesPerYear": 2,
+          "additive": true,
+          "note": "長期保有株主優遇制度（2026年11月末基準から）。同一株主番号で基準日を含め3回連続して100株以上の記載が条件"
+        }
+      ],
+      "tiersNote": "今の制度（2026年11月末基準分まで・株式分割前の株数）。2026年12月1日に1株→2株の株式分割。2027年5月末基準からは next の新制度",
+      "next": {
+        "from": "2027-05",
+        "label": "2027年5月末基準から（株式分割後の新制度）",
+        "balance": 2500,
+        "tiers": [
+          {
+            "minShares": 100,
+            "minHoldMonths": 0,
+            "amount": 2500,
+            "timesPerYear": 2,
+            "note": "分割前の50株以上に相当（区分を新設）"
+          },
+          {
+            "minShares": 200,
+            "minHoldMonths": 0,
+            "amount": 5000,
+            "timesPerYear": 2
+          },
+          {
+            "minShares": 600,
+            "minHoldMonths": 0,
+            "amount": 15000,
+            "timesPerYear": 2
+          },
+          {
+            "minShares": 1000,
+            "minHoldMonths": 0,
+            "amount": 25000,
+            "timesPerYear": 2
+          },
+          {
+            "minShares": 100,
+            "minHoldMonths": 12,
+            "amount": 1000,
+            "timesPerYear": 2,
+            "additive": true,
+            "note": "長期保有株主優遇制度。同一株主番号で基準日を含め3回連続して100株以上の記載が条件"
+          }
+        ],
+        "tiersNote": "2026年12月1日の1→2株式分割後の株数。2027年5月末基準日の優待から適用",
+        "usageNotes": "食事券（電子チケット）。2027年5月末基準分は2027年8月にご案内の予定。使える店舗・有効期限は適時開示に記載なし"
+      }
     }
   ],
   "siteOnly": [
