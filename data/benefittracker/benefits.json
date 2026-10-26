@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "2026-10-26.1",
-  "updatedAt": "2026-10-26",
+  "dataVersion": "2026-10-27.1",
+  "updatedAt": "2026-10-27",
   "categories": [
     "外食",
     "小売",
@@ -9961,6 +9961,228 @@
       ],
       "tiersNote": "継続保有条件なし（公式優待ページに記載なし）。基準日は5月31日と11月30日。日本赤十字社への寄付を選べる",
       "shipMonths": "8,2"
+    },
+    {
+      "company": "物語コーポレーション",
+      "title": "株主様ご優待券（電子チケット・1円単位の割引）",
+      "balance": 3500,
+      "category": "外食",
+      "ticker": "3097",
+      "usableStores": "国内の当社グループ各店舗（焼肉きんぐ、丸源ラーメン、ゆず庵など）",
+      "rating": 3,
+      "unitPrice": 0,
+      "balanceUnit": "円分",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "description": "【基本情報】\n焼肉きんぐ・丸源ラーメンなどを展開する物語コーポレーションの優待。2026年3月中旬発送分から、紙券に印刷したQRコードでスマホの電子チケットにもできる形になりました。\n\n【もらえる条件】\n100株以上で、6月末・12月末の名簿に半年以上（連続2回）同じ株主番号で載っている株主が対象。年2回、各3,500円分（年7,000円分）。",
+      "usageNotes": "お会計額（税込）から残高の範囲で1円単位で割引。全額を減算するので利用額は指定できない。1回の会計で使える枚数は10枚まで。他の割引券と併用可。持ち帰り・福袋にも使える。セルフレジ・宅配サービス・モバイルオーダーでは使えない。有効期限は発行日から1年間（3月発行分は翌年3月末、9月発行分は翌年9月末）。旧優待カード（2025年9月以前の発送分）は有効期限まで併用できる。",
+      "shipMonths": "3,9",
+      "auditedAt": "2026-10-27",
+      "auditScope": "対象株主・継続保有条件・株数区分・金額・形態（電子チケット）・使い方の注意・有効期限・発送時期（公式IRページで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.monogatari.co.jp/ir/benefits/",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 6,
+          "amount": 3500,
+          "timesPerYear": 2,
+          "note": "6月末・12月末の名簿に連続2回（半年以上）記載が受給条件"
+        }
+      ],
+      "tiersNote": "6月30日・12月31日基準で、同一株主番号で連続2回（半年以上）100株以上が名簿に載っていることが条件（満たさないと優待なし）。貸株・証券会社の変更・一度売って買い戻した場合・NISA口座への切替などで株主番号が変わると数え直しになる可能性がある。"
+    },
+    {
+      "company": "アスクル",
+      "title": "LOHACO 割引クーポン（500円×4枚）",
+      "balance": 2000,
+      "category": "小売",
+      "ticker": "2678",
+      "usableStores": "LOHACO（アスクルの一般消費者向けECサイト）",
+      "rating": 3,
+      "unitPrice": 500,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "description": "【基本情報】\nオフィス用品・日用品のアスクルが、自社の一般向け通販サイトLOHACOで使えるクーポンを贈る優待。\n\n【もらえる条件】\n5月20日・11月20日の株主名簿に100株以上で記載された株主へ、年2回、500円×4枚（2,000円分）。継続保有の条件は公式に記載なし。",
+      "usageNotes": "クーポンの獲得には同封の株主優待通知書・株主優待パスワード通知書が必要で、獲得とご利用にはYahoo! JAPAN IDとインターネット環境が必要。クーポンには有効期間がある（日付は公式ページ本文になく、案内パンフレットに記載）。",
+      "auditedAt": "2026-10-27",
+      "auditScope": "基準日・株数区分・金額・形態・獲得条件（公式IRページで確認）。有効期限・発送月は公式ページに記載なし",
+      "auditSource": "official",
+      "sourceUrl": "https://www.askul.co.jp/corp/investor/stock/benefit/",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 2000,
+          "timesPerYear": 2
+        }
+      ],
+      "tiersNote": "5月20日（期末）・11月20日（中間）基準の年2回。各回500円×4枚。継続保有の条件は公式に記載なし。"
+    },
+    {
+      "company": "ペッパーフードサービス",
+      "title": "お食事券（500円券×6枚／セット）または自社商品",
+      "balance": 3000,
+      "category": "外食",
+      "ticker": "3053",
+      "usableStores": "当社が運営する店舗（国内のみ）",
+      "rating": 3,
+      "unitPrice": 500,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "description": "【基本情報】\n「いきなり！ステーキ」などを運営するペッパーフードサービスの優待。2025年6月末基準から年2回になりました。\n\n【もらえる条件】\n6月末・12月末の名簿に500株以上で記載された株主へ。500株以上で3,000円分、5,000株以上で6,000円分、10,000株以上で9,000円分（500円券×6枚が1セット）。同額相当の自社商品との選択制。100〜499株は対象外。",
+      "usageNotes": "お会計時に株主優待券を渡すと券面金額を食事代から差し引く。お食事券の金額が会計金額を超えてもお釣りは出ない。肉マイレージ付与の対象。有効期限は6月末基準（10月下旬発送）が翌年4月末、12月末基準（4月下旬発送）が10月末。",
+      "shipMonths": "4,10",
+      "auditedAt": "2026-10-27",
+      "auditScope": "基準日・株数区分（適時開示PDF 2025-03-14）・金額・使い方の注意・有効期限・発送時期（公式IRページで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.pepper-fs.co.jp/ir/treatment.php",
+      "tiers": [
+        {
+          "minShares": 500,
+          "minHoldMonths": 0,
+          "amount": 3000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 5000,
+          "minHoldMonths": 0,
+          "amount": 6000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 10000,
+          "minHoldMonths": 0,
+          "amount": 9000,
+          "timesPerYear": 2
+        }
+      ],
+      "tiersNote": "6月末・12月末基準の年2回。500株未満は対象外。お食事券と同額相当の自社商品の選択制。株数区分は2025-03-14の適時開示PDFによる（優待ページ本文には区分表なし）。継続保有の条件は公式に記載なし。"
+    },
+    {
+      "company": "フルキャストホールディングス",
+      "title": "「らあめん花月嵐」お食事優待券または嵐げんこつらあめん（選択制）",
+      "balance": 2,
+      "category": "外食",
+      "ticker": "4848",
+      "usableStores": "らあめん花月嵐",
+      "rating": 3,
+      "unitPrice": 1,
+      "balanceUnit": "枚",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "description": "【基本情報】\n人材サービスのフルキャストHDが、グループのラーメン店「らあめん花月嵐」で使える優待券（またはラーメン箱入り）を贈る優待。\n\n【もらえる条件】\n6月末・12月末に100株以上。保有株数と継続保有年数（名簿に連続3回以上で1年以上）で枚数が増える。A（お食事優待券）かB（嵐げんこつらあめん箱入り4食）の選択制。",
+      "usageNotes": "本券1枚で嵐げんこつらあめん（醤油・味噌・塩）または昭和レトロラーメン懐かし中華そば（チャーシューメンは除く）から1杯を1回無料。他のサービス券（アプリクーポン・雑誌クーポン・チラシクーポン等）とは併用できない（事前購入クーポン「ポチッとギフト」のみ併用可）。トッピングは別料金。現金との交換・転売は禁止。有効期間は6月末基準が到着日〜翌年4月末、12月末基準が到着日〜同年10月末。申込がなければAのお食事優待券が届く。",
+      "shipMonths": "4,10",
+      "auditedAt": "2026-10-27",
+      "auditScope": "基準日・株数区分・継続保有条件・形態・使い方の注意・有効期間・発送時期（公式IRページで確認）。券の金額換算は公式に記載なし",
+      "auditSource": "official",
+      "sourceUrl": "https://www.fullcastholdings.co.jp/corporate/ir/stockinformation/benefit/",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 2,
+          "timesPerYear": 2,
+          "note": "A：お食事優待券2枚（B：1箱）"
+        },
+        {
+          "minShares": 100,
+          "minHoldMonths": 12,
+          "amount": 4,
+          "timesPerYear": 2,
+          "note": "A：最大4枚（B：最大2箱）"
+        },
+        {
+          "minShares": 200,
+          "minHoldMonths": 0,
+          "amount": 4,
+          "timesPerYear": 2,
+          "note": "A：最大4枚（B：最大2箱）"
+        },
+        {
+          "minShares": 200,
+          "minHoldMonths": 12,
+          "amount": 6,
+          "timesPerYear": 2,
+          "note": "A：最大6枚（B：最大3箱）"
+        },
+        {
+          "minShares": 300,
+          "minHoldMonths": 0,
+          "amount": 6,
+          "timesPerYear": 2,
+          "note": "A：最大6枚（B：最大3箱）"
+        },
+        {
+          "minShares": 300,
+          "minHoldMonths": 12,
+          "amount": 8,
+          "timesPerYear": 2,
+          "note": "A：最大8枚（B：最大4箱）"
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 0,
+          "amount": 10,
+          "timesPerYear": 2,
+          "note": "A：最大10枚（B：最大5箱）"
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 12,
+          "amount": 12,
+          "timesPerYear": 2,
+          "note": "A：最大12枚（B：最大6箱）"
+        }
+      ],
+      "tiersNote": "amount はAのお食事優待券の枚数（1枚＝ラーメン1杯）。1年以上＝同じ株主番号で6月末・12月末の名簿に連続3回以上、1年未満＝連続2回以下。貸株・証券会社の変更・一度売って買い戻した場合・NISA口座への切替などで株主番号が変わると数え直し。"
+    },
+    {
+      "company": "きちりホールディングス",
+      "title": "株主ご優待券（飲食代金1,500円分の金券）",
+      "balance": 1500,
+      "category": "外食",
+      "ticker": "3082",
+      "usableStores": "当社グループの店舗（国内。店内飲食のみ）",
+      "rating": 3,
+      "unitPrice": 1500,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "description": "【基本情報】\n居酒屋・ダイニングの「きちり」などを運営するきちりHDの優待。\n\n【もらえる条件】\n6月末・12月末に100株以上で、年2回。100株で1,500円券を1枚ずつ（年2枚）、500株で6枚ずつ（年12枚）、1,000株で13枚ずつ（年26枚）。継続保有の条件は公式に記載なし。",
+      "usageNotes": "1枚で飲食代金1,500円の金券として使える。枚数の制限はなく1回の会計で何枚でも使える。他の割引券・割引プランとも併用可。現金との交換・釣銭は出ない。利用制限日はない。店内飲食のみで、デリバリー・テイクアウトの事前決済・ネット販売は不可。LUCUA FOOD HALL『キッチン＆マーケット』内と『ハシゴバルピンチョ』『ローマ商店』『グリルデミ玉』『FLDK』では使えない。有効期限は12月31日基準分が翌々年3月末、6月30日基準分が翌年9月末。",
+      "shipMonths": "3,9",
+      "auditedAt": "2026-10-27",
+      "auditScope": "基準日・株数区分・金額・使い方の注意・使えない店・有効期限・発送時期（公式IRページで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.kichiri.co.jp/ir/yutai2.php",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 1500,
+          "timesPerYear": 2,
+          "note": "1,500円券×1枚"
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 0,
+          "amount": 9000,
+          "timesPerYear": 2,
+          "note": "1,500円券×6枚"
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 0,
+          "amount": 19500,
+          "timesPerYear": 2,
+          "note": "1,500円券×13枚"
+        }
+      ],
+      "tiersNote": "12月31日・6月30日基準の年2回（年間は100株2枚・500株12枚・1,000株26枚）。継続保有の条件は公式に記載なし。"
     }
   ],
   "siteOnly": [
