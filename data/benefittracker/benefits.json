@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "2026-10-27.1",
-  "updatedAt": "2026-10-27",
+  "dataVersion": "2026-10-28.1",
+  "updatedAt": "2026-10-28",
   "categories": [
     "外食",
     "小売",
@@ -10183,6 +10183,117 @@
         }
       ],
       "tiersNote": "12月31日・6月30日基準の年2回（年間は100株2枚・500株12枚・1,000株26枚）。継続保有の条件は公式に記載なし。"
+    },
+    {
+      "company": "SANKO MARKETING FOODS",
+      "title": "株主ご優待券（20%割引）",
+      "balance": 2,
+      "category": "外食",
+      "ticker": "2762",
+      "usableStores": "当社グループ店舗（ご利用可能店舗は公式ページのPDFに一覧）",
+      "rating": 3,
+      "unitPrice": 1,
+      "balanceUnit": "枚",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "description": "【基本情報】\nSANKO MARKETING FOODS（居酒屋・飲食店チェーン）の優待。2026年6月末基準から内容が拡充され、20%割引券に加えて500株以上では優待品（食品）も付きます。\n\n【もらえる条件】\n6月末・12月末に100株以上。年2回。100株で割引券2枚、500株で3枚、1,000株以上で4枚。継続保有の条件は公式に記載なし。",
+      "usageNotes": "1会計につき1枚、20%割引（割引上限10,000円）。他の割引券・金券・インターネットクーポン等とは併用できない。有効期限は6か月間。500株以上は優待品も選べる（500株2品、1,000株3品、2,000株4品、3,000株6品、5,000株8品。申込期日は6月末基準が翌年3月末、12月末基準が翌年9月末）。",
+      "shipMonths": "3,9",
+      "auditedAt": "2026-10-28",
+      "auditScope": "基準日・株数区分・割引率と使い方の注意・有効期限・優待品・発送時期（公式IRページで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.sankofoods.com/ir/stock/benefit/",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 2,
+          "timesPerYear": 2,
+          "note": "割引券2枚"
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 0,
+          "amount": 3,
+          "timesPerYear": 2,
+          "note": "割引券3枚＋優待品2品"
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 0,
+          "amount": 4,
+          "timesPerYear": 2,
+          "note": "割引券4枚＋優待品3品（2,000株で4品、3,000株で6品、5,000株で8品）"
+        }
+      ],
+      "tiersNote": "6月30日・12月31日基準の年2回。割引券は1,000株以上すべて4枚で、優待品だけ株数で増える。継続保有の条件は公式に記載なし。"
+    },
+    {
+      "company": "北海道コカ・コーラボトリング",
+      "title": "株主優待（Aコース：CokeONドリンクチケット）",
+      "balance": 4500,
+      "category": "自社商品",
+      "ticker": "2573",
+      "usableStores": "CokeON対応の自動販売機（Aコース）",
+      "rating": 3,
+      "unitPrice": 900,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "description": "【基本情報】\n北海道コカ・コーラボトリングの優待。個人株主のみが対象で、A・B・Cの3コースから1つを選ぶ申込制です。ここでは、スマホアプリ「CokeON」のドリンクチケットが届くAコースを残高管理できるようにしています。\n\n【もらえる条件】\n6月末・12月末に100株以上の個人株主。年2回。100株でAコース5枚（25本分・4,500円相当）、1,000株以上で6枚（30本分・5,400円相当）。継続保有の条件は公式に記載なし。",
+      "usageNotes": "申込が必要（インターネットまたは専用ハガキ）。申込期間の目安は12月末基準が4月上旬から1か月半程度、6月末基準が9月上旬から1か月半程度で、期限後は送付不可。チケットの利用にはCokeONアプリが必要。Bコース（好きな当社商品1ケース／2ケース）・Cコース（詰め合わせ22本／28本）も選べる。2023年12月末基準から個人株主のみ。有効期限は公式ページに記載なし。",
+      "shipMonths": "",
+      "auditedAt": "2026-10-28",
+      "auditScope": "対象株主・基準日・株数区分・金額・コース・申込方法と期間・使い方の注意（公式IRページで確認）。有効期限・発送月は公式に記載なし",
+      "auditSource": "official",
+      "sourceUrl": "https://www.hokkaido.ccbc.co.jp/ir/stock-information/",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 4500,
+          "timesPerYear": 2,
+          "note": "Aコース5枚（25本分）4,500円相当"
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 0,
+          "amount": 5400,
+          "timesPerYear": 2,
+          "note": "Aコース6枚（30本分）5,400円相当"
+        }
+      ],
+      "tiersNote": "amount はAコースの円相当（1枚=5本=900円相当）。B・Cコースを選ぶと金額が変わる（100株でBは4,224円相当・Cは3,300円相当、1,000株でBは8,448円相当・Cは4,170円相当）。個人株主のみが対象。継続保有の条件は公式に記載なし。"
+    },
+    {
+      "company": "ツカダ・グローバルホールディング",
+      "title": "当社グループ施設割引券",
+      "balance": 2,
+      "category": "レジャー",
+      "ticker": "2418",
+      "usableStores": "ホテル インターコンチネンタル 東京ベイ、ストリングスホテル東京インターコンチネンタル、キンプトン新宿東京、ストリングスホテル名古屋など当社グループ施設",
+      "rating": 3,
+      "unitPrice": 1,
+      "balanceUnit": "枚",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "description": "【基本情報】\nホテル・レストラン・スパ・フィットネスなどを運営するツカダ・グローバルホールディングの優待。グループ施設で使える割引券が届きます。\n\n【もらえる条件】\n6月末・12月末に100株以上。年2回、割引券2枚（宿泊・飲食・リラクゼーション・スパ・フィットネスの各割引）。5,000株以上ではホテルご利用券が加わり、継続3年以上でさらに増えます。",
+      "usageNotes": "割引の内容は施設ごとに異なる（例：インターコンチネンタル東京ベイの宿泊は、ベストフレキシブル料金から20%割引）。除外日や1日の利用室数に上限がある。予約時に「当社グループ施設割引券利用」と伝え、到着時にフロントで券を渡す。有効期限と発送月は優待ページに記載なし。",
+      "shipMonths": "",
+      "auditedAt": "2026-10-28",
+      "auditScope": "基準日・株数区分・継続保有条件・割引券の使い方（公式IRページで確認）。有効期限・発送月は優待ページに記載なし",
+      "auditSource": "official",
+      "sourceUrl": "https://www.tsukada-global.holdings/ir/stock/incentives.html",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 2,
+          "timesPerYear": 2,
+          "note": "割引券2枚"
+        }
+      ],
+      "tiersNote": "6月30日・12月31日の年2回。5,000株以上10,000株未満は継続3年未満で5,000円分・3年以上で10,000円分のホテルご利用券、10,000株以上は3年未満で5,000円分＋宿泊招待券1枚・3年以上で10,000円分＋宿泊招待券2枚が加わる（この表の枚数には含めていない）。継続3年以上は同一株主番号で連続7回以上、かつ全回で区分の最小株数（5,000または10,000株）以上を保有。"
     }
   ],
   "siteOnly": [
@@ -10533,6 +10644,124 @@
       "auditScope": "基準日（2026年10月20日のみ）・株数区分（100株以上一律）・金額・今回限り・発送時期（2027年1月予定・招集通知に同封）・上場市場（公式IRページで確認）",
       "auditSource": "official",
       "sourceUrl": "https://kitac.co.jp/wp/wp-content/uploads/2026/08/20260827.pdf"
+    },
+    {
+      "company": "アーバネットコーポレーション",
+      "title": "QUOカード",
+      "balance": 2500,
+      "category": "その他",
+      "ticker": "3242",
+      "usableStores": "コンビニ、書店",
+      "rating": 3,
+      "unitPrice": 2500,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "description": "【基本情報】\n都市型賃貸マンション「アジールコート」を開発・販売するアーバネットコーポレーションの優待。QUOカードが届きます。\n\n【もらえる条件】\n6月末・12月末に500株以上。年2回。500株以上1,000株未満で2,500円分、1,000株以上で5,000円分（各回）。継続保有の条件は公式に記載なし。",
+      "usageNotes": "中間・期末に発行する株主通信に同封して発送。基準日から3か月以内を目途とする。有効期限の記載は公式にない。",
+      "siteGroup": "QUOカード",
+      "shipMonths": "3,9",
+      "auditedAt": "2026-10-28",
+      "quo": {
+        "tiers": [
+          {
+            "minShares": 500,
+            "minHoldMonths": 0,
+            "amountYen": 2500,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 1000,
+            "minHoldMonths": 0,
+            "amountYen": 5000,
+            "timesPerYear": 1
+          }
+        ],
+        "rightsMonths": "6,12",
+        "note": "年2回。各回の金額（500株以上で2,500円分、1,000株以上で5,000円分）。継続保有の条件は公式に記載なし。発送は基準日から3か月以内が目途",
+        "auditedAt": "2026-10-28",
+        "auditScope": "株数区分・権利月・発送時期（公式IRページで確認）"
+      },
+      "auditScope": "基準日・株数区分・金額・発送時期（公式IRページで確認）。継続保有条件・有効期限は公式に記載なし",
+      "auditSource": "official",
+      "sourceUrl": "https://www.urbanet.jp/ir/yutai/"
+    },
+    {
+      "company": "オオバ",
+      "title": "QUOカード（保有年数で増額）",
+      "balance": 1000,
+      "category": "その他",
+      "ticker": "9765",
+      "usableStores": "コンビニ、書店",
+      "rating": 3,
+      "unitPrice": 500,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "description": "【基本情報】\nまちづくりの設計・測量を手がける建設コンサルタント、オオバの優待。2025年5月期末基準から拡充され、保有年数が長いほどQUOカードが増えます。\n\n【もらえる条件】\n5月末に100株以上（1年未満は500株以上）。年1回。1年未満は500株で1,000円・1,000株以上で4,000円。1年以上3年未満は100株で500円・500株で3,000円・1,000株以上で7,000円。3年以上は100株で800円・500株で4,000円・1,000株以上で10,000円。",
+      "usageNotes": "保有年数は5月末現在で、同一株主番号で5月末・8月末・11月末・2月末・5月末の名簿に連続で載っている回数で数える（1年以上は5回以上連続、3年以上は13回以上連続）。8月下旬に発送予定。2,500株以上は11月中間期末基準でショコラボのチョコレート菓子も届く（金額換算なし・4月下旬発送予定）。有効期限の記載は公式にない。",
+      "siteGroup": "QUOカード",
+      "shipMonths": "8",
+      "auditedAt": "2026-10-28",
+      "quo": {
+        "tiers": [
+          {
+            "minShares": 500,
+            "minHoldMonths": 0,
+            "amountYen": 1000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 1000,
+            "minHoldMonths": 0,
+            "amountYen": 4000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 100,
+            "minHoldMonths": 12,
+            "amountYen": 500,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 500,
+            "minHoldMonths": 12,
+            "amountYen": 3000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 1000,
+            "minHoldMonths": 12,
+            "amountYen": 7000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 100,
+            "minHoldMonths": 36,
+            "amountYen": 800,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 500,
+            "minHoldMonths": 36,
+            "amountYen": 4000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 1000,
+            "minHoldMonths": 36,
+            "amountYen": 10000,
+            "timesPerYear": 1
+          }
+        ],
+        "rightsMonths": "5",
+        "note": "年1回（5月末基準）。1年以上は5回以上連続、3年以上は13回以上連続で名簿に記載された株主。1年未満の100株台は対象外。11月末基準の2,500株以上のチョコレート菓子は含めていない",
+        "auditedAt": "2026-10-28",
+        "auditScope": "株数区分・継続保有条件・権利月・発送時期（公式IRページで確認）"
+      },
+      "auditScope": "基準日・株数区分・継続保有条件・金額・発送時期（公式IRページで確認）。有効期限は公式に記載なし",
+      "auditSource": "official",
+      "sourceUrl": "https://www.k-ohba.co.jp/information/stock/benefit/"
     }
   ]
 }
