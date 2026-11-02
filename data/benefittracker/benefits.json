@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "2026-10-31.1",
-  "updatedAt": "2026-10-31",
+  "dataVersion": "2026-11-03.1",
+  "updatedAt": "2026-11-03",
   "categories": [
     "外食",
     "小売",
@@ -10462,6 +10462,336 @@
           }
         ]
       }
+    },
+    {
+      "company": "NATTY SWANKYホールディングス",
+      "title": "株主優待電子チケット（ダンダダン）",
+      "balance": 10000,
+      "category": "外食",
+      "ticker": "7674",
+      "usableStores": "肉汁餃子のダンダダン",
+      "description": "【基本情報】\n肉汁餃子のダンダダンで使える電子チケット1,000円分を10枚（10,000円相当）。1月末・7月末の年2回、100株以上で保有期間・株数による差はない。\n\n【見て楽しくなる情報】\n全国のダンダダンで使えて、店内飲食のほかテイクアウトも対象。\n\n【お得情報】\n年2回で年間20,000円相当。現金との併用ができる。\n\n【裏技】\nデリバリーは対象外。店舗に行きにくい人は、指定場所へ冷凍餃子を届けてもらう使い方もできる。",
+      "rating": 4,
+      "unitPrice": 0,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "1,000円の電子チケット10枚。1月末権利分は4月末頃発送・5/1〜翌4/30、7月末権利分は10月末頃発送・11/1〜翌10/31が有効期限。店内飲食・テイクアウト可（デリバリー不可）、現金併用可、釣銭・領収証なし。利用条件の詳細は届いた原本で確認",
+      "shipMonths": "4,10",
+      "auditedAt": "2026-11-03",
+      "auditScope": "基準日・株数・金額・発送時期・有効期限・利用条件（公式IRページで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://nattyswanky.com/ir/benefits",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 10000,
+          "timesPerYear": 2
+        }
+      ],
+      "tiersNote": "継続保有条件なし。1月末・7月末基準の年2回で、金額は1回ぶん（1,000円電子チケット10枚）"
+    },
+    {
+      "company": "トーホー",
+      "title": "お買物割引券（100円券）・コース選択",
+      "balance": 2500,
+      "category": "小売",
+      "ticker": "8142",
+      "usableStores": "A-プライス、トーホー せんどば 船橋店、ニッショク、こまつや、トーホー・北関東 簗瀬支店、トーホー・北関東 那須支店、toho coffee shop 神戸元町",
+      "description": "【基本情報】\n2027年1月末の基準日から新制度。保有株数と保有期間に応じて、割引券・商品・寄付のコースから1点を選ぶ。\n\n【見て楽しくなる情報】\n商品コースは toho coffee のセットやオリジナル商品セット。\n\n【お得情報】\n割引券コースは100円券を25〜400枚（1,000円（税込）以上の買い物につき1,000円ごとに1枚）。\n\n【裏技】\n保有1年以上は、基準日と前年7月末・1月末の名簿に連続3回以上の記載が条件。",
+      "rating": 3,
+      "unitPrice": 100,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "2027年1月末基準から新制度（贈呈6月下旬頃）。1,000円（税込）以上の買い物につき1,000円ごとに1枚使える。A-プライスは直営店のみ（オンライン・FC店舗は不可）。トーホーストアでの使用可否は公式PDFで案内。有効期限は公式ページに記載なし。コース選択方法は毎年3月下旬頃に郵送で案内",
+      "shipMonths": "6",
+      "auditedAt": "2026-11-03",
+      "auditScope": "新制度の基準日・株数区分・割引券の枚数・保有期間の条件・利用店舗（公式IRページで確認）。有効期限は記載なし",
+      "auditSource": "official",
+      "sourceUrl": "https://www.to-ho.co.jp/ir/stockholder.html",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 12,
+          "amount": 2500,
+          "timesPerYear": 1,
+          "note": "保有1年以上・割引券コース25枚"
+        },
+        {
+          "minShares": 300,
+          "minHoldMonths": 0,
+          "amount": 5000,
+          "timesPerYear": 1,
+          "note": "300株以上は1年未満でも割引券コース50枚（1年以上も50枚）"
+        },
+        {
+          "minShares": 600,
+          "minHoldMonths": 12,
+          "amount": 20000,
+          "timesPerYear": 1,
+          "note": "保有1年以上・割引券コース200枚"
+        },
+        {
+          "minShares": 1200,
+          "minHoldMonths": 12,
+          "amount": 40000,
+          "timesPerYear": 1,
+          "note": "保有1年以上・割引券コース400枚"
+        }
+      ],
+      "tiersNote": "割引券・商品・寄付の3コースから1点を選ぶ（金額は割引券コースの場合。商品コース・寄付コースは別の内容）。100株以上300株未満は保有1年未満だと対象外。1月末基準・年1回"
+    },
+    {
+      "company": "スバル興業",
+      "title": "TOHOシネマズギフトカード",
+      "balance": 2000,
+      "category": "レジャー",
+      "ticker": "9632",
+      "usableStores": "TOHOシネマズ",
+      "description": "【基本情報】\nTOHOシネマズで使えるプリペイド式のギフトカード。500株から、1月末基準・年1回。継続保有3年以上で金額が増える。\n\n【見て楽しくなる情報】\n映画館のチケット等の購入に使える。\n\n【お得情報】\n500株2,000円分（3年以上は3,000円分）〜1,500株4,000円分（3年以上は5,000円分）。\n\n【裏技】\n使い切りの使い捨てカードで、チャージはできない。",
+      "rating": 4,
+      "unitPrice": 0,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "1月末現在の株主へ4月下旬に発送。使い切りで、チャージ機能なし。有効期限はカードの案内に記載（公式ページに日付は無い）。継続保有3年以上は、1月31日と7月31日の名簿に同一株主番号で連続7回以上記載され、各基準日で500株以上を継続保有していること",
+      "shipMonths": "4",
+      "auditedAt": "2026-11-03",
+      "auditScope": "基準日・株数区分・金額・継続保有条件・発送時期・チャージ可否（公式IRページで確認）。有効期限の日付は記載なし",
+      "auditSource": "official",
+      "sourceUrl": "https://subaru-kougyou.jp/ir/corporator.html",
+      "tiers": [
+        {
+          "minShares": 500,
+          "minHoldMonths": 0,
+          "amount": 2000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 36,
+          "amount": 3000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 0,
+          "amount": 3000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 36,
+          "amount": 4000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 1500,
+          "minHoldMonths": 0,
+          "amount": 4000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 1500,
+          "minHoldMonths": 36,
+          "amount": 5000,
+          "timesPerYear": 1
+        }
+      ],
+      "tiersNote": "1月末基準の年1回。継続保有3年以上（連続7回以上）で金額が上がる"
+    },
+    {
+      "company": "ティーライフ",
+      "title": "株主様ご優待券（自社商品）",
+      "balance": 1000,
+      "category": "自社商品",
+      "ticker": "3172",
+      "usableStores": "ティーライフ（カタログ・WEB通販）",
+      "description": "【基本情報】\nティーライフの商品のお買い物に使える優待券。2026年1月末から年2回（1月末・7月末）に拡充された。100株から。\n\n【見て楽しくなる情報】\n優待特選商品以外の全商品にも使える。\n\n【お得情報】\n優待券を使う注文は、金額にかかわらず送料無料。使える枚数に制限はない。\n\n【裏技】\n有効期間は発行日から1年。",
+      "rating": 3,
+      "unitPrice": 0,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "発行日から1年間有効。利用枚数の制限なし。優待券を使う注文は全商品が送料無料（代引き手数料などは別）。専用の申込ハガキかWEBで注文。発送月は公式ページに記載なし",
+      "auditedAt": "2026-11-03",
+      "auditScope": "基準日・株数区分・金額・年回数（2025-09-04付の変更のお知らせ）、有効期間・送料・利用枚数（公式IRページで確認）。発送月は記載なし",
+      "auditSource": "official",
+      "sourceUrl": "https://www.tealifeir.com/ir/stock.html",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 1000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 0,
+          "amount": 2000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 0,
+          "amount": 3000,
+          "timesPerYear": 2
+        }
+      ],
+      "tiersNote": "継続保有条件なし。1月末・7月末基準の年2回で、金額は1回ぶん（年間はその2倍）。1月末分は2026年1月末の名簿から"
+    },
+    {
+      "company": "TOKYO BASE",
+      "title": "株主優待券（割引券）",
+      "balance": 2000,
+      "category": "小売",
+      "ticker": "3415",
+      "usableStores": "TOKYO BASE のオンラインストア、国内の実店舗",
+      "description": "【基本情報】\n1月31日の名簿の100株以上に、オンラインストアと国内の実店舗で使える割引券（2,000円券・3,000円券・5,000円券）を進呈。継続保有2年以上で金額が倍になる。\n\n【見て楽しくなる情報】\n株数が増えると券の種類と枚数が増える。\n\n【お得情報】\n100株2,000円（2年以上は4,000円）、1,000株8,000円（同16,000円）、5,000株15,000円（同30,000円）。\n\n【裏技】\nオンラインストアは1会計に優待券1枚まで。複数枚使いたい時は公式の「ご利用方法」を確認。",
+      "rating": 3,
+      "unitPrice": 0,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "4月に株主総会招集通知に同封して進呈、有効期間は進呈から翌年3月31日まで。一部商品と指定の催事販売は対象外。オンラインストアは1会計1枚まで。券は2,000円・3,000円・5,000円の3種類（金額は券の合計額）",
+      "shipMonths": "4",
+      "auditedAt": "2026-11-03",
+      "auditScope": "基準日・株数区分・金額・券種内訳・継続保有条件・進呈時期・有効期間・利用条件（公式IRページで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://tokyobase.co.jp/ir/incentives",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 2000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 100,
+          "minHoldMonths": 24,
+          "amount": 4000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 0,
+          "amount": 8000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 24,
+          "amount": 16000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 5000,
+          "minHoldMonths": 0,
+          "amount": 15000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 5000,
+          "minHoldMonths": 24,
+          "amount": 30000,
+          "timesPerYear": 1
+        }
+      ],
+      "tiersNote": "1月末基準の年1回。継続保有2年以上は、1月末・7月末の名簿に同一株主番号で連続5回以上の記録が条件。券種内訳は 100株: 2,000円券1枚（2年以上は2枚）／1,000株: 2,000円券1枚・3,000円券2枚（2年以上は2,000円券1枚・3,000円券3枚・5,000円券1枚）／5,000株: 2,000円券2枚・3,000円券2枚・5,000円券1枚（2年以上は2,000円券2枚・3,000円券2枚・5,000円券4枚）"
+    },
+    {
+      "company": "クロスプラス",
+      "title": "オンラインストアクーポン券",
+      "balance": 3000,
+      "category": "自社商品",
+      "ticker": "3320",
+      "usableStores": "クロスプラスオンラインストア",
+      "description": "【基本情報】\n1月31日の名簿の100株以上に、クロスプラスのオンラインストアで使えるクーポン券を年1回進呈。100株3,000円・500株5,000円・1,000株10,000円。\n\n【見て楽しくなる情報】\n100株以上を継続保有していると、抽選で旅行券30万円が当たる特別優待もある。\n\n【お得情報】\n2年以上継続保有（100株以上）で、クーポン券が2,000円増額。\n\n【裏技】\n旅行券の抽選は、1年以上継続保有から10名、3年以上継続保有から2名（重複当選は無効）。",
+      "rating": 3,
+      "unitPrice": 0,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "1月31日基準の年1回、オンラインストアのクーポン券。発送月とクーポンの有効期限は公式ページに記載なし。特別優待（抽選の旅行券30万円）は金額に含めない",
+      "auditedAt": "2026-11-03",
+      "auditScope": "基準日・株数区分・金額・継続保有の条件・特別優待（公式IRページで確認）。発送月・有効期限は記載なし",
+      "auditSource": "official",
+      "sourceUrl": "https://www.crossplus.co.jp/stock-info/special/",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 3000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 0,
+          "amount": 5000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 0,
+          "amount": 10000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 100,
+          "minHoldMonths": 24,
+          "amount": 2000,
+          "timesPerYear": 1,
+          "additive": true,
+          "note": "2年以上継続保有でクーポンに上乗せ"
+        }
+      ],
+      "tiersNote": "1月末基準の年1回。2年以上継続保有は、同一株主番号で1月末・7月末の名簿に連続5回以上の記載が条件。特別優待（旅行券の抽選）は1年以上（連続3回）・3年以上（連続7回）の継続保有者が対象で、金額には入れていない"
+    },
+    {
+      "company": "稲葉製作所",
+      "title": "オリジナル図書カード・地域特産品",
+      "balance": 1000,
+      "category": "カタログ",
+      "ticker": "3421",
+      "usableStores": "図書カードの利用先は公式に記載なし",
+      "description": "【基本情報】\n7月末・1月末が基準日。100株以上でオリジナル図書カード（1,000円相当）、300株以上は地域特産品かオリジナル図書カードから1品選択（3,000円相当）。\n\n【見て楽しくなる情報】\n地域特産品は毎年異なる都道府県から選ばれる（2026年は宮城県）。\n\n【お得情報】\n1,000株以上は、7月末に選択式の3,000円相当に加えて、1月末にもオリジナル図書カード（1,000円相当）が届く。\n\n【裏技】\n300株以上の7月末分は、申込ハガキで商品を選ぶ方式。",
+      "rating": 3,
+      "unitPrice": 1000,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "100株以上300株未満: 7月末基準で10月下旬にオリジナル図書カード（1,000円相当）。300株以上: 7月末基準で9月上旬に申込ハガキ、10月下旬以降に選んだ品を発送（3,000円相当）。1,000株以上は1月末基準でも4月上旬にオリジナル図書カード（1,000円相当）。図書カードの有効期限と継続保有条件は公式に記載なし",
+      "shipMonths": "10,4",
+      "auditedAt": "2026-11-03",
+      "auditScope": "基準日・株数区分・金額（表の構造を確認）・発送時期・申込方法（公式IRページで確認）。図書カードの有効期限・利用先は記載なし",
+      "auditSource": "official",
+      "sourceUrl": "https://www.inaba-ss.co.jp/ir/yuutai/",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 1000,
+          "timesPerYear": 1,
+          "note": "7月末のみ。オリジナル図書カード1,000円相当"
+        },
+        {
+          "minShares": 300,
+          "minHoldMonths": 0,
+          "amount": 3000,
+          "timesPerYear": 1,
+          "note": "7月末のみ。地域特産品かオリジナル図書カードから1品選択（3,000円相当）"
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 0,
+          "amount": 1000,
+          "timesPerYear": 2,
+          "note": "7月末は選択式3,000円相当、1月末は図書カード1,000円相当（少ない方を記載）"
+        }
+      ],
+      "tiersNote": "継続保有条件なし。1,000株以上は7月末（3,000円相当）と1月末（1,000円相当）で額が違う"
     }
   ],
   "siteOnly": [
@@ -10964,6 +11294,74 @@
       "auditScope": "対象株主・基準日・株数・金額（上限）・長期保有加算・記念優待加算・開始時期・送付時期（適時開示PDF原文で確認）",
       "auditSource": "official",
       "sourceUrl": "https://www.shintohd.co.jp/ir/%e6%a0%aa%e4%b8%bb%e5%84%aa%e5%be%85%e5%88%b6%e5%ba%a6%e3%81%ae%e6%96%b0%e8%a8%ad%e3%81%ab%e9%96%a2%e3%81%99%e3%82%8b%e3%81%8a%e7%9f%a5%e3%82%89%e3%81%9b/"
+    },
+    {
+      "company": "エイチームホールディングス",
+      "title": "QUOカード",
+      "balance": 10000,
+      "category": "その他",
+      "ticker": "3662",
+      "usableStores": "コンビニ、書店",
+      "description": "【基本情報】\n2025年1月末から始まった株主優待。5単元（500株）以上で、1月末・7月末の年2回、各10,000円分のQUOカード（年間20,000円分）。\n\n【見て楽しくなる情報】\n年2回、QUOカードが届く。\n\n【お得情報】\n1月末・7月末の両方で各10,000円分。\n\n【裏技】\n500株が最低ラインなので、100株では対象外。",
+      "rating": 3,
+      "unitPrice": 10000,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "500株（5単元）以上・1月末と7月末の年2回、各QUOカード10,000円分。公式の新設告知（2024年12月）の原文で確認。発送月・継続保有条件は公式の告知に記載なし",
+      "siteGroup": "QUOカード",
+      "auditedAt": "2026-11-03",
+      "quo": {
+        "tiers": [
+          {
+            "minShares": 500,
+            "minHoldMonths": 0,
+            "amountYen": 10000,
+            "timesPerYear": 2
+          }
+        ],
+        "rightsMonths": "1,7",
+        "note": "継続保有条件の記載なし（新設告知の原文）。発送月は公式の告知に記載なし",
+        "auditedAt": "2026-11-03",
+        "auditScope": "株数区分・年回数・権利月・金額（公式ニュース原文）"
+      },
+      "auditScope": "基準日・株数・金額・年回数（公式ニュース原文）。発送月・継続保有条件は告知に記載なし",
+      "auditSource": "official",
+      "sourceUrl": "https://www.a-tm.co.jp/news/50362/"
+    },
+    {
+      "company": "ジェイック",
+      "title": "QUOカード",
+      "balance": 2000,
+      "category": "その他",
+      "ticker": "7073",
+      "usableStores": "コンビニ、書店",
+      "description": "【基本情報】\n100株（1単元）以上で、7月末・1月末の年2回、各2,000円分のクオカード（年間4,000円分）。2025年7月末の株主名簿から開始。\n\n【見て楽しくなる情報】\n年2回、クオカードが届く。\n\n【お得情報】\n100株から対象で、継続保有の条件はない。\n\n【裏技】\n発送は基準日から3か月以内が目途。",
+      "rating": 3,
+      "unitPrice": 2000,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "100株以上・1月末と7月末の年2回、各クオカード2,000円分。基準日から3か月以内を目途に発送",
+      "siteGroup": "QUOカード",
+      "auditedAt": "2026-11-03",
+      "quo": {
+        "tiers": [
+          {
+            "minShares": 100,
+            "minHoldMonths": 0,
+            "amountYen": 2000,
+            "timesPerYear": 2
+          }
+        ],
+        "rightsMonths": "1,7",
+        "note": "基準日から3か月以内を目途に発送",
+        "auditedAt": "2026-11-03",
+        "auditScope": "株数区分・年回数・権利月・金額（公式IRページ原文）"
+      },
+      "auditScope": "基準日・株数・金額・年回数・発送時期（公式IRページで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.jaic-g.com/ir/benefit/"
     }
   ]
 }
