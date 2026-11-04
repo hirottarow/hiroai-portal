@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "2026-11-03.1",
-  "updatedAt": "2026-11-03",
+  "dataVersion": "2026-11-05.1",
+  "updatedAt": "2026-11-05",
   "categories": [
     "外食",
     "小売",
@@ -10792,6 +10792,93 @@
         }
       ],
       "tiersNote": "継続保有条件なし。1,000株以上は7月末（3,000円相当）と1月末（1,000円相当）で額が違う"
+    },
+    {
+      "company": "G-FACTORY",
+      "title": "電子お食事券（宇奈とと・やきとりの扇屋など）",
+      "balance": 3000,
+      "category": "外食",
+      "ticker": "3474",
+      "usableStores": "宇奈とと、やきとりの扇屋、備長扇屋、中目黒いぐち、鳥カミ、鳥さき（当社グループの国内直営店・国内ライセンス店・取引先店舗。対象店は公式の一覧）",
+      "description": "【基本情報】\n「名代宇奈とと」「やきとりの扇屋」などを展開するG-FACTORY。100株以上で年1回、3,000円分の電子お食事券。\n\n【見て楽しくなる情報】\nうな丼や焼鳥の店で使える、外食好き向けの優待。スマホのQRで使う電子チケット。\n\n【お得情報】\n100株で3,000円分。使い切れなかった残高は次回に使える。\n\n【裏技】\n使用期限は基準日の翌年4月1日〜翌々年3月31日。会計時にチケット画面へのログイン（株主番号と郵便番号）が必要なので控えておく。",
+      "rating": 3,
+      "unitPrice": 0,
+      "balanceUnit": "円分",
+      "quantityUnit": "回",
+      "exchange": "東証",
+      "usageNotes": "電子チケット（giftee）。残高があれば次回に使える。2025年12月末株主様用の使用期限は2026年4月1日〜2027年3月31日（基準日の翌年4月1日〜翌々年3月31日の想定）。会計時にチケット画面へのログインが必要（株主番号と郵便番号）。QRコードを読み取れるスマホが必要。「宇奈とと/扇屋」「焼鳥/扇屋」の店舗形態はテイクアウト不可。店舗は予告なく閉店・休業で使えなくなることがある",
+      "shipMonths": "3",
+      "auditedAt": "2026-11-05",
+      "auditScope": "基準日・進呈時期・株数区分・金額・電子チケット形態・残高繰越・使用期限・対象店舗の主なブランド（公式IRページで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://g-fac.jp/ir/stock/benefit/",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 3000,
+          "timesPerYear": 1
+        }
+      ],
+      "tiersNote": "基準日は12月末（年1回）。進呈は3月中旬。対象店舗の全一覧は公式ページ"
+    },
+    {
+      "company": "東京都競馬",
+      "title": "大井競馬場飲食優待券（500円分）と入場証・サマーランド招待券",
+      "balance": 500,
+      "category": "レジャー",
+      "ticker": "9672",
+      "usableStores": "大井競馬場（飲食店舗「STARLIGHT」）、東京サマーランド",
+      "description": "【基本情報】\n大井競馬場（TCK）と東京サマーランドを運営する東京都競馬。100株以上で年1回、競馬場の入場証・飲食優待券・サマーランドの招待券が届く。\n\n【見て楽しくなる情報】\n競馬場に無料で入れて、飲食券で一杯やれる。サマーランドは1Dayパス。\n\n【お得情報】\n100株で入場証1枚・飲食優待券1枚（500円分）・サマーランド招待券2枚。継続1年以上は招待券4枚＋春秋限定4枚、3年以上は6枚＋6枚。株数が増えるほど枚数が増える（10,000株で飲食券7枚）。\n\n【裏技】\nサマーランドの招待券は事前予約（日付指定整理券）が必要。再発行不可。この辞書では残高管理できる飲食優待券を主に扱う。",
+      "rating": 3,
+      "unitPrice": 500,
+      "balanceUnit": "円分",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "飲食優待券は大井競馬の開催日に大井競馬場内の「STARLIGHT」で使える500円分。券面記載の期間内。1回の会計につき1枚・会計時に回収・釣銭なし・現金引換不可。2026年12月31日基準分（2027年3月発送予定）から対象店舗が大井競馬場内の指定店舗に拡大され、詳細は2026年12月末頃に公式で告知。入場証は券面の期間内の開催日に1枚1名・混雑日は事前申込が必要な場合あり。サマーランド招待券は1枚1名・1回限り・日付指定整理券の取得が必要。飲食優待券の有効期限の日付は公式ページに記載なし（券面に記載）",
+      "shipMonths": "3",
+      "auditedAt": "2026-11-05",
+      "auditScope": "基準日・発送時期・株数区分と継続保有ごとの枚数・飲食優待券の使い方・2026年12月基準からの対象店舗拡大（公式IRページで確認。飲食券の有効期限日は記載なし）",
+      "auditSource": "official",
+      "sourceUrl": "https://tokyotokeiba.co.jp/ir/stock/preference/",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 500,
+          "timesPerYear": 1,
+          "note": "飲食優待券1枚（入場証1枚・サマーランド招待券2枚も付く）"
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 12,
+          "amount": 1000,
+          "timesPerYear": 1,
+          "note": "飲食優待券2枚"
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 12,
+          "amount": 1500,
+          "timesPerYear": 1,
+          "note": "飲食優待券3枚"
+        },
+        {
+          "minShares": 5000,
+          "minHoldMonths": 12,
+          "amount": 2500,
+          "timesPerYear": 1,
+          "note": "飲食優待券5枚"
+        },
+        {
+          "minShares": 10000,
+          "minHoldMonths": 12,
+          "amount": 3500,
+          "timesPerYear": 1,
+          "note": "飲食優待券7枚"
+        }
+      ],
+      "tiersNote": "金額は飲食優待券の分のみ（1枚500円分）。入場証・サマーランド招待券は含まない。継続保有1年以上=6月末・12月末の名簿に同一番号で3回以上連続、3年以上=7回以上連続（飲食券の枚数は1年以上と3年以上で同じ）。500株以上は継続1年以上の枚数（1年未満は100株以上で一律1枚）。保有株数は基準日(12月末)の名簿の株数で判定"
     }
   ],
   "siteOnly": [
@@ -11362,6 +11449,385 @@
       "auditScope": "基準日・株数・金額・年回数・発送時期（公式IRページで確認）",
       "auditSource": "official",
       "sourceUrl": "https://www.jaic-g.com/ir/benefit/"
+    },
+    {
+      "company": "タマホーム",
+      "title": "株主様限定 特製クオ・カード",
+      "balance": 2000,
+      "category": "その他",
+      "ticker": "1419",
+      "usableStores": "コンビニ、書店",
+      "description": "【基本情報】\n注文住宅大手。100株からオリジナルデザインのクオ・カードが年1回届く。\n\n【見て楽しくなる情報】\n株主限定の特製デザインのカード。有効期限のないクオ・カードは財布のお守り。\n\n【お得情報】\n100株で2,000円分。保有3年以上（毎年11月末・5月末の名簿に同一株主番号で7回以上連続）になると4,000円分に増える。\n\n【裏技】\n継続の判定は同一株主番号。貸株や証券会社の変更で番号が変わると数え直しになる。",
+      "rating": 3,
+      "unitPrice": 2000,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "年1回（11月30日基準・翌1月下旬頃の発送予定）。100株以上: 保有3年未満2,000円分／3年以上4,000円分。3年以上=11月末・5月末の名簿に同一株主番号で7回以上連続して100株以上の記載。有効期限は公式に記載なし（QUOカード自体は期限なし）",
+      "siteGroup": "QUOカード",
+      "shipMonths": "1",
+      "auditedAt": "2026-11-05",
+      "quo": {
+        "tiers": [
+          {
+            "minShares": 100,
+            "minHoldMonths": 0,
+            "amountYen": 2000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 100,
+            "minHoldMonths": 36,
+            "amountYen": 4000,
+            "timesPerYear": 1
+          }
+        ],
+        "rightsMonths": "11",
+        "note": "保有3年未満2,000円分／3年以上4,000円分（置き換え）。3年以上は11月末・5月末の名簿に同一株主番号で7回以上連続して100株以上の記載",
+        "auditedAt": "2026-11-05",
+        "auditScope": "株数区分・年回数・権利月（公式株主優待ページと突き合わせ）"
+      },
+      "auditScope": "基準日・対象株数・金額・継続保有の条件・進呈時期・特製クオ・カード（公式IRページで確認。有効期限は記載なし）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.tamahome.jp/company/ir/stock_bond/stock_bond_03.html"
+    },
+    {
+      "company": "ベルパーク",
+      "title": "QUOカード",
+      "balance": 1000,
+      "category": "その他",
+      "ticker": "9441",
+      "usableStores": "コンビニ、書店",
+      "description": "【基本情報】\n携帯ショップ運営のベルパーク。100株以上で年2回、各1,000円分のQUOカードが届く。\n\n【見て楽しくなる情報】\n年2回、一律でもらえるわかりやすい優待。\n\n【お得情報】\n6月末・12月末の年2回とも100株で1,000円分。年間2,000円分。\n\n【裏技】\n2024年度までは結婚式場のベルブライド優待券が付いていたが、2025年度以降の公式表はQUOカードのみ。",
+      "rating": 3,
+      "unitPrice": 1000,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "年2回（6月末・12月末基準）。100株（1単元）以上で各回1,000円分。2025年度以降の表はQUOカードのみ（2024年度まではベルブライド株主優待券1枚が付属）。発送月・有効期限は公式に記載なし",
+      "siteGroup": "QUOカード",
+      "auditedAt": "2026-11-05",
+      "quo": {
+        "tiers": [
+          {
+            "minShares": 100,
+            "minHoldMonths": 0,
+            "amountYen": 1000,
+            "timesPerYear": 2
+          }
+        ],
+        "rightsMonths": "6,12",
+        "note": "100株以上で一律。2026年度も1,000円分×2回",
+        "auditedAt": "2026-11-05",
+        "auditScope": "株数区分・年回数・権利月（公式株主優待ページと突き合わせ）"
+      },
+      "auditScope": "基準日・対象株数・金額・年回数・年度ごとの変更（公式IRページで確認。発送月・有効期限は記載なし）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.bellpark.co.jp/ir/stock/benefits"
+    },
+    {
+      "company": "MITホールディングス",
+      "title": "QUOカード",
+      "balance": 5000,
+      "category": "その他",
+      "ticker": "4016",
+      "usableStores": "コンビニ、書店",
+      "description": "【基本情報】\nシステムインテグレーションとDXサービスのMITホールディングス。300株以上で毎年5,000円分のQUOカード。\n\n【見て楽しくなる情報】\n株主総会の決議通知に同封されて届く。\n\n【お得情報】\n300株（3単元）で5,000円分。株数による増額や継続条件はない。\n\n【裏技】\n11月末が基準日で発送は翌2月の定時株主総会後。必要株数が300株とやや多め。",
+      "rating": 3,
+      "unitPrice": 5000,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "年1回（11月末基準）。300株（3単元）以上でQUOカード5,000円分。毎年2月開催予定の定時株主総会終了後、決議通知に同封して発送予定。有効期限は公式に記載なし",
+      "siteGroup": "QUOカード",
+      "shipMonths": "2",
+      "auditedAt": "2026-11-05",
+      "quo": {
+        "tiers": [
+          {
+            "minShares": 300,
+            "minHoldMonths": 0,
+            "amountYen": 5000,
+            "timesPerYear": 1
+          }
+        ],
+        "rightsMonths": "11",
+        "note": "300株以上で一律5,000円分",
+        "auditedAt": "2026-11-05",
+        "auditScope": "株数区分・年回数・権利月（公式株主優待制度ページと突き合わせ）"
+      },
+      "auditScope": "基準日・対象株数・金額・進呈時期（公式IRページで確認。有効期限は記載なし）",
+      "auditSource": "official",
+      "sourceUrl": "https://mit-hd.co.jp/ir-information/benefit/"
+    },
+    {
+      "company": "くろがね工作所",
+      "title": "QUOカード",
+      "balance": 1000,
+      "category": "その他",
+      "ticker": "7997",
+      "usableStores": "コンビニ、書店",
+      "description": "【基本情報】\n建材・金属製品のくろがね工作所。2025年に導入した、11月末基準のQUOカード優待。\n\n【見て楽しくなる情報】\n2026年5月に拡充が決まり、継続保有で上乗せがもらえるようになった。\n\n【お得情報】\n100株で1,000円分（継続6か月以上は1,500円分）、300株で3,000円分（同4,000円分）。\n\n【裏技】\n継続条件は2026年11月期は6か月以上、2027年11月期以降は1年以上に変わる。長く持つ前提の設計。",
+      "rating": 3,
+      "unitPrice": 1000,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "年1回（11月末基準・権利確定日から3か月以内を目途に発送）。2026年11月期: 100株以上300株未満1,000円分（継続6か月以上1,500円分）、300株以上3,000円分（同4,000円分）。継続6か月以上=2026年5月末と11月末の名簿に同一株主番号で規定株数以上の記載。2027年11月期以降は継続1年以上が条件に変わる。有効期限は公式に記載なし",
+      "siteGroup": "QUOカード",
+      "shipMonths": "1,2",
+      "auditedAt": "2026-11-05",
+      "quo": {
+        "tiers": [
+          {
+            "minShares": 100,
+            "minHoldMonths": 0,
+            "amountYen": 1000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 100,
+            "minHoldMonths": 6,
+            "amountYen": 1500,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 300,
+            "minHoldMonths": 0,
+            "amountYen": 3000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 300,
+            "minHoldMonths": 6,
+            "amountYen": 4000,
+            "timesPerYear": 1
+          }
+        ],
+        "rightsMonths": "11",
+        "note": "2026年11月期の区分（2026-05-12 開示）。2027年11月期以降は継続保有期間が1年以上の株主が上乗せの対象になる",
+        "auditedAt": "2026-11-05",
+        "auditScope": "株数区分・年回数・権利月（適時開示PDFの区分表と突き合わせ）"
+      },
+      "auditScope": "基準日・株数区分・継続保有の条件・進呈時期・2027年11月期以降の変更（適時開示PDF2本で確認。会社サイトIR置き。有効期限は記載なし）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.kurogane-kks.co.jp/company/20260512_02_ir.pdf"
+    },
+    {
+      "company": "インターアクション",
+      "title": "QUOカード",
+      "balance": 2000,
+      "category": "その他",
+      "ticker": "7725",
+      "usableStores": "コンビニ、書店",
+      "description": "【基本情報】\n半導体関連の検査装置・イメージセンサ周辺機器を手がけるインターアクション。1,000株以上を2年以上持つ株主へQUOカード。\n\n【見て楽しくなる情報】\n必要株数は多いが、継続2年が条件のはっきりした長期保有向け優待。\n\n【お得情報】\n1,000株以上5,000株未満で2,000円分、5,000株以上で10,000円分（いずれも2年以上保有）。\n\n【裏技】\n名義ごとの判定。2年の数え方（何回連続か）は公式に記載がない。",
+      "rating": 3,
+      "unitPrice": 2000,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "年1回（11月末基準・翌2月下旬〜3月上旬頃に発送予定）。1,000株以上5,000株未満を2年以上保有: 2,000円分、5,000株以上を2年以上保有: 10,000円分（1名義ごと）。2年の数え方・有効期限は公式に記載なし",
+      "siteGroup": "QUOカード",
+      "shipMonths": "2,3",
+      "auditedAt": "2026-11-05",
+      "quo": {
+        "tiers": [
+          {
+            "minShares": 1000,
+            "minHoldMonths": 24,
+            "amountYen": 2000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 5000,
+            "minHoldMonths": 24,
+            "amountYen": 10000,
+            "timesPerYear": 1
+          }
+        ],
+        "rightsMonths": "11",
+        "note": "いずれも保有2年以上が条件（数え方は公式に記載なし）",
+        "auditedAt": "2026-11-05",
+        "auditScope": "株数区分・年回数・権利月（公式株主還元ページと突き合わせ）"
+      },
+      "auditScope": "基準日・株数区分・保有期間2年以上の条件・金額・進呈時期（公式IRページで確認。2年の数え方・有効期限は記載なし）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.inter-action.co.jp/ir/stock/benefit/"
+    },
+    {
+      "company": "北恵",
+      "title": "QUOカード／選べるギフト「鳥」",
+      "balance": 500,
+      "category": "その他",
+      "ticker": "9872",
+      "usableStores": "コンビニ、書店",
+      "description": "【基本情報】\n繊維・商社系の北恵。11月20日基準で、100株からQUOカードが届く。\n\n【見て楽しくなる情報】\n株数が増えると額が上がり、1,000株以上は郵便局の選べるギフト「鳥」に変わる。\n\n【お得情報】\n100株で500円分、500株で1,000円分のQUOカード。1,000株以上はQUOカードではなく選べるギフト「鳥」（3,000円相当）。\n\n【裏技】\n基準日が月末ではなく11月20日。発送月は公式に記載がない。",
+      "rating": 3,
+      "unitPrice": 500,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "年1回（11月20日基準）。100株以上500株未満: QUOカード500円分、500株以上1,000株未満: 1,000円分。1,000株以上はQUOカードではなく郵便局の選べるギフト「鳥」（3,000円相当）。発送月・有効期限は公式に記載なし",
+      "siteGroup": "QUOカード",
+      "auditedAt": "2026-11-05",
+      "quo": {
+        "tiers": [
+          {
+            "minShares": 100,
+            "minHoldMonths": 0,
+            "amountYen": 500,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 500,
+            "minHoldMonths": 0,
+            "amountYen": 1000,
+            "timesPerYear": 1
+          }
+        ],
+        "rightsMonths": "11",
+        "note": "1,000株以上は郵便局の選べるギフト「鳥」（3,000円相当）でQUOカードではないため、この表には含めていない",
+        "auditedAt": "2026-11-05",
+        "auditScope": "株数区分・年回数・権利月（公式株主優待ページと突き合わせ。1,000株以上は対象外）"
+      },
+      "auditScope": "基準日・株数区分・金額・1,000株以上の贈呈品（公式IRページで確認。発送月・有効期限は記載なし）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.kitakei.jp/ja/ir/benefit.html"
+    },
+    {
+      "company": "メック",
+      "title": "クオ・カード",
+      "balance": 1000,
+      "category": "その他",
+      "ticker": "4971",
+      "usableStores": "コンビニ、書店",
+      "description": "【基本情報】\n電子基板用薬品のメック。100株以上を1年以上持つ株主へ、年1回クオ・カード。\n\n【見て楽しくなる情報】\n2025年11月に内容が一部変更された、継続保有で額が増える優待。\n\n【お得情報】\n100株で1年以上1,000円分・3年以上2,000円分、500株で1年以上2,000円分・3年以上3,000円分。\n\n【裏技】\n継続判定は6月末・12月末の名簿に同一株主番号で連続（1年以上=3回、3年以上=7回）。保有株数は直近3回または7回のうち最小の株数で判定される。",
+      "rating": 3,
+      "unitPrice": 1000,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "年1回（12月末基準・定時株主総会終了後の決議通知に同封）。100株以上500株未満: 継続1年以上3年未満1,000円分／3年以上2,000円分、500株以上: 1年以上3年未満2,000円分／3年以上3,000円分（2025年11月11日発表の変更後）。保有株数は直近3回または7回の名簿のうち最も少ない株数。発送月・有効期限は公式に記載なし",
+      "siteGroup": "QUOカード",
+      "auditedAt": "2026-11-05",
+      "quo": {
+        "tiers": [
+          {
+            "minShares": 100,
+            "minHoldMonths": 12,
+            "amountYen": 1000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 100,
+            "minHoldMonths": 36,
+            "amountYen": 2000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 500,
+            "minHoldMonths": 12,
+            "amountYen": 2000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 500,
+            "minHoldMonths": 36,
+            "amountYen": 3000,
+            "timesPerYear": 1
+          }
+        ],
+        "rightsMonths": "12",
+        "note": "2025年11月11日発表の変更後の区分。継続1年以上=12月末と6月末の名簿に3回以上連続、3年以上=7回以上連続",
+        "auditedAt": "2026-11-05",
+        "auditScope": "株数区分・年回数・権利月（公式配当・株主還元ページと突き合わせ）"
+      },
+      "auditScope": "基準日・株数区分・継続保有の条件・保有株数の判定・進呈方法（公式IRページで確認。発送月・有効期限は記載なし）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.mec-co.com/ir/advantage-info/"
+    },
+    {
+      "company": "アスマーク",
+      "title": "QUOカード",
+      "balance": 1000,
+      "category": "その他",
+      "ticker": "4197",
+      "usableStores": "コンビニ、書店",
+      "description": "【基本情報】\nマーケティングリサーチのアスマーク。2024年に新設した、継続保有で額が大きく増えるQUOカード優待。\n\n【見て楽しくなる情報】\n100株で1,000円分から始まり、長く持つほど増える。\n\n【お得情報】\n100株で1,000円分（1年以上3,000円分・3年以上5,000円分）、500株で5,000円分（同10,000円・15,000円）、1,000株で10,000円分（同20,000円・30,000円）。\n\n【裏技】\n継続判定は5月末・11月末の名簿に同一株主番号で連続（1年以上=3回、3年以上=7回）。",
+      "rating": 3,
+      "unitPrice": 1000,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "年1回（11月末基準・毎年2月頃に発送予定）。100株以上500株未満: 継続1年未満1,000円分／1年以上3年未満3,000円分／3年以上5,000円分、500株以上1,000株未満: 5,000円／10,000円／15,000円、1,000株以上: 10,000円／20,000円／30,000円。継続1年以上=5月末・11月末の名簿に同一株主番号で3回以上連続、3年以上=7回以上連続。有効期限は公式に記載なし。確認は2024-08-16 の新設開示の時点（その後の変更告知は見つけられていない）",
+      "siteGroup": "QUOカード",
+      "shipMonths": "2",
+      "auditedAt": "2026-11-05",
+      "quo": {
+        "tiers": [
+          {
+            "minShares": 100,
+            "minHoldMonths": 0,
+            "amountYen": 1000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 100,
+            "minHoldMonths": 12,
+            "amountYen": 3000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 100,
+            "minHoldMonths": 36,
+            "amountYen": 5000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 500,
+            "minHoldMonths": 0,
+            "amountYen": 5000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 500,
+            "minHoldMonths": 12,
+            "amountYen": 10000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 500,
+            "minHoldMonths": 36,
+            "amountYen": 15000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 1000,
+            "minHoldMonths": 0,
+            "amountYen": 10000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 1000,
+            "minHoldMonths": 12,
+            "amountYen": 20000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 1000,
+            "minHoldMonths": 36,
+            "amountYen": 30000,
+            "timesPerYear": 1
+          }
+        ],
+        "rightsMonths": "11",
+        "note": "2024-08-16 の新設開示の区分。継続1年以上=3回以上連続、3年以上=7回以上連続（5月末・11月末の名簿）",
+        "auditedAt": "2026-11-05",
+        "auditScope": "株数区分・年回数・権利月（適時開示PDFの区分表と突き合わせ）"
+      },
+      "auditScope": "基準日・株数区分・継続保有の条件・進呈時期（2024-08-16 の適時開示PDFで確認。会社IRページには優待の記載なし。有効期限は記載なし）",
+      "auditSource": "official",
+      "sourceUrl": "https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20240816/20240816573116.pdf"
     }
   ]
 }
