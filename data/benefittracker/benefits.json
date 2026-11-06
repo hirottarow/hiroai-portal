@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "2026-11-05.2",
-  "updatedAt": "2026-11-05",
+  "dataVersion": "2026-11-07.1",
+  "updatedAt": "2026-11-07",
   "categories": [
     "外食",
     "小売",
@@ -10867,6 +10867,121 @@
         }
       ],
       "tiersNote": "金額は飲食優待券の分のみ（1枚500円分）。入場証・サマーランド招待券は含まない。継続保有1年以上=6月末・12月末の名簿に同一番号で3回以上連続、3年以上=7回以上連続（飲食券の枚数は1年以上と3年以上で同じ）。500株以上は継続1年以上の枚数（1年未満は100株以上で一律1枚）。保有株数は基準日(12月末)の名簿の株数で判定"
+    },
+    {
+      "company": "ポールトゥウィンホールディングス",
+      "title": "特別優待ポイント（上場15周年記念）",
+      "balance": 10000,
+      "category": "カタログ",
+      "ticker": "3657",
+      "usableStores": "専用サイト（デジタル優待倶楽部）",
+      "description": "【基本情報】\nゲームのデバッグ・サポートなどのポールトゥウィンHD（東証プライム）。上場15周年を記念して2026年10月26日に決まった特別優待。\n\n【お得情報】\n1,000株以上でポイントを進呈（1ポイント≒1円）。1,000株で10,000ポイント、2,000株以上で23,000ポイント。継続保有1年以上なら11,000〜27,000ポイントに増額。\n\n【注意】\n「記念優待」の名で、翌年以降も続くとは公式に書かれていない。\n\n【2026-11-07 新規掲載・条件】\n基準日は2027年1月31日。案内は2027年4月上旬の予定。",
+      "rating": 3,
+      "unitPrice": 0,
+      "balanceUnit": "ポイント",
+      "quantityUnit": "回",
+      "exchange": "東証",
+      "usageNotes": "1,000株以上が対象（100株では貰えない）。株主限定の専用サイトで電子マネー・ポイント（1ポイント=1円相当）・商品・サービスと交換でき、共有コイン「WILLsCoin」にも交換できる。案内は2027年4月上旬、特設サイトは4月開設の予定、交換の申込期限は2027年7月31日。上場15周年の特別優待で、翌年以降の実施は公式に記載なし",
+      "shipMonths": "4",
+      "validUntil": "2027-07",
+      "auditedAt": "2026-11-07",
+      "auditScope": "対象株数・基準日・株数区分とポイント数・継続保有の判定・使い道・案内時期・交換期限・今回限りの記載の有無（公式の適時開示PDFで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://pdf.irpocket.com/C3657/xoA3/f6yw/sXqm/KmeV.pdf",
+      "tiers": [
+        {
+          "minShares": 1000,
+          "minHoldMonths": 0,
+          "amount": 10000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 12,
+          "amount": 11000,
+          "timesPerYear": 1,
+          "additive": true,
+          "note": "継続保有1年以上は11,000ポイント（上乗せは+1,000）"
+        },
+        {
+          "minShares": 1500,
+          "minHoldMonths": 0,
+          "amount": 16000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 1500,
+          "minHoldMonths": 12,
+          "amount": 2000,
+          "timesPerYear": 1,
+          "additive": true,
+          "note": "継続保有1年以上は18,000ポイント（上乗せは+2,000）"
+        },
+        {
+          "minShares": 2000,
+          "minHoldMonths": 0,
+          "amount": 23000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 2000,
+          "minHoldMonths": 12,
+          "amount": 4000,
+          "timesPerYear": 1,
+          "additive": true,
+          "note": "継続保有1年以上は27,000ポイント（上乗せは+4,000）"
+        }
+      ],
+      "tiersNote": "上場15周年の特別優待で基準日は2027年1月31日の1回。継続保有1年以上=2026年1月31日と2026年7月31日の株主名簿に同一株主番号で連続記載。1,000株未満は対象外。翌年以降は公式に記載なし"
+    },
+    {
+      "company": "ビジョン",
+      "title": "株主優待券（電子チケット）",
+      "balance": 6000,
+      "category": "レジャー",
+      "ticker": "9416",
+      "usableStores": "グローバルWiFi、VISION GLAMPING Resort & Spa、KO SHI KA（こしか）",
+      "description": "【基本情報】\nWi-Fiルーターレンタル「グローバルWiFi」などを運営するビジョン。6月末と12月末の年2回、電子チケットの優待券を進呈。\n\n【お得情報】\n100株から。優待券は3,000円分の券が基準日ごとに2〜3枚。1,000株以上は10,000円分の券も2枚付き、Wi-Fi・宿泊は最大29,000円分まで割引に使える。\n\n【見て楽しくなる情報】\n海外旅行のWi-Fi、グランピング宿泊、スキンケアと使い道が広い。\n\n【注意】\n同年中に発行された優待券だけ併用できる。\n\n【2026-11-07 新規掲載・条件】\n2025年6月30日の名簿から適用。送付は9月と3月。",
+      "rating": 3,
+      "unitPrice": 0,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "電子チケット（2次元コードの案内で届く）。到着日から利用可。9月送付分は翌年9月30日、3月送付分は翌年3月31日まで申込可。同年中に発行された優待券のみ併用可能。Wi-Fiルーターレンタルと宿泊は最大29,000円分まで、KO SHI KAの3点セットは最大6,000円分まで割引に適用",
+      "shipMonths": "9,3",
+      "auditedAt": "2026-11-07",
+      "auditScope": "基準日・株数区分・金額・送付時期・申込有効期限・使えるサービス・併用条件（公式IRページで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.vision-net.co.jp/ir/benefit.html",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 6000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 200,
+          "minHoldMonths": 0,
+          "amount": 6000,
+          "timesPerYear": 2,
+          "note": "6月末基準は9,000円分（3,000円×3枚）、12月末基準は6,000円分"
+        },
+        {
+          "minShares": 300,
+          "minHoldMonths": 0,
+          "amount": 9000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 0,
+          "amount": 29000,
+          "timesPerYear": 2,
+          "note": "3,000円分×3枚＋10,000円分×2枚"
+        }
+      ],
+      "tiersNote": "基準日は6月30日と12月31日の年2回（送付は9月と3月）。継続保有の条件は公式に記載なし"
     }
   ],
   "siteOnly": [
@@ -11200,7 +11315,7 @@
       "siteGroup": "QUOカード",
       "shipMonths": "1",
       "validUntil": "2027-01",
-      "auditedAt": "2026-10-25",
+      "auditedAt": "2026-11-07",
       "quo": {
         "tiers": [
           {
@@ -11211,7 +11326,7 @@
         ],
         "rightsMonths": "",
         "note": "今回限りの記念優待（2026-08-27 お知らせ）。2026年10月20日基準の1回だけで、毎年の権利月はありません。100株以上の1区分のみ。2027年1月予定",
-        "auditedAt": "2026-10-25",
+        "auditedAt": "2026-11-07",
         "auditScope": "株数区分・権利日・発送時期（公式のお知らせPDF原文と突き合わせ）。年回数は今回限りなので入れていない"
       },
       "auditScope": "基準日（2026年10月20日のみ）・株数区分（100株以上一律）・金額・今回限り・発送時期（2027年1月予定・招集通知に同封）・上場市場（公式IRページで確認）",
@@ -11816,6 +11931,136 @@
       "auditScope": "基準日・株数区分・継続保有の条件・進呈時期（2024-08-16 の適時開示PDFで確認。会社IRページには優待の記載なし。有効期限は記載なし）",
       "auditSource": "official",
       "sourceUrl": "https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20240816/20240816573116.pdf"
+    },
+    {
+      "company": "KSK",
+      "title": "QUOカード",
+      "balance": 1000,
+      "category": "その他",
+      "ticker": "9687",
+      "usableStores": "コンビニ、書店",
+      "description": "【基本情報】\n情報システム・ソフトウェア開発のKSK（東証スタンダード）。2026年10月30日の開示で新設された、QUOカードの優待。\n\n【お得情報】\n200株から。継続保有1年以上で1,000円分、3年以上で2,000円分。500株以上で最大3,000円分、1,000株以上で最大5,000円分に増額。\n\n【裏技】\n初回の基準日（2027年3月31日）は、同日以前の株主名簿を遡って継続保有期間を判定する（2026年3月末から連続して記載されていれば1年以上）。\n\n【2026-11-07 新規掲載・条件】\n2026年10月30日開示、11月2日補足。継続保有は3・6・9・12月末の同一株主番号の連続記載回数で判定（1年以上=5回以上、3年以上=13回以上）。株主番号が変わるとリセット。",
+      "rating": 3,
+      "unitPrice": 1000,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "基準日は毎年3月末日・6月頃に贈呈。200株以上: 1年以上1,000円/3年以上2,000円、500株以上: 1年以上2,000円/3年以上3,000円、1,000株以上: 1年以上3,000円/3年以上5,000円。初回2027年3月末は名簿を遡って継続保有を判定",
+      "siteGroup": "QUOカード",
+      "shipMonths": "6",
+      "auditedAt": "2026-11-07",
+      "quo": {
+        "tiers": [
+          {
+            "minShares": 200,
+            "minHoldMonths": 12,
+            "amountYen": 1000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 200,
+            "minHoldMonths": 36,
+            "amountYen": 2000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 500,
+            "minHoldMonths": 12,
+            "amountYen": 2000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 500,
+            "minHoldMonths": 36,
+            "amountYen": 3000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 1000,
+            "minHoldMonths": 12,
+            "amountYen": 3000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 1000,
+            "minHoldMonths": 36,
+            "amountYen": 5000,
+            "timesPerYear": 1
+          }
+        ],
+        "rightsMonths": "3",
+        "note": "2026-10-30 開示で新設。継続保有は3・6・9・12月末の同一株主番号の連続記載で判定（1年以上=5回以上、3年以上=13回以上）。初回2027年3月末は名簿を遡って判定（11-02 補足）。贈呈は6月頃",
+        "auditedAt": "2026-11-07",
+        "auditScope": "株数区分・継続保有の判定・金額・基準日・贈呈時期（適時開示PDFで確認）"
+      },
+      "auditScope": "基準日・株数区分・継続保有の判定（連続5回／13回）・金額・贈呈時期・初回の遡り判定（公式の適時開示PDFで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://ssl4.eir-parts.net/doc/9687/tdnet/2901079/00.pdf"
+    },
+    {
+      "company": "北興化学工業",
+      "title": "QUOカード",
+      "balance": 500,
+      "category": "その他",
+      "ticker": "4992",
+      "usableStores": "コンビニ、書店",
+      "description": "【基本情報】\n農薬メーカーの北興化学工業（東証スタンダード）。2026年10月27日の開示で新設された、100株からのQUOカード優待。\n\n【お得情報】\n継続保有1年以上で500円券、2年以上で1,000円券。300株以上で最大2,000円券、500株以上で最大3,000円券。\n\n【裏技】\n初回の基準日（2026年11月30日）は、継続保有の要件を満たす株主だけが対象。\n\n【2026-11-07 新規掲載・条件】\n2026年10月27日開示。継続保有は5月末・11月末の同一株主番号での連続記載回数で判定（1年以上=連続3回、2年以上=連続5回）。",
+      "rating": 3,
+      "unitPrice": 500,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "基準日は毎年11月30日、2月上旬の招集通知に同封。100〜299株: 1年以上500円/2年以上1,000円、300〜499株: 1年以上1,000円/2年以上2,000円、500株以上: 1年以上2,000円/2年以上3,000円。初回2026年11月30日は継続保有の要件を満たす株主のみ",
+      "siteGroup": "QUOカード",
+      "shipMonths": "2",
+      "auditedAt": "2026-11-07",
+      "quo": {
+        "tiers": [
+          {
+            "minShares": 100,
+            "minHoldMonths": 12,
+            "amountYen": 500,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 100,
+            "minHoldMonths": 24,
+            "amountYen": 1000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 300,
+            "minHoldMonths": 12,
+            "amountYen": 1000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 300,
+            "minHoldMonths": 24,
+            "amountYen": 2000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 500,
+            "minHoldMonths": 12,
+            "amountYen": 2000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 500,
+            "minHoldMonths": 24,
+            "amountYen": 3000,
+            "timesPerYear": 1
+          }
+        ],
+        "rightsMonths": "11",
+        "note": "2026-10-27 開示で新設。基準日 毎年11月30日。継続保有は5月末・11月末の同一株主番号の連続記載回数で判定（1年以上=連続3回、2年以上=連続5回）。初回2026-11-30は継続要件を満たす株主のみ。2月上旬の招集通知に同封",
+        "auditedAt": "2026-11-07",
+        "auditScope": "株数区分・継続保有の判定・金額・基準日・贈呈時期（適時開示PDFで確認）"
+      },
+      "auditScope": "基準日・株数区分・継続保有の判定（連続3回／5回）・金額・贈呈時期（公式の適時開示PDFで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.hokkochem.co.jp/wp-content/uploads/2027_10_27_release-2.pdf"
     }
   ]
 }
