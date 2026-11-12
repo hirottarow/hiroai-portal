@@ -20,6 +20,9 @@ DATA_PATH = os.path.join(ROOT, "data", "benefittracker", "benefits.json")
 BENEFITS_DIR = os.path.join(ROOT, "benefits")
 BENEFITS_HTML = os.path.join(ROOT, "benefits.html")
 SITEMAP_PATH = os.path.join(ROOT, "sitemap.xml")
+# sitemap.xml と同じ中身を別名でも書く（Search Console が sitemap.xml を「取得できませんでした」のまま
+# 処理しないため、別名で送り直す用。2026-11-12。どちらも常に同一に保つ。sitemap.xml は消さない）
+SITEMAP_ALIAS_PATHS = [os.path.join(ROOT, "sitemap2.xml")]
 BASE_URL = "https://hirottarow.github.io/hiroai-portal/"
 QUO_FILENAME = "quo.html"
 
@@ -668,8 +671,9 @@ def build_sitemap(items, updated_at):
     lines.append("</urlset>")
     lines.append("")
 
-    with open(SITEMAP_PATH, "w", encoding="utf-8", newline="\n") as f:
-        f.write("\n".join(lines))
+    for path in [SITEMAP_PATH] + SITEMAP_ALIAS_PATHS:
+        with open(path, "w", encoding="utf-8", newline="\n") as f:
+            f.write("\n".join(lines))
 
     return len(top_files) + len(benefit_files)
 
