@@ -14,6 +14,10 @@ import json
 import os
 import re
 import subprocess
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from site_common import css_link, header_html, footer_html  # noqa: E402  共通ヘッダー・フッター（正本）
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_PATH = os.path.join(ROOT, "data", "benefittracker", "benefits.json")
@@ -224,29 +228,17 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
         table.quo-table th {{ color: var(--secondary-color); font-size: 12px; }}
         table.quo-table a {{ color: var(--primary-color); font-weight: 600; text-decoration: none; }}
     </style>
+{site_css}
 </head>
 <body>
-    <header>
-        <a class="logo" href="../index.html">ひろ@AI遊び場</a>
-        <nav>
-            <a href="../benefits.html">株主優待</a>
-            <a href="../tools.html">ツール</a>
-            <a href="../privacy.html">プライバシーポリシー</a>
-        </nav>
-    </header>
+{site_header}
 
     <div class="breadcrumb">{breadcrumb_links}</div>
 
     <div class="container">
 {body}
-        <div class="footer-links">
-            <a href="../index.html">ホーム</a>
-            <a href="../benefits.html">株主優待 一覧に戻る</a>
-            <a href="../terms.html">利用規約</a>
-            <a href="../privacy.html">プライバシーポリシー</a>
-        </div>
-        <div class="copyright">&copy; 2026 Hiro @ AI Playground. All Rights Reserved.</div>
     </div>
+{site_footer}
 </body>
 </html>
 """
@@ -414,12 +406,12 @@ def build_description(t):
 
 APP_BANNER_NORMAL = """        <div class="app-banner">
             <strong>&#128241; 手持ちの優待をアプリで管理</strong>
-            この情報は、株主優待の残高・期限管理アプリ「BenefitTracker」の優待辞書と同じデータです。現在 Google Play でクローズドテストを実施中です。
+            この情報は、株主優待の残高・期限管理アプリ「株主優待管理（BenefitTracker）」の優待辞書と同じデータです。Google Play で配信中です（日本）。 <a href="../app-benefittracker.html">アプリの紹介を見る &rarr;</a>
         </div>"""
 
 APP_BANNER_SITE_ONLY = """        <div class="app-banner">
             <strong>&#128241; この銘柄について</strong>
-            この銘柄は BenefitTracker の優待辞書には未収録です（QUO カードはアプリ内で1つの品目として管理します）。
+            この銘柄は BenefitTracker の優待辞書には未収録です（QUO カードはアプリ内で1つの品目として管理します）。 <a href="../app-benefittracker.html">アプリの紹介を見る &rarr;</a>
         </div>"""
 
 
@@ -473,6 +465,7 @@ def build_page(t, updated_at, is_site_only=False):
     ])
 
     return PAGE_TEMPLATE.format(
+        site_css=css_link("../"), site_header=header_html("../", current="benefits"), site_footer=footer_html("../"),
         title=esc(title),
         description=esc(description),
         canonical=canonical,
@@ -542,6 +535,7 @@ def build_quo_page(quo_items, updated_at):
     ])
 
     return PAGE_TEMPLATE.format(
+        site_css=css_link("../"), site_header=header_html("../", current="benefits"), site_footer=footer_html("../"),
         title=esc(title),
         description=esc(description),
         canonical=canonical,

@@ -2,3 +2,6 @@
 # 親リポジトリは temp/ を無視しているが、独立リポジトリは別判定。無いと git add で他セッションの
 # スクショ等を巻き込む（2026-09-07 hiroai-portal / 2026-09-22 つぎコピで2回発生）。
 temp/
+
+# --- Python のキャッシュ（scripts/ の生成スクリプトが site_common を import すると出来る）---
+__pycache__/
