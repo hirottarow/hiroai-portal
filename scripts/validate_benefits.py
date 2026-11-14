@@ -19,6 +19,7 @@ push 前に止めるためのもの。標準ライブラリのみ使用。
   - dataVersion の形式違反（YYYY-MM-DD.連番）
   - auditedAt の形式違反（YYYY-MM-DD。quo.auditedAt も対象）
   - auditSource が "official" / "secondary" / "" 以外、formerNames が文字列の配列でない（2026-09-26 追加）
+  - companyKana がひらがな（ー・ゔ・空白区切り）以外を含む（2026-11-14 追加。空・欠けは警告）
 
 警告（終了コードは 0 のまま。2026-09-10 追加。2026-09-11 に判定を作り直した）:
   - アプリの BenefitTierCalculator.select が絶対に選ばない tiers の段。
@@ -49,6 +50,8 @@ DATA_PATH = os.path.join(ROOT, "data", "benefittracker", "benefits.json")
 
 DATA_VERSION_RE = re.compile(r"^\d{4}-\d{2}-\d{2}\.\d+$")
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+# 社名の読み（companyKana）: ひらがな・ー・ゔ。別の呼び方は半角空白で区切る（2026-11-14）
+KANA_RE = re.compile(r"^[ぁ-ゖゔー]+( [ぁ-ゖゔー]+)*$")
 # validUntil は月粒度（"YYYY-MM"・その月末まで有効）。→ data/benefittracker/README.md
 YEAR_MONTH_RE = re.compile(r"^\d{4}-(0[1-9]|1[0-2])$")
 
@@ -232,6 +235,12 @@ def validate_item(item, line, index, errors, is_site_only):
             for name in fn:
                 if not is_str(name) or name.strip() == "":
                     errors.add(line, label, "formerNames の要素は空でない文字列にする（値: %r）" % (name,))
+
+    # 社名の読み（2026-11-14）。アプリの検索が社名の読みにも当てる。ひらがなだけ・別の呼び方は空白で区切る
+    # 欠け・空は collect_missing_kana の WARN（巡回で付け忘れても止めない）
+    kana = item.get("companyKana")
+    if kana is not None and (not is_str(kana) or (kana.strip() and not KANA_RE.match(kana))):
+        errors.add(line, label, "companyKana はひらがな・ー・空白だけにする（値: %r）" % (kana,))
 
     valid_until = item.get("validUntil")
     if is_str(valid_until) and valid_until and not YEAR_MONTH_RE.match(valid_until):
@@ -550,6 +559,30 @@ def collect_official_without_url(text):
     return out
 
 
+def collect_missing_kana(text):
+    """companyKana（社名の読み）が無い・空のもの（2026-11-14）。WARN だけで止めない。
+    無いとアプリの検索がひらがなの社名に当たらない（かなの同一視でカタカナ社名は当たる）。"""
+    out = []
+    try:
+        data = json.loads(text)
+    except ValueError:
+        return out
+    for key in ("templates", "siteOnly"):
+        items = data.get(key)
+        if not isinstance(items, list):
+            continue
+        open_idx = find_array_open(text, key)
+        spans = scan_top_level_objects(text, open_idx) if open_idx is not None else []
+        for i, item in enumerate(items):
+            if not isinstance(item, dict):
+                continue
+            kana = item.get("companyKana")
+            if not isinstance(kana, str) or not kana.strip():
+                line = line_of(text, spans[i][0]) if i < len(spans) else 1
+                out.append((line, item_label(item, i), "companyKana（社名の読み・ひらがな）が無い"))
+    return out
+
+
 def main():
     if not os.path.exists(DATA_PATH):
         print("ERROR: %s が見つかりません" % DATA_PATH, file=sys.stderr)
@@ -569,6 +602,8 @@ def main():
     for line, label, message in collect_store_separator(text):
         print("WARN [%d行目] %s: %s" % (line, label, message))
     for line, label, message in collect_official_without_url(text):
+        print("WARN [%d行目] %s: %s" % (line, label, message))
+    for line, label, message in collect_missing_kana(text):
         print("WARN [%d行目] %s: %s" % (line, label, message))
 
     if not errors:

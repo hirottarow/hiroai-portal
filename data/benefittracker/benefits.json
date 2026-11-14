@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "2026-11-14.1",
+  "dataVersion": "2026-11-14.2",
   "updatedAt": "2026-11-14",
   "categories": [
     "外食",
@@ -15,6 +15,7 @@
   "templates": [
     {
       "company": "カッパ・クリエイト",
+      "companyKana": "かっぱくりえいと",
       "title": "優待ポイント",
       "balance": 3000,
       "category": "外食",
@@ -56,6 +57,7 @@
     },
     {
       "company": "すかいらーくHD",
+      "companyKana": "すかいらーくほーるでぃんぐす",
       "title": "株主優待券（電子チケット）",
       "balance": 2000,
       "category": "外食",
@@ -103,6 +105,7 @@
     },
     {
       "company": "マクドナルドHD",
+      "companyKana": "にほんまくどなるどほーるでぃんぐす まくどなるど",
       "title": "株主ご優待券",
       "balance": 1,
       "category": "外食",
@@ -144,6 +147,7 @@
     },
     {
       "company": "ゼンショーHD",
+      "companyKana": "ぜんしょーほーるでぃんぐす",
       "title": "株主様ご優待券",
       "balance": 1000,
       "category": "外食",
@@ -197,6 +201,7 @@
     },
     {
       "company": "トリドールHD",
+      "companyKana": "とりどーるほーるでぃんぐす",
       "title": "株主優待カード",
       "balance": 3000,
       "category": "外食",
@@ -252,6 +257,7 @@
     },
     {
       "company": "吉野家HD",
+      "companyKana": "よしのやほーるでぃんぐす",
       "title": "株主様ご優待券",
       "balance": 2000,
       "category": "外食",
@@ -303,6 +309,7 @@
     },
     {
       "company": "松屋フーズHD",
+      "companyKana": "まつやふーずほーるでぃんぐす",
       "title": "お食事優待券",
       "balance": 10,
       "category": "外食",
@@ -338,6 +345,7 @@
     },
     {
       "company": "コロワイド",
+      "companyKana": "ころわいど",
       "title": "優待ポイント",
       "balance": 10000,
       "category": "外食",
@@ -367,6 +375,7 @@
     },
     {
       "company": "アトム",
+      "companyKana": "あとむ",
       "title": "優待ポイント",
       "balance": 500,
       "category": "外食",
@@ -408,6 +417,7 @@
     },
     {
       "company": "王将フードサービス",
+      "companyKana": "おうしょうふーどさーびす ぎょうざのおうしょう",
       "title": "株主様ご優待券（電子チケット）",
       "balance": 2500,
       "category": "外食",
@@ -480,6 +490,7 @@
     },
     {
       "company": "コメダHD",
+      "companyKana": "こめだほーるでぃんぐす",
       "title": "株主優待電子マネー（KOMECAチャージ）",
       "balance": 1000,
       "category": "外食",
@@ -517,6 +528,7 @@
     },
     {
       "company": "くら寿司",
+      "companyKana": "くらずし",
       "title": "お食事優待券",
       "balance": 1000,
       "category": "外食",
@@ -565,6 +577,7 @@
     },
     {
       "company": "FOOD & LIFE COMPANIES",
+      "companyKana": "ふーどあんどらいふかんぱにーず",
       "title": "株主優待券",
       "balance": 1100,
       "category": "外食",
@@ -635,6 +648,7 @@
     },
     {
       "company": "クリエイト・レストランツ",
+      "companyKana": "くりえいとれすとらんつほーるでぃんぐす",
       "title": "株主様ご優待券（電子チケット）",
       "balance": 1500,
       "category": "外食",
@@ -753,6 +767,7 @@
     },
     {
       "company": "エターナルホスピタリティグループ",
+      "companyKana": "えたーなるほすぴたりてぃぐるーぷ",
       "title": "お食事優待券",
       "balance": 500,
       "category": "外食",
@@ -803,6 +818,7 @@
     },
     {
       "company": "サンマルクHD",
+      "companyKana": "さんまるくほーるでぃんぐす",
       "title": "割引カード",
       "balance": 1,
       "category": "外食",
@@ -823,6 +839,7 @@
     },
     {
       "company": "ドトール・日レスHD",
+      "companyKana": "どとーるにちれすほーるでぃんぐす",
       "title": "株主ご優待カード（ドトール バリューカード）",
       "balance": 1000,
       "category": "外食",
@@ -863,6 +880,7 @@
     },
     {
       "company": "力の源ホールディングス",
+      "companyKana": "ちからのもとほーるでぃんぐす",
       "title": "優待電子チケット",
       "balance": 2000,
       "category": "外食",
@@ -934,6 +952,7 @@
     },
     {
       "company": "リンガーハット",
+      "companyKana": "りんがーはっと",
       "title": "優待ポイント",
       "balance": 1650,
       "category": "外食",
@@ -1003,6 +1022,7 @@
     },
     {
       "company": "木曽路",
+      "companyKana": "きそじ",
       "title": "お食事優待券",
       "balance": 1600,
       "category": "外食",
@@ -1044,6 +1064,7 @@
     },
     {
       "company": "ロイヤルHD",
+      "companyKana": "ろいやるほーるでぃんぐす",
       "title": "お食事優待券",
       "balance": 500,
       "category": "外食",
@@ -1088,6 +1109,7 @@
     },
     {
       "company": "ジョイフル",
+      "companyKana": "じょいふる",
       "title": "株主優待割引券(15%)",
       "balance": 5,
       "category": "外食",
@@ -1132,6 +1154,7 @@
     },
     {
       "company": "ワタミ",
+      "companyKana": "わたみ",
       "title": "お食事優待券",
       "balance": 4000,
       "category": "外食",
@@ -1183,6 +1206,7 @@
     },
     {
       "company": "大戸屋HD",
+      "companyKana": "おおとやほーるでぃんぐす",
       "title": "株主優待ポイントカード",
       "balance": 4000,
       "category": "外食",
@@ -1217,6 +1241,7 @@
     },
     {
       "company": "モスフードサービス",
+      "companyKana": "もすふーどさーびす",
       "title": "お食事優待券",
       "balance": 1000,
       "category": "外食",
@@ -1296,6 +1321,7 @@
     },
     {
       "company": "壱番屋",
+      "companyKana": "いちばんや",
       "title": "お食事優待券",
       "balance": 1000,
       "category": "外食",
@@ -1347,6 +1373,7 @@
     },
     {
       "company": "幸楽苑",
+      "companyKana": "こうらくえん",
       "title": "ご優待食事券",
       "balance": 2000,
       "category": "外食",
@@ -1415,6 +1442,7 @@
     },
     {
       "company": "ユニシアホールディングス",
+      "companyKana": "ゆにしあほーるでぃんぐす",
       "title": "お食事優待券",
       "balance": 2000,
       "category": "外食",
@@ -1465,6 +1493,7 @@
     },
     {
       "company": "ハイデイ日高",
+      "companyKana": "はいでいひだか",
       "title": "お食事優待券",
       "balance": 1000,
       "category": "外食",
@@ -1522,6 +1551,7 @@
     },
     {
       "company": "銀座ルノアール",
+      "companyKana": "ぎんざるのあーる",
       "title": "お食事優待券",
       "balance": 1000,
       "category": "外食",
@@ -1562,6 +1592,7 @@
     },
     {
       "company": "ギフトHD",
+      "companyKana": "ぎふとほーるでぃんぐす",
       "title": "優待ポイント",
       "balance": 1000,
       "category": "外食",
@@ -1669,6 +1700,7 @@
     },
     {
       "company": "テンアライド",
+      "companyKana": "てんあらいど",
       "title": "株主ご優待券（500円券）",
       "balance": 1000,
       "category": "外食",
@@ -1723,6 +1755,7 @@
     },
     {
       "company": "ヴィア・HD",
+      "companyKana": "ゔぃあほーるでぃんぐす びあほーるでぃんぐす",
       "title": "食事優待割引券",
       "balance": 8000,
       "category": "外食",
@@ -1781,6 +1814,7 @@
     },
     {
       "company": "ホットランドホールディングス",
+      "companyKana": "ほっとらんどほーるでぃんぐす",
       "title": "お食事優待券",
       "balance": 1500,
       "category": "外食",
@@ -1825,6 +1859,7 @@
     },
     {
       "company": "イオン",
+      "companyKana": "いおん",
       "title": "オーナーズカード",
       "balance": 1,
       "category": "小売",
@@ -1844,6 +1879,7 @@
     },
     {
       "company": "ビックカメラ",
+      "companyKana": "びっくかめら",
       "title": "株主様お買物優待券",
       "balance": 1000,
       "category": "小売",
@@ -1909,6 +1945,7 @@
     },
     {
       "company": "コジマ",
+      "companyKana": "こじま",
       "title": "株主様お買物優待券",
       "balance": 2000,
       "category": "小売",
@@ -1980,6 +2017,7 @@
     },
     {
       "company": "ヤマダHD",
+      "companyKana": "やまだほーるでぃんぐす",
       "title": "お買物優待券",
       "balance": 500,
       "category": "小売",
@@ -2029,6 +2067,7 @@
     },
     {
       "company": "マツキヨココカラ＆カンパニー",
+      "companyKana": "まつきよここからあんどかんぱにー",
       "title": "マツキヨココカラポイント",
       "balance": 2000,
       "category": "小売",
@@ -2078,6 +2117,7 @@
     },
     {
       "company": "スギHD",
+      "companyKana": "すぎほーるでぃんぐす",
       "title": "株主優待券またはスギポイント（選択制）",
       "balance": 1000,
       "category": "小売",
@@ -2119,6 +2159,7 @@
     },
     {
       "company": "サンドラッグ",
+      "companyKana": "さんどらっぐ",
       "title": "優待券2,000円分＋PB商品無料引換券",
       "balance": 2000,
       "category": "小売",
@@ -2147,6 +2188,7 @@
     },
     {
       "company": "ツルハHD",
+      "companyKana": "つるはほーるでぃんぐす",
       "title": "株主ギフト券等",
       "balance": 5000,
       "category": "小売",
@@ -2187,6 +2229,7 @@
     },
     {
       "company": "クスリのアオキ",
+      "companyKana": "くすりのあおきほーるでぃんぐす",
       "title": "株主優待カード",
       "balance": 1,
       "category": "小売",
@@ -2208,6 +2251,7 @@
     },
     {
       "company": "ニトリHD",
+      "companyKana": "にとりほーるでぃんぐす",
       "title": "お買物優待券",
       "balance": 5,
       "category": "小売",
@@ -2249,6 +2293,7 @@
     },
     {
       "company": "エディオン",
+      "companyKana": "えでぃおん",
       "title": "優待ギフトカード",
       "balance": 3000,
       "category": "小売",
@@ -2350,6 +2395,7 @@
     },
     {
       "company": "ケーズHD",
+      "companyKana": "けーずほーるでぃんぐす",
       "title": "株主ご優待券（1,000円券）",
       "balance": 1000,
       "category": "小売",
@@ -2425,6 +2471,7 @@
     },
     {
       "company": "しまむら",
+      "companyKana": "しまむら",
       "title": "株主お買物券",
       "balance": 2000,
       "category": "小売",
@@ -2471,6 +2518,7 @@
     },
     {
       "company": "西松屋チェーン",
+      "companyKana": "にしまつやちぇーん",
       "title": "株主ご優待カード",
       "balance": 1000,
       "category": "小売",
@@ -2547,6 +2595,7 @@
     },
     {
       "company": "ライフコーポ",
+      "companyKana": "らいふこーぽれーしょん",
       "title": "商品券等（選択制）",
       "balance": 2000,
       "category": "小売",
@@ -2606,6 +2655,7 @@
     },
     {
       "company": "ユナイテッド・スーパー",
+      "companyKana": "ゆないてっどすーぱーまーけっとほーるでぃんぐす",
       "title": "お買物優待券",
       "balance": 3000,
       "category": "小売",
@@ -2672,6 +2722,7 @@
     },
     {
       "company": "良品計画",
+      "companyKana": "りょうひんけいかく むじるしりょうひん",
       "title": "株主優待電子クーポン（7%割引）",
       "balance": 7,
       "category": "小売",
@@ -2692,6 +2743,7 @@
     },
     {
       "company": "三越伊勢丹HD",
+      "companyKana": "みつこしいせたんほーるでぃんぐす",
       "title": "株主優待カード(10%割引)",
       "balance": 1,
       "category": "小売",
@@ -2712,6 +2764,7 @@
     },
     {
       "company": "高島屋",
+      "companyKana": "たかしまや",
       "title": "お買物優待カード",
       "balance": 1,
       "category": "小売",
@@ -2732,6 +2785,7 @@
     },
     {
       "company": "J.フロントリテイリング",
+      "companyKana": "じぇいふろんとりていりんぐ",
       "title": "大丸松坂屋優待カード",
       "balance": 1,
       "category": "小売",
@@ -2752,6 +2806,7 @@
     },
     {
       "company": "コーナン商事",
+      "companyKana": "こーなんしょうじ",
       "title": "ホームセンター優待券",
       "balance": 1000,
       "category": "小売",
@@ -2851,6 +2906,7 @@
     },
     {
       "company": "DCMホールディングス",
+      "companyKana": "でぃーしーえむほーるでぃんぐす",
       "title": "株主買物優待券",
       "balance": 500,
       "category": "小売",
@@ -2910,6 +2966,7 @@
     },
     {
       "company": "コメリ",
+      "companyKana": "こめり",
       "title": "ギフトカード",
       "balance": 1000,
       "category": "小売",
@@ -2992,6 +3049,7 @@
     },
     {
       "company": "パン・パシフィック(ドンキ)",
+      "companyKana": "ぱんぱしふぃっくいんたーなしょなるほーるでぃんぐす どんきほーて",
       "title": "majicaポイント",
       "balance": 300,
       "category": "小売",
@@ -3037,6 +3095,7 @@
     },
     {
       "company": "イズミ",
+      "companyKana": "いずみ",
       "title": "お買物優待券",
       "balance": 1000,
       "category": "小売",
@@ -3174,6 +3233,7 @@
     },
     {
       "company": "バローHD",
+      "companyKana": "ばろーほーるでぃんぐす",
       "title": "Lu Vitギフトカード",
       "balance": 500,
       "category": "小売",
@@ -3241,6 +3301,7 @@
     },
     {
       "company": "平和堂",
+      "companyKana": "へいわどう",
       "title": "株主様ご優待券（100円券）",
       "balance": 1000,
       "category": "小売",
@@ -3320,6 +3381,7 @@
     },
     {
       "company": "オートバックスセブン",
+      "companyKana": "おーとばっくすせぶん",
       "title": "オートバックス限定Vポイント",
       "balance": 1000,
       "category": "小売",
@@ -3379,6 +3441,7 @@
     },
     {
       "company": "JR東日本",
+      "companyKana": "じぇいあーるひがしにほん ひがしにほんりょかくてつどう",
       "title": "割引券(4割)",
       "balance": 1,
       "category": "交通",
@@ -3481,6 +3544,7 @@
     },
     {
       "company": "JR西日本",
+      "companyKana": "じぇいあーるにしにほん にしにほんりょかくてつどう",
       "title": "割引券(5割)",
       "balance": 1,
       "category": "交通",
@@ -3588,6 +3652,7 @@
     },
     {
       "company": "JR東海",
+      "companyKana": "じぇいあーるとうかい とうかいりょかくてつどう",
       "title": "割引券(1割)",
       "balance": 1,
       "category": "交通",
@@ -3678,6 +3743,7 @@
     },
     {
       "company": "JR九州",
+      "companyKana": "じぇいあーるきゅうしゅう きゅうしゅうりょかくてつどう",
       "title": "鉄道株主優待券（1日乗車券）・JR九州グループ株主優待券",
       "balance": 1,
       "category": "交通",
@@ -3780,6 +3846,7 @@
     },
     {
       "company": "日本航空(JAL)",
+      "companyKana": "にほんこうくう じゃる",
       "title": "株主割引券",
       "balance": 1,
       "category": "交通",
@@ -3889,6 +3956,7 @@
     },
     {
       "company": "ANA HD",
+      "companyKana": "えーえぬえーほーるでぃんぐす ぜんにっくう",
       "title": "株主優待番号ご案内書",
       "balance": 1,
       "category": "交通",
@@ -3951,6 +4019,7 @@
     },
     {
       "company": "東急",
+      "companyKana": "とうきゅう",
       "title": "優待乗車証等",
       "balance": 1,
       "category": "交通",
@@ -3971,6 +4040,7 @@
     },
     {
       "company": "小田急電鉄",
+      "companyKana": "おだきゅうでんてつ",
       "title": "優待乗車証（きっぷ式）",
       "balance": 4,
       "category": "交通",
@@ -4054,6 +4124,7 @@
     },
     {
       "company": "京王電鉄",
+      "companyKana": "けいおうでんてつ",
       "title": "電車全線優待乗車券",
       "balance": 2,
       "category": "交通",
@@ -4104,6 +4175,7 @@
     },
     {
       "company": "京成電鉄",
+      "companyKana": "けいせいでんてつ",
       "title": "優待乗車証",
       "balance": 1,
       "category": "交通",
@@ -4158,6 +4230,7 @@
     },
     {
       "company": "西武HD",
+      "companyKana": "せいぶほーるでぃんぐす",
       "title": "優待乗車券・施設割引",
       "balance": 1,
       "category": "交通",
@@ -4178,6 +4251,7 @@
     },
     {
       "company": "阪急阪神HD",
+      "companyKana": "はんきゅうはんしんほーるでぃんぐす",
       "title": "優待乗車証",
       "balance": 2,
       "category": "交通",
@@ -4272,6 +4346,7 @@
     },
     {
       "company": "近鉄グループHD",
+      "companyKana": "きんてつぐるーぷほーるでぃんぐす",
       "title": "近畿日本鉄道線沿線招待乗車券",
       "balance": 4,
       "category": "交通",
@@ -4337,6 +4412,7 @@
     },
     {
       "company": "名古屋鉄道",
+      "companyKana": "なごやてつどう めいてつ",
       "title": "株主ご優待券（電車線株主招待乗車証4枚を含む冊子）",
       "balance": 4,
       "category": "交通",
@@ -4430,6 +4506,7 @@
     },
     {
       "company": "京急電鉄",
+      "companyKana": "けいきゅうでんてつ けいひんきゅうこうでんてつ",
       "title": "優待乗車証",
       "balance": 2,
       "category": "交通",
@@ -4521,6 +4598,7 @@
     },
     {
       "company": "相鉄HD",
+      "companyKana": "そうてつほーるでぃんぐす",
       "title": "優待乗車証（回数券方式）",
       "balance": 2,
       "category": "交通",
@@ -4621,6 +4699,7 @@
     },
     {
       "company": "富士急行",
+      "companyKana": "ふじきゅうこう ふじきゅう",
       "title": "施設優待",
       "balance": 1,
       "category": "レジャー",
@@ -4641,6 +4720,7 @@
     },
     {
       "company": "HIS",
+      "companyKana": "えいちあいえす",
       "title": "HIS株主優待券",
       "balance": 1000,
       "category": "サービス",
@@ -4711,6 +4791,7 @@
     },
     {
       "company": "オリエンタルランド",
+      "companyKana": "おりえんたるらんど",
       "title": "パスポート",
       "balance": 1,
       "category": "レジャー",
@@ -4794,6 +4875,7 @@
     },
     {
       "company": "サンリオ",
+      "companyKana": "さんりお",
       "title": "共通優待券",
       "balance": 1,
       "category": "レジャー",
@@ -4847,6 +4929,7 @@
     },
     {
       "company": "ラウンドワン",
+      "companyKana": "らうんどわん",
       "title": "優待券",
       "balance": 500,
       "category": "レジャー",
@@ -4905,6 +4988,7 @@
     },
     {
       "company": "第一興商",
+      "companyKana": "だいいちこうしょう",
       "title": "株主様ご優待カード（電子・1円単位）",
       "balance": 5000,
       "category": "レジャー",
@@ -4955,6 +5039,7 @@
     },
     {
       "company": "コシダカHD",
+      "companyKana": "こしだかほーるでぃんぐす",
       "title": "カラオケ優待券",
       "balance": 2000,
       "category": "レジャー",
@@ -5016,6 +5101,7 @@
     },
     {
       "company": "東宝",
+      "companyKana": "とうほう",
       "title": "映画招待券",
       "balance": 1,
       "category": "レジャー",
@@ -5074,6 +5160,7 @@
     },
     {
       "company": "松竹",
+      "companyKana": "しょうちく",
       "title": "映画優待ポイント",
       "balance": 80,
       "category": "レジャー",
@@ -5132,6 +5219,7 @@
     },
     {
       "company": "スタジオアリス",
+      "companyKana": "すたじおありす",
       "title": "株主写真撮影券",
       "balance": 1,
       "category": "サービス",
@@ -5178,6 +5266,7 @@
     },
     {
       "company": "アシックス",
+      "companyKana": "あしっくす",
       "title": "株主優待電子チケット（オンラインストア割引）",
       "balance": 10,
       "category": "小売",
@@ -5229,6 +5318,7 @@
     },
     {
       "company": "ミズノ",
+      "companyKana": "みずの",
       "title": "株主優待割引券（20%割引）",
       "balance": 10,
       "category": "小売",
@@ -5265,6 +5355,7 @@
     },
     {
       "company": "ライオン",
+      "companyKana": "らいおん",
       "title": "自社製品セット",
       "balance": 1,
       "category": "自社商品",
@@ -5293,6 +5384,7 @@
     },
     {
       "company": "ヤクルト本社",
+      "companyKana": "やくるとほんしゃ",
       "title": "製品等詰め合わせ",
       "balance": 1,
       "category": "自社商品",
@@ -5313,6 +5405,7 @@
     },
     {
       "company": "味の素",
+      "companyKana": "あじのもと",
       "title": "自社製品セット",
       "balance": 500,
       "category": "自社商品",
@@ -5365,6 +5458,7 @@
     },
     {
       "company": "カゴメ",
+      "companyKana": "かごめ",
       "title": "自社製品セット",
       "balance": 2000,
       "category": "自社商品",
@@ -5400,6 +5494,7 @@
     },
     {
       "company": "キリンHD",
+      "companyKana": "きりんほーるでぃんぐす",
       "title": "自社製品等選択",
       "balance": 500,
       "category": "自社商品",
@@ -5456,6 +5551,7 @@
     },
     {
       "company": "日清食品HD",
+      "companyKana": "にっしんしょくひんほーるでぃんぐす",
       "title": "商品詰め合わせ／WFP寄付／オンラインストアクーポン（選択制）",
       "balance": 1000,
       "category": "自社商品",
@@ -5502,6 +5598,7 @@
     },
     {
       "company": "カルビー",
+      "companyKana": "かるびー",
       "title": "スナック菓子セット",
       "balance": 1500,
       "category": "自社商品",
@@ -5536,6 +5633,7 @@
     },
     {
       "company": "江崎グリコ",
+      "companyKana": "えざきぐりこ",
       "title": "自社製品セット",
       "balance": 1200,
       "category": "自社商品",
@@ -5594,6 +5692,7 @@
     },
     {
       "company": "明治HD",
+      "companyKana": "めいじほーるでぃんぐす",
       "title": "自社製品セット",
       "balance": 1500,
       "category": "自社商品",
@@ -5634,6 +5733,7 @@
     },
     {
       "company": "キユーピー",
+      "companyKana": "きゆーぴー きゅーぴー",
       "title": "自社製品セット",
       "balance": 1000,
       "category": "自社商品",
@@ -5680,6 +5780,7 @@
     },
     {
       "company": "日本ハム",
+      "companyKana": "にっぽんはむ にほんはむ",
       "title": "自社製品セット",
       "balance": 1500,
       "category": "自社商品",
@@ -5744,6 +5845,7 @@
     },
     {
       "company": "伊藤ハム米久HD",
+      "companyKana": "いとうはむよねきゅうほーるでぃんぐす",
       "title": "自社製品セット",
       "balance": 5000,
       "category": "自社商品",
@@ -5773,6 +5875,7 @@
     },
     {
       "company": "小林製薬",
+      "companyKana": "こばやしせいやく",
       "title": "自社製品セット",
       "balance": 5000,
       "category": "自社商品",
@@ -5801,6 +5904,7 @@
     },
     {
       "company": "ハウス食品G",
+      "companyKana": "はうすしょくひんぐるーぷほんしゃ",
       "title": "自社製品セット",
       "balance": 1000,
       "category": "自社商品",
@@ -5837,6 +5941,7 @@
     },
     {
       "company": "東洋水産",
+      "companyKana": "とうようすいさん",
       "title": "製品詰め合わせ",
       "balance": 2000,
       "category": "自社商品",
@@ -5878,6 +5983,7 @@
     },
     {
       "company": "ダイドーGHD",
+      "companyKana": "だいどーぐるーぷほーるでぃんぐす",
       "title": "自社飲料セット",
       "balance": 6000,
       "category": "自社商品",
@@ -5906,6 +6012,7 @@
     },
     {
       "company": "タカラトミー",
+      "companyKana": "たからとみー",
       "title": "限定トミカ等",
       "balance": 1,
       "category": "自社商品",
@@ -5925,6 +6032,7 @@
     },
     {
       "company": "KDDI",
+      "companyKana": "けーでぃーでぃーあい",
       "title": "Pontaポイント等（選択制）",
       "balance": 2000,
       "category": "カタログ",
@@ -5960,6 +6068,7 @@
     },
     {
       "company": "NTT",
+      "companyKana": "えぬてぃーてぃー にっぽんでんしんでんわ",
       "title": "dポイント進呈",
       "balance": 1500,
       "category": "その他",
@@ -5983,6 +6092,7 @@
     },
     {
       "company": "リコーリース",
+      "companyKana": "りこーりーす",
       "title": "カタログギフト",
       "balance": 2000,
       "category": "カタログ",
@@ -6040,6 +6150,7 @@
     },
     {
       "company": "ひろぎんHD",
+      "companyKana": "ひろぎんほーるでぃんぐす",
       "title": "ギフトカード（クオカード）／カタログギフト",
       "balance": 500,
       "category": "カタログ",
@@ -6094,6 +6205,7 @@
     },
     {
       "company": "日本管財ホールディングス",
+      "companyKana": "にほんかんざいほーるでぃんぐす",
       "title": "カタログギフト(年2回)",
       "balance": 2000,
       "category": "カタログ",
@@ -6132,6 +6244,7 @@
     },
     {
       "company": "ヒューリック",
+      "companyKana": "ひゅーりっく",
       "title": "グルメカタログ",
       "balance": 6000,
       "category": "カタログ",
@@ -6161,6 +6274,7 @@
     },
     {
       "company": "TOKAIHD",
+      "companyKana": "とーかいほーるでぃんぐす",
       "title": "クオカード等選択",
       "balance": 500,
       "category": "その他",
@@ -6227,6 +6341,7 @@
     },
     {
       "company": "エスリード",
+      "companyKana": "えすりーど",
       "title": "旬のフルーツカタログ",
       "balance": 3000,
       "category": "カタログ",
@@ -6247,6 +6362,7 @@
     },
     {
       "company": "ソフトバンク",
+      "companyKana": "そふとばんく",
       "title": "PayPayマネーライト",
       "balance": 1000,
       "category": "その他",
@@ -6276,6 +6392,7 @@
     },
     {
       "company": "沖縄セルラー",
+      "companyKana": "おきなわせるらーでんわ",
       "title": "株主優待（Pontaポイント／商品セット選択制）",
       "balance": 2000,
       "category": "カタログ",
@@ -6311,6 +6428,7 @@
     },
     {
       "company": "ほくほくフィナンシャル",
+      "companyKana": "ほくほくふぃなんしゃるぐるーぷ",
       "title": "地場特産品等",
       "balance": 5000,
       "category": "カタログ",
@@ -6344,6 +6462,7 @@
     },
     {
       "company": "大和証券グループ",
+      "companyKana": "だいわしょうけんぐるーぷほんしゃ",
       "title": "カタログギフト",
       "balance": 2000,
       "category": "カタログ",
@@ -6400,6 +6519,7 @@
     },
     {
       "company": "青山商事",
+      "companyKana": "あおやましょうじ",
       "title": "株主優待割引券(20%)",
       "balance": 3,
       "category": "小売",
@@ -6441,6 +6561,7 @@
     },
     {
       "company": "はるやまHD",
+      "companyKana": "はるやまほーるでぃんぐす",
       "title": "株主優待割引券等",
       "balance": 2,
       "category": "小売",
@@ -6490,6 +6611,7 @@
     },
     {
       "company": "TABAYAホールディングス",
+      "companyKana": "たばやほーるでぃんぐす",
       "title": "株主優待割引券(15%)",
       "balance": 2,
       "category": "小売",
@@ -6540,6 +6662,7 @@
     },
     {
       "company": "アルペン",
+      "companyKana": "あるぺん",
       "title": "お買物優待券",
       "balance": 1000,
       "category": "小売",
@@ -6605,6 +6728,7 @@
     },
     {
       "company": "オンワードHD",
+      "companyKana": "おんわーどほーるでぃんぐす",
       "title": "EC20%割引券",
       "balance": 6,
       "category": "小売",
@@ -6625,6 +6749,7 @@
     },
     {
       "company": "資生堂",
+      "companyKana": "しせいどう",
       "title": "Beauty Keyポイント等（選択制）",
       "balance": 1500,
       "category": "自社商品",
@@ -6671,6 +6796,7 @@
     },
     {
       "company": "コーセーホールディングス",
+      "companyKana": "こーせーほーるでぃんぐす",
       "title": "自社製品セット",
       "balance": 4000,
       "category": "自社商品",
@@ -6693,6 +6819,7 @@
     },
     {
       "company": "ポーラ・オルビスHD",
+      "companyKana": "ぽーらおるびすほーるでぃんぐす",
       "title": "自社製品等選択",
       "balance": 1500,
       "category": "自社商品",
@@ -6772,6 +6899,7 @@
     },
     {
       "company": "花王",
+      "companyKana": "かおう",
       "title": "自社製品セット（100〜399株は抽選）",
       "balance": 0,
       "category": "自社商品",
@@ -6808,6 +6936,7 @@
     },
     {
       "company": "ロート製薬",
+      "companyKana": "ろーとせいやく",
       "title": "ココロートパークポイント（100株・3年未満はポイントのみ）",
       "balance": 2000,
       "category": "自社商品",
@@ -6867,6 +6996,7 @@
     },
     {
       "company": "リゾートトラスト",
+      "companyKana": "りぞーとらすと",
       "title": "施設利用割引券",
       "balance": 1,
       "category": "サービス",
@@ -6947,6 +7077,7 @@
     },
     {
       "company": "四国銀行",
+      "companyKana": "しこくぎんこう",
       "title": "QUOカード等",
       "balance": 500,
       "category": "カタログ",
@@ -7018,6 +7149,7 @@
     },
     {
       "company": "南都銀行",
+      "companyKana": "なんとぎんこう",
       "title": "地元特産カタログ",
       "balance": 2000,
       "category": "カタログ",
@@ -7063,6 +7195,7 @@
     },
     {
       "company": "滋賀銀行",
+      "companyKana": "しがぎんこう",
       "title": "株主優待カタログギフト",
       "balance": 3000,
       "category": "カタログ",
@@ -7110,6 +7243,7 @@
     },
     {
       "company": "ブロンコビリー",
+      "companyKana": "ぶろんこびりー",
       "title": "食事優待券",
       "balance": 2000,
       "category": "外食",
@@ -7163,6 +7297,7 @@
     },
     {
       "company": "チムニー",
+      "companyKana": "ちむにー",
       "title": "お食事券（デジタルクーポン）",
       "balance": 3000,
       "category": "外食",
@@ -7198,6 +7333,7 @@
     },
     {
       "company": "フジオフードHD",
+      "companyKana": "ふじおふーどほーるでぃんぐす",
       "title": "食事優待券",
       "balance": 3000,
       "category": "外食",
@@ -7245,6 +7381,7 @@
     },
     {
       "company": "グローバルダイニング",
+      "companyKana": "ぐろーばるだいにんぐ",
       "title": "株主優待証(15%割引)",
       "balance": 1,
       "category": "外食",
@@ -7273,6 +7410,7 @@
     },
     {
       "company": "大崎電気工業",
+      "companyKana": "おおさきでんきこうぎょう",
       "title": "デジタルギフト",
       "balance": 1000,
       "category": "その他",
@@ -7308,6 +7446,7 @@
     },
     {
       "company": "AZ-COM丸和HD",
+      "companyKana": "えーぜっとこむまるわほーるでぃんぐす",
       "title": "プレミアム優待倶楽部ポイント",
       "balance": 3000,
       "category": "カタログ",
@@ -7373,6 +7512,7 @@
     },
     {
       "company": "京阪神ビルディング",
+      "companyKana": "けいはんしんびるでぃんぐ",
       "title": "プレミアム優待倶楽部ポイント",
       "balance": 25000,
       "category": "カタログ",
@@ -7408,6 +7548,7 @@
     },
     {
       "company": "MIRARTHホールディングス",
+      "companyKana": "みらあーすほーるでぃんぐす",
       "title": "プレミアム優待倶楽部ポイント",
       "balance": 3000,
       "category": "カタログ",
@@ -7464,6 +7605,7 @@
     },
     {
       "company": "日本アジア投資",
+      "companyKana": "にほんあじあとうし にっぽんあじあとうし",
       "title": "グループ取引先・投資先の商品",
       "balance": 5000,
       "category": "自社商品",
@@ -7492,6 +7634,7 @@
     },
     {
       "company": "豊田合成",
+      "companyKana": "とよだごうせい",
       "title": "Re-S商品（新設優待）",
       "balance": 1000,
       "category": "自社商品",
@@ -7533,6 +7676,7 @@
     },
     {
       "company": "ロココ",
+      "companyKana": "ろここ",
       "title": "QUOカード等",
       "balance": 1000,
       "category": "カタログ",
@@ -7584,6 +7728,7 @@
     },
     {
       "company": "ブックオフグループホールディングス",
+      "companyKana": "ぶっくおふぐるーぷほーるでぃんぐす",
       "title": "株主優待券",
       "balance": 2000,
       "category": "小売",
@@ -7652,6 +7797,7 @@
     },
     {
       "company": "コナカ",
+      "companyKana": "こなか",
       "title": "株主優待割引券",
       "balance": 3,
       "category": "小売",
@@ -7696,6 +7842,7 @@
     },
     {
       "company": "AOKIホールディングス",
+      "companyKana": "あおきほーるでぃんぐす",
       "title": "株主優待電子チケット",
       "balance": 5,
       "category": "小売",
@@ -7733,6 +7880,7 @@
     },
     {
       "company": "Joshin",
+      "companyKana": "じょーしん じょうしんでんき",
       "title": "株主ご優待カード",
       "balance": 2200,
       "category": "小売",
@@ -7811,6 +7959,7 @@
     },
     {
       "company": "WDI",
+      "companyKana": "だぶりゅーでぃーあい",
       "title": "株主優待電子チケット",
       "balance": 3000,
       "category": "外食",
@@ -7886,6 +8035,7 @@
     },
     {
       "company": "ブルーゾーンホールディングス",
+      "companyKana": "ぶるーぞーんほーるでぃんぐす",
       "formerNames": [
         "ヤオコー"
       ],
@@ -7947,6 +8097,7 @@
     },
     {
       "company": "サッポロビール",
+      "companyKana": "さっぽろびーる さっぽろほーるでぃんぐす",
       "formerNames": [
         "サッポロホールディングス"
       ],
@@ -8028,6 +8179,7 @@
     },
     {
       "company": "テイクアンドギヴ・ニーズ",
+      "companyKana": "ていくあんどぎゔにーず ていくあんどぎぶにーず",
       "title": "プレミアム優待倶楽部ポイント",
       "balance": 5000,
       "category": "カタログ",
@@ -8087,6 +8239,7 @@
     },
     {
       "company": "ミニストップ",
+      "companyKana": "みにすとっぷ",
       "title": "ソフトクリーム無料券",
       "balance": 5,
       "category": "外食",
@@ -8131,6 +8284,7 @@
     },
     {
       "company": "大庄",
+      "companyKana": "だいしょう",
       "title": "優待飲食券",
       "balance": 3000,
       "category": "外食",
@@ -8172,6 +8326,7 @@
     },
     {
       "company": "サガミホールディングス",
+      "companyKana": "さがみほーるでぃんぐす",
       "title": "株主優待食事券",
       "balance": 7000,
       "category": "外食",
@@ -8215,6 +8370,7 @@
     },
     {
       "company": "銚子丸",
+      "companyKana": "ちょうしまる",
       "title": "優待お食事券",
       "balance": 1000,
       "category": "外食",
@@ -8256,6 +8412,7 @@
     },
     {
       "company": "ヨシックスホールディングス",
+      "companyKana": "よしっくすほーるでぃんぐす",
       "title": "お食事優待券",
       "balance": 3000,
       "category": "外食",
@@ -8291,6 +8448,7 @@
     },
     {
       "company": "神戸物産",
+      "companyKana": "こうべぶっさん",
       "title": "Gyomucaカード",
       "balance": 1000,
       "category": "小売",
@@ -8350,6 +8508,7 @@
     },
     {
       "company": "あみやき亭",
+      "companyKana": "あみやきてい",
       "title": "株主優待食事券",
       "balance": 1000,
       "category": "外食",
@@ -8430,6 +8589,7 @@
     },
     {
       "company": "共立メンテナンス",
+      "companyKana": "きょうりつめんてなんす",
       "title": "株主様ご優待割引電子チケット",
       "balance": 2000,
       "category": "レジャー",
@@ -8551,6 +8711,7 @@
     },
     {
       "company": "亀田製菓",
+      "companyKana": "かめだせいか",
       "title": "通販いちば クーポン",
       "balance": 500,
       "category": "自社商品",
@@ -8604,6 +8765,7 @@
     },
     {
       "company": "中村屋",
+      "companyKana": "なかむらや",
       "title": "株主優待（当社商品／優待券・通販割引／寄付から選択）",
       "balance": 2000,
       "category": "自社商品",
@@ -8647,6 +8809,7 @@
     },
     {
       "company": "モロゾフ",
+      "companyKana": "もろぞふ",
       "title": "株主優待券または自社商品",
       "balance": 1000,
       "category": "自社商品",
@@ -8712,6 +8875,7 @@
     },
     {
       "company": "イオンファンタジー",
+      "companyKana": "いおんふぁんたじー",
       "title": "株主さまご優待券",
       "balance": 2000,
       "category": "レジャー",
@@ -8759,6 +8923,7 @@
     },
     {
       "company": "コカ・コーラ ボトラーズジャパンHD",
+      "companyKana": "こかこーらぼとらーずじゃぱんほーるでぃんぐす",
       "title": "CokeON ドリンクチケット",
       "balance": 5,
       "category": "自社商品",
@@ -8810,6 +8975,7 @@
     },
     {
       "company": "ユーグレナ",
+      "companyKana": "ゆーぐれな",
       "title": "オンラインショップ割引クーポン",
       "balance": 2000,
       "category": "自社商品",
@@ -8839,6 +9005,7 @@
     },
     {
       "company": "東京テアトル",
+      "companyKana": "とうきょうてあとる",
       "title": "株主ご優待綴（映画ご招待券・提示割引証）",
       "balance": 4,
       "category": "レジャー",
@@ -8936,6 +9103,7 @@
     },
     {
       "company": "ワコールHD",
+      "companyKana": "わこーるほーるでぃんぐす",
       "title": "株主優待割引（通販20〜40％引き）",
       "balance": 20,
       "category": "小売",
@@ -8979,6 +9147,7 @@
     },
     {
       "company": "エスフーズ",
+      "companyKana": "えすふーず",
       "title": "自社グループ商品・国産牛肉",
       "balance": 3000,
       "category": "自社商品",
@@ -9016,6 +9185,7 @@
     },
     {
       "company": "アークランズ",
+      "companyKana": "あーくらんず",
       "title": "株主ご優待券",
       "balance": 1100,
       "category": "小売",
@@ -9057,6 +9227,7 @@
     },
     {
       "company": "アンドエスティHD",
+      "companyKana": "あんどえすてぃーほーるでぃんぐす",
       "title": "株主様ご優待券",
       "balance": 1500,
       "category": "小売",
@@ -9108,6 +9279,7 @@
     },
     {
       "company": "ハニーズHD",
+      "companyKana": "はにーずほーるでぃんぐす",
       "title": "株主ご優待券",
       "balance": 3000,
       "category": "小売",
@@ -9154,6 +9326,7 @@
     },
     {
       "company": "B-Rサーティワンアイスクリーム",
+      "companyKana": "びーあーるさーてぃわんあいすくりーむ",
       "title": "株主優待eGift（電子ギフト）",
       "balance": 1200,
       "category": "外食",
@@ -9201,6 +9374,7 @@
     },
     {
       "company": "丸千代山岡家",
+      "companyKana": "まるちよやまおかや",
       "title": "株主優待券（ラーメン無料券）",
       "balance": 2,
       "category": "外食",
@@ -9254,6 +9428,7 @@
     },
     {
       "company": "第一交通産業",
+      "companyKana": "だいいちこうつうさんぎょう",
       "title": "株主ご優待クーポン券シート（タクシー）",
       "balance": 1000,
       "category": "交通",
@@ -9409,6 +9584,7 @@
     },
     {
       "company": "オンデック",
+      "companyKana": "おんでっく",
       "title": "電子ギフト",
       "balance": 10000,
       "category": "その他",
@@ -9450,6 +9626,7 @@
     },
     {
       "company": "ロック・フィールド",
+      "companyKana": "ろっくふぃーるど",
       "title": "そうざい券",
       "balance": 500,
       "category": "小売",
@@ -9545,6 +9722,7 @@
     },
     {
       "company": "カンロ",
+      "companyKana": "かんろ",
       "title": "株主優待（選べる3コース）",
       "balance": 1000,
       "category": "自社商品",
@@ -9591,6 +9769,7 @@
     },
     {
       "company": "ブルボン",
+      "companyKana": "ぶるぼん",
       "title": "自社グループ商品詰合せ＋オンラインショップクーポン",
       "balance": 1200,
       "category": "自社商品",
@@ -9682,6 +9861,7 @@
     },
     {
       "company": "東和フードサービス",
+      "companyKana": "とうわふーどさーびす",
       "title": "株主優待割引券（500円券）／椿屋珈琲グループアプリポイント",
       "balance": 1000,
       "category": "外食",
@@ -9747,6 +9927,7 @@
     },
     {
       "company": "光フードサービス",
+      "companyKana": "ひかりふーどさーびす",
       "title": "食事券（電子チケット）",
       "balance": 5000,
       "category": "外食",
@@ -9838,6 +10019,7 @@
     },
     {
       "company": "トップカルチャー",
+      "companyKana": "とっぷかるちゃー",
       "title": "図書カード（創立40周年記念の上乗せあり）",
       "balance": 1000,
       "category": "小売",
@@ -9898,6 +10080,7 @@
     },
     {
       "company": "テンポスホールディングス",
+      "companyKana": "てんぽすほーるでぃんぐす",
       "title": "株主優待御食事券",
       "balance": 3000,
       "category": "外食",
@@ -9927,6 +10110,7 @@
     },
     {
       "company": "ニイタカ",
+      "companyKana": "にいたか",
       "title": "ジェフグルメカード／日本旅行ギフト旅行券",
       "balance": 500,
       "category": "外食",
@@ -9964,6 +10148,7 @@
     },
     {
       "company": "物語コーポレーション",
+      "companyKana": "ものがたりこーぽれーしょん",
       "title": "株主様ご優待券（電子チケット・1円単位の割引）",
       "balance": 3500,
       "category": "外食",
@@ -9994,6 +10179,7 @@
     },
     {
       "company": "アスクル",
+      "companyKana": "あすくる",
       "title": "LOHACO 割引クーポン（500円×4枚）",
       "balance": 2000,
       "category": "小売",
@@ -10022,6 +10208,7 @@
     },
     {
       "company": "ペッパーフードサービス",
+      "companyKana": "ぺっぱーふーどさーびす",
       "title": "お食事券（500円券×6枚／セット）または自社商品",
       "balance": 3000,
       "category": "外食",
@@ -10063,6 +10250,7 @@
     },
     {
       "company": "フルキャストホールディングス",
+      "companyKana": "ふるきゃすとほーるでぃんぐす",
       "title": "「らあめん花月嵐」お食事優待券または嵐げんこつらあめん（選択制）",
       "balance": 2,
       "category": "外食",
@@ -10142,6 +10330,7 @@
     },
     {
       "company": "きちりホールディングス",
+      "companyKana": "きちりほーるでぃんぐす",
       "title": "株主ご優待券（飲食代金1,500円分の金券）",
       "balance": 1500,
       "category": "外食",
@@ -10186,6 +10375,7 @@
     },
     {
       "company": "SANKO MARKETING FOODS",
+      "companyKana": "さんこーまーけてぃんぐふーず",
       "title": "株主ご優待券（20%割引）",
       "balance": 2,
       "category": "外食",
@@ -10230,6 +10420,7 @@
     },
     {
       "company": "北海道コカ・コーラボトリング",
+      "companyKana": "ほっかいどうこかこーらぼとりんぐ",
       "title": "株主優待（Aコース：CokeONドリンクチケット）",
       "balance": 4500,
       "category": "自社商品",
@@ -10267,6 +10458,7 @@
     },
     {
       "company": "ツカダ・グローバルホールディング",
+      "companyKana": "つかだぐろーばるほーるでぃんぐ",
       "title": "当社グループ施設割引券",
       "balance": 2,
       "category": "レジャー",
@@ -10297,6 +10489,7 @@
     },
     {
       "company": "鳥越製粉",
+      "companyKana": "とりごえせいふん",
       "title": "自社商品（そうめん・久留米ラーメン）",
       "balance": 1,
       "category": "自社商品",
@@ -10335,6 +10528,7 @@
     },
     {
       "company": "木徳神糧",
+      "companyKana": "きとくしんりょう",
       "title": "米穀製品等（5kg／10kg相当）・切り餅",
       "balance": 1,
       "category": "自社商品",
@@ -10386,6 +10580,7 @@
     },
     {
       "company": "ダイト",
+      "companyKana": "だいと",
       "title": "自社健康食品の6割引購入（株主優待特典ショップ）",
       "balance": 1,
       "category": "自社商品",
@@ -10423,6 +10618,7 @@
     },
     {
       "company": "ウェザーニューズ",
+      "companyKana": "うぇざーにゅーず",
       "title": "ウェザーニュースPro 無料利用（約半年）",
       "balance": 1,
       "category": "サービス",
@@ -10453,6 +10649,7 @@
     },
     {
       "company": "NATTY SWANKYホールディングス",
+      "companyKana": "なってぃーすわんきーほーるでぃんぐす",
       "title": "株主優待電子チケット（ダンダダン）",
       "balance": 10000,
       "category": "外食",
@@ -10482,6 +10679,7 @@
     },
     {
       "company": "トーホー",
+      "companyKana": "とーほー",
       "title": "お買物割引券（100円券）・コース選択",
       "balance": 2500,
       "category": "小売",
@@ -10533,6 +10731,7 @@
     },
     {
       "company": "スバル興業",
+      "companyKana": "すばるこうぎょう",
       "title": "TOHOシネマズギフトカード",
       "balance": 2000,
       "category": "レジャー",
@@ -10592,6 +10791,7 @@
     },
     {
       "company": "ティーライフ",
+      "companyKana": "てぃーらいふ",
       "title": "株主様ご優待券（自社商品）",
       "balance": 1000,
       "category": "自社商品",
@@ -10632,6 +10832,7 @@
     },
     {
       "company": "TOKYO BASE",
+      "companyKana": "とうきょうべーす",
       "title": "株主優待券（割引券）",
       "balance": 2000,
       "category": "小売",
@@ -10691,6 +10892,7 @@
     },
     {
       "company": "クロスプラス",
+      "companyKana": "くろすぷらす",
       "title": "オンラインストアクーポン券",
       "balance": 3000,
       "category": "自社商品",
@@ -10739,6 +10941,7 @@
     },
     {
       "company": "稲葉製作所",
+      "companyKana": "いなばせいさくしょ",
       "title": "オリジナル図書カード・地域特産品",
       "balance": 1000,
       "category": "カタログ",
@@ -10783,6 +10986,7 @@
     },
     {
       "company": "G-FACTORY",
+      "companyKana": "じーふぁくとりー",
       "title": "電子お食事券（宇奈とと・やきとりの扇屋など）",
       "balance": 3000,
       "category": "外食",
@@ -10812,6 +11016,7 @@
     },
     {
       "company": "東京都競馬",
+      "companyKana": "とうきょうとけいば",
       "title": "大井競馬場飲食優待券（500円分）と入場証・サマーランド招待券",
       "balance": 500,
       "category": "レジャー",
@@ -10870,6 +11075,7 @@
     },
     {
       "company": "ポールトゥウィンホールディングス",
+      "companyKana": "ぽーるとぅういんほーるでぃんぐす",
       "title": "特別優待ポイント（上場15周年記念）",
       "balance": 10000,
       "category": "カタログ",
@@ -10936,6 +11142,7 @@
     },
     {
       "company": "ビジョン",
+      "companyKana": "びじょん",
       "title": "株主優待券（電子チケット）",
       "balance": 6000,
       "category": "レジャー",
@@ -10985,6 +11192,7 @@
     },
     {
       "company": "rakumo",
+      "companyKana": "らくも",
       "title": "デジタルギフト",
       "balance": 7500,
       "category": "カタログ",
@@ -11013,6 +11221,7 @@
     },
     {
       "company": "Orchestra Holdings",
+      "companyKana": "おーけすとらほーるでぃんぐす",
       "title": "デジタルギフト",
       "balance": 15000,
       "category": "カタログ",
@@ -11057,6 +11266,7 @@
     },
     {
       "company": "LAホールディングス",
+      "companyKana": "えるえーほーるでぃんぐす",
       "title": "デジタルギフト",
       "balance": 500,
       "category": "カタログ",
@@ -11086,6 +11296,7 @@
     },
     {
       "company": "ニチレイ",
+      "companyKana": "にちれい",
       "title": "自社グループ商品詰め合わせ",
       "balance": 2500,
       "category": "自社商品",
@@ -11121,6 +11332,7 @@
     },
     {
       "company": "東京建物",
+      "companyKana": "とうきょうたてもの",
       "title": "WEBカタログギフト・施設利用割引券",
       "balance": 2000,
       "category": "カタログ",
@@ -11180,6 +11392,7 @@
     },
     {
       "company": "コクヨ",
+      "companyKana": "こくよ",
       "title": "自社グループ商品（または寄付）",
       "balance": 4000,
       "category": "自社商品",
@@ -11221,6 +11434,7 @@
     },
     {
       "company": "象印マホービン",
+      "companyKana": "ぞうじるしまほーびん",
       "title": "優待特別割引（自社商品の優待販売）",
       "balance": 1000,
       "category": "自社商品",
@@ -11262,6 +11476,7 @@
     },
     {
       "company": "ヴィレッジヴァンガードコーポレーション",
+      "companyKana": "ゔぃれっじゔぁんがーどこーぽれーしょん びれっじばんがーど",
       "title": "お買物券（1,000円券）",
       "balance": 10000,
       "category": "小売",
@@ -11303,6 +11518,7 @@
     },
     {
       "company": "不二家",
+      "companyKana": "ふじや",
       "title": "株主ご優待券（500円券）",
       "balance": 3000,
       "category": "外食",
@@ -11344,6 +11560,7 @@
     },
     {
       "company": "山崎製パン",
+      "companyKana": "やまざきせいぱん",
       "title": "自社製品詰合せ",
       "balance": 3000,
       "category": "自社商品",
@@ -11373,6 +11590,7 @@
     },
     {
       "company": "大塚ホールディングス",
+      "companyKana": "おおつかほーるでぃんぐす",
       "title": "自社グループ製品詰合せ",
       "balance": 3000,
       "category": "自社商品",
@@ -11402,6 +11620,7 @@
     },
     {
       "company": "藤田観光",
+      "companyKana": "ふじたかんこう",
       "title": "株主優待券（金額割引券・無料入場券・無料宿泊券）",
       "balance": 1000,
       "category": "レジャー",
@@ -11459,6 +11678,7 @@
     },
     {
       "company": "キングジム",
+      "companyKana": "きんぐじむ",
       "title": "公式オンラインストア優待クーポン",
       "balance": 6000,
       "category": "自社商品",
@@ -11494,6 +11714,7 @@
     },
     {
       "company": "かんなん丸",
+      "companyKana": "かんなんまる",
       "title": "当社飲食券（ジェフグルメカードも選べる）",
       "balance": 2000,
       "category": "外食",
@@ -11545,6 +11766,7 @@
     },
     {
       "company": "東海汽船",
+      "companyKana": "とうかいきせん",
       "title": "株主乗船割引券（35%引）・株主サービス券",
       "balance": 10,
       "category": "交通",
@@ -11592,6 +11814,7 @@
     },
     {
       "company": "グリーンランドリゾート",
+      "companyKana": "ぐりーんらんどりぞーと",
       "title": "株主特別遊園地等入場券（ほか5種）",
       "balance": 2,
       "category": "レジャー",
@@ -11655,6 +11878,7 @@
     },
     {
       "company": "キユーソー流通システム",
+      "companyKana": "きゆーそーりゅうつうしすてむ きゅーそー",
       "title": "ジェフグルメカード",
       "balance": 1000,
       "category": "外食",
@@ -11696,6 +11920,7 @@
     },
     {
       "company": "白洋舍",
+      "companyKana": "はくようしゃ",
       "title": "クリーニング優待券（無料券・3割引券）／QUOカード／寄付から選択",
       "balance": 1,
       "category": "サービス",
@@ -11750,6 +11975,7 @@
     },
     {
       "company": "LINEヤフー",
+      "companyKana": "らいんやふー",
       "title": "ヤフーショッピング商品券",
       "balance": 25000,
       "category": "小売",
@@ -11797,6 +12023,7 @@
     },
     {
       "company": "ホリイフードサービス",
+      "companyKana": "ほりいふーどさーびす",
       "title": "ジャパネットギフトカード／ホリイフード食事券（選択制）",
       "balance": 10000,
       "category": "外食",
@@ -11889,6 +12116,7 @@
     },
     {
       "company": "サーラコーポレーション",
+      "companyKana": "さーらこーぽれーしょん",
       "title": "株主優待ポイント（カタログ交換・グループ店舗の優待券）",
       "balance": 1000,
       "category": "カタログ",
@@ -11992,6 +12220,7 @@
     },
     {
       "company": "ファーマライズHD",
+      "companyKana": "ふぁーまらいずほーるでぃんぐす",
       "title": "当社商品券／現物優待（選択制）",
       "balance": 2500,
       "category": "小売",
@@ -12024,6 +12253,7 @@
   "siteOnly": [
     {
       "company": "スターシーズ",
+      "companyKana": "すたーしーず",
       "title": "QUOカード",
       "balance": 30000,
       "category": "その他",
@@ -12058,6 +12288,7 @@
     },
     {
       "company": "ＴＯブックス",
+      "companyKana": "とぅーぶっくす てぃーおーぶっくす",
       "title": "QUOカード",
       "balance": 3000,
       "category": "その他",
@@ -12104,6 +12335,7 @@
     },
     {
       "company": "フタバ産業",
+      "companyKana": "ふたばさんぎょう",
       "title": "QUOカード",
       "balance": 1000,
       "category": "その他",
@@ -12156,6 +12388,7 @@
     },
     {
       "company": "イクヨ",
+      "companyKana": "いくよ",
       "title": "QUOカード",
       "balance": 60000,
       "category": "その他",
@@ -12190,6 +12423,7 @@
     },
     {
       "company": "たけびし",
+      "companyKana": "たけびし",
       "title": "QUOカード",
       "balance": 1000,
       "category": "その他",
@@ -12231,6 +12465,7 @@
     },
     {
       "company": "稲畑産業",
+      "companyKana": "いなばたさんぎょう",
       "title": "QUOカード",
       "balance": 500,
       "category": "その他",
@@ -12302,6 +12537,7 @@
     },
     {
       "company": "Green Earth Institute",
+      "companyKana": "ぐりーんあーすいんすてぃてゅーと",
       "title": "QUOカード（市場区分変更記念・今回限り）",
       "balance": 1000,
       "category": "その他",
@@ -12337,6 +12573,7 @@
     },
     {
       "company": "キタック",
+      "companyKana": "きたっく",
       "title": "QUOカード（名証メイン市場への重複上場記念・今回限り）",
       "balance": 1000,
       "category": "その他",
@@ -12372,6 +12609,7 @@
     },
     {
       "company": "アーバネットコーポレーション",
+      "companyKana": "あーばねっとこーぽれーしょん",
       "title": "QUOカード",
       "balance": 2500,
       "category": "その他",
@@ -12413,6 +12651,7 @@
     },
     {
       "company": "オオバ",
+      "companyKana": "おおば",
       "title": "QUOカード（保有年数で増額）",
       "balance": 1000,
       "category": "その他",
@@ -12490,6 +12729,7 @@
     },
     {
       "company": "新都ホールディングス",
+      "companyKana": "しんとほーるでぃんぐす",
       "title": "QUOカードPay",
       "balance": 5000,
       "category": "その他",
@@ -12524,6 +12764,7 @@
     },
     {
       "company": "エイチームホールディングス",
+      "companyKana": "えいちーむほーるでぃんぐす",
       "title": "QUOカード",
       "balance": 10000,
       "category": "その他",
@@ -12558,6 +12799,7 @@
     },
     {
       "company": "ジェイック",
+      "companyKana": "じぇいっく",
       "title": "QUOカード",
       "balance": 2000,
       "category": "その他",
@@ -12592,6 +12834,7 @@
     },
     {
       "company": "タマホーム",
+      "companyKana": "たまほーむ",
       "title": "株主様限定 特製クオ・カード",
       "balance": 2000,
       "category": "その他",
@@ -12633,6 +12876,7 @@
     },
     {
       "company": "ベルパーク",
+      "companyKana": "べるぱーく",
       "title": "QUOカード",
       "balance": 1000,
       "category": "その他",
@@ -12667,6 +12911,7 @@
     },
     {
       "company": "MITホールディングス",
+      "companyKana": "えむあいてぃーほーるでぃんぐす",
       "title": "QUOカード",
       "balance": 5000,
       "category": "その他",
@@ -12702,6 +12947,7 @@
     },
     {
       "company": "くろがね工作所",
+      "companyKana": "くろがねこうさくしょ",
       "title": "QUOカード",
       "balance": 1000,
       "category": "その他",
@@ -12755,6 +13001,7 @@
     },
     {
       "company": "インターアクション",
+      "companyKana": "いんたーあくしょん",
       "title": "QUOカード",
       "balance": 2000,
       "category": "その他",
@@ -12796,6 +13043,7 @@
     },
     {
       "company": "北恵",
+      "companyKana": "きたけい",
       "title": "QUOカード／選べるギフト「鳥」",
       "balance": 500,
       "category": "その他",
@@ -12836,6 +13084,7 @@
     },
     {
       "company": "メック",
+      "companyKana": "めっく",
       "title": "クオ・カード",
       "balance": 1000,
       "category": "その他",
@@ -12888,6 +13137,7 @@
     },
     {
       "company": "アスマーク",
+      "companyKana": "あすまーく",
       "title": "QUOカード",
       "balance": 1000,
       "category": "その他",
@@ -12971,6 +13221,7 @@
     },
     {
       "company": "KSK",
+      "companyKana": "けーえすけー",
       "title": "QUOカード",
       "balance": 1000,
       "category": "その他",
@@ -13036,6 +13287,7 @@
     },
     {
       "company": "北興化学工業",
+      "companyKana": "ほっこうかがくこうぎょう",
       "title": "QUOカード",
       "balance": 500,
       "category": "その他",
@@ -13101,6 +13353,7 @@
     },
     {
       "company": "ユニバーサル園芸社",
+      "companyKana": "ゆにばーさるえんげいしゃ",
       "title": "QUOカード（当社オリジナル）",
       "balance": 1000,
       "category": "その他",
@@ -13142,6 +13395,7 @@
     },
     {
       "company": "IBJ",
+      "companyKana": "あいびーじぇい",
       "title": "特製QUOカード（6月末基準）／サービス割引券（12月末基準）",
       "balance": 500,
       "category": "その他",
@@ -13183,6 +13437,7 @@
     },
     {
       "company": "Lib Work",
+      "companyKana": "りぶわーく",
       "title": "QUOカード（＋投資用アパート割引券）",
       "balance": 1000,
       "category": "その他",
@@ -13218,6 +13473,7 @@
     },
     {
       "company": "クリヤマHD",
+      "companyKana": "くりやまほーるでぃんぐす",
       "title": "QUOカード（継続保有で増額）",
       "balance": 500,
       "category": "その他",
@@ -13295,6 +13551,7 @@
     },
     {
       "company": "多木化学",
+      "companyKana": "たきかがく",
       "title": "QUOカード",
       "balance": 1000,
       "category": "その他",
