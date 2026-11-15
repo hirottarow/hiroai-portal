@@ -153,7 +153,7 @@ APPS = [
     {
         "slug": "numdeck", "name": "NumDeck", "sub": "テンキー＆ボタン盤",
         "pkg": "com.hiroai.bluetoothnumpad", "privacy": "privacy_bluetoothnumpad.html",
-        "status": "wip", "badge": "公開準備中", "category": "UtilitiesApplication",
+        "status": "ok", "badge": "Google Play で配信中", "category": "UtilitiesApplication",
         "lead": "スマホを Bluetooth キーボードに。テンキーの無いノートパソコンへ、半角の数字をそのまま打ち込めます。",
         "feats": [
             ("🔢", "全角にならない数字", "日本語入力がオンのままでも、半角の数字が入ります。"),
