@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "2026-11-18.1",
-  "updatedAt": "2026-11-18",
+  "dataVersion": "2026-11-19.1",
+  "updatedAt": "2026-11-19",
   "categories": [
     "外食",
     "小売",
@@ -14675,6 +14675,353 @@
         }
       ],
       "tiersNote": "2,000株以上は商品または寄付から1点選ぶ方式（QUOカードではない）。1,000株未満は対象外"
+    },
+    {
+      "ticker": "3639",
+      "company": "ボルテージ",
+      "companyKana": "ぼるてーじ",
+      "category": "その他",
+      "exchange": "東証",
+      "title": "QUOカード（300株以上）",
+      "balance": 500,
+      "balanceUnit": "円",
+      "unitPrice": 500,
+      "quantityUnit": "枚",
+      "usableStores": "コンビニ、書店",
+      "rating": 2,
+      "siteGroup": "QUOカード",
+      "description": "【基本情報】\n恋愛ドラマアプリを手がけるボルテージ。毎年12月31日に300株以上を持つ株主へ、アプリの人気キャラクターをデザインしたオリジナルQuoカードを贈呈する。年1回。\n\n【お得情報】\n300株以上で一律500円分。継続保有の条件は無い。2022年12月末の優待から、対象を100株以上から300株以上に変更している。\n\n【2026-11-19 新規掲載・条件】\n発送は2月予定。QUOカードの有効期限は公式に記載なし。",
+      "usageNotes": "基準日は毎年12月31日（年1回・300株以上）。オリジナルQuoカード500円分（保有株数・継続保有で額は変わらない）。発送は2月予定。有効期限は公式に記載なし。2022年12月末の優待から対象を100株以上から300株以上へ変更",
+      "quo": {
+        "auditedAt": "2026-11-19",
+        "auditScope": "株数区分・金額・年回数・権利月・発送時期（公式IRの株主優待ページの原文で確認）",
+        "note": "300株以上で一律500円分。継続保有の条件なし。2022年12月末から対象を100株以上から300株以上へ変更",
+        "rightsMonths": "12",
+        "tiers": [
+          {
+            "amountYen": 500,
+            "minHoldMonths": 0,
+            "minShares": 300,
+            "timesPerYear": 1
+          }
+        ]
+      },
+      "auditedAt": "2026-11-19",
+      "auditSource": "official",
+      "auditScope": "基準日・株数区分・金額・発送時期・上場市場（公式IRの株主優待ページと株式情報ページの原文で確認）",
+      "sourceUrl": "https://www.voltage.co.jp/ir/shareholder.html",
+      "shipMonths": "2",
+      "tiers": [
+        {
+          "minShares": 300,
+          "minHoldMonths": 0,
+          "amount": 500,
+          "timesPerYear": 1
+        }
+      ],
+      "tiersNote": "300株未満は対象外（2022年12月末の優待から100株以上→300株以上へ変更）"
+    },
+    {
+      "ticker": "4826",
+      "company": "CIJ",
+      "companyKana": "しーあいじぇい",
+      "category": "その他",
+      "exchange": "東証",
+      "title": "QUOカード（200株以上・1年以上継続保有）",
+      "balance": 500,
+      "balanceUnit": "円",
+      "unitPrice": 500,
+      "quantityUnit": "枚",
+      "usableStores": "コンビニ、書店",
+      "rating": 2,
+      "siteGroup": "QUOカード",
+      "description": "【基本情報】\nシステム開発のCIJ。毎年12月31日に200株以上を1年以上保有する株主へ、オリジナルクオカードを贈呈する。年1回。\n\n【お得情報】\n株数と保有年数で額が増える。200株以上は500円分、1,000株以上は1,000円分、2,000株以上は2,000円分（3年以上は4,000円分）、10,000株以上は3,000円分（3年以上は6,000円分）。\n\n【2026-11-19 新規掲載・条件】\n保有1年未満は対象外。1年以上は基準日の名簿に同一の株主番号が連続2回（または3回）以上、3年以上は連続4回以上。発送月・QUOカードの有効期限は公式に記載なし。",
+      "usageNotes": "基準日は毎年12月31日（年1回）。200株以上かつ1年以上保有が対象で、保有1年未満は対象外。額は200株以上500円分・1,000株以上1,000円分・2,000株以上2,000円分（3年以上4,000円分）・10,000株以上3,000円分（3年以上6,000円分）。1年以上＝前年と当年の2つの基準日（または2年前から当年の3つ）、3年以上＝3年前から当年の4つの基準日で、株主番号が継続して同一（貸株や証券会社の変更で株主番号が変わると継続保有の対象外）。発送月・有効期限は公式に記載なし",
+      "quo": {
+        "auditedAt": "2026-11-19",
+        "auditScope": "株数区分・保有年数・金額・年回数・権利月（公式IRの株主優待ページの原文で確認）",
+        "note": "200株以上かつ1年以上保有が対象（1年未満はなし）。1年以上は500〜3,000円分、3年以上は2,000株以上・10,000株以上で額が増える（4,000円・6,000円）。保有年数は基準日ごとの株主番号が継続して同一であることで数える",
+        "rightsMonths": "12",
+        "tiers": [
+          {
+            "amountYen": 500,
+            "minHoldMonths": 12,
+            "minShares": 200,
+            "timesPerYear": 1
+          },
+          {
+            "amountYen": 1000,
+            "minHoldMonths": 12,
+            "minShares": 1000,
+            "timesPerYear": 1
+          },
+          {
+            "amountYen": 2000,
+            "minHoldMonths": 12,
+            "minShares": 2000,
+            "timesPerYear": 1
+          },
+          {
+            "amountYen": 4000,
+            "minHoldMonths": 36,
+            "minShares": 2000,
+            "timesPerYear": 1
+          },
+          {
+            "amountYen": 3000,
+            "minHoldMonths": 12,
+            "minShares": 10000,
+            "timesPerYear": 1
+          },
+          {
+            "amountYen": 6000,
+            "minHoldMonths": 36,
+            "minShares": 10000,
+            "timesPerYear": 1
+          }
+        ]
+      },
+      "auditedAt": "2026-11-19",
+      "auditSource": "official",
+      "auditScope": "基準日・株数区分・保有年数・金額・保有年数の数え方・上場市場（公式IRの株主優待ページの原文で確認）",
+      "sourceUrl": "https://www.cij.co.jp/ir/incentive/",
+      "shipMonths": "",
+      "tiers": [
+        {
+          "minShares": 200,
+          "minHoldMonths": 12,
+          "amount": 500,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 12,
+          "amount": 1000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 2000,
+          "minHoldMonths": 12,
+          "amount": 2000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 2000,
+          "minHoldMonths": 36,
+          "amount": 4000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 10000,
+          "minHoldMonths": 12,
+          "amount": 3000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 10000,
+          "minHoldMonths": 36,
+          "amount": 6000,
+          "timesPerYear": 1
+        }
+      ],
+      "tiersNote": "保有1年未満は対象外。1年以上＝基準日の名簿に同一株主番号が連続2回以上（前年・当年）、3年以上＝連続4回以上（3年前〜当年）。200株未満は対象外"
+    },
+    {
+      "ticker": "4351",
+      "company": "山田再生系債権回収総合事務所",
+      "companyKana": "やまださいせいけいさいけんかいしゅうそうごうじむしょ",
+      "category": "その他",
+      "exchange": "東証",
+      "title": "QUOカード（100株以上・年2回）",
+      "balance": 1000,
+      "balanceUnit": "円",
+      "unitPrice": 1000,
+      "quantityUnit": "枚",
+      "usableStores": "コンビニ、書店",
+      "rating": 2,
+      "siteGroup": "QUOカード",
+      "description": "【基本情報】\n債権回収・サービサー事業の山田再生系債権回収総合事務所。6月末と12月末に100株以上を持つ株主へ、QUOカード1,000円相当を贈呈する。年2回。\n\n【お得情報】\n100株以上で一律1,000円分、年2回で年間2,000円分。継続保有の条件は無い。\n\n【2026-11-19 新規掲載・条件】\n6月末基準分は9月上旬に発送、12月末基準分は3月開催の定時株主総会終了後に送る決議通知に同封。QUOカードの有効期限は公式に記載なし。",
+      "usageNotes": "基準日は毎年6月末と12月末（年2回・100株以上）。各回QUOカード1,000円相当（保有株数・継続保有で額は変わらない）。6月末基準分は9月上旬に発送、12月末基準分は3月開催の定時株主総会終了後に送る決議通知に同封。有効期限は公式に記載なし",
+      "quo": {
+        "auditedAt": "2026-11-19",
+        "auditScope": "株数区分・金額・年回数・権利月・発送時期（公式IRの株主優待ページの原文で確認）",
+        "note": "100株以上で一律1,000円相当。継続保有の条件なし。年2回（6月末・12月末）。12月末基準分は3月の定時株主総会後の決議通知に同封",
+        "rightsMonths": "6,12",
+        "tiers": [
+          {
+            "amountYen": 1000,
+            "minHoldMonths": 0,
+            "minShares": 100,
+            "timesPerYear": 2
+          }
+        ]
+      },
+      "auditedAt": "2026-11-19",
+      "auditSource": "official",
+      "auditScope": "基準日・株数区分・金額・年回数・発送時期・上場市場（公式IRの株主優待ページと株式情報ページの原文で確認）",
+      "sourceUrl": "https://www.yamada-servicer.co.jp/ir/shareholder.html",
+      "shipMonths": "9,3",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 1000,
+          "timesPerYear": 2
+        }
+      ]
+    },
+    {
+      "ticker": "4772",
+      "company": "SM ENTERTAINMENT JAPAN",
+      "companyKana": "えすえむえんたーていんめんとじゃぱん えすえむ",
+      "category": "その他",
+      "exchange": "東証グロース",
+      "title": "QUOカード（1,000株以上）",
+      "balance": 1000,
+      "balanceUnit": "円",
+      "unitPrice": 1000,
+      "quantityUnit": "枚",
+      "usableStores": "コンビニ、書店",
+      "rating": 2,
+      "siteGroup": "QUOカード",
+      "description": "【基本情報】\nK-POPのSMエンタテインメントの日本法人、SM ENTERTAINMENT JAPAN。毎年12月31日に10単元（1,000株）以上を持つ株主へ、QUOカード1,000円分を進呈する。年1回。\n\n【お得情報】\n1,000株以上で一律1,000円分。1,000株未満は対象外。継続保有の条件は無い。\n\n【2026-11-19 新規掲載・条件】\n毎年3月発送の定時株主総会招集通知書に同封して進呈。QUOカードの有効期限は公式に記載なし。",
+      "usageNotes": "基準日は毎年12月31日（年1回・10単元＝1,000株以上）。QUOカード1,000円分。1,000株未満は対象外（保有株数で額は変わらない）。毎年3月発送の定時株主総会招集通知書に同封。有効期限は公式に記載なし",
+      "quo": {
+        "auditedAt": "2026-11-19",
+        "auditScope": "株数区分・金額・年回数・権利月・発送時期（公式IRの株主優待ページの原文で確認）",
+        "note": "1,000株（10単元）以上で一律1,000円分。継続保有の条件なし。3月発送の定時株主総会招集通知書に同封",
+        "rightsMonths": "12",
+        "tiers": [
+          {
+            "amountYen": 1000,
+            "minHoldMonths": 0,
+            "minShares": 1000,
+            "timesPerYear": 1
+          }
+        ]
+      },
+      "auditedAt": "2026-11-19",
+      "auditSource": "official",
+      "auditScope": "基準日・株数区分・金額・発送時期・上場市場（公式IRの株主優待ページと会社概要の原文で確認）",
+      "sourceUrl": "https://www.smej.co.jp/ir/stock/benefit/",
+      "shipMonths": "3",
+      "tiers": [
+        {
+          "minShares": 1000,
+          "minHoldMonths": 0,
+          "amount": 1000,
+          "timesPerYear": 1
+        }
+      ],
+      "tiersNote": "1,000株未満は対象外"
+    },
+    {
+      "ticker": "7128",
+      "company": "ユニソルホールディングス",
+      "companyKana": "ゆにそるほーるでぃんぐす ふるさと まるか",
+      "category": "その他",
+      "exchange": "東証",
+      "title": "QUOカード（100株以上・3年以上で増額）",
+      "balance": 500,
+      "balanceUnit": "円",
+      "unitPrice": 500,
+      "quantityUnit": "枚",
+      "usableStores": "コンビニ、書店",
+      "rating": 2,
+      "siteGroup": "QUOカード",
+      "description": "【基本情報】\n技術商社グループのユニソルホールディングス。毎年12月31日に100株以上を持つ国内居住の株主へ、オリジナルのQUOカードを贈呈する。年1回。\n\n【お得情報】\n株数と保有期間で額が決まる。保有3年未満は100株以上500円分・200株以上1,000円分・500株以上5,000円分、継続3年以上は1,000円分・3,000円分・10,000円分。\n\n【2026-11-19 新規掲載・条件】\n贈呈は毎年3月予定。国内居住者に限る。継続3年以上は6月末・12月末の名簿に同一株主番号で連続7回以上。QUOカードの有効期限は公式に記載なし。",
+      "usageNotes": "基準日は毎年12月31日（年1回・100株以上・国内居住者に限る）。保有3年未満は100株以上500円分・200株以上1,000円分・500株以上5,000円分、継続3年以上は100株以上1,000円分・200株以上3,000円分・500株以上10,000円分（額の置き換え）。継続3年以上＝毎年6月末・12月末の名簿に同一株主番号が連続7回以上。贈呈は毎年3月予定。有効期限は公式に記載なし",
+      "quo": {
+        "auditedAt": "2026-11-19",
+        "auditScope": "株数区分・保有期間・金額・年回数・権利月・贈呈時期・国内居住者の条件（公式IRの株主還元ページの原文で確認）",
+        "note": "保有3年未満と継続3年以上で額が違う（3年以上は額の置き換え）。継続3年以上＝6月末・12月末の名簿に同一株主番号が連続7回以上。国内居住者に限る",
+        "rightsMonths": "12",
+        "tiers": [
+          {
+            "amountYen": 500,
+            "minHoldMonths": 0,
+            "minShares": 100,
+            "timesPerYear": 1
+          },
+          {
+            "amountYen": 1000,
+            "minHoldMonths": 0,
+            "minShares": 200,
+            "timesPerYear": 1
+          },
+          {
+            "amountYen": 5000,
+            "minHoldMonths": 0,
+            "minShares": 500,
+            "timesPerYear": 1
+          },
+          {
+            "amountYen": 1000,
+            "minHoldMonths": 36,
+            "minShares": 100,
+            "timesPerYear": 1
+          },
+          {
+            "amountYen": 3000,
+            "minHoldMonths": 36,
+            "minShares": 200,
+            "timesPerYear": 1
+          },
+          {
+            "amountYen": 10000,
+            "minHoldMonths": 36,
+            "minShares": 500,
+            "timesPerYear": 1
+          }
+        ]
+      },
+      "auditedAt": "2026-11-19",
+      "auditSource": "official",
+      "auditScope": "基準日・株数区分・保有期間・金額・贈呈時期・旧社名・上場市場（公式IRの株主還元ページ・株式情報ページ・企業の成り立ちのページの原文で確認）",
+      "sourceUrl": "https://www.unisol-gr.com/ir/return/",
+      "shipMonths": "3",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 500,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 200,
+          "minHoldMonths": 0,
+          "amount": 1000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 0,
+          "amount": 5000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 100,
+          "minHoldMonths": 36,
+          "amount": 1000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 200,
+          "minHoldMonths": 36,
+          "amount": 3000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 36,
+          "amount": 10000,
+          "timesPerYear": 1
+        }
+      ],
+      "tiersNote": "国内居住者に限る。継続3年以上＝6月末・12月末の名簿に同一株主番号が連続7回以上（額は保有3年未満の額の置き換え）",
+      "formerNames": [
+        "フルサト・マルカホールディングス"
+      ]
     }
   ]
 }
