@@ -22,6 +22,7 @@ import re
 
 from site_common import BASE_URL, SITE_NAME, CONTACT, css_link, header_html, footer_html, \
     HEADER_BEGIN, HEADER_END, FOOTER_BEGIN, FOOTER_END, CSS_MARK
+from site_icons import icon
 
 try:
     from PIL import Image
@@ -40,15 +41,15 @@ APPS = [
         "status": "ok", "badge": "Google Play で配信中", "category": "UtilitiesApplication",
         "lead": "パーツの長さと本数を入れるだけ。木材をいちばん無駄なく切る木取り図を自動で計算します。",
         "feats": [
-            ("🪵", "木取り図を自動計算", "端材（余り）が最小になる切り出し方を瞬時に出します。"),
-            ("⚖️", "歩留まり優先／カット数優先", "目的に合わせて計算の方針を選べます。"),
-            ("🪚", "電動工具と手ノコ", "同じ長さを重ねて切る／1本ずつ切るも選べます。"),
-            ("📏", "刃の幅とトリム幅", "のこぎりの削れ幅と両端の余白を指定して、実寸で計算します。"),
-            ("🎬", "切る順番を再生", "のこぎりのアニメーションで手順を確かめられます。"),
-            ("💾", "計算の履歴", "過去の計算を保存して、いつでも再利用できます。"),
+            ("carpenter", "木取り図を自動計算", "端材（余り）が最小になる切り出し方を瞬時に出します。"),
+            ("balance", "歩留まり優先／カット数優先", "目的に合わせて計算の方針を選べます。"),
+            ("handyman", "電動工具と手ノコ", "同じ長さを重ねて切る／1本ずつ切るも選べます。"),
+            ("straighten", "刃の幅とトリム幅", "のこぎりの削れ幅と両端の余白を指定して、実寸で計算します。"),
+            ("play_circle", "切る順番を再生", "のこぎりのアニメーションで手順を確かめられます。"),
+            ("history", "計算の履歴", "過去の計算を保存して、いつでも再利用できます。"),
         ],
         "steps": ["木材の長さを選ぶ", "パーツの長さと本数を入れる", "木取り図のとおりに切る"],
-        "facts": [("💾", "入力したデータは端末内に保存されます。"), ("📢", "広告を表示します。")],
+        "facts": [("save", "入力したデータは端末内に保存されます。"), ("campaign", "広告を表示します。")],
     },
     {
         "slug": "launchlog", "name": "LaunchLog", "sub": "アプリ台帳と起動管理",
@@ -56,18 +57,18 @@ APPS = [
         "status": "ok", "badge": "Google Play で配信中", "category": "UtilitiesApplication",
         "lead": "増えたアプリを台帳で整理。連続起動（ストリーク）と、定期的に開くタイミングをまとめて管理します。",
         "feats": [
-            ("🚀", "台帳からすぐ起動", "検索やタブ分けで、目的のアプリをすぐ開けます。"),
-            ("🔥", "連続起動を数える", "ログインボーナスや習慣化に。長く開いていない「幽霊アプリ」も抽出します。"),
-            ("⏱️", "次の回収までカウントダウン", "「毎日○時」「毎月1日」「○時間ごと」などの周期を表示します。"),
-            ("📝", "メモ・URL・関連アプリ", "攻略コードやログインURLを保存。長押しで関連アプリも続けて起動。"),
-            ("🧩", "ウィジェットと通知", "フォルダごとの起動ウィジェット。途切れそうな時は通知します。"),
-            ("➡️", "「次へ▶」で順番に", "画面の端のボタンで、登録したアプリを順に開けます。"),
+            ("rocket_launch", "台帳からすぐ起動", "検索やタブ分けで、目的のアプリをすぐ開けます。"),
+            ("local_fire_department", "連続起動を数える", "ログインボーナスや習慣化に。長く開いていない「幽霊アプリ」も抽出します。"),
+            ("timer", "次の回収までカウントダウン", "「毎日○時」「毎月1日」「○時間ごと」などの周期を表示します。"),
+            ("edit_note", "メモ・URL・関連アプリ", "攻略コードやログインURLを保存。長押しで関連アプリも続けて起動。"),
+            ("widgets", "ウィジェットと通知", "フォルダごとの起動ウィジェット。途切れそうな時は通知します。"),
+            ("arrow_forward", "「次へ▶」で順番に", "画面の端のボタンで、登録したアプリを順に開けます。"),
         ],
         "steps": ["台帳に入れるアプリを選ぶ", "周期やメモを付ける", "ウィジェットや「次へ▶」から開く"],
         "facts": [
-            ("🔒", "登録したデータはスマホの中だけに保存し、開発者のサーバーへは送りません。"),
-            ("📢", "広告表示（Google AdMob）のためにインターネットを使います。"),
-            ("🔑", "使う許可: 全アプリの一覧・他のアプリの上に表示・アンインストールの依頼。"),
+            ("lock", "登録したデータはスマホの中だけに保存し、開発者のサーバーへは送りません。"),
+            ("campaign", "広告表示（Google AdMob）のためにインターネットを使います。"),
+            ("key", "使う許可: 全アプリの一覧・他のアプリの上に表示・アンインストールの依頼。"),
         ],
     },
     {
@@ -76,20 +77,20 @@ APPS = [
         "status": "ok", "badge": "Google Play で配信中（日本）", "category": "FinanceApplication",
         "lead": "優待券・優待カード・優待ポイントの残高と期限を1つの画面で。期限が近づいたら通知でお知らせします。",
         "feats": [
-            ("🎫", "残高と期限", "円・枚・点で管理。1枚使うごとにワンタップで減らせます。"),
-            ("🚦", "期限を3色で", "緊急・注意・安全で一目で分かり、近づくと通知します。"),
-            ("📖", "優待辞書から登録", "主要銘柄の内容から選ぶだけ。辞書は自動で最新になります。"),
-            ("📷", "バーコード・OCR", "カメラで読み取り。端末内で処理し、画像は保存しません。"),
-            ("🧩", "ホーム画面ウィジェット", "期限が近い順の一覧と件数を、開かずに確認できます。"),
-            ("💾", "バックアップ", "JSON で書き出し・読み込み。機種変更に備えられます。"),
+            ("confirmation_number", "残高と期限", "円・枚・点で管理。1枚使うごとにワンタップで減らせます。"),
+            ("traffic", "期限を3色で", "緊急・注意・安全で一目で分かり、近づくと通知します。"),
+            ("menu_book", "優待辞書から登録", "主要銘柄の内容から選ぶだけ。辞書は自動で最新になります。"),
+            ("barcode_scanner", "バーコード・OCR", "カメラで読み取り。端末内で処理し、画像は保存しません。"),
+            ("widgets", "ホーム画面ウィジェット", "期限が近い順の一覧と件数を、開かずに確認できます。"),
+            ("save", "バックアップ", "JSON で書き出し・読み込み。機種変更に備えられます。"),
         ],
         "steps": ["辞書から銘柄を選ぶ", "残高と期限を入れる", "使ったら「1枚使う」"],
         "facts": [
-            ("🔒", "登録した優待の情報は端末内に保存し、外部へ送信しません。"),
-            ("📢", "広告表示（Google AdMob）のためにインターネットを使います。"),
-            ("⚠️", "優待情報は参考です。正確な内容は各企業の公式サイトでご確認ください。"),
+            ("lock", "登録した優待の情報は端末内に保存し、外部へ送信しません。"),
+            ("campaign", "広告表示（Google AdMob）のためにインターネットを使います。"),
+            ("warning", "優待情報は参考です。正確な内容は各企業の公式サイトでご確認ください。"),
         ],
-        "extra": ("🎁", "株主優待データベースを見る", "benefits.html"),
+        "extra": ("redeem", "株主優待データベースを見る", "benefits.html"),
     },
     {
         "slug": "designforge", "name": "DesignForge", "sub": "DESIGN.md をつくる",
@@ -97,17 +98,17 @@ APPS = [
         "status": "ok", "badge": "Google Play で配信中", "category": "DesignApplication",
         "lead": "色・書体・余白の「正解」を DESIGN.md 1枚に。AI にも人にも、同じデザインを渡せます。",
         "feats": [
-            ("🎛️", "8項目から自動で導く", "14色・7段階の書体・角丸・余白・部品スタイルまで。"),
-            ("👀", "ライブプレビュー", "見出し・ボタン・カード・入力欄に、その場で反映されます。"),
-            ("🧰", "12の道具で試着", "TODO リストやタイマーなど、普段使う画面で配色を確かめられます。"),
-            ("✅", "コントラスト判定", "WCAG AA の基準を、書き出す前に端末で判定します。"),
-            ("📄", "DESIGN.md 形式", "公開されている仕様に準拠。コピー・共有・保存できます。"),
-            ("🗂️", "保存して呼び出す", "名前を付けて保存し、あとから読み込めます。"),
+            ("tune", "8項目から自動で導く", "14色・7段階の書体・角丸・余白・部品スタイルまで。"),
+            ("visibility", "ライブプレビュー", "見出し・ボタン・カード・入力欄に、その場で反映されます。"),
+            ("home_repair_service", "12の道具で試着", "TODO リストやタイマーなど、普段使う画面で配色を確かめられます。"),
+            ("check_circle", "コントラスト判定", "WCAG AA の基準を、書き出す前に端末で判定します。"),
+            ("description", "DESIGN.md 形式", "公開されている仕様に準拠。コピー・共有・保存できます。"),
+            ("folder_open", "保存して呼び出す", "名前を付けて保存し、あとから読み込めます。"),
         ],
         "steps": ["下敷き（ジャンル別のプリセット）を選ぶ", "主色・書体・余白などを調整", "プレビューで確かめる", "DESIGN.md を書き出す"],
         "facts": [
-            ("🔒", "入力したデータはすべて端末内に保存されます。アカウント登録は不要です。"),
-            ("📢", "無料で使えます。運営のため広告を表示します。"),
+            ("lock", "入力したデータはすべて端末内に保存されます。アカウント登録は不要です。"),
+            ("campaign", "無料で使えます。運営のため広告を表示します。"),
         ],
     },
     {
@@ -116,18 +117,18 @@ APPS = [
         "status": "ok", "badge": "Google Play で配信中", "category": "UtilitiesApplication",
         "lead": "用意した文を上から順に1タップでコピー。最前面の小窓から送るので、配信やチャットの画面を離れずに次の一言を出せます。",
         "feats": [
-            ("🔢", "順番・ランダム・重複なし", "出す順番を先に決めておき、当日は送るだけ。"),
-            ("🎛️", "6つのスロット", "枠ごとにグループを割り当て。使い切ると次のグループへ。"),
-            ("⏱️", "自動送りとゆらぎ", "秒数・件数・待ち時間を決めて自動で。±秒のゆらぎも。"),
-            ("✍️", "選んだ文字をそのまま登録", "他のアプリの選択メニュー・共有メニューから追加できます。"),
-            ("⏳", "カウントダウン", "決めた秒数のあいだ次のコピーを止め、連投を急ぎすぎない目安に。"),
-            ("💾", "バックアップ", "グループ・本文・小窓の設定をまとめて1つのファイルに。"),
+            ("format_list_numbered", "順番・ランダム・重複なし", "出す順番を先に決めておき、当日は送るだけ。"),
+            ("grid_view", "6つのスロット", "枠ごとにグループを割り当て。使い切ると次のグループへ。"),
+            ("timer", "自動送りとゆらぎ", "秒数・件数・待ち時間を決めて自動で。±秒のゆらぎも。"),
+            ("edit", "選んだ文字をそのまま登録", "他のアプリの選択メニュー・共有メニューから追加できます。"),
+            ("hourglass_top", "カウントダウン", "決めた秒数のあいだ次のコピーを止め、連投を急ぎすぎない目安に。"),
+            ("save", "バックアップ", "グループ・本文・小窓の設定をまとめて1つのファイルに。"),
         ],
         "steps": ["文をグループにまとめる", "小窓（フローター）を起動", "押してコピー → 貼り付け"],
         "facts": [
-            ("🔒", "入力した文は端末の中だけに保存し、どこにも送信しません。他のアプリでコピーされた内容も読みません。"),
-            ("📢", "広告はアプリ画面の一番下だけ。小窓には出しません。"),
-            ("🌐", "日本語と英語に対応しています。"),
+            ("lock", "入力した文は端末の中だけに保存し、どこにも送信しません。他のアプリでコピーされた内容も読みません。"),
+            ("campaign", "広告はアプリ画面の一番下だけ。小窓には出しません。"),
+            ("language", "日本語と英語に対応しています。"),
         ],
     },
     {
@@ -136,18 +137,18 @@ APPS = [
         "status": "ok", "badge": "Google Play で配信中", "category": "MultimediaApplication",
         "lead": "声・BGM・効果音を1つずつ測って音量バランスを合わせるメーター。次からは目標線に合わせるだけです。",
         "feats": [
-            ("🔊", "出る音を直接測る", "端末が再生している音を測るので、音量つまみやミュートに左右されません。"),
-            ("🎤", "入る音も測れる", "マイクやミキサー・オーディオインターフェース経由の音にも対応。"),
-            ("🧭", "ステップ案内", "声 → BGM → 効果音 → 全体の順に、何を鳴らすかを案内します。"),
-            ("🎯", "目標線とプリセット", "良い音量を目標に登録。映像編集・配信・Web会議などを収録。"),
-            ("🪟", "小窓で見続ける", "他のアプリを操作しながら、最前面の小窓でメーターを見られます。"),
-            ("📊", "6種類のメーター", "バー・履歴・スペクトラム・低中高・波形・LED/VU。"),
+            ("volume_up", "出る音を直接測る", "端末が再生している音を測るので、音量つまみやミュートに左右されません。"),
+            ("mic", "入る音も測れる", "マイクやミキサー・オーディオインターフェース経由の音にも対応。"),
+            ("explore", "ステップ案内", "声 → BGM → 効果音 → 全体の順に、何を鳴らすかを案内します。"),
+            ("flag", "目標線とプリセット", "良い音量を目標に登録。映像編集・配信・Web会議などを収録。"),
+            ("picture_in_picture", "小窓で見続ける", "他のアプリを操作しながら、最前面の小窓でメーターを見られます。"),
+            ("equalizer", "6種類のメーター", "バー・履歴・スペクトラム・低中高・波形・LED/VU。"),
         ],
         "steps": ["測る音（出る音／入る音）を選ぶ", "声・BGM・効果音を1つずつ鳴らす", "良い音量を目標として登録"],
         "facts": [
-            ("🔒", "音声は端末の中だけで処理し、送信も録音ファイルの保存もしません。"),
-            ("🪟", "小窓は広告を1本見ると24時間使えます。本体のメーターはいつでも制限なく使えます。"),
-            ("⚠️", "通話の音声は測れません（Android の仕様）。"),
+            ("lock", "音声は端末の中だけで処理し、送信も録音ファイルの保存もしません。"),
+            ("picture_in_picture", "小窓は広告を1本見ると24時間使えます。本体のメーターはいつでも制限なく使えます。"),
+            ("warning", "通話の音声は測れません（Android の仕様）。"),
         ],
     },
     {
@@ -156,19 +157,19 @@ APPS = [
         "status": "ok", "badge": "Google Play で配信中", "category": "UtilitiesApplication",
         "lead": "スマホを Bluetooth キーボードに。テンキーの無いノートパソコンへ、半角の数字をそのまま打ち込めます。",
         "feats": [
-            ("🔢", "全角にならない数字", "日本語入力がオンのままでも、半角の数字が入ります。"),
-            ("💡", "NumLock を実測", "パソコンのランプ情報を読み取り、キーの表示も自動で切り替えます。"),
-            ("🧮", "電卓", "その場で計算して、答えだけをパソコンへ送れます。"),
-            ("🖱️", "トラックパッド", "クリック・縦横スクロール・端末を傾けるエアマウス。"),
-            ("🎛️", "自分の盤面", "キーを並べた盤面を最大5枚まで作れます。"),
-            ("🔁", "自動でつなぎ直す", "一度つないだ相手を覚えて、開くとつなぎ直します。"),
+            ("dialpad", "全角にならない数字", "日本語入力がオンのままでも、半角の数字が入ります。"),
+            ("lightbulb", "NumLock を実測", "パソコンのランプ情報を読み取り、キーの表示も自動で切り替えます。"),
+            ("calculate", "電卓", "その場で計算して、答えだけをパソコンへ送れます。"),
+            ("mouse", "トラックパッド", "クリック・縦横スクロール・端末を傾けるエアマウス。"),
+            ("grid_view", "自分の盤面", "キーを並べた盤面を最大5枚まで作れます。"),
+            ("sync", "自動でつなぎ直す", "一度つないだ相手を覚えて、開くとつなぎ直します。"),
         ],
         "steps": ["パソコンと Bluetooth でつなぐ（パソコン側にアプリは不要）", "テンキー・電卓・トラックパッドから選ぶ", "そのまま打つ"],
         "facts": [
-            ("🔑", "使う権限は Bluetooth と通知だけ。位置情報・連絡先・写真・マイク・カメラには触れません。"),
-            ("🔒", "入力した内容は開発者に送られません。設定と計算履歴は端末内にだけ保存します。"),
-            ("📢", "無料で提供するため、画面上部に広告を表示します。"),
-            ("📱", "Android 10 以降。接続先は Bluetooth キーボード／マウスを受け付ける機器です。"),
+            ("key", "使う権限は Bluetooth と通知だけ。位置情報・連絡先・写真・マイク・カメラには触れません。"),
+            ("lock", "入力した内容は開発者に送られません。設定と計算履歴は端末内にだけ保存します。"),
+            ("campaign", "無料で提供するため、画面上部に広告を表示します。"),
+            ("smartphone", "Android 10 以降。接続先は Bluetooth キーボード／マウスを受け付ける機器です。"),
         ],
     },
     {
@@ -177,16 +178,16 @@ APPS = [
         "status": "wip", "badge": "クローズドテスト中", "category": "UtilitiesApplication",
         "lead": "イヤホンや車がどこで切れたかを覚えておく相棒アプリ。置き忘れても、最後の場所を地図で開けます。",
         "feats": [
-            ("📍", "切れた場所を記録", "接続が切れた瞬間の場所を1回だけ記録。地図アプリで開けます（初期はオフ）。"),
-            ("🔋", "バッテリー残量", "接続中の機器の残量を表示し、下回ったら通知します。"),
-            ("🕒", "接続・切断の履歴", "いつつながり、いつ切れ、そのとき何%だったかを残します。"),
-            ("🗂️", "つないだらアプリ棚", "イヤホンなら音楽、車なら地図。機器ごとのアプリ棚が出ます。"),
+            ("location_on", "切れた場所を記録", "接続が切れた瞬間の場所を1回だけ記録。地図アプリで開けます（初期はオフ）。"),
+            ("battery_full", "バッテリー残量", "接続中の機器の残量を表示し、下回ったら通知します。"),
+            ("schedule", "接続・切断の履歴", "いつつながり、いつ切れ、そのとき何%だったかを残します。"),
+            ("apps", "つないだらアプリ棚", "イヤホンなら音楽、車なら地図。機器ごとのアプリ棚が出ます。"),
         ],
         "steps": ["見守る機器を選ぶ", "棚にアプリを並べる", "つないだら棚から開く"],
         "facts": [
-            ("📍", "位置は切断の瞬間に1回だけ取ります。記録は端末の中だけに保存し、広告にも使いません。"),
-            ("⚠️", "充電ケースの残量は表示できません（Android の仕様）。"),
-            ("📢", "無料で提供するため、画面に広告を表示します。"),
+            ("location_on", "位置は切断の瞬間に1回だけ取ります。記録は端末の中だけに保存し、広告にも使いません。"),
+            ("warning", "充電ケースの残量は表示できません（Android の仕様）。"),
+            ("campaign", "無料で提供するため、画面に広告を表示します。"),
         ],
     },
     {
@@ -195,18 +196,18 @@ APPS = [
         "status": "wip", "badge": "クローズドテスト中", "category": "UtilitiesApplication",
         "lead": "次に押す所と残り秒数が見えるオートクリッカー。毎日の決まった画面操作を手順にしてまかせられます。",
         "feats": [
-            ("👁️", "次に押す所が見える", "押す位置の印と、あと何秒で押すかのカウントダウン。"),
-            ("🧱", "ブロックで手順を組む", "タップ・長押し・スワイプ・なぞり・待ち・アプリの起動を並べます。"),
-            ("⏺️", "操作を記録", "実際に画面を操作して、そのまま手順にできます。"),
-            ("📐", "画面の比率で覚える", "画面の大きさが違う端末でも同じ所を押します。"),
-            ("🛑", "確実に止まる", "音量キーの長押しで、いつでもすぐに止まります。"),
-            ("⏸️", "割り込みで一時停止", "通知や別のアプリが前に出たら止まります（強さは4段階）。"),
+            ("visibility", "次に押す所が見える", "押す位置の印と、あと何秒で押すかのカウントダウン。"),
+            ("view_agenda", "ブロックで手順を組む", "タップ・長押し・スワイプ・なぞり・待ち・アプリの起動を並べます。"),
+            ("radio_button_checked", "操作を記録", "実際に画面を操作して、そのまま手順にできます。"),
+            ("aspect_ratio", "画面の比率で覚える", "画面の大きさが違う端末でも同じ所を押します。"),
+            ("stop_circle", "確実に止まる", "音量キーの長押しで、いつでもすぐに止まります。"),
+            ("pause_circle", "割り込みで一時停止", "通知や別のアプリが前に出たら止まります（強さは4段階）。"),
         ],
         "steps": ["ブロックを並べて手順を作る", "押す位置を決める", "再生してまかせる"],
         "facts": [
-            ("🚫", "インターネットの権限を持たず、広告もありません。手順は端末の中だけに保存します。"),
-            ("♿", "ユーザー補助機能は、あなたが設定でオンにした時だけ動きます。画面の文字や入力内容は読み取りません。"),
-            ("⚠️", "自動操作の前に、操作する相手のアプリやサービスの利用規約をご確認ください。"),
+            ("lock", "手順は端末の中だけに保存します。通信するのは、アプリ別の再生リストを使う時の広告だけです。"),
+            ("accessibility_new", "ユーザー補助機能は、あなたが設定でオンにした時だけ動きます。画面の文字や入力内容は読み取りません。"),
+            ("warning", "自動操作の前に、操作する相手のアプリやサービスの利用規約をご確認ください。"),
         ],
     },
 ]
@@ -228,7 +229,7 @@ POSTS = [
 ]
 
 # 差し込まないページ（OBS 表示専用・Search Console の確認用）と、ここで作るページ
-SKIP_INJECT = {"tool-japan-map-display.html", "index.html"}
+SKIP_INJECT = {"tool-japan-map-display.html", "index.html", "licenses.html"}
 CURRENT = {"benefits.html": "benefits", "tools.html": "tools"}
 
 e = html.escape
@@ -293,7 +294,7 @@ def head(title, desc, canonical, image, card="summary_large_image", og_type="web
 
 def play_button(a, cls="btn primary"):
     return (f'<a class="{cls}" href="{PLAY}{a["pkg"]}" target="_blank" rel="noopener">'
-            f'<span aria-hidden="true">▶</span>Google Play で入手</a>')
+            f'Google Play で入手{icon("open_in_new")}</a>')
 
 
 def badge(a):
@@ -303,8 +304,8 @@ def badge(a):
 
 
 def app_card(a):
-    icon = img_tag(f'img/apps/{a["slug"]}/icon.webp', "", lazy=True)
-    return (f'<a class="app" href="app-{a["slug"]}.html">{icon}<div>'
+    app_icon = img_tag(f'img/apps/{a["slug"]}/icon.webp', "", lazy=True)
+    return (f'<a class="app" href="app-{a["slug"]}.html">{app_icon}<div>'
             f'<div class="app-n">{e(a["name"])}</div><div class="app-d">{e(a["lead"])}</div>{badge(a)}</div></a>')
 
 
@@ -338,15 +339,15 @@ def build_index():
 </section>
 
 <nav class="doors" aria-label="入口">
-<a class="door main" href="benefits.html"><span class="door-ico" aria-hidden="true">🎁</span>
+<a class="door main" href="benefits.html">{icon("redeem", "door-ico")}
 <span class="door-t">株主優待データベース</span>
 <span class="door-d">使えるお店・期限・長期保有の条件を銘柄ごとに</span>
 <span class="door-n">{n_benefit}銘柄を検索 →</span></a>
-<a class="door" href="tools.html"><span class="door-ico" aria-hidden="true">🧰</span>
+<a class="door" href="tools.html">{icon("home_repair_service", "door-ico")}
 <span class="door-t">便利ツール</span>
 <span class="door-d">インストール不要・ブラウザだけで動く</span>
-<span class="door-n">{len(TOOLS)}つのツール →</span></a>
-<a class="door" href="ai-keys.html"><span class="door-ico" aria-hidden="true">🔑</span>
+<span class="door-n">{len(TOOLS)}つのツールを使う →</span></a>
+<a class="door" href="ai-keys.html">{icon("key", "door-ico")}
 <span class="door-t">AIキー取得ガイド</span>
 <span class="door-d">各社の AI の API キーの取り方</span>
 <span class="door-n">ガイドを読む →</span></a>
@@ -406,20 +407,20 @@ def build_app(a):
     extra = ""
     if a.get("extra"):
         ico, label, href = a["extra"]
-        extra = f'<a class="btn" href="{href}"><span aria-hidden="true">{ico}</span>{e(label)}</a>'
-    privacy = f'<a class="btn" href="{a["privacy"]}"><span aria-hidden="true">🔒</span>プライバシーポリシー</a>'
+        extra = f'<a class="btn" href="{href}">{icon(ico)}{e(label)}</a>'
+    privacy = f'<a class="btn" href="{a["privacy"]}">{icon("lock")}プライバシーポリシー</a>'
 
     shot_html = "".join(img_tag(s, f'{a["name"]} の画面 {i}', lazy=i > 2) for i, s in enumerate(shots, 1))
     feats = "".join(
-        f'<div class="feat"><div class="feat-i" aria-hidden="true">{ico}</div><div class="feat-t">{e(t)}</div>'
+        f'<div class="feat">{icon(ico, "feat-i")}<div class="feat-t">{e(t)}</div>'
         f'<div class="feat-d">{e(d)}</div></div>' for ico, t, d in a["feats"])
     feats_cls = " even" if len(a["feats"]) % 3 and len(a["feats"]) % 2 == 0 else ""
     steps = "".join(f"<li>{e(s)}</li>" for s in a["steps"])
-    facts = "".join(f'<li><span aria-hidden="true">{ico}</span><span>{e(t)}</span></li>' for ico, t in a["facts"])
+    facts = "".join(f'<li>{icon(ico)}<span>{e(t)}</span></li>' for ico, t in a["facts"])
     others = "".join(
         f'<a href="app-{o["slug"]}.html">{img_tag(f"img/apps/{o['slug']}/icon.webp", "")}{e(o["name"])}</a>'
         for o in APPS if o is not a)
-    icon = img_tag(f"img/apps/{slug}/icon.webp", f'{a["name"]} のアイコン', lazy=False)
+    app_icon = img_tag(f"img/apps/{slug}/icon.webp", f'{a["name"]} のアイコン', lazy=False)
     cta_icon = img_tag(f"img/apps/{slug}/icon.webp", "")
 
     body = f"""
@@ -429,7 +430,7 @@ def build_app(a):
 <nav class="crumb" aria-label="パンくず"><a href="index.html">ホーム</a> › <a href="index.html#apps">アプリ</a> › {e(a["name"])}</nav>
 
 <section class="ap-hero">
-{icon}
+{app_icon}
 <div>
 <h1>{e(a["name"])}</h1>
 <div class="ap-sub">{e(a["sub"])}</div>
@@ -475,6 +476,39 @@ def build_app(a):
 """
     page = head(title, desc, url, BASE_URL + f"img/apps/{slug}/og.jpg", jsonld=[jsonld, crumbs]) + body
     write(f"app-{slug}.html", page)
+
+
+def build_licenses():
+    """同梱している第三者の素材と、そのライセンス（素材を足したらここと assets/icons/NOTICE.txt に足す）。"""
+    url = BASE_URL + "licenses.html"
+    title = f"ライセンス | {SITE_NAME}"
+    desc = f"{SITE_NAME}のサイトに同梱している第三者の素材と、そのライセンスです。"
+    src = "https://github.com/google/material-design-icons"
+    body = f"""
+<body class="site">
+{header_html(current=None)}
+<main class="wrap">
+<div class="prose">
+<h1>ライセンス</h1>
+<p>このサイトに同梱している第三者の素材と、そのライセンスです。</p>
+
+<h2>アイコン</h2>
+<dl>
+<dt>素材</dt><dd>Material Symbols（Outlined）</dd>
+<dt>提供元</dt><dd>Google</dd>
+<dt>出典</dt><dd><a href="{src}">{src}</a></dd>
+<dt>ライセンス</dt><dd>Apache License 2.0（<a href="assets/icons/LICENSE.txt">全文</a>）</dd>
+<dt>変更点</dt><dd>形は変えていません。HTML に埋め込み、色をページの文字色に合わせています。</dd>
+<dt>使っている所</dt><dd>ヘッダー、トップページの入口、アプリ紹介ページ</dd>
+</dl>
+<p>使っているアイコンの一覧は <a href="assets/icons/NOTICE.txt">NOTICE.txt</a> にあります。</p>
+</div>
+</main>
+{footer_html()}
+</body>
+</html>
+"""
+    write("licenses.html", head(title, desc, url, BASE_URL + "logo.png", card="summary") + body)
 
 
 def write(name, text):
@@ -536,6 +570,7 @@ def main():
     build_index()
     for a in APPS:
         build_app(a)
+    build_licenses()
     targets = [p for p in sorted(glob.glob(os.path.join(ROOT, "*.html")))
                if os.path.basename(p) not in SKIP_INJECT
                and not os.path.basename(p).startswith("app-")

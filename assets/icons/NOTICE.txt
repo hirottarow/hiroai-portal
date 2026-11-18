@@ -1,0 +1,70 @@
+このフォルダの LICENSE.txt は、サイトで使っているアイコンのライセンス（Apache License 2.0）の全文です。
+
+素材    : Material Symbols（Outlined・24px・weight 400）
+提供元  : Google
+出典    : https://github.com/google/material-design-icons
+          （symbols/web/<名前>/materialsymbolsoutlined/<名前>_24px.svg）
+取得日  : 2026-11-19
+ライセンス: Apache License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
+
+変更点  : 各 SVG から path の d だけを取り出し、scripts/site_icons.py に並べて HTML に埋め込んでいます。
+          色はページの文字色（currentColor）に合わせています。アイコンの形は変えていません。
+
+使っているアイコン（57 個）:
+  accessibility_new
+  apps
+  arrow_forward
+  article
+  aspect_ratio
+  balance
+  barcode_scanner
+  battery_full
+  calculate
+  campaign
+  carpenter
+  check_circle
+  confirmation_number
+  description
+  dialpad
+  edit
+  edit_note
+  equalizer
+  explore
+  flag
+  folder_open
+  format_list_numbered
+  grid_view
+  handyman
+  history
+  home_repair_service
+  hourglass_top
+  key
+  language
+  lightbulb
+  local_fire_department
+  location_on
+  lock
+  menu_book
+  mic
+  mouse
+  open_in_new
+  pause_circle
+  picture_in_picture
+  play_circle
+  radio_button_checked
+  redeem
+  rocket_launch
+  save
+  schedule
+  smartphone
+  stop_circle
+  straighten
+  sync
+  timer
+  traffic
+  tune
+  view_agenda
+  visibility
+  volume_up
+  warning
+  widgets

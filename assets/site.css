@@ -7,15 +7,19 @@
   --surface-2: #F3EDE4;
   --ink: #2A2420;
   --ink-2: #6B5F57;
-  --ink-3: #988B81;
+  --ink-3: #74685F;
   --line: rgba(42, 36, 32, 0.10);
   --brand: #8B5A2B;
   --brand-strong: #6E4520;
+  --brand-deep: #55340F;
   --brand-soft: #F1E6D8;
   --ok: #1F7A4D;
   --ok-soft: #E3F2EA;
   --wip: #9A5B00;
   --wip-soft: #FCEFD9;
+  --on-brand: #FFFFFF;
+  --on-brand-2: #E5DED7;
+  --on-brand-accent: #FFE2B8;
   --r-s: 8px;
   --r-m: 12px;
   --r-l: 20px;
@@ -44,14 +48,15 @@
 .sh-brand span { font-size: 16px; font-weight: 700; letter-spacing: 0.02em; color: var(--ink); }
 .sh-nav { display: flex; align-items: center; gap: 4px; margin: 0; padding: 0; }
 .sh-nav a {
-  display: inline-flex; align-items: center; gap: 4px; margin: 0;
+  display: inline-flex; align-items: center; gap: 6px; margin: 0; min-height: 44px;
   padding: 8px 12px; border-radius: 999px;
   font-size: 14px; font-weight: 600; color: var(--ink-2); text-decoration: none; white-space: nowrap;
   background: transparent; box-shadow: none; transition: background 0.15s, color 0.15s;
 }
 .sh-nav a:hover { background: var(--surface-2); color: var(--ink); }
 .sh-nav a[aria-current="page"] { background: var(--brand-soft); color: var(--brand-strong); }
-.sh-nav .sh-ico { font-size: 15px; line-height: 1; }
+.sh-nav .sh-ico { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; display: block; }
+.sh a:focus-visible, .sf a:focus-visible, .site a:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
 @media (max-width: 640px) {
   .sh { position: static; }
   .sh-in { height: auto; flex-wrap: wrap; padding: 8px 12px 4px; gap: 4px; }
@@ -65,12 +70,12 @@
   display: block; width: 100%; align-self: stretch; clear: both;
   margin: 64px 0 0; padding: 32px 16px 40px; box-sizing: border-box;
   border-top: 1px solid var(--line); background: transparent;
-  font-family: var(--font); line-height: 1.6; text-align: center; color: var(--ink-2);
+  font-family: var(--font); line-height: 1.6; text-align: left; color: var(--ink-2);
 }
-.sf-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 8px; max-width: 760px; margin: 0 auto; }
-.sf-links a { color: var(--ink-2); text-decoration: none; font-size: 13px; padding: 4px 8px; border-radius: var(--r-s); }
-.sf-links a:hover { color: var(--ink); background: var(--surface-2); }
-.sf-copy { margin-top: 16px; font-size: 12px; color: var(--ink-3); }
+.sf-links { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 4px 20px; max-width: calc(var(--w) - 32px); margin: 0 auto; }
+.sf-links a { color: var(--ink-2); text-decoration: none; font-size: 13px; padding: 6px 0; }
+.sf-links a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.sf-copy { max-width: calc(var(--w) - 32px); margin: 16px auto 0; font-size: 12px; color: var(--ink-3); }
 
 /* ---------- ここから下は build_site.py が作るページ（トップ・アプリ紹介）だけが使う ---------- */
 :where(.site *) { box-sizing: border-box; margin: 0; padding: 0; }
@@ -80,6 +85,7 @@ body.site {
   -webkit-text-size-adjust: 100%; text-rendering: optimizeLegibility;
 }
 .site img { max-width: 100%; }
+.site .ico { width: 1.2em; height: 1.2em; fill: currentColor; flex-shrink: 0; display: block; }
 :where(.site) a { color: var(--brand-strong); }
 .site .wrap { max-width: var(--w); margin: 0 auto; padding: 0 16px; }
 .site .sec { margin-top: 56px; scroll-margin-top: 76px; }
@@ -108,13 +114,14 @@ body.site {
   transition: transform 0.15s, box-shadow 0.15s;
 }
 .site .door:hover { transform: translateY(-2px); box-shadow: 0 2px 4px rgba(42,36,32,.08), 0 12px 28px rgba(42,36,32,.10); }
-.site .door-ico { font-size: 32px; line-height: 1; }
+.site .door-ico { width: 32px; height: 32px; fill: var(--brand); display: block; }
 .site .door-t { font-size: 18px; font-weight: 800; margin-top: 8px; }
 .site .door-d { font-size: 13px; color: var(--ink-2); }
 .site .door-n { font-size: 13px; font-weight: 700; color: var(--brand-strong); margin-top: auto; padding-top: 8px; }
-.site .door.main { background: linear-gradient(140deg, #8B5A2B 0%, #5E3A18 100%); color: #fff; border: 0; }
-.site .door.main .door-d { color: rgba(255,255,255,.82); }
-.site .door.main .door-n { color: #FFE2B8; }
+.site .door.main { background: var(--brand-strong); color: var(--on-brand); border: 0; }
+.site .door.main .door-ico { fill: var(--on-brand-accent); }
+.site .door.main .door-d { color: var(--on-brand-2); }
+.site .door.main .door-n { color: var(--on-brand-accent); }
 .site .door.main .door-t { font-size: 22px; }
 @media (max-width: 860px) {.site .doors { grid-template-columns: 1fr 1fr; }.site .door.main { grid-column: 1 / -1; } }
 
@@ -153,9 +160,9 @@ body.site {
   background: var(--surface); color: var(--ink); border: 1px solid var(--line);
 }
 .site .btn:hover { background: var(--surface-2); }
-.site .btn.primary { background: var(--ink); color: #fff; border-color: var(--ink); }
-.site .btn.primary:hover { background: #000; }
-.site .btn .gp { width: 18px; height: 18px; display: block; }
+.site .btn.primary { background: var(--brand-strong); color: var(--on-brand); border-color: var(--brand-strong); }
+.site .btn.primary:hover { background: var(--brand-deep); border-color: var(--brand-deep); }
+.site .btn .ico { width: 18px; height: 18px; }
 
 /* アプリ紹介ページ */
 .site .crumb { font-size: 13px; color: var(--ink-3); padding-top: 16px; }
@@ -183,7 +190,7 @@ body.site {
 @media (max-width: 860px) {.site .feats, .site .feats.even { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) {.site .feats, .site .feats.even { grid-template-columns: 1fr; } }
 .site .feat { padding: 20px; border-radius: var(--r-l); background: var(--surface); border: 1px solid var(--line); }
-.site .feat-i { font-size: 28px; line-height: 1; }
+.site .feat-i { width: 28px; height: 28px; fill: var(--brand); display: block; }
 .site .feat-t { font-size: 16px; font-weight: 800; margin-top: 12px; line-height: 1.45; }
 .site .feat-d { font-size: 14px; color: var(--ink-2); margin-top: 4px; }
 .site .steps { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; counter-reset: s; }
@@ -192,7 +199,7 @@ body.site {
   background: var(--brand); color: #fff; font-weight: 800; font-size: 14px; display: grid; place-items: center; }
 .site .facts { list-style: none; display: grid; gap: 8px; }
 .site .facts li { display: grid; grid-template-columns: 28px 1fr; gap: 8px; font-size: 14px; color: var(--ink-2); }
-.site .facts li span:first-child { font-size: 18px; line-height: 1.5; text-align: center; }
+.site .facts .ico { width: 20px; height: 20px; margin-top: 2px; justify-self: center; }
 .site .cta { margin-top: 56px; padding: 24px; border-radius: var(--r-l); background: var(--surface); border: 1px solid var(--line);
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
 .site .cta-t { display: flex; align-items: center; gap: 12px; font-weight: 800; }
@@ -203,5 +210,21 @@ body.site {
 .site .more a:hover { background: var(--surface-2); }
 .site .more img { width: 56px; height: 56px; border-radius: 14px; display: block; box-shadow: 0 0 0 1px var(--line); }
 
+/* ライセンスなど、文章だけのページ */
+.site .prose { max-width: 720px; padding-top: 32px; }
+.site .prose h1 { font-size: 28px; font-weight: 800; line-height: 1.3; }
+.site .prose h2 { font-size: 20px; font-weight: 800; margin-top: 40px; }
+.site .prose p { margin-top: 12px; font-size: 15px; }
+.site .prose dl { margin-top: 16px; display: grid; grid-template-columns: 7em 1fr; gap: 8px 16px; font-size: 15px; }
+.site .prose dt { color: var(--ink-2); font-weight: 600; }
+.site .prose a { text-underline-offset: 3px; overflow-wrap: anywhere; }
+@media (max-width: 560px) {.site .prose dl { grid-template-columns: 1fr; gap: 2px; }.site .prose dd { margin-bottom: 10px; } }
+
+/* 動きを減らす設定の人には、浮き上がりを出さない */
+@media (prefers-reduced-motion: reduce) {
+.site .door, .site .app { transition: none; }
+.site .door:hover, .site .app:hover { transform: none; }
+}
+
 /* 優待ページのアプリ案内（茶色の帯）の中のリンク */
-.app-banner a { color: #FFE2B8; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.app-banner a { color: var(--on-brand-accent); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }

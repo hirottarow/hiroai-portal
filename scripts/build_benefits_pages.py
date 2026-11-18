@@ -218,7 +218,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
         .updated {{ font-size: 12px; color: var(--secondary-color); margin-top: 24px; }}
         .source-line {{ font-size: 13px; color: var(--secondary-color); margin-top: 20px; }}
         .stale-notice {{ margin: 16px 0 4px; padding: 10px 12px; border-radius: 8px; background: #fff4e5; color: #7a4b00; font-size: 0.92em; }}
-        .app-banner {{ margin-top: 26px; background: linear-gradient(135deg, #8B5A2B 0%, #6B4520 100%); color: #FFF; border-radius: 14px; padding: 18px; font-size: 13.5px; }}
+        .app-banner {{ margin-top: 26px; background: #6E4520; color: #FFF; border-radius: 14px; padding: 18px; font-size: 13.5px; }}
         .app-banner strong {{ display: block; font-size: 15px; margin-bottom: 6px; }}
         .footer-links {{ margin-top: 40px; text-align: center; font-size: 13px; }}
         .footer-links a {{ color: var(--secondary-color); margin: 0 10px; }}

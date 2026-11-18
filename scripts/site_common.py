@@ -6,16 +6,18 @@ build_benefits_pages.py（銘柄ページ）の両方がここを使う。
 prefix はページから見たサイト直下への相対パス（直下のページは ""、benefits/ の中は "../"）。
 """
 
+from site_icons import icon
+
 BASE_URL = "https://hirottarow.github.io/hiroai-portal/"
 SITE_NAME = "ひろ@AI遊び場"
 CONTACT = "hiro.ai.playground@gmail.com"
 
-# (表示名, アイコン, リンク, 印を付けるキー)
+# (表示名, アイコンの名前＝site_icons.PATHS の鍵, リンク, 印を付けるキー)
 NAV = [
-    ("アプリ", "📱", "index.html#apps", "apps"),
-    ("株主優待", "🎁", "benefits.html", "benefits"),
-    ("ツール", "🧰", "tools.html", "tools"),
-    ("記事", "📝", "index.html#articles", "articles"),
+    ("アプリ", "smartphone", "index.html#apps", "apps"),
+    ("株主優待", "redeem", "benefits.html", "benefits"),
+    ("ツール", "home_repair_service", "tools.html", "tools"),
+    ("記事", "article", "index.html#articles", "articles"),
 ]
 
 FOOTER = [
@@ -26,6 +28,7 @@ FOOTER = [
     ("AIキー取得ガイド", "ai-keys.html"),
     ("利用規約", "terms.html"),
     ("プライバシーポリシー", "privacy.html"),
+    ("ライセンス", "licenses.html"),
     ("お問い合わせ", "mailto:" + CONTACT),
 ]
 
@@ -44,7 +47,7 @@ def header_html(prefix="", current=None):
     links = []
     for label, ico, href, key in NAV:
         cur = ' aria-current="page"' if key == current else ""
-        links.append(f'<a href="{prefix}{href}"{cur}><span class="sh-ico" aria-hidden="true">{ico}</span>{label}</a>')
+        links.append(f'<a href="{prefix}{href}"{cur}>{icon(ico, "sh-ico")}{label}</a>')
     return (
         f'{HEADER_BEGIN}\n'
         f'<div class="sh" role="banner"><div class="sh-in">'
