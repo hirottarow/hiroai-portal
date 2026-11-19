@@ -341,16 +341,16 @@ def build_index():
 <nav class="doors" aria-label="入口">
 <a class="door main" href="benefits.html">{icon("redeem", "door-ico")}
 <span class="door-t">株主優待データベース</span>
-<span class="door-d">使えるお店・期限・長期保有の条件を銘柄ごとに</span>
-<span class="door-n">{n_benefit}銘柄を検索 →</span></a>
+<span class="door-d">使えるお店・<wbr>期限・<wbr>長期保有の<wbr>条件を<wbr>銘柄ごとに</span>
+<span class="door-n">{n_benefit}銘柄を<wbr><span class="nb">検索 →</span></span></a>
 <a class="door" href="tools.html">{icon("home_repair_service", "door-ico")}
 <span class="door-t">便利ツール</span>
-<span class="door-d">インストール不要・ブラウザだけで動く</span>
-<span class="door-n">{len(TOOLS)}つのツールを使う →</span></a>
+<span class="door-d">インストール<wbr>不要・<wbr>ブラウザだけで<wbr>動く</span>
+<span class="door-n">{len(TOOLS)}つの<wbr>ツールを<wbr><span class="nb">使う →</span></span></a>
 <a class="door" href="ai-keys.html">{icon("key", "door-ico")}
-<span class="door-t">AIキー取得ガイド</span>
-<span class="door-d">各社の AI の API キーの取り方</span>
-<span class="door-n">ガイドを読む →</span></a>
+<span class="door-t">AIキー<wbr>取得ガイド</span>
+<span class="door-d">各社の AI の API キーの<wbr>取り方</span>
+<span class="door-n">ガイドを<wbr><span class="nb">読む →</span></span></a>
 </nav>
 
 <section class="sec" id="apps">

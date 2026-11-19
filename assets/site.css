@@ -123,7 +123,13 @@ body.site {
 .site .door.main .door-d { color: var(--on-brand-2); }
 .site .door.main .door-n { color: var(--on-brand-accent); }
 .site .door.main .door-t { font-size: 22px; }
+/* 入口の文字は語の切れ目（HTML の <wbr> と空白）だけで折る。1字だけ次の行に落ちるのを防ぐ。
+   語が枠より長い時だけ途中で折る（はみ出させない）。 */
+.site .door-t, .site .door-d, .site .door-n { word-break: keep-all; overflow-wrap: anywhere; }
+.site .door-n .nb { white-space: nowrap; }  /* 矢印だけが次の行に落ちないよう、最後の語と矢印を離さない */
 @media (max-width: 860px) {.site .doors { grid-template-columns: 1fr 1fr; }.site .door.main { grid-column: 1 / -1; } }
+/* 幅の狭いスマホ: 2列のタイルに9文字の語（インストール不要・）が1行で入るよう、内側の余白を少し詰める */
+@media (max-width: 420px) {.site .door { padding: 16px; } }
 
 /* アプリ一覧 */
 .site .apps { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
