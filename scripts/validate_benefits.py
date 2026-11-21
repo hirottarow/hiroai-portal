@@ -181,6 +181,17 @@ def validate_tiers(tiers, line, label, errors, int_fields, where):
             errors.add(line, label, "%s[%d].validUntil が文字列ではありません（値: %r）" % (where, i, vu))
         elif is_str(vu) and vu and not YEAR_MONTH_RE.match(vu):
             errors.add(line, label, "%s[%d].validUntil の形式が不正です（YYYY-MM ではない: %r）" % (where, i, vu))
+        # extras: この段で届く「ほかの品目」（2026-11-21。例 9946 のコーヒー）。title は文字列・amount は正の整数
+        if "extras" in tier:
+            ex = tier["extras"]
+            if not isinstance(ex, list):
+                errors.add(line, label, "%s[%d].extras が配列ではありません" % (where, i))
+            else:
+                for j, e in enumerate(ex):
+                    if not isinstance(e, dict) or not is_str(e.get("title")) or not e.get("title")                             or not is_int(e.get("amount")) or e.get("amount") <= 0:
+                        errors.add(line, label, "%s[%d].extras[%d] は {title:文字列, amount:正の整数} が必要です（値: %r）" % (where, i, j, e))
+                    elif "timesPerYear" in e and e["timesPerYear"] is not None and not is_int(e["timesPerYear"]):
+                        errors.add(line, label, "%s[%d].extras[%d].timesPerYear が数値ではありません" % (where, i, j))
         min_shares = tier.get("minShares")
         hold = tier.get("minHoldMonths")
         # additive（上乗せ）の段は自動採用されず「＋◯円」と表示するだけなので、段の並び（昇順）の検査から外す（2026-10-02）

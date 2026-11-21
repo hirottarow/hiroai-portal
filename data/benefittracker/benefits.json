@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "2026-11-21.1",
+  "dataVersion": "2026-11-21.2",
   "updatedAt": "2026-11-21",
   "categories": [
     "外食",
@@ -8266,18 +8266,20 @@
           "minHoldMonths": 0,
           "amount": 5,
           "timesPerYear": 2,
-          "note": "ソフトクリーム無料券5枚＋コーヒーSサイズ無料券3枚"
+          "note": "ソフトクリーム無料券5枚＋コーヒーSサイズ無料券3枚",
+          "extras": [{"title": "コーヒーSサイズ無料券", "amount": 3, "timesPerYear": 2}]
         },
         {
           "minShares": 1000,
           "minHoldMonths": 0,
           "amount": 20,
           "timesPerYear": 2,
-          "note": "ソフトクリーム無料券20枚＋コーヒーSサイズ無料券3枚"
+          "note": "ソフトクリーム無料券20枚＋コーヒーSサイズ無料券3枚",
+          "extras": [{"title": "コーヒーSサイズ無料券", "amount": 3, "timesPerYear": 2}]
         }
       ],
-      "tiersNote": "枚数はソフトクリーム無料券。200株以上のコーヒーSサイズ無料券3枚は別の券なので枚数に含めていない。200株以上は2月末基準でイオンラウンジ会員証（年1回）も届く",
-      "auditedAt": "2026-10-03",
+      "tiersNote": "枚数はソフトクリーム無料券。200株以上のコーヒーSサイズ無料券3枚（年2回）は、アプリでは別のカードとして登録される。200株以上は2月末基準でイオンラウンジ会員証（年1回）も届く",
+      "auditedAt": "2026-11-21",
       "auditScope": "券種・枚数・株数区分・基準日・送付月・使える店・対象外商品（公式IRページで確認）。有効期限は公式に記載なく未確認",
       "auditSource": "official",
       "sourceUrl": "https://www.ministop.co.jp/corporate/ir/stock/benefit.html"
