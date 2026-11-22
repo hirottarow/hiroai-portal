@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "2026-11-22.1",
-  "updatedAt": "2026-11-22",
+  "dataVersion": "2026-11-23.1",
+  "updatedAt": "2026-11-23",
   "categories": [
     "外食",
     "小売",
@@ -12620,6 +12620,325 @@
         }
       ],
       "tiersNote": "年1回（2026年12月31日基準・2027年3月10日発送予定）。クーポンは各段とも1枚で、金額は割引の上限。保有期間は6月30日・12月31日の名簿に同一株主番号で連続して記載された回数で数える（1年以上=3回以上、2年以上=5回以上、5年以上=11回以上）。minHoldMonths は 12/24/60 に置いた"
+    },
+    {
+      "company": "キューブ",
+      "companyKana": "きゅーぶ",
+      "title": "株主優待クーポン（10,000円相当）",
+      "balance": 10000,
+      "category": "小売",
+      "ticker": "7112",
+      "usableStores": "キューブ（MARK&LONA）の国内店舗、国内公式オンラインストア（海外向けは対象外）",
+      "description": "【基本情報】\nキューブ（MARK&LONA）。200株以上で、当社の国内店舗と国内公式オンラインストアで使える10,000円相当のクーポンが年1回届きます。\n\n【もらえる条件】\n毎年12月末の株主名簿に200株以上で記録されている株主が対象。保有株数・保有期間で額は変わりません。2025年12月末基準から、事前申請が要るポイント方式（10,000ポイント）が申請不要のクーポン方式に変わりました。",
+      "rating": 3,
+      "unitPrice": 10000,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証グロース",
+      "usageNotes": "10,000円相当のクーポン1枚。1回のみ使え、おつりは出ず、次回への繰り越しもできない（値引額を超えた分は自己負担）。毎年12月末基準の年1回で、3月上旬に株主総会等の資料と一緒に利用方法の案内つきで届く。2026年発行分は2027年3月末日まで有効。国内の店舗と国内公式オンラインストアで使える（海外向けオンラインストアは対象外）。クーポンとポイントは併用不可。会員登録なしで使える。第三者への譲渡は禁止。基準日後に全株を売っても有効期限まで使える",
+      "auditedAt": "2026-11-23",
+      "auditScope": "券種・金額・株数区分・基準日・発送月・有効期限・使える店・使い方の注意・上場市場（公式IRページと変更の適時開示PDFで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.cube-co.com/ja/ir/stock/benefit.html",
+      "tiers": [
+        {
+          "minShares": 200,
+          "minHoldMonths": 0,
+          "amount": 10000,
+          "timesPerYear": 1,
+          "note": "保有株数・保有期間で額は変わらない"
+        }
+      ],
+      "tiersNote": "毎年12月末基準の年1回。200株未満は対象外。2025年12月末基準から、事前申請が要るポイント方式（10,000ポイント）が申請不要のクーポン方式に変わった",
+      "shipMonths": "3"
+    },
+    {
+      "company": "バルコス",
+      "companyKana": "ばるこす",
+      "title": "株主優待クーポン（5,000円券）",
+      "balance": 5000,
+      "category": "小売",
+      "ticker": "7790",
+      "usableStores": "バルコスの直営店舗、公式オンラインショップ",
+      "description": "【基本情報】\nバルコス。100株以上で、直営店舗と公式オンラインショップで使える5,000円券が、100株ごとに1枚ずつ（最大10枚）年1回届きます。\n\n【もらえる条件】\n毎年12月末の株主名簿に記録されている株主が対象。2025年12月末基準から設立35周年記念で拡充され、継続保有1年以上の条件がなくなりました（旧制度は100株以上で3,000円相当）。",
+      "rating": 3,
+      "unitPrice": 5000,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "名証ネクスト",
+      "usageNotes": "5,000円券のクーポン。商品総額10,000円（税抜）以上の購入で、10,000円ごとに1枚使える。おつりは出ない。セール品は対象外で、他の商品券との併用は不可。公式オンラインショップで使うには会員登録が必要。毎年12月末基準の年1回で、基準日から3か月以内に郵送、発送から翌年3月31日まで有効（目安: 3月）",
+      "auditedAt": "2026-11-23",
+      "auditScope": "券種・金額・株数区分・基準日・発送月・有効期限・使える店・使い方の注意・上場市場（会社サイトに置かれた適時開示PDFで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://barcos.jp/wp/wp-content/uploads/462c20f4e88e2142689a62efa51482b6.pdf",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 5000,
+          "timesPerYear": 1,
+          "note": "5,000円券1枚"
+        },
+        {
+          "minShares": 200,
+          "minHoldMonths": 0,
+          "amount": 10000,
+          "timesPerYear": 1,
+          "note": "5,000円券2枚"
+        },
+        {
+          "minShares": 300,
+          "minHoldMonths": 0,
+          "amount": 15000,
+          "timesPerYear": 1,
+          "note": "5,000円券3枚"
+        },
+        {
+          "minShares": 400,
+          "minHoldMonths": 0,
+          "amount": 20000,
+          "timesPerYear": 1,
+          "note": "5,000円券4枚"
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 0,
+          "amount": 25000,
+          "timesPerYear": 1,
+          "note": "5,000円券5枚"
+        },
+        {
+          "minShares": 600,
+          "minHoldMonths": 0,
+          "amount": 30000,
+          "timesPerYear": 1,
+          "note": "5,000円券6枚"
+        },
+        {
+          "minShares": 700,
+          "minHoldMonths": 0,
+          "amount": 35000,
+          "timesPerYear": 1,
+          "note": "5,000円券7枚"
+        },
+        {
+          "minShares": 800,
+          "minHoldMonths": 0,
+          "amount": 40000,
+          "timesPerYear": 1,
+          "note": "5,000円券8枚"
+        },
+        {
+          "minShares": 900,
+          "minHoldMonths": 0,
+          "amount": 45000,
+          "timesPerYear": 1,
+          "note": "5,000円券9枚"
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 0,
+          "amount": 50000,
+          "timesPerYear": 1,
+          "note": "5,000円券10枚"
+        }
+      ],
+      "tiersNote": "毎年12月末基準の年1回。100株刻みで1枚ずつ増え、1,000株以上は10枚で頭打ち。継続保有の条件なし。優待専用の公式ページは見つからず、根拠は会社サイトに置かれた2025年11月14日付の適時開示（設立35周年記念 株主優待制度拡充）",
+      "shipMonths": "3"
+    },
+    {
+      "company": "ジャパンクラフトホールディングス",
+      "companyKana": "じゃぱんくらふとほーるでぃんぐす",
+      "title": "株主ご優待券（券面額500円）",
+      "balance": 500,
+      "category": "小売",
+      "ticker": "7135",
+      "usableStores": "クラフトハートトーカイ、クラフトパーク、シュゲール楽天店、シュゲールYahoo!店、手づくりタウン",
+      "description": "【基本情報】\nクラフトハートトーカイ・クラフトパークを運営するトーカイグループ。6月末・12月末の株主に、500円券が保有株数と保有期間に応じた枚数で年2回届きます（100株は6月末のみ年1回）。\n\n【もらえる条件】\n100株で500円分、200株で年2回500円分ずつ、500株以上は継続保有の年数で増えます。1,000株以上を1年以上持つと6月末に特別優待品も付きます。",
+      "rating": 3,
+      "unitPrice": 500,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "券面額500円の株主ご優待券（お買い物1,000円ごとに500円の券を1枚使える）。優待券だけで払う時はお釣りなし。トーカイグループの店舗（クラフトハートトーカイ・クラフトパーク）と、ジャパンクラフトグループの各ECサイト（シュゲール楽天店・シュゲールYahoo!店・手づくりタウン）で使える。ECでは優待券を返送してクーポンをメールで受け取る手順。6月末基準は9月下旬発送で翌年2月末まで、12月末基準は3月上旬発送で9月末まで有効",
+      "auditedAt": "2026-11-23",
+      "auditScope": "券種・金額・株数区分・継続保有の条件・基準日・発送月・有効期限・使える店・使い方の注意（公式IRページで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.jcraft-hd.co.jp/ir/benefits/",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 500,
+          "timesPerYear": 1,
+          "note": "6月末のみ年1回"
+        },
+        {
+          "minShares": 200,
+          "minHoldMonths": 0,
+          "amount": 500,
+          "timesPerYear": 2,
+          "note": "6月末・12月末とも500円分（保有期間による差なし）"
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 12,
+          "amount": 1500,
+          "timesPerYear": 2,
+          "note": "1年以上継続保有"
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 36,
+          "amount": 2000,
+          "timesPerYear": 2,
+          "note": "3年以上継続保有"
+        },
+        {
+          "minShares": 700,
+          "minHoldMonths": 12,
+          "amount": 2500,
+          "timesPerYear": 2,
+          "note": "1年以上継続保有"
+        },
+        {
+          "minShares": 700,
+          "minHoldMonths": 36,
+          "amount": 3500,
+          "timesPerYear": 2,
+          "note": "3年以上継続保有"
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 12,
+          "amount": 5000,
+          "timesPerYear": 2,
+          "note": "1年以上継続保有"
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 36,
+          "amount": 6500,
+          "timesPerYear": 2,
+          "note": "3年以上継続保有"
+        }
+      ],
+      "tiersNote": "金額は1回ぶんで、6月末・12月末の年2回（100株だけ6月末の年1回）。継続保有は6月30日・12月31日の名簿に同一株主番号で連続して記載された回数で数える（1年以上=3回連続、3年以上=7回連続）。500株以上は表に1年未満の額がなく、貸株や証券会社の変更で株主番号が変わると継続保有がリセットされる。1,000株以上を6月末に1年以上継続保有していると、年1回の特別優待品が別に付く（内容は決まり次第の案内）。2026年8月10日に制度変更のお知らせが出ている",
+      "shipMonths": "3,9"
+    },
+    {
+      "company": "SAKIGAKEホールディングス",
+      "companyKana": "さきがけほーるでぃんぐす",
+      "title": "株主優待チケット（500円券）",
+      "balance": 2000,
+      "category": "外食",
+      "ticker": "5891",
+      "usableStores": "ラーメン魁力屋、つけ麺専門店 三田製麺所（UberEats等のデリバリーでは使えない）",
+      "description": "【基本情報】\nラーメン魁力屋を持つSAKIGAKEホールディングス。6月末・12月末の株主に、500円のチケットが保有株数に応じた枚数で年2回届きます。\n\n【もらえる条件】\n100株で4枚（2,000円分）、300株で8枚、500株以上で12枚。2026年9月1日から、使える店が魁力屋に三田製麺所が加わり、1回1,000円相当1枚から500円券の枚数制に変わりました。",
+      "rating": 3,
+      "unitPrice": 500,
+      "balanceUnit": "円",
+      "quantityUnit": "枚",
+      "exchange": "東証スタンダード",
+      "usageNotes": "500円券の株主優待チケット（2026年9月1日以降の制度）。額面未満の利用で差額が出てもおつりは出ない。1回に使える枚数の制限なし。100円割引券・他のクーポン券と併用できる。テイクアウトでも使えるが、UberEatsなどのデリバリーでは使えない。現金との引換え・再発行・返品返金はなし。6月末基準は9月に案内で、有効期限は翌年3月末日までの約6か月。12月末基準は3月に招集通知へ同封で、有効期限は9月末日までの約6か月",
+      "auditedAt": "2026-11-23",
+      "auditScope": "券種・金額・株数区分・基準日・発送月・有効期限・使える店・使い方の注意・旧社名・上場市場（公式IRページ・株数区分表の画像・会社概要で確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.sakigake-holdings.co.jp/ir/about",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 2000,
+          "timesPerYear": 2,
+          "note": "500円券4枚"
+        },
+        {
+          "minShares": 300,
+          "minHoldMonths": 0,
+          "amount": 4000,
+          "timesPerYear": 2,
+          "note": "500円券8枚"
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 0,
+          "amount": 6000,
+          "timesPerYear": 2,
+          "note": "500円券12枚"
+        }
+      ],
+      "tiersNote": "6月末・12月末の年2回で、金額は1回ぶん（どちらの基準日も同じ）。継続保有の条件なし。2026年8月31日まで（一律1,000円相当の電子チケット1枚・魁力屋のみ）とは別の制度で、これは2026年9月1日以降の分。株数区分表は公式ページに画像で載っている",
+      "shipMonths": "3,9",
+      "formerNames": [
+        "魁力屋"
+      ]
+    },
+    {
+      "company": "きんえい",
+      "companyKana": "きんえい",
+      "title": "映画鑑賞ご招待（あべのアポロシネマ）",
+      "balance": 1,
+      "category": "レジャー",
+      "ticker": "9636",
+      "usableStores": "あべのアポロシネマ",
+      "description": "【基本情報】\n大阪・阿倍野のあべのアポロシネマの運営会社。1月末・7月末の株主に、保有株数に応じた月ごとの回数で映画の無料鑑賞招待が付きます。\n\n【もらえる条件】\n75株で毎月1回から、1,050株以上で毎月14回まで。招待回数は月ごとに失効し、翌月へ持ち越せません。家族や親しい方も使えます。",
+      "rating": 3,
+      "unitPrice": 1,
+      "balanceUnit": "回",
+      "quantityUnit": "回",
+      "exchange": "東証スタンダード",
+      "usageNotes": "あべのアポロシネマの映画鑑賞に無料で招待（1回で1名・1本）。月間ご招待回数は使わなくても翌月以降に持ち越せない。2026年11月5日から、鑑賞は①あべのアポロシネマのホームページの「株主ログイン」からネットで座席指定（株主WEB登録が必要）、②「鑑賞ご招待カード」またはマイページの「デジタル会員証（二次元コード）」で券売機・カウンターで発券（登録なしでも可）。3D作品は追加料金で利用でき、当社が指定する作品やライブビューイング等の特別興行は対象外。上映開始1時間前までにキャンセルしないと権利が失効する。1月末分は5月〜10月、7月末分は11月〜翌年4月が有効期間。月間の回数は4月中旬以降・10月中旬以降に届く「株主ご優待のお知らせ」の送付状で確認する。権利の第三者への譲渡は禁止（家族・家族に準じる親しい方への貸与を除く）",
+      "auditedAt": "2026-11-23",
+      "auditScope": "優待の種類・株数区分（月間ご招待回数）・基準日・有効期間・使える劇場・使い方の注意・上場市場（公式IRページと会社概要で確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://corporate.kin-ei.co.jp/ir/benefit",
+      "tiers": [
+        {
+          "minShares": 75,
+          "minHoldMonths": 0,
+          "amount": 1,
+          "timesPerYear": 2,
+          "note": "毎月1回"
+        },
+        {
+          "minShares": 150,
+          "minHoldMonths": 0,
+          "amount": 2,
+          "timesPerYear": 2,
+          "note": "毎月2回"
+        },
+        {
+          "minShares": 300,
+          "minHoldMonths": 0,
+          "amount": 4,
+          "timesPerYear": 2,
+          "note": "毎月4回"
+        },
+        {
+          "minShares": 450,
+          "minHoldMonths": 0,
+          "amount": 6,
+          "timesPerYear": 2,
+          "note": "毎月6回"
+        },
+        {
+          "minShares": 750,
+          "minHoldMonths": 0,
+          "amount": 10,
+          "timesPerYear": 2,
+          "note": "毎月10回"
+        },
+        {
+          "minShares": 1050,
+          "minHoldMonths": 0,
+          "amount": 14,
+          "timesPerYear": 2,
+          "note": "毎月14回"
+        }
+      ],
+      "tiersNote": "金額は「月間ご招待回数」。1月末基準の権利で5月〜10月、7月末基準の権利で11月〜翌年4月の6か月間、毎月この回数が使える。月ごとに失効し持ち越せないので、残高が貯まる優待ではない。継続保有の条件なし",
+      "shipMonths": "4,10"
     }
   ],
   "siteOnly": [
