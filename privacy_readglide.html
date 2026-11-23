@@ -196,7 +196,10 @@
             <h2>3. アプリが求める権限について</h2>
             <ul>
                 <li><strong>ユーザー補助サービス（BIND_ACCESSIBILITY_SERVICE）</strong>… 第2項の目的に使用します。</li>
-                <li><strong>インターネット・ネットワーク状態の確認・広告 ID</strong>… 下記の広告の取得にのみ使用します。</li>
+                <li><strong>インターネット（INTERNET）・ネットワーク状態の確認（ACCESS_NETWORK_STATE）</strong>… 下記の広告の取得にのみ使用します。</li>
+                <li><strong>広告 ID（com.google.android.gms.permission.AD_ID・ACCESS_ADSERVICES_AD_ID）</strong>… 下記の広告の配信と計測にのみ使用します。</li>
+                <li><strong>スリープの防止・裏の処理（WAKE_LOCK・FOREGROUND_SERVICE）</strong>… 広告 SDK が通信の予約のために使う権限です。本アプリ自身は使いません。</li>
+                <li><strong>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</strong>… 利用しているライブラリ（AndroidX）が、アプリ内の受信を他のアプリから守るために定義する、本アプリ専用の権限です（同じ署名のアプリにしか与えられません）。ユーザーに許可を求める画面は出ず、情報の取得にも使いません。</li>
             </ul>
             <p>連絡先・位置情報・カメラ・マイク・電話・ストレージへのアクセス権限は求めません。「他のアプリの上に表示」の許可も求めません。アプリ内に、端末の電池の最適化や自動起動の設定画面を開く案内がありますが、これは端末の設定画面を開くだけで、設定の変更はユーザー自身が行います。</p>
 
