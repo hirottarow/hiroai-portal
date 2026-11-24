@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "2026-11-24.1",
-  "updatedAt": "2026-11-24",
+  "dataVersion": "2026-11-25.1",
+  "updatedAt": "2026-11-25",
   "categories": [
     "外食",
     "小売",
@@ -13245,6 +13245,44 @@
       ],
       "tiersNote": "1,000株（10単元）以上が対象。株数による差はない。基準日・贈呈回数は優待ページに記載なし（株式情報の表の株主確定基準日は12月31日）",
       "formerNames": []
+    },
+    {
+      "company": "あさくま",
+      "companyKana": "あさくま",
+      "title": "お食事券",
+      "balance": 2000,
+      "category": "外食",
+      "ticker": "7678",
+      "usableStores": "あさくま直営店、FC店舗加盟店（通販サイトを含む）",
+      "description": "【基本情報】\nあさくま。毎年1月末日・7月末日に100株以上を持つ株主へ、年2回の優待。\n\n【お得情報】\n1月末は100〜199株で2,000円分・200株以上で4,000円分のお食事券。7月末は商品抽選（最大50,000円分のお食事券・あさくまおせち・1ポンドシェアステーキ食事券など）で、外れた株主にも1月末と同額の食事券が付く。\n\n【2026-11-25 新規掲載・条件】\n公式の株主メモ（株主に対する特典）で確認。報道にある株式分割後の区分は公式ページに未掲載のため入れていない。",
+      "rating": 3,
+      "unitPrice": 0,
+      "balanceUnit": "円分",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "あさくま直営店・FC店舗加盟店（通販サイトを含む）で使える。有効期限は食事券に記載の日まで。1月末基準分は毎年4月末頃に発送する株主総会の決議通知に同封。7月末基準分は抽選（当選者の発表は公式サイト。9月におせちの目録・10月におせち以外の賞品を発送）で、抽選に外れた株主にも食事券が付く",
+      "shipMonths": "4,9,10",
+      "auditedAt": "2026-11-25",
+      "auditScope": "対象株主・基準日・株数区分・年回数・使える店・有効期限・発送時期（公式IRページで確認。株式分割後の区分は公式未確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.asakuma.co.jp/irinfo/stock/",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 2000,
+          "timesPerYear": 2,
+          "note": "100〜199株"
+        },
+        {
+          "minShares": 200,
+          "minHoldMonths": 0,
+          "amount": 4000,
+          "timesPerYear": 2,
+          "note": "200株以上"
+        }
+      ],
+      "tiersNote": "1月末・7月末基準の年2回。7月末基準は商品抽選で、外れた株主に1月末と同額の食事券（金額は抽選に外れた場合の1回ぶん。当選すると最大50,000円分の食事券など）"
     }
   ],
   "siteOnly": [
@@ -15996,6 +16034,203 @@
         }
       ],
       "tiersNote": "2023年に廃止した制度の再導入。初回基準日は2027年3月31日。保有期間1年未満1,000円分・1年以上2,000円分"
+    },
+    {
+      "company": "コーセーアールイー",
+      "companyKana": "こーせーあーるいー",
+      "title": "QUOカード",
+      "balance": 500,
+      "category": "その他",
+      "ticker": "3246",
+      "usableStores": "コンビニ、書店",
+      "description": "【基本情報】\n福岡のファミリー型マンション・投資用マンションの開発販売。毎年1月31日に100株以上を1年以上継続保有する株主へ、QUOカードを年1回贈る。\n\n【お得情報】\n100株500円分から、2,000株以上で5,000円分まで5段階。\n\n【2026-11-25 新規掲載・条件】\n1年以上の継続保有は、1月31日を基準に中間期末日・期末日の株主名簿に同一株主番号で連続して3回以上記載されること。毎年4月の定時株主総会後に発送。",
+      "rating": 3,
+      "unitPrice": 500,
+      "balanceUnit": "円分",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "siteGroup": "QUOカード",
+      "usageNotes": "毎年1月31日基準（年1回）。100株以上を1年以上継続保有（基準日を基準に中間期末日・期末日の名簿に同一株主番号で連続3回以上）。発送は毎年4月の定時株主総会開催後。QUOカードの有効期限は公式に記載なし",
+      "shipMonths": "4",
+      "quo": {
+        "tiers": [
+          {
+            "minShares": 100,
+            "minHoldMonths": 12,
+            "amountYen": 500,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 200,
+            "minHoldMonths": 12,
+            "amountYen": 1000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 500,
+            "minHoldMonths": 12,
+            "amountYen": 2000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 1000,
+            "minHoldMonths": 12,
+            "amountYen": 3000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 2000,
+            "minHoldMonths": 12,
+            "amountYen": 5000,
+            "timesPerYear": 1
+          }
+        ],
+        "rightsMonths": "1",
+        "note": "1年以上の継続保有が条件（基準日を基準に中間期末日・期末日の名簿に同一株主番号で連続3回以上）。毎年4月の定時株主総会後に発送",
+        "auditedAt": "2026-11-25",
+        "auditScope": "対象株主・基準日・継続保有の条件・株数区分と金額・年回数・発送時期（公式IRページで確認）"
+      },
+      "auditedAt": "2026-11-25",
+      "auditScope": "対象株主・基準日・継続保有の条件・株数区分と金額・年回数・発送時期（公式IRページで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.kose-re.jp/ir/hospitality",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 12,
+          "amount": 500,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 200,
+          "minHoldMonths": 12,
+          "amount": 1000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 12,
+          "amount": 2000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 12,
+          "amount": 3000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 2000,
+          "minHoldMonths": 12,
+          "amount": 5000,
+          "timesPerYear": 1
+        }
+      ],
+      "tiersNote": "毎年1月31日基準の年1回。1年以上の継続保有が条件（中間期末日・期末日の株主名簿に同一株主番号で連続3回以上）"
+    },
+    {
+      "company": "不二電機工業",
+      "companyKana": "ふじでんきこうぎょう",
+      "title": "QUOカード",
+      "balance": 500,
+      "category": "その他",
+      "ticker": "6654",
+      "usableStores": "コンビニ、書店",
+      "description": "【基本情報】\n不二電機工業。毎年1月31日・7月31日に300株以上を持つ株主へ、QUOカードを年2回贈る。\n\n【お得情報】\n継続保有3年未満は300株500円分・500株1,000円分・1,000株以上2,000円分。3年以上は1,000円・2,000円・3,000円分に増える。\n\n【2026-11-25 新規掲載・条件】\n3年以上は、各基準日の株主名簿に同一株主番号で連続7回以上記載されること。発送時期は現行の公式ページに記載なし。",
+      "rating": 3,
+      "unitPrice": 500,
+      "balanceUnit": "円分",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "siteGroup": "QUOカード",
+      "usageNotes": "基準日は毎年1月31日・7月31日（年2回・300株以上）。継続保有3年未満と3年以上で金額が変わる（3年以上＝各基準日の名簿に同一株主番号で連続7回以上）。発送時期とQUOカードの有効期限は公式（現行ページ）に記載なし",
+      "quo": {
+        "tiers": [
+          {
+            "minShares": 300,
+            "minHoldMonths": 0,
+            "amountYen": 500,
+            "timesPerYear": 2
+          },
+          {
+            "minShares": 500,
+            "minHoldMonths": 0,
+            "amountYen": 1000,
+            "timesPerYear": 2
+          },
+          {
+            "minShares": 1000,
+            "minHoldMonths": 0,
+            "amountYen": 2000,
+            "timesPerYear": 2
+          },
+          {
+            "minShares": 300,
+            "minHoldMonths": 36,
+            "amountYen": 1000,
+            "timesPerYear": 2
+          },
+          {
+            "minShares": 500,
+            "minHoldMonths": 36,
+            "amountYen": 2000,
+            "timesPerYear": 2
+          },
+          {
+            "minShares": 1000,
+            "minHoldMonths": 36,
+            "amountYen": 3000,
+            "timesPerYear": 2
+          }
+        ],
+        "rightsMonths": "1,7",
+        "note": "継続保有3年以上（各基準日の名簿に同一株主番号で連続7回以上）で金額が増える。発送時期は公式（現行ページ）に記載なし",
+        "auditedAt": "2026-11-25",
+        "auditScope": "対象株主・基準日・株数区分と金額・継続保有の条件・年回数・上場市場（公式IRページで確認）"
+      },
+      "auditedAt": "2026-11-25",
+      "auditScope": "対象株主・基準日・株数区分と金額・継続保有の条件・年回数・上場市場（公式IRページで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.fujidk.co.jp/ir/stock/overview.html",
+      "tiers": [
+        {
+          "minShares": 300,
+          "minHoldMonths": 0,
+          "amount": 500,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 0,
+          "amount": 1000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 0,
+          "amount": 2000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 300,
+          "minHoldMonths": 36,
+          "amount": 1000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 500,
+          "minHoldMonths": 36,
+          "amount": 2000,
+          "timesPerYear": 2
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 36,
+          "amount": 3000,
+          "timesPerYear": 2
+        }
+      ],
+      "tiersNote": "1月31日・7月31日基準の年2回。継続保有3年未満／3年以上で金額が変わる（3年以上＝各基準日の名簿に同一株主番号で連続7回以上）"
     }
   ]
 }
