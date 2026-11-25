@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "2026-11-26.1",
+  "dataVersion": "2026-11-26.2",
   "updatedAt": "2026-11-26",
   "categories": [
     "外食",
@@ -13321,6 +13321,263 @@
         }
       ],
       "tiersNote": "1月末・7月末基準の年2回。7月末基準は商品抽選で、外れた株主に1月末と同額の食事券（金額は抽選に外れた場合の1回ぶん。当選すると最大50,000円分の食事券など）"
+    },
+    {
+      "company": "大光",
+      "companyKana": "おおみつ",
+      "title": "QUOカード または アミカ商品券（選択）",
+      "balance": 1000,
+      "category": "小売",
+      "ticker": "3160",
+      "usableStores": "アミカ（アミカ商品券を選んだ場合。QUOカードは加盟店）",
+      "description": "【基本情報】\n大光。毎年5月末日・11月末日に500株以上を持つ株主へ、QUOカードかアミカ商品券を贈る年2回の優待。\n\n【お得情報】\n500〜999株はQUOカード1,000円分かアミカ商品券2,000円分、1,000〜1,999株は2,000円分か4,000円分、2,000株以上は3,000円分か6,000円分。\n\n【2026-11-26 新規掲載・条件】\n株数の区分と年2回の基準日は有価証券報告書（2026年5月期）の「株主に対する特典」、申し込みと発送時期は公式の「株主優待のご案内」（2026年5月末基準分）で確認。",
+      "rating": 3,
+      "unitPrice": 0,
+      "balanceUnit": "円分",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "500株以上が対象。QUOカードかアミカ商品券を申し込んで選ぶ（アミカ商品券の額はQUOカードの2倍）。2026年5月末基準分は申し込みの締切が2026年9月4日で、申し込みがない場合などはQUOカードが届く。5月末基準分は10月末発送予定。11月末基準分の発送月と商品券の有効期限は公式の案内で未確認。残高の目安はQUOカードを選んだ場合の額",
+      "shipMonths": "",
+      "auditedAt": "2026-11-26",
+      "auditScope": "対象株数・基準日・株数区分・年回数（有価証券報告書 2026年5月期）・選び方・5月末基準分の発送時期（公式の株主優待のご案内PDF・画像で確認）。11月末基準分の発送時期・有効期限・上場市場は記載なし（公式IR資料で確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.oomitsu.com/ir/yuutai.pdf",
+      "tiers": [
+        {
+          "minShares": 500,
+          "minHoldMonths": 0,
+          "amount": 1000,
+          "timesPerYear": 2,
+          "note": "アミカ商品券なら2,000円分"
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 0,
+          "amount": 2000,
+          "timesPerYear": 2,
+          "note": "アミカ商品券なら4,000円分"
+        },
+        {
+          "minShares": 2000,
+          "minHoldMonths": 0,
+          "amount": 3000,
+          "timesPerYear": 2,
+          "note": "アミカ商品券なら6,000円分"
+        }
+      ],
+      "tiersNote": "",
+      "formerNames": [],
+      "quo": {
+        "tiers": [
+          {
+            "minShares": 500,
+            "minHoldMonths": 0,
+            "amountYen": 1000,
+            "timesPerYear": 2
+          },
+          {
+            "minShares": 1000,
+            "minHoldMonths": 0,
+            "amountYen": 2000,
+            "timesPerYear": 2
+          },
+          {
+            "minShares": 2000,
+            "minHoldMonths": 0,
+            "amountYen": 3000,
+            "timesPerYear": 2
+          }
+        ],
+        "rightsMonths": "5,11",
+        "note": "アミカ商品券との選択。QUOカードを選んだ場合の金額",
+        "auditedAt": "2026-11-26"
+      }
+    },
+    {
+      "company": "ダブルエー",
+      "companyKana": "だぶるえー おりえんたるとらふぃっく",
+      "title": "商品1点無料券",
+      "balance": 1,
+      "category": "小売",
+      "ticker": "7683",
+      "usableStores": "ORiental TRaffic ONLINE STORE、卑弥呼公式オンラインショップ（大口区分の券のみ）",
+      "description": "【基本情報】\nダブルエー（ORiental TRaffic）。毎年1月末日・7月末日に100株以上を持つ株主へ、通販で使える商品1点無料券を贈る年2回の優待。\n\n【お得情報】\n100〜599株はORiental TRafficの通販の券1枚。600株以上は卑弥呼・NICAL（定価4万円（税込）以内）の券が加わり2枚。靴・バッグなどが対象で洋服は除く。\n\n【2027年7月末基準からの変更】\n6か月以上の継続保有が条件に加わり、2枚になる区分は1,000株以上、卑弥呼の券の上限は5万円（税込）になる。\n\n【2026-11-26 新規掲載・条件】\n公式の株主還元ページで確認。",
+      "rating": 3,
+      "unitPrice": 1,
+      "balanceUnit": "枚",
+      "quantityUnit": "枚",
+      "exchange": "東証",
+      "usageNotes": "通販専用（実店舗・他社の通販は不可）。洋服は除く。1注文に1枚で、他のキャンペーンとは併用できない。紛失しても再発行はない。卑弥呼の券は卑弥呼・NICALの定価4万円（税込）以内の商品が対象。利用期限は公式の表記で、1月末基準分は翌年5月末まで・7月末基準分は翌年11月末まで（届いた券で確認）",
+      "shipMonths": "4,10",
+      "auditedAt": "2026-11-26",
+      "auditScope": "対象株数・基準日・株数区分・利用条件・利用期限・発送時期・2027年7月末基準からの変更とよくある質問（公式IRページで確認）。上場市場は記載なし",
+      "auditSource": "official",
+      "sourceUrl": "https://www.wa-jp.com/ir/benefit.html",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 1,
+          "timesPerYear": 2,
+          "note": "ORiental TRafficの通販の券1枚"
+        },
+        {
+          "minShares": 600,
+          "minHoldMonths": 0,
+          "amount": 2,
+          "timesPerYear": 2,
+          "note": "うち1枚は卑弥呼・NICAL（定価4万円（税込）以内）"
+        }
+      ],
+      "tiersNote": "",
+      "formerNames": [],
+      "next": {
+        "from": "2027-07",
+        "label": "2027年7月末基準から（6か月以上の継続保有が条件）",
+        "tiers": [
+          {
+            "minShares": 100,
+            "minHoldMonths": 6,
+            "amount": 1,
+            "timesPerYear": 2,
+            "note": "ORiental TRafficの通販の券1枚"
+          },
+          {
+            "minShares": 1000,
+            "minHoldMonths": 6,
+            "amount": 2,
+            "timesPerYear": 2,
+            "note": "うち1枚は卑弥呼・NICAL（定価5万円（税込）以内）"
+          }
+        ],
+        "tiersNote": "その基準日と6か月前の基準日に、同じ株主番号で続けて株主名簿に記載されていることが条件。区分の株数を6か月持ち続ける必要はなく、その基準日の株数で決まる"
+      }
+    },
+    {
+      "company": "日本スキー場開発",
+      "companyKana": "にっぽんすきーじょうかいはつ にほんすきーじょうかいはつ",
+      "title": "リフト1日券30%割引券ほか株主ご優待チケット",
+      "balance": 7,
+      "category": "レジャー",
+      "ticker": "6040",
+      "usableStores": "HAKUBA VALLEY、竜王スキーパーク、菅平高原スノーリゾート、川場スキー場、めいほうスキー場、みやぎ蔵王えぼしリゾート、オグナほたかスキー場、丸沼高原スキー場",
+      "description": "【基本情報】\n日本スキー場開発。毎年7月31日・1月31日に100株以上を持つ個人株主へ、年2回の株主ご優待チケット。\n\n【お得情報】\n2026年7月末基準分は、リフト1日券30%割引券7枚（1枚で5名まで）のほか、ゴンドラ・アクティビティ、レンタル、温泉、駐車場、那須の施設の割引券が付く。3,000株以上は共通ウィンターシーズン券を申し込める。\n\n【2026-11-26 新規掲載・条件】\n公式の株主優待ページと2026-10-13のお知らせで確認。1月末基準分の中身は公式ページに記載なし。",
+      "rating": 3,
+      "unitPrice": 1,
+      "balanceUnit": "枚",
+      "quantityUnit": "枚",
+      "exchange": "東証グロース",
+      "usageNotes": "個人株主が対象（法人は対象外。2026-10-13のお知らせでは株主名簿の住所が日本国内の人）。残高はリフト1日券30%割引券の枚数（1枚で5名まで）。ほかにゴンドラ・レンタル・温泉・駐車場などの割引券が付く。冬のリフト券は専用サイトで事前購入。2026年7月末基準分の利用期間は2026年10月下旬から2027年グリーンシーズン終了まで。枚数と期間は7月末基準分のもの（1月末基準分は公式ページで未確認）",
+      "shipMonths": "10",
+      "auditedAt": "2026-11-26",
+      "auditScope": "対象株主・基準日・年2回・7月末基準分の券の内訳と利用期間・対象スキー場・発送開始日・上場市場（公式の株主優待ページと2026-10-13のお知らせPDFで確認）。1月末基準分の内訳・利用期間・発送時期は記載なし（公式IRページで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.nippon-ski.jp/ir-benefit.php",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 7,
+          "note": "7月末基準分の枚数（1月末基準分は公式ページに記載なし）"
+        }
+      ],
+      "tiersNote": "年2回（7月31日・1月31日基準）。3,000株以上は7月31日基準で、Webから申し込むと共通ウィンターシーズン券が1枚届く",
+      "formerNames": []
+    },
+    {
+      "company": "日本駐車場開発",
+      "companyKana": "にっぽんちゅうしゃじょうかいはつ にほんちゅうしゃじょうかいはつ",
+      "title": "スキー場・駐車場などの株主優待券（電子チケット）",
+      "balance": 3,
+      "category": "レジャー",
+      "ticker": "2353",
+      "usableStores": "日本スキー場開発のスキー場、日本駐車場開発の時間貸駐車場、那須ハイランドパーク、那須高原りんどう湖ファミリー牧場",
+      "description": "【基本情報】\n日本駐車場開発。1月末日・7月末日に500株以上を持つ株主へ、スキー場・駐車場・那須の施設などの優待。\n\n【お得情報】\n1月末基準は駐車場30%割引券、スキー場のリフト及びアクティビティ割引券、那須ハイランドパークや牧場の入園料無料券など。7月末基準はリフトとゴンドラの割引券などで、1,000株以上は駐車場50%割引券も付く。\n\n【2026-11-26 新規掲載・条件】\n公式の株主優待ページと2026-01-23・2026-07-27の変更のお知らせで確認。",
+      "rating": 3,
+      "unitPrice": 1,
+      "balanceUnit": "枚",
+      "quantityUnit": "枚",
+      "exchange": "東証プライム",
+      "usageNotes": "500株以上が対象。2026年7月末基準分から電子版へ完全移行（利用の前に専用ページで登録）。残高はスキー場の割引券の枚数。ほかの券は1月末と7月末で中身が違う（1月末: 駐車場30%割引券・那須の施設の入園料無料券など／7月末: ゴンドラ往復乗車券の割引券など）。公式の表に「株主本人が不在では利用できない」の注記がある。利用期間は電子チケットのサイトで確認",
+      "shipMonths": "",
+      "auditedAt": "2026-11-26",
+      "auditScope": "対象株数・基準日ごとの券の内訳と株数区分・電子化・上場市場（公式の株主優待ページと変更PDF 2026-01-23・2026-07-27、表は画像でも確認）。利用期間・発送時期は記載なし（公式IRページで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://n-p-d.co.jp/ir/complimentary/",
+      "tiers": [
+        {
+          "minShares": 500,
+          "minHoldMonths": 0,
+          "amount": 3,
+          "timesPerYear": 2,
+          "note": "1月末・7月末ともスキー場の割引券は3枚"
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 0,
+          "amount": 3,
+          "timesPerYear": 2,
+          "note": "1月末基準は3枚・7月末基準はリフト1日割引券6枚"
+        }
+      ],
+      "tiersNote": "駐車場の券は株数で変わる。7月末基準は1,000株以上に50%割引券（予約のみ）が付き、1,000株12枚・2,000株24枚・5,000株50枚。1月末基準は30%割引券が500株3枚・1,000株以上5枚で、予約のみの割引券（無制限）が1,000株10%・2,000株30%・3,000株50%。10,000株以上は施設の券が一部増える",
+      "formerNames": []
+    },
+    {
+      "company": "キッツ",
+      "companyKana": "きっつ",
+      "title": "グループ会社優待券（株主様ご優待案内冊子）",
+      "balance": 1,
+      "category": "レジャー",
+      "ticker": "6498",
+      "usableStores": "ホテル紅や、BIZ & SPA KISEKINOYU、北澤美術館",
+      "description": "【基本情報】\nキッツ。12月31日に100株以上を持つ株主へ、グループ会社優待券の冊子を贈る年1回の優待（3月下旬発送）。\n\n【お得情報】\n冊子にホテル紅やの宿泊割引券、BIZ & SPA KISEKINOYUの1,000円割引券3枚、北澤美術館の招待券5枚、家庭用浄水器の優待価格販売など。1,000株以上はオリジナルQUOカード（1,000〜3,000円分）と、選べる優待品も付く。\n\n【2026-11-26 新規掲載・条件】\n公式の株主優待ページで確認。",
+      "rating": 3,
+      "unitPrice": 1,
+      "balanceUnit": "冊",
+      "quantityUnit": "冊",
+      "exchange": "東証",
+      "usageNotes": "12月31日基準の年1回で、3月下旬に届く。冊子にホテル紅やの宿泊割引券、BIZ & SPA KISEKINOYUの1,000円割引券3枚、北澤美術館の招待券5枚など。1,000株以上の選べる優待品は返送はがきで申し込む（期限は5月29日・当日消印有効。申し込まないと届かない）。券の有効期限は公式ページに記載なし",
+      "shipMonths": "3",
+      "auditedAt": "2026-11-26",
+      "auditScope": "対象株数・権利確定日・年回数・発送時期・冊子の中身・QUOカードの区分・長期保有の扱い（公式IRページで確認）。券の有効期限・上場市場は記載なし",
+      "auditSource": "official",
+      "sourceUrl": "https://www.kitz.co.jp/investor_ir/stock-information/complimentary/",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 0,
+          "amount": 1,
+          "timesPerYear": 1
+        }
+      ],
+      "tiersNote": "1,000株以上は冊子に加えて、オリジナルQUOカード（1,000株1,000円分・2,000株2,000円分・3,000株以上3,000円分）と選べる優待品1点（同じ株主番号で5年以上かつ1,000株以上は2点）",
+      "formerNames": [],
+      "quo": {
+        "tiers": [
+          {
+            "minShares": 1000,
+            "minHoldMonths": 0,
+            "amountYen": 1000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 2000,
+            "minHoldMonths": 0,
+            "amountYen": 2000,
+            "timesPerYear": 1
+          },
+          {
+            "minShares": 3000,
+            "minHoldMonths": 0,
+            "amountYen": 3000,
+            "timesPerYear": 1
+          }
+        ],
+        "rightsMonths": "12",
+        "note": "グループ会社優待券の冊子に同封",
+        "auditedAt": "2026-11-26"
+      }
     }
   ],
   "siteOnly": [
