@@ -1,6 +1,6 @@
 # 優待辞書の確認日レポート（生成物・`scripts/build_benefits_pages.py` が書く）
 
-生成日: 2026-11-26 ／ 閾値: 最終確認から 180 日
+生成日: 2026-11-27 ／ 閾値: 最終確認から 180 日
 
 - 銘柄数: 306（templates 252・siteOnly 54）
 - 確認元が公式（`auditSource: official` かつ `sourceUrl` あり）: **306 件** ／ 二次情報: 0 件 ／ 未確認: 0 件
