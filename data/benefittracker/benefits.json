@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "2026-11-28.2",
+  "dataVersion": "2026-11-28.3",
   "updatedAt": "2026-11-28",
   "categories": [
     "外食",
@@ -13706,6 +13706,128 @@
         }
       ],
       "tiersNote": "総額を対象者で等しく分ける方式。株数を増やしても額は同じ"
+    },
+    {
+      "company": "ディスラプターズ",
+      "companyKana": "でぃすらぷたーず",
+      "formerNames": [
+        "キャリアインデックス"
+      ],
+      "title": "デジタルギフト（金額は基準日ごとに確定）",
+      "balance": 1,
+      "category": "カタログ",
+      "ticker": "6538",
+      "usableStores": "デジタルギフトの交換先から選ぶ（PayPayマネーライト、Amazonギフトカード、dポイントなど複数の予定）",
+      "description": "【基本情報】\n2026年11月に新設を決めた株主優待。決まった総額を対象の株主で等しく分ける方式で、1人あたりの額は基準日の対象者の数で変わる。\n\n【もらえる条件】\n3月末基準の年1回、1,000株以上。継続保有の条件なし。初回は2027年3月末。",
+      "rating": 3,
+      "unitPrice": 1,
+      "balanceUnit": "回",
+      "quantityUnit": "回",
+      "exchange": "東証スタンダード",
+      "usageNotes": "3月31日基準の年1回。1,000株以上、継続保有の条件なし。決まった総額（第1回は5,000万円）を基準日の対象株主の数で等しく分ける（円未満切り捨て）。第2回以降の総額は基準日の前に決まり、増減することがある。発送は基準日から概ね3か月以内（初回は2027年6月頃）。有効期限は公式に記載なし",
+      "shipMonths": "6",
+      "auditedAt": "2026-11-28",
+      "auditScope": "基準日・対象株数・継続保有の条件・配り方（シェア型）・総額・案内時期・上場市場・旧社名（会社サイトからリンクされた適時開示PDFで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://ssl4.eir-parts.net/doc/6538/tdnet/2918370/00.pdf",
+      "tiers": [
+        {
+          "minShares": 1000,
+          "minHoldMonths": 0,
+          "amount": 1,
+          "timesPerYear": 1,
+          "note": "1人あたりの額は基準日の対象者の数で決まる"
+        }
+      ],
+      "tiersNote": "総額を対象者で等しく分ける方式。株数を増やしても額は同じ"
+    },
+    {
+      "company": "テックファームホールディングス",
+      "companyKana": "てっくふぁーむほーるでぃんぐす",
+      "title": "デジタルギフト",
+      "balance": 4000,
+      "category": "カタログ",
+      "ticker": "3625",
+      "usableStores": "デジタルギフトの交換先から選ぶ（Amazonギフトカード、PayPayマネーライト、dポイント、au PAYギフトカード、図書カードNEXT など。交換先は変更される可能性あり）",
+      "description": "【基本情報】\n2026年11月に導入を決めた株主優待。デジタルギフトで、いくつもの交換先から選ぶ。\n\n【もらえる条件】\n6月末・12月末基準の年2回、500株以上で各4,000円分。初回は2026年12月末。",
+      "rating": 3,
+      "unitPrice": 0,
+      "balanceUnit": "円分",
+      "quantityUnit": "回",
+      "exchange": "東証グロース",
+      "usageNotes": "6月末・12月末基準の年2回で、1回4,000円分。500株以上。初回は2026年12月末基準。案内は権利確定日から3か月以内を目途に発送。有効期限は公式に記載なし",
+      "shipMonths": "",
+      "auditedAt": "2026-11-28",
+      "auditScope": "基準日・対象株数・金額・年回数・交換先・案内時期・上場市場（会社サイトからリンクされた適時開示PDFで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://ssl4.eir-parts.net/doc/3625/tdnet/2919528/00.pdf",
+      "tiers": [
+        {
+          "minShares": 500,
+          "minHoldMonths": 0,
+          "amount": 4000,
+          "timesPerYear": 2
+        }
+      ],
+      "tiersNote": "500株以上は一律。継続保有の条件は記載なし"
+    },
+    {
+      "company": "六甲バター",
+      "companyKana": "ろっこうばたー きゅーびーびー",
+      "title": "クオカード・自社製品",
+      "balance": 1000,
+      "category": "自社商品",
+      "ticker": "2266",
+      "usableStores": "六甲バターの自社製品の贈呈とクオカード（クオカードは加盟店で利用）",
+      "description": "【基本情報】\nQBBブランドの六甲バターの株主優待。2026年12月末基準から、100株でもクオカードの対象になる。\n\n【もらえる条件】\n12月末基準の年1回。クオカード1,000円分は100株以上を1年以上継続保有。1,000株以上は自社製品3,000円相当が付く（こちらは継続保有の条件なし）。",
+      "rating": 3,
+      "unitPrice": 1000,
+      "balanceUnit": "円分",
+      "quantityUnit": "枚",
+      "exchange": "東証プライム",
+      "usageNotes": "12月31日基準の年1回。クオカード1,000円分は100株以上を1年以上継続保有（6月30日・12月31日の名簿に、同一の株主番号で3回以上連続して100株以上。これまでの保有期間も通算）で、3月の定時株主総会後に配当金計算書に同封。1,000株以上は自社製品3,000円相当が付き、こちらは継続保有の条件なし・2月発送。2026年12月31日基準から。有効期限は公式に記載なし",
+      "shipMonths": "2,3",
+      "auditedAt": "2026-11-28",
+      "auditScope": "基準日・株数区分・継続保有の条件・金額・年回数・発送時期・適用開始・上場市場（公式IRページと2026-08-31のPDFで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://www.qbb.co.jp/ir/stock",
+      "tiers": [
+        {
+          "minShares": 100,
+          "minHoldMonths": 12,
+          "amount": 1000,
+          "timesPerYear": 1
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 0,
+          "amount": 3000,
+          "timesPerYear": 1,
+          "note": "自社製品3,000円相当（継続保有の条件なし）"
+        },
+        {
+          "minShares": 1000,
+          "minHoldMonths": 12,
+          "amount": 4000,
+          "timesPerYear": 1,
+          "note": "クオカード1,000円分＋自社製品3,000円相当"
+        }
+      ],
+      "tiersNote": "クオカードは1年以上の継続保有が条件。1,000株以上の自社製品は条件なし",
+      "quo": {
+        "tiers": [
+          {
+            "minShares": 100,
+            "minHoldMonths": 12,
+            "amountYen": 1000,
+            "timesPerYear": 1
+          }
+        ],
+        "rightsMonths": "12",
+        "note": "1年以上の継続保有が条件",
+        "auditedAt": "2026-11-28",
+        "auditScope": "株数区分・継続保有・年回数・権利月（公式IRページと突き合わせ）"
+      }
     }
   ],
   "siteOnly": [
@@ -16660,6 +16782,78 @@
         }
       ],
       "tiersNote": "1月31日・7月31日基準の年2回。継続保有3年未満／3年以上で金額が変わる（3年以上＝各基準日の名簿に同一株主番号で連続7回以上）"
+    },
+    {
+      "company": "インフォメティス",
+      "companyKana": "いんふぉめてぃす",
+      "title": "QUOカード",
+      "balance": 500,
+      "category": "その他",
+      "ticker": "281A",
+      "usableStores": "コンビニ、書店",
+      "description": "【基本情報】\n2026年11月に導入を決めた株主優待。100株以上で500円分のQUOカード。\n\n【もらえる条件】\n12月末基準の年1回。継続保有の条件は記載なし。初回は2026年12月末。",
+      "rating": 3,
+      "unitPrice": 500,
+      "balanceUnit": "円分",
+      "quantityUnit": "枚",
+      "exchange": "東証グロース",
+      "usageNotes": "12月31日基準の年1回、100株以上でQUOカード500円分。初回は2026年12月31日基準。毎年3月上旬に発送する定時株主総会の招集ご通知に同封の予定。2027年3月の定時株主総会は、書面かインターネットで事前に議決権を行使すると別にQUOカード500円分（優待とは別の取組み。当日出席すると対象外。次年度以降は未定）",
+      "siteGroup": "QUOカード",
+      "auditedAt": "2026-11-28",
+      "shipMonths": "3",
+      "quo": {
+        "tiers": [
+          {
+            "minShares": 100,
+            "minHoldMonths": 0,
+            "amountYen": 500,
+            "timesPerYear": 1
+          }
+        ],
+        "rightsMonths": "12",
+        "note": "2027年3月の定時株主総会は、書面かインターネットで事前に議決権を行使すると別にQUOカード500円分（優待とは別の取組み。当日出席すると対象外。次年度以降は未定）",
+        "auditedAt": "2026-11-28",
+        "auditScope": "株数区分・年回数・権利月（適時開示PDF原文と突き合わせ）"
+      },
+      "auditScope": "対象株主・基準日・株数・金額・年回数・贈呈の方法と時期・別の取組み・上場市場（会社サイトからリンクされた適時開示PDFで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://contents.xj-storage.jp/xcontents/AS04931a/2c25380f/1d13/4618/9a1e/07944f3f3ac6/140120261116581069.pdf"
+    },
+    {
+      "company": "コパ・コーポレーション",
+      "companyKana": "こぱこーぽれーしょん",
+      "title": "QUOカードPay（2回目以降は継続1年以上）",
+      "balance": 9000,
+      "category": "その他",
+      "ticker": "7689",
+      "usableStores": "QUOカード Pay 加盟店（デジタルギフト）",
+      "description": "【基本情報】\n2026年11月に新設を決めた株主優待。300株以上でQUOカードPay 9,000円分。\n\n【もらえる条件】\n2月末基準の年1回。初回の2027年2月末は継続保有の条件なし。2028年2月末からは1年以上の継続保有が条件。",
+      "rating": 3,
+      "unitPrice": 9000,
+      "balanceUnit": "円分",
+      "quantityUnit": "枚",
+      "exchange": "東証グロース",
+      "usageNotes": "2月末基準の年1回、300株以上でQUOカードPay 9,000円分。初回は2027年2月28日基準。2027年2月末基準の初回だけは継続保有の条件なし。2028年2月末基準からは、前年と当年の2月末の名簿に同一の株主番号で300株以上（1年以上の継続保有）。受け取りには所定の手続きが要る。発送時期は公式に記載なし",
+      "siteGroup": "QUOカード",
+      "auditedAt": "2026-11-28",
+      "shipMonths": "",
+      "quo": {
+        "tiers": [
+          {
+            "minShares": 300,
+            "minHoldMonths": 12,
+            "amountYen": 9000,
+            "timesPerYear": 1
+          }
+        ],
+        "rightsMonths": "2",
+        "note": "2027年2月末基準の初回だけは継続保有の条件なし。2028年2月末基準からは、前年と当年の2月末の名簿に同一の株主番号で300株以上（1年以上の継続保有）。受け取りには所定の手続きが要る",
+        "auditedAt": "2026-11-28",
+        "auditScope": "株数区分・継続保有・年回数・権利月（適時開示PDF原文と突き合わせ）"
+      },
+      "auditScope": "対象株主・基準日・株数・金額・継続保有の条件と判定・受け取りの手続き・上場市場（会社サイトからリンクされた適時開示PDFで確認）",
+      "auditSource": "official",
+      "sourceUrl": "https://ssl4.eir-parts.net/doc/7689/tdnet/2923091/00.pdf"
     }
   ]
 }
